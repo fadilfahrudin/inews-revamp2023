@@ -1,0 +1,18 @@
+.breadcrumb {
+    font-family: Inter, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    display: flex;
+    align-items: center;
+    color: $color-gray-100;
+    gap: 0 4px;
+    & > a {
+        color: $color-gray-100;
+    }
+    .lastPage {
+        cursor: default;
+        color: $color-dark-10;
+    }
+}

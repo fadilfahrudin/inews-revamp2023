@@ -1,0 +1,27 @@
+.stickyAds {
+    width: 1100px;
+    height: 50px;
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: $color-gray-75;
+    z-index: 999;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    #closeAds {
+        position: absolute;
+        right: 0;
+        top: 0;
+        cursor: pointer;
+        padding: 5px 8px;
+        background-color: $color-dark-10;
+        color: $color-light-100;
+    }
+    @include media.ipad {
+        width: 80%;
+    }
+}

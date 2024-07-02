@@ -1,0 +1,85 @@
+footer {
+    width: 100%;
+    height: auto;
+    background-color: $color-dark-25;
+    background-image: url("../img/footer-bg.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    background-blend-mode: multiply;
+
+    border-top: 5px solid $color-red-100;
+    position: relative;
+    bottom: -20px;
+    .footerBody {
+        width: 100%;
+        padding: 56px 0;
+        display: flex;
+        justify-content: space-between;
+        .withImg {
+            display: flex;
+            flex-direction: column;
+            gap: 32px 0;
+            margin-right: 8vw;
+            .partOf {
+                display: flex;
+                align-items: center;
+                gap: 0 8px;
+                span {
+                    font-size: 14px;
+                    font-weight: 400;
+                    line-height: 25.6px;
+                    color: $color-white;
+                }
+            }
+            .socmed {
+                display: flex;
+                gap: 0 18px;
+            }
+            .donwloadApp {
+                margin-top: 10px;
+                display: flex;
+                justify-content: space-between;
+            }
+        }
+        .listInfoFooter {
+            justify-self: flex-end;
+            list-style: none;
+            padding: 0 5px;
+            li {
+                margin-bottom: 8px;
+                &:first-child {
+                    font-size: 18px;
+                    font-weight: 700;
+                    line-height: 28.8px;
+                    color: $color-white;
+                    margin-bottom: 16px;
+                }
+                &:hover {
+                    a {
+                        transition: all 0.3s ease-in-out;
+                        color: $color-gray-75;
+                    }
+                }
+
+                a {
+                    font-size: 12px;
+                    font-weight: 400;
+                    line-height: 18px;
+                    color: $color-white;
+                }
+            }
+        }
+    }
+    .license {
+        padding: 8px;
+        width: 100%;
+        background-color: $color-dark-100;
+
+        text-align: center;
+        font-size: 12px;
+        line-height: 14.52px;
+        font-weight: 400;
+        color: #c5c5c5;
+    }
+}

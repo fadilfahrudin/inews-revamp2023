@@ -1,0 +1,1077 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- JQuery -->
+    <script src="./assets/js/jquery-3.7.1.min.js"></script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="./assets/css/main.css">
+</head>
+
+<body id="detail-article">
+    <!-- Header -->
+    <div class="topBarWrap">
+        <div class="container topBar">
+            <!-- left section -->
+            <div>
+                <a class="logo" href="./index.html" aria-label="logon"><img src="./assets/img/icon/ic-inews.png"
+                        alt="iNews.id" width="40" height="40" loading="lazy"></a>
+                <a class="logo" href="./index.html" target="_blank" aria-label="logon"><span
+                        class="ic-inews-tv"></span></a>
+                <div class="app-gateway">
+                    <img src="./assets/img/icon/ic-get-app.png" alt="get app" width="100%" height="100%">
+                    <div class="modal-app-gateway">
+                        <div class="qrcode-app">
+                            <img src="./assets/img/barcode-get-app.png" alt="qrcode" height="100%" width="100%">
+                        </div>
+                        <div class="get-app-wrappp">
+                            <p>Scan this QR or download app from:</p>
+                            <div class="app-available">
+                                <a href="#" target="_blank" aria-label="play store">
+                                    <img src="./assets/img/play-store.png" alt="play store" width="105" height="36">
+                                </a>
+                                <a href="#" target="_blank" aria-label="app store">
+                                    <img src="./assets/img/app-store.png" alt="app store" width="314" height="120">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- center section -->
+            <div>
+                <form class="searchForm">
+                    <input type="text" name="search" id="search" placeholder="Search">
+                    <button class="btnSearch" type="submit" aria-label="search">
+                        <img src="./assets/img/icon/ic-search.png" alt="search" width="24" height="24">
+                    </button>
+                </form>
+            </div>
+            <!-- right section -->
+            <div>
+                <div id="login" class="loginSection">
+                    <!-- Login -->
+                    <!-- punya class hide -->
+                    <a class="btnLogin" href="#">
+                        Login
+                        <span class="ic-login"></span>
+                    </a>
+
+                    <!-- sudah login -->
+                    <button type="button" id="openModalSSO" class="hide">
+                        <img id="profileThumb" src="./assets/img/dummy/profile-dummy.png" alt="user name" width="28"
+                            height="28" loading="lazy">
+                    </button>
+
+                    <div id="modalSSO" class="modalLogin hide">
+                        <div class="modalHeader">
+                            <a href="#" target="_blank">
+                                <img src="./assets/img/icon/ic-user.png" alt="user name" width="48" height="48"
+                                    loading="lazy">
+                                <div class="userInfo">
+                                    <span class="detail-username">@Username</span>
+                                    <span class="detail-name">Username</span>
+                                </div>
+                            </a>
+                            <button type="button" id="closeModalSSO">
+                                <span class="ic-close-modal-sso"></span>
+                            </button>
+                        </div>
+                        <div class="modalBody">
+                            <div class="warning">Kelengkapan data diri 30%</div>
+                            <div class="infoModal">Bantu kami untuk merekomendasikan konten dengan melengkapi data diri
+                                Anda <a href="#">di sini</a></div>
+                        </div>
+                        <a class="modalAction" href="#">Dashboard</a>
+                        <a id="disconect" class="modalAction" href="#">Disconect</a>
+                    </div>
+                </div>
+                <div class="networkNav">
+                    <span class="ic-news-network"></span>
+                    <button id="dropDownNetworkBtn" type="button" class="dropDownBtn">
+                        <span class="networkLabel">Network</span>
+                        <span class="ic-dropdown-network"></span>
+                    </button>
+                </div>
+                <button id="burgerBtn" type="button" aria-label="burger-btn">
+                    <span class="ic-burger-btn"></span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <header>
+        <div class="container">
+            <div class="header">
+                <div class="brand">
+                    <img src="./assets/img/logo-kanal-inews.png" alt="inews" width="100%" height="100%" loading="lazy">
+                </div>
+                <div class="adsHeader">
+                    <img src="./assets/img/dummy/dummy-ads-720x90.png" alt="ads" width="100%" height="100%"
+                        loading="lazy">
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- End Header -->
+    <!-- Alert SSO -->
+    <div class="alert-wrapp container">
+        <div class="alert-img">
+            <img src="https://static.inews.co.id/img/info.svg" title="icon info sso" alt="icon info sso"
+                pinger-seen="true" width="21" height="21">
+        </div>
+        <div class="alert-text">
+            <b id="progession-alert2">Kelengkapan data diri 28%</b>: Bantu kami untuk merekomendasikan konten dengan
+            melengkapi data diri Anda <b><a target="_blank" href="https://orion.mncportal.id/profile">di sini</a></b>
+        </div>
+        <button type="button" class="alert-close" onclick="$('.alert-wrapp').hide()">
+            <img src="https://static.inews.co.id/img/close.svg" title="icon close" alt="icon close" pinger-seen="true">
+        </button>
+    </div>
+    <!-- END Alert SSO -->
+    <!-- Navigation Kanal -->
+    <nav class="container">
+        <ul class="navigationKanal">
+            <li class="navList"><a href="#" class="navLink">Home</a></li>
+            <li class="navList"><a href="#" class="navLink navLink-active">Nasional</a></li>
+            <li class="navList"><a href="#" class="navLink">Internasional</a></li>
+            <li class="navList"><a href="#" class="navLink">Megapolitan</a></li>
+        </ul>
+    </nav>
+    <!-- End Navigation Kanal -->
+    <!-- Stiky Feature -->
+    <div class="stickyFeature">
+        <div class="container stikyContent">
+            <div class="resizeFontToggle">
+                <button type="button" id="smallFont">A</button>
+                <span class="toggleResize"> <span id="toggle"></span> </span>
+                <button type="button" id="largeFont">A</button>
+            </div>
+            <span class="resizeFont">Aa</span>
+            <!-- <div class="like">
+                <button id="btnLike" type="button" aria-label="like"><span class="ic-btnlike"></span></button>
+                <span id="likeCount">8</span>
+            </div>
+            <div class="comment">
+                <span class="ic-comment"></span>
+                <span>99+</span>
+            </div> -->
+            <div class="iconShare">
+                <a href="javascript:void(0)" aria-label="link">
+                    <span class="ic-link-share"></span>
+                    <span id="copied">Link Copied!</span>
+                </a>
+                <a href="#" aria-label="whatsapp"><span class="ic-wa"></span></a>
+                <a href="#" aria-label="facebook"><span class="ic-fb"></span></a>
+                <a href="#" aria-label="twitter"><span class="ic-x"></span></a>
+            </div>
+            <a href="#" class="readNext">
+                <span class="readNextText"> Read Next : Kronologi Longsor Desasaasasasasasa</span>
+                <span class="ic-next-read"></span>
+            </a>
+        </div>
+        <span id="progressBar" class="container"></span>
+    </div>
+    <!-- End Stiky Feature -->
+    <!-- Main -->
+    <main class="container">
+        <!-- ads 970x250 -->
+        <figure class="ads-970x250">
+            <figcaption>Advertisement . Scroll to see content</figcaption>
+            <img src="./assets/img/dummy/dummy-ads-970x250.png" alt="ads" width="100%" height="100%" loading="lazy">
+        </figure>
+        <!-- end ads 970x250 -->
+
+        <article class="headerArticle">
+            <div class="breadcrumb">
+                <a href="#">News</a>
+                <img src="./assets/img/icon/ic-next-page-breadcrumb.png" alt="breadcrumb" width="8" height="8" />
+                <a href="#">Nasional</a>
+                <img src="./assets/img/icon/ic-next-page-breadcrumb.png" alt="breadcrumb" width="8" height="8" />
+                <span class="lastPage">DetailBerita</span>
+            </div>
+            <h1 class="headerTitle">Minta Jatah Preman, Bang Jago Ngamuk Pakai Golok di Bandung Kulon, Kakinya Ditembak
+                Polisi</h1>
+            <div class="timeAndShare">
+                <div class="createdAt">Selasa, 15 Januari 2023 - 08:00 WIB</div>
+                <div class="share">
+                    <label for="share">Share</label>
+                    <div class="iconShare">
+                        <a href="javascript:void(0)" aria-label="link">
+                            <span class="ic-link-share-2"></span>
+                            <span id="copied-2">Link Copied!</span>
+                        </a>
+                        <a href="#" aria-label="whatsapp"><span class="ic-wa"></span></a>
+                        <a href="#" aria-label="facebook"><span class="ic-fb"></span></a>
+                        <a href="#" aria-label="twitter"><span class="ic-x"></span></a>
+                    </div>
+                </div>
+            </div>
+            <ul class="author">
+                <li class="authorList">
+                    <a href="#">
+                        <img src="./assets/img/icon/ic-user-reguler.png" alt="user-anonim" width="24" height="24"
+                            loading="lazy">
+                        Vivi Revina
+                        Priagung Adisucipto
+                    </a>
+                </li>
+                <li class="authorList">
+                    <a href="#">
+                        <img src="./assets/img/dummy/profile-dummy.png" alt="profile-pic" width="24" height="24"
+                            loading="lazy">
+                        Vivi Revina
+                        Priagung Adisucipto
+                    </a>
+                </li>
+            </ul>
+            <figure class="headerImg">
+                <img src="./assets/img/dummy/dummy-header-img.png" alt="header img" width="100%" height="100%"
+                    loading="lazy">
+                <figcaption>Gubernur Jawa Barat Ridwan Kamil menyampaikan harapannya kepada Pangdam III/ Siliwangi
+                    Mayjen TNI Kunto Arief Wibowo seusai acara lepas sambut di Taman Pule Makodam III/Siliwangi, Jalan
+                    Aceh, Kota Bandung, Rabu (2/2/2022). (Foto: Humas Pemprov Jabar)</figcaption>
+            </figure>
+        </article>
+        <section class="mainBody">
+            <article class="bodyArticleWrapper">
+                <div class="bodyArticle">
+                    <p>
+                        BANDUNG, iNews.id - Gubernur Jabar Ridwan Kamil menyampaikan harapan kepada Pangdam
+                        III/Siliwangi
+                        yang baru, Mayjen TNI Kunto Arief Wibowo. Di bawah kepemimpinan Mayjen TNI Kunto Arief Wibowo,
+                        Kodam
+                        III/Siliwangi diharapkan terus bersinergi dengan Pemprov Jabar, khususnya dalam penanganan
+                        Covid-19
+                        dan isu lingkungan.
+                    </p>
+                    <p>
+                        Harapan itu disampaikan Ridwan Kamil seusai acara lepas sambut Panglima Kodam III/Siliwangi di
+                        Taman
+                        Pule, Makodam III/Siliwangi, Kota Bandung, Rabu (2/2/2022). Harapan itu disampaikan Ridwan Kamil
+                        seusai acara lepas sambut Panglima Kodam III/Siliwangi di Taman Pule, Makodam III/Siliwangi,
+                        Kota
+                        Bandung, Rabu (2/2/2022).
+                    </p>
+                    <article class="bacaJuga">
+                        <a href="#">
+                            <img src="./assets/img/dummy/dummy-img-artikel-terkait.png" alt="artikel rekomendasi"
+                                width="80" height="80" loading="lazy">
+                            <article>
+                                <div class="bacaJugatitle">Baca Juga</div>
+                                <div class="bacaJugaExcerpt">Ekonom INDEF Soal UU Kesehatan: Perekenomian Daerah
+                                    Penghasil Tembakau Akan Lesu</div>
+                            </article>
+                        </a>
+                    </article>
+                    <p>
+                        Kang Emil mengatakan, 2022 merupakan tahun penuh tantangan dan hanya bisa dilewati dengan
+                        sinergi
+                        dan kolaborasi dengan berbagai pihak. "Tahun 2022, kita masih banyak tantangan. Covid-19
+                        tentunya
+                        masih akan hadir. Tapi kebangkitan ekonomi dan lainnya juga harus dijaga," kata Kang Emil.
+                    </p>
+                    <div class="subscribeINews">
+                        <span>Follow iNews di WhatsApp Channel dan Google News</span>
+                        <a href="#" class="goToFollow" aria-label="Follow WhatsApp Channel">Follow</a>
+                    </div>
+                    <h5>
+                        <img src="./assets/img/dummy/dummy-body-img.png" alt="dummy img" width="704" height="396">
+                        <em>menggunakan tag h5.
+                        </em>
+                    </h5>
+                    <p>
+                        Menurut Kang Emil, sosok Mayjen TNI Kunto Arief Wibowo sudah tak asing lagi dan pernah bekerja
+                        sama.
+                        Pada 2020, putra mantan Wakil Presiden RI Tri Sutrisno itu pernah menjabat sebagai Kasdam
+                        III/Siliwangi. Sebelum menjabat Pangdam III/Siliwangi, Kunto bertugas sebagai Panglima Divisi
+                        Infanteri 3 Kostrad pada 2021.
+                    </p>
+                    <div>
+                        <img src="./assets/img/dummy/dummy-side-ads.png" alt="dummy img" width="704" height="396">
+                        <em>menggunakan tag div.
+                        </em>
+                    </div>
+                    <article class="bacaJuga">
+                        <a href="#">
+                            <img src="./assets/img/dummy/dummy-img-artikel-terkait.png" alt="artikel rekomendasi"
+                                width="80" height="80" loading="lazy">
+                            <article>
+                                <div class="bacaJugatitle">Baca Juga</div>
+                                <div class="bacaJugaExcerpt">Ekonom INDEF Soal UU Kesehatan: Perekenomian Daerah
+                                    Penghasil Tembakau Akan Lesu</div>
+                            </article>
+                        </a>
+                    </article>
+                    <figure>
+                        <img src="./assets/img/dummy/dummy-side-ads.png" alt="dummy img" width="704" height="396">
+                        <figcaption>menggunakan figure.
+                        </figcaption>
+                    </figure>
+                    <p>
+                        Begitu pula dalam proses pemulihan lingkungan, khususnya Program Citarum Harum yang harus terus
+                        dijaga komitmennya. "Untuk komitmen lingkungan yang menjadi contoh adalah Program Citarum
+                        Harum,"
+                        tutur Kang Emil.
+                    </p>
+                    <p>
+
+                        Mewakili masyarakat Jabar, Kang Emil juga memastikan siap membangun kemanunggalan yang lebih
+                        baik
+                        bersama seluruh prajurit TNI Kodam III/Siliwangi dengan dilandasi semangat silih asih, asah,
+                        asuh,
+                        dan wawangi. "Selamat datang pada Pangdam baru, rakyat Jabar siap manunggal bersama prajurit
+                        dari
+                        Kodam III/ Siliwangi," tuturnya.
+                    </p>
+                    <article class="bacaJuga">
+                        <a href="#">
+                            <img src="./assets/img/dummy/dummy-img-artikel-terkait.png" alt="artikel rekomendasi"
+                                width="80" height="80" loading="lazy">
+                            <article>
+                                <div class="bacaJugatitle">Baca Juga</div>
+                                <div class="bacaJugaExcerpt">Ekonom INDEF Soal UU Kesehatan: Perekenomian Daerah
+                                    Penghasil Tembakau Akan Lesu</div>
+                            </article>
+                        </a>
+                    </article>
+                    <div class="video-container">
+                        <iframe class="rplayer"
+                            id="embed-demo-mpi-real-madrid-rugi-rp18-miliar-tiap-pekan-gegara-ini-c6590f"
+                            title="(Demo-Mpi) Real Madrid Rugi Rp18 Miliar Tiap Pekan, Gegara Ini"
+                            src="https://embed.rctiplus.com/tube/sindo-highlight-piala-eropa-2024-jerman-skotlandia-17e789"
+                            name="embed-demo-mpi-real-madrid-rugi-rp18-miliar-tiap-pekan-gegara-ini-c6590f"
+                            allowfullscreen="allowfullscreen" loading="lazy"></iframe>
+                    </div>
+                    <p>Editor: Zyan Malik</p>
+                </div>
+                <!-- Pagination -->
+                <div class="pagination">
+                    <label for="page">Page:</label>
+                    <ul id="page" class="paginationContent">
+                        <li>
+                            <a class="prev" href="#" aria-label="prev-left">
+                                <span class="ic-prev"></span>
+                            </a>
+                        </li>
+                        <!-- li Punya class avtive -->
+                        <li class="pageList active"><a href="#">1</a></li>
+                        <li class="pageList"><a href="#">2</a></li>
+                        <li class="pageList"><a href="#">3</a></li>
+                        <li>...</li>
+                        <li class="pageList"><a href="#">5</a></li>
+                        <li class="pageList"><a href="#">6</a></li>
+                        <li class="pageList"><a href="#">7</a></li>
+                        <!--  -->
+                        <li>
+                            <a class="next" href="#" aria-label="next">
+                                <span class="ic-next-active"></span>
+                            </a>
+                        </li>
+                        <li class="showAll"><a href="#">Show All</a></li>
+                    </ul>
+                </div>
+                <!-- End Pagination -->
+
+                <!-- Google News -->
+                <span class="pleaseFollow">Follow Berita iNews Bengkulu Utara di <a href="#">Google News</a></span>
+
+                <!-- Tags -->
+                <div class="tags">
+                    <label for="tags">Tags:</label>
+                    <ul>
+                        <li class="tagList"><a href="#">Pangdam Siliwangi</a></li>
+                        <li class="tagList"><a href="#">Kodam Siliwangi</a></li>
+                        <li class="tagList"><a href="#">Kodam II Siliwangi</a></li>
+                        <li class="tagList"><a href="#">Khodam</a></li>
+                        <li class="tagList"><a href="#">Gubernur Jateng Ganjar Pranowo</a></li>
+                        <li class="tagList"><a href="#">Ganjar Pranowo Gubernur</a></li>
+                    </ul>
+                </div>
+                <!-- End Tags -->
+
+                <!-- Article Related -->
+                <div class="articleRecommended">
+                    <div class="recommendedHeader">
+                        <img src="./assets/img/icon/ic-artikel-terkait.png" alt="icon article related" width="24"
+                            height="24" loading="lazy">
+                        <div class="recommendedTitleHeadre">Artikel Terkait</div>
+                    </div>
+                    <div class="recommendedBody">
+                        <article class="listRecommended">
+                            <a href="#">
+                                <div class="imgWrapp">
+                                    <img class="thumbnail" src="./assets/img/dummy/dummy-img-artikel-terkait.png"
+                                        alt="rekomendasi" width="213" height="143" loading="lazy">
+                                    <img class="multimediaIcon" src="./assets/img/icon/ic-img-post.png" alt="img icon"
+                                        width="26" height="23" loading="lazy">
+                                </div>
+                                <div class="kanalAndTime">
+                                    <div class="kanal">Nasional</div>
+                                    <div class="postTime">33 menit lalu</div>
+                                </div>
+                                <div class="recommendedTitle">Jerat Bandar Narkoba dengan TPPU, Bareskrim Sita
+                                    Sejumlah
+                                    Kendaraan Mewah</div>
+                            </a>
+                        </article>
+                        <article class="listRecommended">
+                            <a href="#">
+                                <div class="imgWrapp">
+                                    <img class="thumbnail" src="./assets/img/dummy/dummy-img-artikel-terkait.png"
+                                        alt="rekomendasi" width="213" height="143" loading="lazy">
+                                    <img class="multimediaIcon" src="./assets/img/icon/ic-img-post.png" alt="img icon"
+                                        width="26" height="23" loading="lazy">
+                                </div>
+                                <div class="kanalAndTime">
+                                    <div class="kanal">Nasional</div>
+                                    <div class="postTime">33 menit lalu</div>
+                                </div>
+                                <div class="recommendedTitle">Jerat Bandar Narkoba dengan TPPU, Bareskrim Sita
+                                    Sejumlah
+                                    Kendaraan Mewah</div>
+                            </a>
+                        </article>
+                        <article class="listRecommended">
+                            <a href="#">
+                                <div class="imgWrapp">
+                                    <img class="thumbnail" src="./assets/img/dummy/dummy-img-artikel-terkait.png"
+                                        alt="rekomendasi" width="213" height="143" loading="lazy">
+                                    <img class="multimediaIcon" src="./assets/img/icon/ic-img-post.png" alt="img icon"
+                                        width="26" height="23" loading="lazy">
+                                </div>
+                                <div class="kanalAndTime">
+                                    <div class="kanal">Nasional</div>
+                                    <div class="postTime">33 menit lalu</div>
+                                </div>
+                                <div class="recommendedTitle">Jerat Bandar Narkoba dengan TPPU, Bareskrim Sita
+                                    Sejumlah
+                                    Kendaraan Mewah</div>
+                            </a>
+                        </article>
+                        <article class="listRecommended">
+                            <a href="#">
+                                <div class="imgWrapp ">
+                                    <img class="thumbnail" src="./assets/img/dummy/dummy-img-artikel-terkait.png"
+                                        alt="rekomendasi" width="213" height="143" loading="lazy">
+                                    <img class="multimediaIcon" src="./assets/img/icon/ic-img-post.png" alt="img icon"
+                                        width="26" height="23" loading="lazy">
+                                </div>
+                                <div class="kanalAndTime">
+                                    <div class="kanal">Nasional</div>
+                                    <div class="postTime">33 menit lalu</div>
+                                </div>
+                                <div class="recommendedTitle">Jerat Bandar Narkoba dengan TPPU, Bareskrim Sita
+                                    Sejumlah
+                                    Kendaraan Mewah</div>
+                            </a>
+                        </article>
+                        <article class="listRecommended">
+                            <a href="#">
+                                <div class="imgWrapp">
+                                    <img class="thumbnail" src="./assets/img/dummy/dummy-img-artikel-terkait.png"
+                                        alt="rekomendasi" width="213" height="143" loading="lazy">
+                                    <img class="multimediaIcon" src="./assets/img/icon/ic-img-post.png" alt="img icon"
+                                        width="26" height="23" loading="lazy">
+                                </div>
+                                <div class="kanalAndTime">
+                                    <div class="kanal">Nasional</div>
+                                    <div class="postTime">33 menit lalu</div>
+                                </div>
+                                <div class="recommendedTitle">Jerat Bandar Narkoba dengan TPPU, Bareskrim Sita
+                                    Sejumlah
+                                    Kendaraan Mewah</div>
+                            </a>
+                        </article>
+                        <article class="listRecommended">
+                            <a href="#">
+                                <div class="imgWrapp">
+                                    <img class="thumbnail" src="./assets/img/dummy/dummy-img-artikel-terkait.png"
+                                        alt="rekomendasi" width="213" height="143" loading="lazy">
+                                    <img class="multimediaIcon" src="./assets/img/icon/ic-img-post.png" alt="img icon"
+                                        width="26" height="23" loading="lazy">
+                                </div>
+                                <div class="kanalAndTime">
+                                    <div class="kanal">Nasional</div>
+                                    <div class="postTime">33 menit lalu</div>
+                                </div>
+                                <div class="recommendedTitle">Jerat Bandar Narkoba dengan TPPU, Bareskrim Sita
+                                    Sejumlah
+                                    Kendaraan Mewah</div>
+                            </a>
+                        </article>
+                    </div>
+                </div>
+                <!-- End Article Related -->
+
+                <!-- News Location -->
+                <div class="newsLocation">
+                    <div class="locationHeader">
+                        <div class="locationHeaderTitle">Berita di Sekitarmu</div>
+                        <button name="modalAI" type="button" class="icon-toggle off" data-toggle="modal"
+                            data-target="#modalAI" aria-label="toggle">
+                            <label class="switch">
+                                <input id="switchInput" type="checkbox">
+                                <span class="slider"></span>
+                            </label>
+                        </button>
+                    </div>
+
+                    <div class="locationBody">
+                        <!-- Non Active -->
+                        <div class="geo-location-non-active">
+                            <div class="locationTitle">Aktifkan Lokasimu untuk dapatkan berita menarik di sekitarmu
+                            </div>
+                            <div class="locationImg">
+                                <img src="./assets/img/inews-location.png" alt="indonesia" width="584" height="217"
+                                    loading="lazy">
+                            </div>
+                        </div>
+
+                        <!-- Active -->
+                        <!-- display none -->
+                        <div class="geo-location-active">
+                            <div class="geo-location-city">
+                                <span>Jakarta Selatan, DKI Jakarta</span>
+                                <a href="#" class="btn-more-news-in-city" type="button">See All</a>
+                            </div>
+                            <div class="newsInLocation">
+                                <article class="listRecommended">
+                                    <a href="#">
+                                        <div class="imgWrapp">
+                                            <img class="thumbnail"
+                                                src="./assets/img/dummy/dummy-img-artikel-terkait.png" alt="rekomendasi"
+                                                width="213" height="143" loading="lazy">
+                                            <img class="multimediaIcon" src="./assets/img/icon/ic-img-post.png"
+                                                alt="img icon" width="26" height="23" loading="lazy">
+                                        </div>
+                                        <div class="recommendedTitle">Jerat Bandar Narkoba dengan TPPU, Bareskrim Sita
+                                            Sejumlah
+                                            Kendaraan Mewah</div>
+                                    </a>
+                                </article>
+                                <article class="listRecommended">
+                                    <a href="#">
+                                        <div class="imgWrapp">
+                                            <img class="thumbnail"
+                                                src="./assets/img/dummy/dummy-img-artikel-terkait.png" alt="rekomendasi"
+                                                width="213" height="143" loading="lazy">
+                                            <img class="multimediaIcon" src="./assets/img/icon/ic-img-post.png"
+                                                alt="img icon" width="26" height="23" loading="lazy">
+                                        </div>
+                                        <div class="recommendedTitle">Jerat Bandar Narkoba dengan TPPU, Bareskrim Sita
+                                            Sejumlah
+                                            Kendaraan Mewah</div>
+                                    </a>
+                                </article>
+                                <article class="listRecommended">
+                                    <a href="#">
+                                        <div class="imgWrapp">
+                                            <img class="thumbnail"
+                                                src="./assets/img/dummy/dummy-img-artikel-terkait.png" alt="rekomendasi"
+                                                width="213" height="143" loading="lazy">
+                                            <img class="multimediaIcon" src="./assets/img/icon/ic-img-post.png"
+                                                alt="img icon" width="26" height="23" loading="lazy">
+                                        </div>
+                                        <div class="recommendedTitle">Jerat Bandar Narkoba dengan TPPU, Bareskrim Sita
+                                            Sejumlah
+                                            Kendaraan Mewah</div>
+                                    </a>
+                                </article>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- display none -->
+                <div id="modalAI" class="modal fade modal-ai in" tabindex="-1" role="dialog">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-body">
+                                <p id="msg_off">Aktifkan fitur berita di sekitarmu?"</p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-ai btn-toggle-yes btn-default">Ya</button>
+                                <button type="button" class="btn btn-ai btn-toggle-no btn-disabled"
+                                    data-dismiss="modal">Batal</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- End News Location -->
+
+                <!-- Lihat berita lainnya -->
+                <a role="button" class="btnMoreNews" target="#newsUpdate">Lihat Berita Lainnya</a>
+                <div>
+                    <!-- Ads mgid -->
+                </div>
+                <div>
+                    <!-- Ads Geozo -->
+                </div>
+                <!-- News Update -->
+                <div id="newsUpdate" class="articleRecommended">
+                    <div class="recommendedHeader">
+                        <img src="./assets/img/icon/ic-berita-terkini.png" alt="icon news update" width="24" height="24"
+                            loading="lazy">
+                        <div class="recommendedTitleHeadre">Berita Terkini</div>
+                    </div>
+                    <div class="recommendedBody">
+                        <article class="listRecommended">
+                            <a href="#">
+                                <div class="imgWrapp">
+                                    <img class="thumbnail" src="./assets/img/dummy/dummy-img-artikel-terkait.png"
+                                        alt="rekomendasi" width="213" height="143" loading="lazy">
+                                    <img class="multimediaIcon" src="./assets/img/icon/ic-img-post.png" alt="img icon"
+                                        width="26" height="23" loading="lazy">
+                                </div>
+                                <div class="kanalAndTime">
+                                    <div class="kanal">Nasional</div>
+                                    <div class="postTime">33 menit lalu</div>
+                                </div>
+                                <div class="recommendedTitle">Jerat Bandar Narkoba dengan TPPU, Bareskrim Sita
+                                    Sejumlah
+                                    Kendaraan Mewah</div>
+                            </a>
+                        </article>
+                        <article class="listRecommended">
+                            <a href="#">
+                                <div class="imgWrapp">
+                                    <img class="thumbnail" src="./assets/img/dummy/dummy-img-artikel-terkait.png"
+                                        alt="rekomendasi" width="213" height="143" loading="lazy">
+                                    <img class="multimediaIcon" src="./assets/img/icon/ic-img-post.png" alt="img icon"
+                                        width="26" height="23" loading="lazy">
+                                </div>
+                                <div class="kanalAndTime">
+                                    <div class="kanal">Nasional</div>
+                                    <div class="postTime">33 menit lalu</div>
+                                </div>
+                                <div class="recommendedTitle">Jerat Bandar Narkoba dengan TPPU, Bareskrim Sita
+                                    Sejumlah
+                                    Kendaraan Mewah</div>
+                            </a>
+                        </article>
+                        <article class="listRecommended">
+                            <a href="#">
+                                <div class="imgWrapp">
+                                    <img class="thumbnail" src="./assets/img/dummy/dummy-img-artikel-terkait.png"
+                                        alt="rekomendasi" width="213" height="143" loading="lazy">
+                                    <img class="multimediaIcon" src="./assets/img/icon/ic-img-post.png" alt="img icon"
+                                        width="26" height="23" loading="lazy">
+                                </div>
+                                <div class="kanalAndTime">
+                                    <div class="kanal">Nasional</div>
+                                    <div class="postTime">33 menit lalu</div>
+                                </div>
+                                <div class="recommendedTitle">Jerat Bandar Narkoba dengan TPPU, Bareskrim Sita
+                                    Sejumlah
+                                    Kendaraan Mewah</div>
+                            </a>
+                        </article>
+                        <article class="listRecommended">
+                            <a href="#">
+                                <div class="imgWrapp">
+                                    <img class="thumbnail" src="./assets/img/dummy/dummy-img-artikel-terkait.png"
+                                        alt="rekomendasi" width="213" height="143" loading="lazy">
+                                    <img class="multimediaIcon" src="./assets/img/icon/ic-img-post.png" alt="img icon"
+                                        width="26" height="23" loading="lazy">
+                                </div>
+                                <div class="kanalAndTime">
+                                    <div class="kanal">Nasional</div>
+                                    <div class="postTime">33 menit lalu</div>
+                                </div>
+                                <div class="recommendedTitle">Jerat Bandar Narkoba dengan TPPU, Bareskrim Sita
+                                    Sejumlah
+                                    Kendaraan Mewah</div>
+                            </a>
+                        </article>
+                        <article class="listRecommended">
+                            <a href="#">
+                                <div class="imgWrapp">
+                                    <img class="thumbnail" src="./assets/img/dummy/dummy-img-artikel-terkait.png"
+                                        alt="rekomendasi" width="213" height="143" loading="lazy">
+                                    <img class="multimediaIcon" src="./assets/img/icon/ic-img-post.png" alt="img icon"
+                                        width="26" height="23" loading="lazy">
+                                </div>
+                                <div class="kanalAndTime">
+                                    <div class="kanal">Nasional</div>
+                                    <div class="postTime">33 menit lalu</div>
+                                </div>
+                                <div class="recommendedTitle">Jerat Bandar Narkoba dengan TPPU, Bareskrim Sita
+                                    Sejumlah
+                                    Kendaraan Mewah</div>
+                            </a>
+                        </article>
+                        <article class="listRecommended">
+                            <a href="#">
+                                <div class="imgWrapp">
+                                    <img class="thumbnail" src="./assets/img/dummy/dummy-img-artikel-terkait.png"
+                                        alt="rekomendasi" width="213" height="143" loading="lazy">
+                                    <img class="multimediaIcon" src="./assets/img/icon/ic-img-post.png" alt="img icon"
+                                        width="26" height="23" loading="lazy">
+                                </div>
+                                <div class="kanalAndTime">
+                                    <div class="kanal">Nasional</div>
+                                    <div class="postTime">33 menit lalu</div>
+                                </div>
+                                <div class="recommendedTitle">Jerat Bandar Narkoba dengan TPPU, Bareskrim Sita
+                                    Sejumlah
+                                    Kendaraan Mewah</div>
+                            </a>
+                        </article>
+                    </div>
+                </div>
+                <!-- End News Update -->
+            </article>
+            <aside>
+                <figure class="asideAds ">
+                    <figcaption>Advertisement</figcaption>
+                    <img src="./assets/img/dummy/dummy-side-ads.png" alt="ads" width="100%" height="100%"
+                        loading="lazy">
+                </figure>
+                <figure class="asideAds ">
+                    <figcaption>Advertisement</figcaption>
+                    <img src="./assets/img/dummy/dummy-side-ads2.png" alt="ads" width="100%" height="100%"
+                        loading="lazy">
+                </figure>
+
+                <!-- Widget Inews Network -->
+                <article class="widgetInewsNetwork ">
+                    <div class="headerWidget">iNews Network</div>
+                    <article class="listWidgetContent">
+                        <a href="#">
+                            <div class="widgetImgWrapp">
+                                <img class="thumbnail" src="./assets/img/dummy/dummy-img-widget-inews-network.png"
+                                    alt="news network" width="100%" height="100%" loading="lazy">
+                                <img src="./assets/img/icon/ic-video-post.png" alt="video" class="multimediaIcon"
+                                    loading="lazy" width="16" height="16">
+                            </div>
+                            <span class="NewsNetwork">iNews Aceh</span>
+                            <div class="widgetdContentTitle">Badai Musim Dingin Mulai Ada, Joe Biden Umumkan Ada dan
+                                Mengatakan Persiapan</div>
+                        </a>
+                    </article>
+                    <article class="listWidgetContent">
+                        <a href="#">
+                            <div class="widgetImgWrapp">
+                                <img class="thumbnail" src="./assets/img/dummy/dummy-img-widget-inews-network.png"
+                                    alt="news network" width="100%" height="100%" loading="lazy">
+                                <img src="./assets/img/icon/ic-video-post.png" alt="video" class="multimediaIcon"
+                                    loading="lazy" width="16" height="16">
+                            </div>
+                            <span class="NewsNetwork">iNews Aceh</span>
+                            <div class="widgetdContentTitle">Badai Musim Dingin Mulai Ada, Joe Biden Umumkan Ada dan
+                                Mengatakan Persiapan</div>
+                        </a>
+                    </article>
+                    <article class="listWidgetContent">
+                        <a href="#">
+                            <div class="widgetImgWrapp">
+                                <img class="thumbnail" src="./assets/img/dummy/dummy-img-widget-inews-network4x2.png"
+                                    alt="news network" width="100%" height="100%" loading="lazy">
+                                <!-- img multimedia -->
+                            </div>
+                            <span class="NewsNetwork">iNews Aceh</span>
+                            <div class="widgetdContentTitle">Badai Musim Dingin Mulai Ada, Joe Biden Umumkan Ada dan
+                                Mengatakan Persiapan</div>
+                        </a>
+                    </article>
+                    <article class="listWidgetContent">
+                        <a href="#">
+                            <div class="widgetImgWrapp">
+                                <img class="thumbnail" src="./assets/img/dummy/dummy-img-widget-inews-network1x1.png"
+                                    alt="news network" width="100%" height="100%" loading="lazy">
+                                <img src="./assets/img/icon/ic-img-post.png" alt="video" class="multimediaIcon"
+                                    loading="lazy" width="16" height="16">
+                            </div>
+                            <span class="NewsNetwork">iNews Aceh</span>
+                            <div class="widgetdContentTitle">Badai Musim Dingin Mulai Ada, Joe Biden Umumkan Ada dan
+                                Mengatakan Persiapan</div>
+                        </a>
+                    </article>
+                    <article class="listWidgetContent">
+                        <a href="#">
+                            <div class="widgetImgWrapp">
+                                <img class="thumbnail" src="./assets/img/dummy/dummy-img-widget-inews-network1x1.png"
+                                    alt="news network" width="100%" height="100%" loading="lazy">
+                                <img src="./assets/img/icon/ic-img-post.png" alt="video" class="multimediaIcon"
+                                    loading="lazy" width="16" height="16">
+                            </div>
+                            <span class="NewsNetwork">iNews Aceh</span>
+                            <div class="widgetdContentTitle">Badai Musim Dingin Mulai Ada, Joe Biden Umumkan Ada dan
+                                Mengatakan Persiapan</div>
+                        </a>
+                    </article>
+                </article>
+                <!-- End Widget Inews Network -->
+
+                <!-- Widget Piala Asia -->
+                <div id="widgetPialaAsia" class="row">
+                    <div class="widget-network">
+                        <div class="widget-network-bg">
+                            <a href="https://www.inews.id/tag/piala-asia-2023"><img
+                                    src="https://img.inews.co.id/media/600/files/inews_new/2024/04/04/piala_asia_2024_desk.png"
+                                    title="banner piala asia 2023" alt="banner piala asia 2023" /></a>
+                        </div>
+                        <div class="widget-item" style="width: calc(100% - 24px)">
+                            <a
+                                href="https://www.inews.id/sport/soccer/sosok-nasrullo-kabirov-wasit-indonesia-vs-qatar-di-piala-asia-u-23-2024-yang-disebut-selevel-tarkam">
+                                <div class="widget-item-img">
+                                    <img src="https://img.inews.co.id/media/200/files/inews_new/2024/04/16/wasit_nasrullo_kabirov_memberi_kartu_merah_kepada.jpg"
+                                        alt="piala-asia">
+                                </div>
+                                <div class="widget-item-isi">
+                                    <p>Sosok Nasrullo Kabirov, Wasit Indonesia Vs Qatar di Piala Asia U-23 2024 yang
+                                        Disebut Selevel Tarkam</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="widget-item" style="width: calc(100% - 24px)">
+                            <a
+                                href="https://www.inews.id/sport/soccer/4-kontroversi-wasit-timnas-indonesia-u-23-vs-qatar-di-piala-asia-u-23-2024-jelas-untungkan-tuan-rumah">
+                                <div class="widget-item-img">
+                                    <img src="https://img.inews.co.id/media/200/files/inews_new/2024/04/16/wasit_nasrullo_kabirov_memberi_kartu_merah_kepada.jpg"
+                                        alt="piala-asia">
+                                </div>
+                                <div class="widget-item-isi">
+                                    <p>4 Kontroversi Wasit Timnas Indonesia U-23 vs Qatar di Piala Asia U-23 2024, Jelas
+                                        Untungkan Tuan Rumah!</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="widget-item" style="width: calc(100% - 24px)">
+                            <a
+                                href="https://www.inews.id/sport/soccer/pelatih-qatar-tak-peduli-timnas-indonesia-protes-soal-keputusan-wasit-piala-asia-u-23-kami-yang-layak-menang">
+                                <div class="widget-item-img">
+                                    <img src="https://img.inews.co.id/media/200/files/inews_new/2024/04/15/timnas_indonesia_u_23_vs_qatar.jpg"
+                                        alt="piala-asia">
+                                </div>
+                                <div class="widget-item-isi">
+                                    <p>Pelatih Qatar Tak Peduli Timnas Indonesia Protes soal Keputusan Wasit Piala Asia
+                                        U-23: Kami yang Layak Menang</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="widget-item" style="width: calc(100% - 24px)">
+                            <a
+                                href="https://www.inews.id/sport/soccer/ivar-jenner-dan-ramadhan-sananta-absen-2-laga-karena-kartu-merah-sty-ini-situasi-terburuk">
+                                <div class="widget-item-img">
+                                    <img src="https://img.inews.co.id/media/200/files/inews_new/2024/04/15/pelatih_timnas_indonesia_u_23_shin_tae_yong_fot.jpg"
+                                        alt="piala-asia">
+                                </div>
+                                <div class="widget-item-isi">
+                                    <p>Ivar Jenner dan Ramadhan Sananta Absen 2 Laga karena Kartu Merah, STY: Ini
+                                        Situasi Terburuk</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="widget-item no-border">
+                            <div class="widget-item-more purple">
+                                <a href="https://www.inews.id/tag/piala-asia-u-23-2024">More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Widget Piala Asia End -->
+
+
+                <figure class="asideAds ">
+                    <figcaption>Advertisement</figcaption>
+                    <!-- img -->
+                </figure>
+
+                <!-- Popular Topic -->
+                <article class="popularTopic">
+                    <div class="headerPop">Popular Topics</div>
+                    <ul>
+                        <li class="one popularTopicList "><a href="#">Indonesia Menang Ajaib</a></li>
+                        <li class="two popularTopicList "><a href="#">Indonesia Menang Ajaib</a></li>
+                        <li class="three popularTopicList "><a href="#">Indonesia Menang Ajaib</a></li>
+                        <li class="four popularTopicList "><a href="#">Indonesia Menang Ajaib</a></li>
+                        <li class="five popularTopicList "><a href="#">Indonesia Menang Ajaib</a></li>
+                    </ul>
+                </article>
+                <!-- End Popular Topic -->
+            </aside>
+        </section>
+    </main>
+    <!-- End Main -->
+    <button type="button" id="backToTop" aria-label="backToTop"><span class="backToTop"></span></button>
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footerBody">
+                <div class="withImg">
+                    <a href="#">
+                        <img src="./assets/img/logo-footer-inews.png" alt="iNews" width="185" height="67"
+                            loading="lazy">
+                    </a>
+
+                    <div class="socmed">
+                        <a href="#">
+                            <img src="./assets/img/icon/ic-sosmed-ig.png" alt="instagram" width="32" height="32"
+                                loading="lazy">
+                        </a>
+                        <a href="#">
+                            <img src="./assets/img/icon/ic-sosmed-fb.png" alt="facebook" width="32" height="32"
+                                loading="lazy">
+                        </a>
+                        <a href="#">
+                            <img src="./assets/img/icon/ic-sosmed-x.png" alt="x" width="32" height="32" loading="lazy">
+                        </a>
+                        <a href="#">
+                            <img src="./assets/img/icon/ic-sosmed-yt.png" alt="youtube" width="32" height="32"
+                                loading="lazy">
+                        </a>
+                        <a href="#">
+                            <img src="./assets/img/icon/ic-sosmed-tt.png" alt="tiktok" width="32" height="32"
+                                loading="lazy">
+                        </a>
+                    </div>
+                    <div class="donwloadApp">
+                        <a href="#">
+                            <img src="./assets/img/get-app-playstore.png" alt="play store" width="103.21" height="38"
+                                loading="lazy">
+                        </a>
+                        <a href="#">
+                            <img src="./assets/img/get-app-appstore.png" alt="play store" width="103" height="39"
+                                loading="lazy">
+                        </a>
+                    </div>
+                </div>
+                <ul class="listInfoFooter">
+                    <li>Company Profile</li>
+                    <li><a href="#">Tentang Kamil</a></li>
+                    <li><a href="#">Redaksi</a></li>
+                    <li><a href="#">Pedoman Media Siber</a></li>
+                    <li><a href="#">Disclaimer</a></li>
+                    <li><a href="#">Terms of Services</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Kontak Kami</a></li>
+                    <li><a href="#">Sitemap</a></li>
+                </ul>
+                <ul class="listInfoFooter">
+                    <li>Informasi</li>
+                    <li><a href="#">Karir</a></li>
+                    <li><a href="#">MNC Group Business</a></li>
+                    <li><a href="#">Profile MNC Group</a></li>
+                    <li><a href="#">MNC Peduli</a></li>
+                </ul>
+                <ul class="listInfoFooter">
+                    <li>MNC portal</li>
+                    <li><a href="#">Okezone</a></li>
+                    <li><a href="#">SINDOnews</a></li>
+                    <li><a href="#">IDXChannel</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="license">Copyright ©2023 iNews.id. All Rights Reserved</div>
+    </footer>
+    <!-- End Footer -->
+
+
+    <!-- Modals -->
+    <div class="modalContainer">
+        <!-- Burger Navigation -->
+        <div id="burgerMenu">
+            <div class="headerBurgerMenu">
+                <img src="./assets/img/logo-kanal-inews.png" alt="iNews.id" width="151.866" height="55" loading="lazy">
+                <button type="button" id="closeBurgerMenu">
+                    <span class="ic-close-burger-menu"></span>
+                </button>
+            </div>
+            <div class="bodyBurgerMenu">
+                <div class="menuKanal">
+                    <div class="headerMenuKanal">Kanal</div>
+                    <ul class="listMenuKanal">
+                        <li class="listKanal"><a href="#">News <span class="ic-news-burger"></span></a></li>
+                        <li class="listKanal"><a href="#">Daerah <span class="ic-daerah-burger"></span></a></li>
+                        <li class="listKanal"><a href="#">Finance <span class="ic-finance-burger"></span></a></li>
+                        <li class="listKanal"><a href="#">Sport <span class="ic-sport-burger"></span></a></li>
+                        <li class="listKanal"><a href="#">Lifestyle <span class="ic-lifestyle-burger"></span></a></li>
+                        <li class="listKanal"><a href="#">Travel <span class="ic-travel-burger"></span></a></li>
+                        <li class="listKanal"><a href="#">Otomotif <span class="ic-otomotif-burger"></span></a></li>
+                        <li class="listKanal"><a href="#">Techno <span class="ic-techno-burger"></span></a></li>
+                    </ul>
+                </div>
+                <div class="mncPortal">
+                    <div class="headerMenuKanal">Kanal</div>
+                    <ul>
+                        <li><a href="#" target="_blank">Okezone</a></li>
+                        <li><a href="#" target="_blank">IDX Channel</a></li>
+                        <li><a href="#" target="_blank">SINDOnews</a></li>
+                    </ul>
+                </div>
+                <div class="liveTV">
+                    <div class="headerMenuKanal">MNC Portal dan Live TV</div>
+                    <ul>
+                        <li><a href="#">iNews TV</a></li>
+                        <li><a href="#">RCTI</a></li>
+                        <li><a href="#">IDX Channel</a></li>
+                        <li><a href="#">MNC TV</a></li>
+                        <li><a href="#">GTV</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- End Burger Navigation -->
+
+        <!-- Network Dropdown -->
+        <div id="networkDropdown">
+            <div class="container">
+                <div class="networkHeader">
+                    <span class="textHeader">iNews Network</span>
+                    <button type="button" id="closeDropdown">
+                        <span class="ic-close-dropdown"></span>
+                    </button>
+                    <div class="textDesc">Kami membuka kesempatan bagi Anda yang ingin menjadi pebisnis media melalui
+                        program iNews.id
+                        Network. <a href="#"> Klik lebih lanjut</a></div>
+                </div>
+                <div class="dropdownMenu">
+                    <div class="networkChannel">
+                        <ul class="pulau">
+                            <li class="listPulau" data-pulau="sumatera">Sumatra</li>
+                            <li class="listPulau" data-pulau="jawa">Jawa</li>
+                            <li class="listPulau" data-pulau="kalimantan">Kalimantan</li>
+                            <li class="listPulau" data-pulau="sulawesi">Sulawesi</li>
+                            <li class="listPulau" data-pulau="papua">Papua</li>
+                            <li class="listPulau" data-pulau="kep-nusa-tenggara">Kepulauan Nusa Tenggara</li>
+                            <li class="listPulau" data-pulau="kep-bali">Kepulauan Bali</li>
+                            <li class="listPulau" data-pulau="kep-maluku">Kepulauan Maluku</li>
+                        </ul>
+                        <span class="lineVertical"></span>
+                        <section id="listNetwork">
+                            <ul id="kabupaten"></ul>
+                        </section>
+                    </div>
+                    <div class="networkUpdate">
+                        <a href="#">
+                            <span>Network Updates</span>
+                            <span>News updates from 99+ regions</span>
+                            <span class="ic-network-updates"></span>
+                        </a>
+                        <a href="#">
+                            <span>Personalize Your News</span>
+                            <span>Get your customized local news</span>
+                            <span class="ic-personalize"></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Network Dropdown -->
+    </div>
+    <!-- Stiky Ads -->
+    <div class="stickyAds">
+        <button type="button" id="closeAds" onclick="$('.stickyAds').hide()">Close Ads X</button>
+        <!-- Ads here -->
+    </div>
+    <!-- End Stiky Ads -->
+    <!-- JS -->
+    <script type="module" src="./assets/js/script.js"></script>
+</body>
+
+</html>

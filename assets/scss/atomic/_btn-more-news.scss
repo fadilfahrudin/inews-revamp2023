@@ -1,0 +1,26 @@
+.btnMoreNews {
+    cursor: pointer;
+    width: max-content;
+    margin: 32px auto;
+    display: flex;
+    align-items: center;
+    gap: 0 4px;
+    padding: 8px 8px 8px 16px;
+    border-radius: 20px;
+    background-color: $color-dark-100;
+    color: $color-light-25;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 700;
+    transition: transform ease-in-out 0.3s;
+    &:hover {
+        transform: translateY(-4px);
+        box-shadow: 0px 1px 4px rgba(31, 30, 30, 0.747);
+    }
+
+    &::after {
+        content: url("../img/icon/ic-arrow-down.png");
+        margin: 0 4px;
+        line-height: 12px;
+    }
+}

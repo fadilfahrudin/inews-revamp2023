@@ -1,0 +1,205 @@
+#burgerMenu {
+    position: fixed;
+    top: 0;
+    right: -450px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px 0;
+    padding: 24px;
+    background-color: $color-white;
+    width: 423px;
+    height: 100vh;
+    .headerBurgerMenu {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        #closeBurgerMenu {
+            cursor: pointer;
+            .ic-close-burger-menu {
+                content: url("../img/icon/ic-close-burger-menu.png");
+                width: 24px;
+                height: 24px;
+            }
+        }
+    }
+    .bodyBurgerMenu {
+        display: flex;
+        width: 100%;
+        height: 100vh;
+        overflow-y: scroll;
+        flex-direction: column;
+        scrollbar-width: thin;
+        scrollbar-color: $color-dark-25 $color-light-100;
+        gap: 32px 0;
+        .menuKanal {
+            width: 100%;
+            height: auto;
+            .headerMenuKanal {
+                color: #0c0b0b;
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 160%;
+                margin-bottom: 20px;
+
+                padding-left: 16px;
+            }
+            .listMenuKanal {
+                list-style: none;
+                width: 100%;
+                height: auto;
+                padding: 0 16px;
+                display: flex;
+                flex-wrap: wrap;
+                gap: 11px;
+                .listKanal {
+                    width: calc((100% / 3) - 8px);
+                    height: 72px;
+                    padding: 8px 0;
+                    border-radius: 15px;
+                    background: #fefefe;
+
+                    /* Light/M */
+                    box-shadow: 0px 6px 12px 0px rgba(28, 39, 49, 0.05);
+                    &:hover {
+                        box-shadow: 0px 3px 6px 0px rgba(28, 39, 49, 0.05);
+                        a {
+                            color: $color-red-75;
+                        }
+                    }
+                    a {
+                        display: flex;
+                        flex-direction: column-reverse;
+                        align-items: center;
+                        gap: 8px 0;
+
+                        color: #0c0b0b;
+                        text-align: center;
+                        font-size: 16px;
+                        font-style: normal;
+                        font-weight: 700;
+                        line-height: 150%; /* 24px */
+
+                        span {
+                            display: block;
+                        }
+                        .ic-news-burger {
+                            content: url("../img/icon/ic-news-burger.png");
+                            width: 24px;
+                            height: 24px;
+                        }
+                        .ic-daerah-burger {
+                            content: url("../img/icon/ic-daerah-burger.png");
+                            width: 24px;
+                            height: 24px;
+                        }
+                        .ic-finance-burger {
+                            content: url("../img/icon/ic-finance-burger.png");
+                            width: 24px;
+                            height: 24px;
+                        }
+                        .ic-sport-burger {
+                            content: url("../img/icon/ic-sport-burger.png");
+                            width: 24px;
+                            height: 24px;
+                        }
+                        .ic-lifestyle-burger {
+                            content: url("../img/icon/ic-lifestyle-burger.png");
+                            width: 24px;
+                            height: 24px;
+                        }
+                        .ic-travel-burger {
+                            content: url("../img/icon/ic-travel-burger.png");
+                            width: 24px;
+                            height: 24px;
+                        }
+                        .ic-otomotif-burger {
+                            content: url("../img/icon/ic-otomotif-burger.png");
+                            width: 24px;
+                            height: 24px;
+                        }
+                        .ic-techno-burger {
+                            content: url("../img/icon/ic-techno-burger.png");
+                            width: 24px;
+                            height: 24px;
+                        }
+                    }
+                }
+            }
+        }
+        .mncPortal {
+            .headerMenuKanal {
+                color: #0c0b0b;
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 160%;
+                margin-bottom: 16px;
+
+                padding-left: 16px;
+            }
+            ul {
+                list-style: none;
+                width: 100%;
+                height: 95px;
+                display: flex;
+                flex-direction: column;
+                gap: 9px 0;
+                flex-wrap: wrap;
+                padding: 0 16px;
+                li {
+                    &:hover {
+                        a {
+                            color: $color-dark-50;
+                        }
+                    }
+                    a {
+                        width: max-content;
+                        color: #000;
+                        font-size: 14px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 150%; /* 21px */
+                    }
+                }
+            }
+        }
+        .liveTV {
+            .headerMenuKanal {
+                color: #0c0b0b;
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 160%;
+                margin-bottom: 16px;
+
+                padding-left: 16px;
+            }
+            ul {
+                list-style: none;
+                width: 100%;
+                height: 95px;
+                display: flex;
+                flex-direction: column;
+                gap: 9px 0;
+                flex-wrap: wrap;
+                padding: 0 16px;
+                li {
+                    &:hover {
+                        a {
+                            color: $color-dark-25;
+                        }
+                    }
+                    a {
+                        width: max-content;
+                        color: #000;
+                        font-size: 14px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 150%; /* 21px */
+                    }
+                }
+            }
+        }
+    }
+}

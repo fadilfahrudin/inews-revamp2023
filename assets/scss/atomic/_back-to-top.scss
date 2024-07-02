@@ -1,0 +1,15 @@
+#backToTop {
+    cursor: pointer;
+    position: fixed;
+    bottom: 87px;
+    right: 80px;
+    z-index: 999;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+    .backToTop {
+        content: url("../img/icon/ic-back-toTop.png");
+        width: 48px;
+        height: auto;
+    }
+}

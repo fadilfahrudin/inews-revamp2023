@@ -1,0 +1,85 @@
+.share {
+    display: flex;
+    gap: 0 8px;
+    align-items: center;
+    label {
+        font-family: Inter, sans-serif;
+        font-size: 14px;
+        font-weight: 400;
+        color: $color-gray-100;
+    }
+    .iconShare {
+        position: relative;
+        display: flex;
+        align-items: center;
+        gap: 0 4px;
+        .ic-link-share-2 {
+            display: block;
+            content: url("../img/icon/ic-link-share.png");
+            width: 32px;
+            height: 32px;
+            &:hover {
+                content: url("../img/icon/ic-link-share-active.png");
+            }
+        }
+        #copied-2 {
+            display: none;
+            opacity: 0;
+            position: absolute;
+            top: 40px;
+            left: -45px;
+            background-color: rgba($color-dark-100, 0.9);
+            padding: 4px 16px;
+            border-radius: 32px;
+            color: #fff;
+            text-align: center;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 150%; /* 24px */
+
+            &.active {
+                opacity: 1;
+                display: block;
+                animation: copyAnimate 0.5s ease-in-out forwards;
+            }
+
+            @keyframes copyAnimate {
+                0% {
+                    opacity: 0;
+                }
+                100% {
+                    opacity: 1;
+                }
+            }
+        }
+        .ic-wa {
+            display: block;
+            content: url("../img/icon/ic-wa.png");
+            width: 32px;
+            height: 32px;
+            &:hover {
+                content: url("../img/icon/ic-wa-active.png");
+            }
+        }
+        .ic-fb {
+            display: block;
+            content: url("../img/icon/ic-fb.png");
+            width: 32px;
+            height: 32px;
+            &:hover {
+                content: url("../img/icon/ic-fb-active.png");
+            }
+        }
+        .ic-x {
+            display: block;
+            content: url("../img/icon/ic-x.png");
+            width: 32px;
+            height: 32px;
+
+            &:hover {
+                content: url("../img/icon/ic-x-active.png");
+            }
+        }
+    }
+}

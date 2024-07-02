@@ -1,0 +1,78 @@
+.popularTopic {
+    background-color: #fcfcfc;
+    padding: 16px 10px;
+    box-shadow: 0px 2px 4px rgba(28, 39, 49, 0.05);
+    border-radius: 18px;
+    .headerPop {
+        font-size: 18px;
+        margin-bottom: 8px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 150%;
+    }
+    ul {
+        .one::before {
+            content: "";
+            background-image: url("../img/icon/top-1.png");
+            background-size: 100%;
+            background-repeat: no-repeat;
+            width: 29px;
+            height: 37px;
+            margin-right: 8px;
+        }
+        .two::before {
+            content: "";
+            background-image: url(../img/icon/top-2.png);
+            background-size: 100%;
+            background-repeat: no-repeat;
+            width: 29px;
+            height: 37px;
+            margin-right: 8px;
+        }
+        .three::before {
+            content: "";
+            background-image: url(../img/icon/top-3.png);
+            background-size: 100%;
+            background-repeat: no-repeat;
+            width: 29px;
+            height: 37px;
+            margin-right: 8px;
+        }
+        .four::before {
+            content: "";
+            background-image: url(../img/icon/top-4.png);
+            background-size: 100%;
+            background-repeat: no-repeat;
+            width: 29px;
+            height: 37px;
+            margin-right: 8px;
+        }
+        .five::before {
+            content: "";
+            background-image: url(../img/icon/top-5.png);
+            background-size: 100%;
+            background-repeat: no-repeat;
+            width: 29px;
+            height: 37px;
+            margin-right: 8px;
+        }
+        .popularTopicList {
+            display: flex;
+            align-items: center;
+            margin-bottom: 16px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+            a {
+                font-size: 16px;
+                width: 100%;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                color: $color-dark-100;
+                font-weight: 700;
+                line-height: 24px;
+            }
+        }
+    }
+}

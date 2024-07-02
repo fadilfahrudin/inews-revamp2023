@@ -1,0 +1,136 @@
+article {
+    &.cardArticle {
+        position: relative;
+        width: 100%;
+        height: clamp(107px, 14vw, 117px);
+        margin-bottom: 24px;
+        a {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: row;
+            gap: 16px;
+            &:hover {
+                .cardImg {
+                    .thumbCard {
+                        transform: scale(1.1);
+                    }
+                }
+                .cardBody {
+                    .cardTitle {
+                        color: $color-red-75;
+                    }
+                }
+            }
+            .cardImg {
+                flex-shrink: 0;
+                position: relative;
+                width: clamp(154px, 14vw, 164px);
+                height: 100%;
+                overflow: hidden;
+                border-radius: 20px;
+                .thumbCard {
+                    transition: transform 0.3s ease-in-out;
+                    width: 100%;
+                    height: 100%;
+                    aspect-ratio: 5/3.5;
+                    object-fit: cover;
+                    object-position: center top;
+                }
+                .ic-video,
+                .ic-img,
+                .ic-pie-chart {
+                    position: absolute;
+                    top: 11px;
+                    left: 11px;
+                    width: 24px;
+                    height: 24px;
+                }
+                .ic-video {
+                    content: url("../img/icon/ic-video-post.png");
+                }
+                .ic-img {
+                    content: url("../img/icon/ic-img-post.png");
+                }
+                .ic-pie-chart {
+                    content: url("../img/icon/ic-multi-post.png");
+                }
+            }
+            .cardBody {
+                display: flex;
+                flex-direction: column;
+                gap: 8px;
+                .kanalAndTime {
+                    display: flex;
+                    justify-content: space-between;
+                    width: 100%;
+                    .kanal,
+                    .postTime {
+                        font-size: clamp(8px, 1vw, 12px);
+                        color: $color-red-50;
+                        font-style: normal;
+                        font-weight: 700;
+                        line-height: 150%;
+                    }
+                    .postTime {
+                        font-weight: 400;
+                        color: $color-dark-10;
+                    }
+                }
+                .cardTitle {
+                    color: $color-dark-75;
+                    display: -webkit-box;
+                    -webkit-box-orient: vertical;
+                    -webkit-line-clamp: 3;
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                }
+            }
+        }
+        &.card__col {
+            width: calc(100% / 3 - 11px);
+            height: auto;
+            margin-bottom: 0;
+            a {
+                flex-direction: column;
+                .cardImg {
+                    width: 100%;
+                    height: clamp(100px, 13vw, 143px);
+                }
+            }
+        }
+        &.card__multimed {
+            a {
+                .cardImg {
+                    height: clamp(80px, 11vw, 120px);
+                }
+            }
+        }
+        &.card__headline {
+            height: auto;
+            a {
+                flex-direction: column;
+                .cardImg {
+                    width: 100%;
+                    height: clamp(320px, 100%, 489px);
+                    .ic-video,
+                    .ic-img,
+                    .ic-pie-chart {
+                        position: absolute;
+                        top: 51px;
+                        left: 12px;
+                        width: 36px;
+                        height: 36px;
+                    }
+                }
+                .cardBody {
+                    .kanalAndTime {
+                        .postTime {
+                            font-size: clamp(10px, 1vw, 14px);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

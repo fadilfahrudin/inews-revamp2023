@@ -1,0 +1,48 @@
+.subscribeINews {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    padding: 16px;
+    padding-left: 20px;
+    margin-bottom: 24px;
+    background-color: #272725;
+    background-image: url("../img/indonesia-dot.png");
+    background-repeat: no-repeat;
+    background-position: 90% center;
+    background-size: auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    span {
+        color: #fff;
+        font-family: Inter, sans-serif;
+        font-size: clamp(12px, 1.5vw, 16px);
+        font-style: normal;
+        font-weight: 700;
+        line-height: 28px;
+    }
+    .goToFollow {
+        padding: 8px 16px;
+        border-radius: 32px;
+        border: 1px solid #fff;
+        background: #484844;
+
+        color: #fafafa;
+        font-family: Inter-Regular, sans-serif;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 150%; /* 18px */
+        transition:
+            background-color 0.3s ease-in-out,
+            color 0.3s ease-in-out;
+        -webkit-transition:
+            background-color 0.3s ease-in-out,
+            color 0.3s ease-in-out;
+        &:hover {
+            background-color: #fafafa;
+            color: #484844;
+        }
+    }
+}

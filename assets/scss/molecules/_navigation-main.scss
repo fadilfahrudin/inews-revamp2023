@@ -1,0 +1,102 @@
+nav {
+    &.nav__main {
+        position: relative;
+        width: 100%;
+        height: auto;
+        z-index: 99;
+        background-color: #fff;
+        box-shadow: 0 4px 5px rgba(0, 0, 0, 0.12);
+        &.sticky {
+            position: fixed;
+            top: 46px;
+            left: 0;
+            .container {
+                margin-bottom: 0;
+            }
+        }
+        .container {
+            position: relative;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: start;
+            flex-wrap: wrap;
+            list-style: none;
+            margin-bottom: 20px;
+            overflow-y: hidden;
+            transition: height 0.3s ease-in-out;
+
+            &.dropDown {
+                height: 80px;
+            }
+            .navList {
+                padding: 8px 24px 0px 24px;
+                border-radius: 8px 8px 0px 0px;
+                transition: background-color 0.3s ease-in-out;
+                &:has(.navLink-active) {
+                    background-color: #fafafa;
+                }
+                &:hover .navLink::after {
+                    transform: translateY(0);
+                    transition: all 0.3s ease-in-out;
+                }
+                &:hover {
+                    background-color: #fafafa;
+                }
+                .navLink {
+                    position: relative;
+                    overflow-y: hidden;
+                    padding-bottom: 8px;
+
+                    font-family: Inter, sans-serif;
+                    font-size: 16px;
+                    font-weight: 700;
+                    line-height: 24px;
+                    color: #8c8c8c;
+
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 4px;
+                        border-radius: 4px 4px 0px 0px;
+                        background-color: #d80605;
+
+                        transform: translateY(8px);
+                        transition: all 0.3s ease-in-out;
+                    }
+
+                    &:focus {
+                        color: #212121;
+                        &::after {
+                            transform: translateY(0);
+                        }
+                    }
+                    &.navLink-active {
+                        color: #212121;
+                        &::after {
+                            transform: translateY(0);
+                        }
+                    }
+                }
+            }
+            .ic-dropdown-kanal {
+                cursor: pointer;
+                position: absolute;
+                right: 0;
+                top: 18px;
+                content: url("../img/icon/ic-dropdown-kanal.png");
+                width: 16.667px;
+                height: 8.333px;
+                transform: scaleY(1);
+                transition: transform 0.3s ease-in-out;
+
+                &.dropDown {
+                    transform: scaleY(-1);
+                }
+            }
+        }
+    }
+}

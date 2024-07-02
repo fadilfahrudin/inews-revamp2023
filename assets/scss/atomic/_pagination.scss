@@ -1,0 +1,86 @@
+.pagination {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    label {
+        font-size: 14px;
+        line-height: 21px;
+        font-weight: 700;
+        font-style: normal;
+        color: #242424;
+    }
+    .paginationContent {
+        list-style: none;
+        display: flex;
+        align-items: center;
+        gap: 0 8px;
+
+        .pageList {
+            width: 24px;
+            height: 24px;
+            a {
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 24px;
+                color: $color-gray-100;
+                text-align: center;
+                transition: color 0.2s ease-in-out;
+            }
+
+            &.active {
+                background-color: $color-red-75;
+                border-radius: 50%;
+                a {
+                    color: $color-white;
+                }
+            }
+            &:hover {
+                background-color: $color-red-75;
+                border-radius: 50%;
+                a {
+                    color: $color-white;
+                }
+            }
+        }
+        .showAll {
+            a {
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 21px;
+                color: $color-dark-100;
+            }
+        }
+
+        li {
+            .prev,
+            .next {
+                line-height: 12px;
+            }
+
+            .prev {
+                .ic-prev {
+                    content: url("../img/icon/ic-arrow-left.png");
+                    width: 9px;
+                    height: auto;
+                }
+                .ic-prev-active {
+                    content: url("../img/icon/ic-arrow-left-active.png");
+                    width: 9px;
+                    height: auto;
+                }
+            }
+            .next {
+                .ic-next-active {
+                    content: url("../img/icon/ic-arrow-right-active.png");
+                    width: 9px;
+                    height: auto;
+                }
+                .ic-next {
+                    content: url("../img/icon/ic-arrow-right.png");
+                    width: 9px;
+                    height: auto;
+                }
+            }
+        }
+    }
+}
