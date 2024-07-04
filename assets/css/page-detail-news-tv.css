@@ -89,6 +89,11 @@ nav.nav__main .container .ic-dropdown-kanal {
   transform: scaleY(1);
   transition: transform 0.3s ease-in-out;
 }
+@media screen and (max-width: 1365px) {
+  nav.nav__main .container .ic-dropdown-kanal {
+    right: 5%;
+  }
+}
 nav.nav__main .container .ic-dropdown-kanal.dropDown {
   transform: scaleY(-1);
 }
@@ -128,7 +133,6 @@ article.headline__tv .schedule__tv {
 article.headline__tv .schedule__tv .scheduleWrapper {
   display: flex;
   width: 100%;
-  height: auto;
   scrollbar-width: none;
   scroll-behavior: smooth;
   height: 146px;

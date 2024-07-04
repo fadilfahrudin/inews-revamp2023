@@ -14,14 +14,14 @@
 }
 :root {
   scrollbar-width: thin;
-  scrollbar-color: #333333 #fcfcfc;
+  scrollbar-color: #343434 #fff;
 }
 
 body {
   font-family: Inter, sans-serif;
   scroll-behavior: smooth;
   min-height: 100vh;
-  scrollbar-color: #bd0100 #333333;
+  scrollbar-color: #d40403 #343434;
   background-color: #fff;
 }
 
@@ -147,7 +147,7 @@ aside.sideLeft {
   z-index: 999;
   width: 100%;
   height: auto;
-  background-color: #fcfcfc;
+  background-color: #fff;
 }
 #detail-article .topBarWrap .topBar {
   height: 48px;
@@ -280,12 +280,12 @@ aside.sideLeft {
 #detail-article .topBarWrap .topBar > div:nth-child(2) .searchForm input {
   width: 100%;
   height: 100%;
-  border: 1px solid #dcdcdc;
+  border: 1px solid #9a9a9a;
   border-radius: 16px;
   padding: 4px 16px;
 }
 #detail-article .topBarWrap .topBar > div:nth-child(2) .searchForm input:focus {
-  outline: 1px solid #212121;
+  outline: 1px solid #0d0d0d;
 }
 #detail-article .topBarWrap .topBar > div:nth-child(2) .searchForm .btnSearch {
   position: absolute;
@@ -307,7 +307,7 @@ aside.sideLeft {
   font-size: 14px;
   font-weight: 700;
   line-height: 21px;
-  color: #525252;
+  color: #595959;
 }
 #detail-article .topBarWrap .topBar > div:last-child .loginSection .btnLogin .ic-login {
   content: url("../img/icon/ic-user.png");
@@ -337,7 +337,7 @@ aside.sideLeft {
   font-weight: 700;
   font-style: normal;
   line-height: 21px;
-  color: #252121;
+  color: #2d2d2a;
 }
 #detail-article .topBarWrap .topBar > div:last-child .networkNav .dropDownBtn .ic-dropdown-network {
   content: url("../img/icon/ic-drop-down.png");
@@ -391,13 +391,13 @@ aside.sideLeft {
 footer {
   width: 100%;
   height: auto;
-  background-color: #333333;
+  background-color: #343434;
   background-image: url("../img/footer-bg.png");
   background-size: 100%;
   background-repeat: no-repeat;
   background-position: bottom center;
   background-blend-mode: multiply;
-  border-top: 5px solid #8a0100;
+  border-top: 5px solid #bd0100;
   position: relative;
   bottom: -20px;
 }
@@ -450,7 +450,7 @@ footer .footerBody .listInfoFooter li:first-child {
 }
 footer .footerBody .listInfoFooter li:hover a {
   transition: all 0.3s ease-in-out;
-  color: #dcdcdc;
+  color: #9a9a9a;
 }
 footer .footerBody .listInfoFooter li a {
   font-size: 12px;
@@ -461,7 +461,7 @@ footer .footerBody .listInfoFooter li a {
 footer .license {
   padding: 8px;
   width: 100%;
-  background-color: #212121;
+  background-color: #0d0d0d;
   text-align: center;
   font-size: 12px;
   line-height: 14.52px;
@@ -497,7 +497,7 @@ footer .license {
   width: 191px;
   height: 37px;
   border-radius: 37px;
-  background-color: #bd0100;
+  background-color: #d40403;
   padding: 4px 16px 4px 16px;
   display: flex;
   align-items: center;
@@ -545,7 +545,7 @@ footer .license {
   font-size: 16px;
   font-weight: 700;
   line-height: 24px;
-  color: #bd0100;
+  color: #d40403;
   margin-left: 26px;
 }
 .stickyFeature .stikyContent .like {
@@ -580,7 +580,7 @@ footer .license {
   font-weight: 700;
   line-height: 21px;
   text-align: center;
-  color: #212121;
+  color: #0d0d0d;
 }
 .stickyFeature .stikyContent .comment {
   cursor: pointer;
@@ -603,7 +603,7 @@ footer .license {
   font-weight: 700;
   line-height: 21px;
   text-align: center;
-  color: #212121;
+  color: #0d0d0d;
 }
 .stickyFeature .stikyContent .iconShare {
   margin-left: 4px;
@@ -627,7 +627,7 @@ footer .license {
   position: absolute;
   top: 52px;
   left: 154px;
-  background-color: rgba(33, 33, 33, 0.9);
+  background-color: rgba(13, 13, 13, 0.9);
   padding: 4px 16px;
   border-radius: 32px;
   color: #fff;
@@ -685,13 +685,13 @@ footer .license {
   width: 351px;
 }
 .stickyFeature .stikyContent .readNext:hover .readNextText {
-  color: #bd0100;
+  color: #d40403;
 }
 .stickyFeature .stikyContent .readNext .readNextText {
   font-size: 16px;
   font-weight: 400;
   line-height: 24px;
-  color: #212121;
+  color: #0d0d0d;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -765,7 +765,7 @@ footer .license {
   overflow-y: scroll;
   flex-direction: column;
   scrollbar-width: thin;
-  scrollbar-color: #333333 #fcfcfc;
+  scrollbar-color: #343434 #fff;
   gap: 32px 0;
 }
 #burgerMenu .bodyBurgerMenu .menuKanal {
@@ -803,7 +803,7 @@ footer .license {
   box-shadow: 0px 3px 6px 0px rgba(28, 39, 49, 0.05);
 }
 #burgerMenu .bodyBurgerMenu .menuKanal .listMenuKanal .listKanal:hover a {
-  color: #bd0100;
+  color: #d40403;
 }
 #burgerMenu .bodyBurgerMenu .menuKanal .listMenuKanal .listKanal a {
   display: flex;
@@ -880,7 +880,7 @@ footer .license {
   padding: 0 16px;
 }
 #burgerMenu .bodyBurgerMenu .mncPortal ul li:hover a {
-  color: #252121;
+  color: #2d2d2a;
 }
 #burgerMenu .bodyBurgerMenu .mncPortal ul li a {
   width: -moz-max-content;
@@ -911,7 +911,7 @@ footer .license {
   padding: 0 16px;
 }
 #burgerMenu .bodyBurgerMenu .liveTV ul li:hover a {
-  color: #333333;
+  color: #343434;
 }
 #burgerMenu .bodyBurgerMenu .liveTV ul li a {
   width: -moz-max-content;
@@ -945,14 +945,14 @@ footer .license {
   display: inline-block;
 }
 #networkDropdown .networkHeader .textHeader {
-  color: #212121;
+  color: #0d0d0d;
   font-size: 24px;
   font-style: normal;
   font-weight: 700;
   line-height: 160%;
 }
 #networkDropdown .networkHeader .textHeader::first-letter {
-  color: #d80605;
+  color: #de2027;
 }
 #networkDropdown .networkHeader #closeDropdown {
   cursor: pointer;
@@ -965,14 +965,14 @@ footer .license {
 #networkDropdown .networkHeader .textDesc {
   display: block;
   width: 100%;
-  color: #212121;
+  color: #0d0d0d;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
   line-height: 150%;
 }
 #networkDropdown .networkHeader .textDesc a {
-  color: #212121;
+  color: #0d0d0d;
   display: inline-block;
   font-weight: 700;
 }
@@ -998,7 +998,7 @@ footer .license {
   padding: 8px 16px;
   width: 100%;
   cursor: pointer;
-  color: #212121;
+  color: #0d0d0d;
   font-size: 16px;
   font-style: normal;
   font-weight: 700;
@@ -1032,7 +1032,7 @@ footer .license {
   height: 322px;
   overflow-y: scroll;
   scrollbar-width: thin;
-  scrollbar-color: #dcdcdc #fcfcfc;
+  scrollbar-color: #dcdcdc #fff;
 }
 #networkDropdown .dropdownMenu .networkChannel #listNetwork #kabupaten {
   list-style: none;
@@ -1048,7 +1048,7 @@ footer .license {
   padding: 8px 16px;
   width: 100%;
   cursor: pointer;
-  color: #212121;
+  color: #0d0d0d;
   font-size: 16px;
   font-style: normal;
   font-weight: 700;
@@ -1095,7 +1095,7 @@ footer .license {
 #networkDropdown .dropdownMenu .networkUpdate a span {
   position: relative;
   z-index: 1;
-  color: #212121;
+  color: #0d0d0d;
   font-size: 16px;
   font-style: normal;
   font-weight: 700;
@@ -1150,7 +1150,7 @@ footer .license {
   font-style: normal;
   font-weight: 700;
   line-height: 150%;
-  color: #212121;
+  color: #0d0d0d;
 }
 .widget__col .widgetHeader__col .seeAll {
   font-family: Inter, sans-serif;
@@ -1158,7 +1158,7 @@ footer .license {
   font-style: normal;
   font-weight: 500;
   line-height: 150%;
-  color: #000000;
+  color: #2d2d2a;
   margin-left: auto;
 }
 .widget__col .widgetBody__col {
@@ -1167,7 +1167,7 @@ footer .license {
   gap: 16px;
   border-radius: 12px;
   padding: 16px;
-  background-color: #f9f9f9;
+  background-color: #f4f4f4;
   box-shadow: 0px 6px 12px rgba(28, 39, 49, 0.05);
 }
 .widget__col .widgetBody__col.bg-none {
@@ -1192,7 +1192,7 @@ article.cardArticle a:hover .cardImg .thumbCard {
   transform: scale(1.1);
 }
 article.cardArticle a:hover .cardBody .cardTitle {
-  color: #bd0100;
+  color: #d40403;
 }
 article.cardArticle a .cardImg {
   flex-shrink: 0;
@@ -1243,17 +1243,17 @@ article.cardArticle a .cardBody .kanalAndTime {
 article.cardArticle a .cardBody .kanalAndTime .kanal,
 article.cardArticle a .cardBody .kanalAndTime .postTime {
   font-size: clamp(8px, 1vw, 12px);
-  color: #d80605;
+  color: #de2027;
   font-style: normal;
   font-weight: 700;
   line-height: 150%;
 }
 article.cardArticle a .cardBody .kanalAndTime .postTime {
   font-weight: 400;
-  color: #525252;
+  color: #595959;
 }
 article.cardArticle a .cardBody .cardTitle {
-  color: #2d2d2a;
+  color: #0d0d0d;
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 3;
@@ -1314,7 +1314,7 @@ article.cardArticle.card__headline a .cardBody .kanalAndTime .postTime {
 }
 .breadcrumb .lastPage {
   cursor: default;
-  color: #525252;
+  color: #595959;
 }
 
 .share {
@@ -1349,7 +1349,7 @@ article.cardArticle.card__headline a .cardBody .kanalAndTime .postTime {
   position: absolute;
   top: 40px;
   left: -45px;
-  background-color: rgba(33, 33, 33, 0.9);
+  background-color: rgba(13, 13, 13, 0.9);
   padding: 4px 16px;
   border-radius: 32px;
   color: #fff;
@@ -1410,7 +1410,7 @@ article.cardArticle.card__headline a .cardBody .kanalAndTime .postTime {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: #fcfcfc;
+  background-color: #fff;
   border-radius: 20px;
   margin: 0 auto;
   margin-bottom: 24px;
@@ -1439,7 +1439,7 @@ article.cardArticle.card__headline a .cardBody .kanalAndTime .postTime {
   position: relative;
   width: 300px;
   min-height: 250px;
-  background-color: #dcdcdc;
+  background-color: #9a9a9a;
   display: flex;
   justify-content: center;
   align-items: start;
@@ -1473,7 +1473,7 @@ article.cardArticle.card__headline a .cardBody .kanalAndTime .postTime {
 .widgetInewsNetwork {
   width: 100%;
   height: auto;
-  background-color: #212121;
+  background-color: #0d0d0d;
   padding: 16px;
   border-radius: 6px;
 }
@@ -1487,7 +1487,7 @@ article.cardArticle.card__headline a .cardBody .kanalAndTime .postTime {
   margin-bottom: 16px;
 }
 .widgetInewsNetwork .headerWidget::first-letter {
-  color: #d80605;
+  color: #de2027;
 }
 .widgetInewsNetwork .listWidgetContent {
   padding: 8px 0;
@@ -1564,7 +1564,7 @@ article.cardArticle.card__headline a .cardBody .kanalAndTime .postTime {
   font-weight: 700;
 }
 .widgetInewsNetwork .listWidgetContent a .NewsNetwork::first-letter {
-  color: #d80605;
+  color: #de2027;
 }
 .widgetInewsNetwork .listWidgetContent a .widgetImgWrapp {
   position: relative;
@@ -1744,7 +1744,7 @@ article.cardArticle.card__headline a .cardBody .kanalAndTime .postTime {
   bottom: 20px;
   left: 50%;
   transform: translateX(-50%);
-  background-color: #dcdcdc;
+  background-color: #9a9a9a;
   z-index: 999;
   display: flex;
   align-items: center;
@@ -1757,8 +1757,8 @@ article.cardArticle.card__headline a .cardBody .kanalAndTime .postTime {
   top: 0;
   cursor: pointer;
   padding: 5px 8px;
-  background-color: #525252;
-  color: #fcfcfc;
+  background-color: #595959;
+  color: #fff;
 }
 @media screen and (max-width: 1365px) {
   .stickyAds {

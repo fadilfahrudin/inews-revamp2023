@@ -2,7 +2,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    // border: 1px solid lightseagreen;
 }
 @font-face {
     font-family: Inter;
@@ -14,30 +13,6 @@
     src: url("../../assets/fonts/Inter/static/Inter-Bold.woff2"), format("woff2"),
         url("../../assets/fonts/Inter/static/Inter-Bold.ttf"), format("truetype");
 }
-
-// Color Variables
-$color-black: #000000;
-$color-white: #fff;
-
-$color-dark-100: #212121;
-$color-dark-75: #2d2d2a;
-$color-dark-50: #252121;
-$color-dark-25: #333333;
-$color-dark-10: #525252;
-
-$color-gray-100: #8c8c8c;
-$color-gray-75: #dcdcdc;
-
-$color-light-100: #fcfcfc;
-$color-light-75: #fafafa;
-$color-light-50: #f9f9f9;
-$color-light-25: #f4f4f4;
-
-$color-red-100: #8a0100;
-$color-red-75: #bd0100;
-$color-red-50: #d80605;
-
-$color-link: #00bfff;
 
 :root {
     scrollbar-width: thin;

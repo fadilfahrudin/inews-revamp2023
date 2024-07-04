@@ -1,3 +1,4 @@
+@use "media";
 @import "./molecules/navigation-main";
 article {
     &.headline__tv {
@@ -35,7 +36,6 @@ article {
             .scheduleWrapper {
                 display: flex;
                 width: 100%;
-                height: auto;
                 scrollbar-width: none;
                 scroll-behavior: smooth;
                 height: 146px;

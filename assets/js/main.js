@@ -1,16 +1,32 @@
-import { burgerMenu } from "./modules/burgermenu.js";
-import { geoLocation } from "./modules/geoLocation.js";
-import { modalQrtoApp } from "./modules/modalQrtoApp.js";
-import { navKanal, navMain } from "./modules/navKanal.js";
-import { networkDropdown, showHideDropdown } from "./modules/networksDropdown.js";
-import { pagination } from "./modules/pagination.js";
-import { ssoLogin } from "./modules/sso.js";
-import { counterLike, progressBar, resizeFontToggle, sticky, copyLink } from "./modules/sticky.js";
-import { backToTop } from "./modules/backToTop.js"
-import { schaduleSlider } from "./modules/newsTv.js"
+import { burgerMenu } from "./_modules/burgermenu.js";
+import { geoLocation } from "./_modules/geoLocation.js";
+import { modalQrtoApp } from "./_modules/modalQrtoApp.js";
+import { networkDropdown, showHideDropdown } from "./_modules/networksDropdown.js";
+import { pagination } from "./_modules/pagination.js";
+import { ssoLogin } from "./_modules/sso.js";
+import { counterLike, progressBar, resizeFontToggle, sticky, copyLink } from "./_modules/sticky.js";
+import { backToTop } from "./_modules/backToTop.js"
+import { schaduleSlider } from "./_modules/newsTv.js"
+import { Navigation } from "./modules/navigation.js";
+
+function initialize() {
+    initNav()
+}
+
+function initNav() {
+    if ($('#navbar-nav').length > 0) {
+        Navigation.dropDown()
+        if ($('.nav__main').length > 0) {
+            Navigation.stickyNavigationMainPage()
+        }
+    }
+}
+
+document.addEventListener("DOMContentLoaded", initialize);
 
 // Check Dokument is ready
 document.addEventListener("DOMContentLoaded", function () {
+
 
     // run geolocation function
     $('#switchInput').length > 0 && geoLocation();
@@ -32,10 +48,6 @@ document.addEventListener("DOMContentLoaded", function () {
     $('.stickyFeature').length > 0 && counterLike();
     $('.stickyFeature').length > 0 && copyLink();
     $('.share').length > 0 && copyLink();
-
-    // Nav Kanal
-    $('.navigationKanal').length > 0 && navKanal();
-    $('.nav__main').length > 0 && navMain();
 
     // iNews TV Feature
     $('.schedule__tv').length > 0 && schaduleSlider();

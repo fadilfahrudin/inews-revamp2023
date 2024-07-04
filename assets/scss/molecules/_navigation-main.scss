@@ -93,6 +93,10 @@ nav {
                 transform: scaleY(1);
                 transition: transform 0.3s ease-in-out;
 
+                @include media.ipad {
+                    right: 5%;
+                }
+
                 &.dropDown {
                     transform: scaleY(-1);
                 }
