@@ -5,7 +5,7 @@
     bottom: 20px;
     left: 50%;
     transform: translateX(-50%);
-    background-color: $color-gray-75;
+    background-color: var(--color-grey-75);
     z-index: 999;
 
     display: flex;
@@ -18,8 +18,8 @@
         top: 0;
         cursor: pointer;
         padding: 5px 8px;
-        background-color: $color-dark-0;
-        color: $color-light-100;
+        background-color: var(--color-dark-0);
+        color: var(--color-light-100);
     }
     @include media.ipad {
         width: 80%;

@@ -1,5 +1,5 @@
 @use "media";
-@import "library";
+@use "library" as *;
 @import "global";
 
 // Molecules
@@ -8,15 +8,18 @@
 @import "molecules/footer";
 @import "molecules/burger-menu";
 @import "molecules/network-dropdown";
+@import "molecules/widget-headline";
+@import "molecules/widget-list-article";
+@import "molecules/widget-popular";
+@import "molecules/widget-election-center";
+@import "molecules/widget-litigasi";
+@import "molecules/widget-inews-network";
+@import "molecules/widget-multimedia";
 
 // Atomic
 @import "atomic/portalception";
 @import "atomic/btn-laod-more";
-@import "atomic/card-article";
-@import "atomic/ads-970x250";
 @import "atomic/ads-aside";
-@import "atomic/widget-news-location";
-@import "atomic/widget-inews-network";
 @import "atomic/sso-login";
 @import "atomic/ads-placement";
 @import "atomic/hidden";

@@ -1,0 +1,127 @@
+// widget list article bisa digunakan untuk:
+// - widget hot news
+// - widget editor choice
+// - widget geolocation on
+// - widget geolocation detail page
+// - widget latest news
+// - widget latest multimedia(video, photo, infografis)
+// - widget latest news TV
+// - widget related (news, photo, video)
+// - widget Article Terkait
+
+.widgetListArticle {
+    width: 100%;
+    height: auto;
+    margin: 24px 0;
+
+    &__header {
+        display: flex;
+        flex-direction: row;
+        gap: 0 8px;
+        align-items: center;
+        margin-bottom: 16px;
+        margin-top: 32px;
+        &__title {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            .ic-editor-choice {
+                position: relative;
+                content: url("../img/icon/ic-editor-choice.png");
+                width: 24px;
+                height: 24px;
+            }
+            .ic-latest-news {
+                position: relative;
+                content: url("../img/icon/ic-latest-news.png");
+                width: 24px;
+                height: 24px;
+            }
+            .ic-hotNews {
+                position: relative;
+                content: url("../img/icon/ic-hotnews.png");
+                width: 24px;
+                height: 24px;
+            }
+            h3 {
+                font-family: Inter-Bold, sans-serif;
+                color: var(--color-dark-100);
+            }
+        }
+        &__action {
+            font-family: Inter, sans-serif;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 21px;
+            color: var(--color-black);
+            margin-left: auto;
+            padding: 4px 16px;
+            border-radius: 32px;
+            border: 1px solid var(--color-black-new, #171717);
+            transition:
+                background-color 0.2s ease-in-out,
+                color 0.2s ease-in-out;
+            &:hover {
+                background-color: var(--color-black);
+                color: var(--color-white);
+            }
+        }
+    }
+    &.col {
+        .widgetListArticle__body {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+            border-radius: 8px;
+            padding: 16px;
+            background-color: var(--color-light-50);
+            box-shadow: 0px 6px 12px rgba(28, 39, 49, 0.05);
+            &.bg-none {
+                background-color: transparent;
+                box-shadow: none;
+            }
+            @include CardArticle(
+                $width: calc(100% / 3 - 10.7px),
+                $height: 100%,
+                $flex-direction: column,
+                $img-height: clamp(100px, 12vw, 143px),
+                $img-width: 100%,
+                $radius: 16px,
+                $paddingCard: 0,
+                $radiusCard: 0,
+                $gap: 8px,
+                $kanal-text-size: 12px,
+                $bg-color: transparent
+            );
+        }
+    }
+    &.row {
+        .widgetListArticle__body {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 24px;
+            border-radius: 8px;
+            padding: 16px;
+            background-color: transparent;
+            box-shadow: none;
+            &.bg-none {
+                background-color: transparent;
+                box-shadow: none;
+            }
+            @include CardArticle(
+                $width: 100%,
+                $height: 117px,
+                $flex-direction: row,
+                $img-height: 100%,
+                $img-width: 164px,
+                $radius: 16px,
+                $paddingCard: 0,
+                $radiusCard: 0,
+                $gap: 8px,
+                $kanal-text-size: 14px,
+                $bg-color: transparent
+            );
+        }
+    }
+}

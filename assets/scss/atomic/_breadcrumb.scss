@@ -6,13 +6,13 @@
     line-height: 21px;
     display: flex;
     align-items: center;
-    color: $color-gray-100;
+    color: var(--color-grey-75);
     gap: 0 4px;
     & > a {
-        color: $color-gray-100;
+        color: var(--color-grey-75);
     }
     .lastPage {
         cursor: default;
-        color: $color-dark-0;
+        color: var(--color-dark-0);
     }
 }

@@ -42,7 +42,7 @@
 
 /* on checked slider background condition*/
 input:checked + .slider {
-    background-color: $color-red-75;
+    background-color: var(--color-red-75);
 }
 
 /* on checked slider toggle condition */

@@ -1,14 +1,14 @@
 footer {
     width: 100%;
     height: auto;
-    background-color: $color-dark-25;
+    background-color: var(--color-dark-25);
     background-image: url("../img/footer-bg.png");
     background-size: 100%;
     background-repeat: no-repeat;
     background-position: bottom center;
     background-blend-mode: multiply;
 
-    border-top: 5px solid $color-red-100;
+    border-top: 5px solid var(--color-red-100);
     position: relative;
     bottom: -20px;
     .footerBody {
@@ -29,7 +29,7 @@ footer {
                     font-size: 14px;
                     font-weight: 400;
                     line-height: 25.6px;
-                    color: $color-white;
+                    color: var(--color-white);
                 }
             }
             .socmed {
@@ -52,13 +52,13 @@ footer {
                     font-size: 18px;
                     font-weight: 700;
                     line-height: 28.8px;
-                    color: $color-white;
+                    color: var(--color-white);
                     margin-bottom: 16px;
                 }
                 &:hover {
                     a {
                         transition: all 0.3s ease-in-out;
-                        color: $color-gray-75;
+                        color: var(--color-grey-75);
                     }
                 }
 
@@ -66,7 +66,7 @@ footer {
                     font-size: 12px;
                     font-weight: 400;
                     line-height: 18px;
-                    color: $color-white;
+                    color: var(--color-white);
                 }
             }
         }
@@ -74,7 +74,7 @@ footer {
     .license {
         padding: 8px;
         width: 100%;
-        background-color: $color-dark-100;
+        background-color: var(--color-dark-100);
 
         text-align: center;
         font-size: 12px;

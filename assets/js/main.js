@@ -1,5 +1,5 @@
 import { burgerMenu } from "./_modules/burgermenu.js";
-import { geoLocation } from "./_modules/geoLocation.js";
+import { geoLocationWidget } from "./modules/geolocation-widget.js";
 import { modalQrtoApp } from "./_modules/modalQrtoApp.js";
 import { networkDropdown, showHideDropdown } from "./_modules/networksDropdown.js";
 import { pagination } from "./_modules/pagination.js";
@@ -8,9 +8,14 @@ import { counterLike, progressBar, resizeFontToggle, sticky, copyLink } from "./
 import { backToTop } from "./_modules/backToTop.js"
 import { schaduleSlider } from "./_modules/newsTv.js"
 import { Navigation } from "./modules/navigation.js";
+import { popularWidget } from "./modules/popular-widget.js";
+import { videoHighlightWidget } from "./modules/video-highlight-widget.js"
 
 function initialize() {
     initNav()
+    iniPopWidget()
+    initGeoLocationWidget()
+    initVideoHighlightWidget()
 }
 
 function initNav() {
@@ -22,15 +27,27 @@ function initNav() {
     }
 }
 
+function iniPopWidget() {
+    if ($('.widgetPopular').length > 0) {
+        popularWidget()
+    }
+}
+
+function initGeoLocationWidget() {
+    if ($('.widgetGeoLocation').length > 0) {
+        geoLocationWidget()
+    }
+}
+function initVideoHighlightWidget() {
+    if ($('.widgetVideoHighlight').length > 0) {
+        videoHighlightWidget()
+    }
+}
+
 document.addEventListener("DOMContentLoaded", initialize);
 
 // Check Dokument is ready
 document.addEventListener("DOMContentLoaded", function () {
-
-
-    // run geolocation function
-    $('#switchInput').length > 0 && geoLocation();
-
     // run modal qr to download app
     $('.app-gateway').length > 0 && modalQrtoApp();
 

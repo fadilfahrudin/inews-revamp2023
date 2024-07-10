@@ -1,0 +1,66 @@
+.widgetNewsHeadline {
+    display: grid;
+    grid-template-areas: "headline1 headline1 headline1 headline2" "headline1 headline1 headline1 headline3" "headline1 headline1 headline1 headline4" "headline1 headline1 headline1 headline5";
+    grid-auto-rows: clamp(90px, 10vw, 106px);
+    height: clamp(400px, 36vw, 480px);
+    width: 100%;
+    margin: 24px 0;
+
+    .headline1 {
+        grid-area: headline1;
+    }
+    .headline2 {
+        grid-area: headline2;
+    }
+    .headline3 {
+        grid-area: headline3;
+    }
+    .headline4 {
+        grid-area: headline4;
+    }
+    .headline5 {
+        grid-area: headline5;
+    }
+    @include CardArticle(
+        $width: 100%,
+        $height: 100%,
+        $flex-direction: row,
+        $img-height: 100%,
+        $img-width: 137px,
+        $radius: 10px,
+        $paddingCard: 8px,
+        $radiusCard: 8px,
+        $gap: 8px,
+        $kanal-text-size: 14px
+    );
+    .cardArticle {
+        &:first-child {
+            height: 100%;
+            a {
+                flex-direction: column;
+                gap: 17px;
+                .cardImg {
+                    width: 100%;
+                    height: clamp(261px, 25vw, 354px);
+                    .ic-video,
+                    .ic-img,
+                    .ic-pie-chart {
+                        position: absolute;
+                        top: 51px;
+                        left: 12px;
+                        width: 36px;
+                        height: 36px;
+                    }
+                }
+                .cardBody {
+                    gap: 9px;
+                    .kanalAndTime {
+                        .kanal {
+                            font-size: clamp(10px, 1.6vw, 16px);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

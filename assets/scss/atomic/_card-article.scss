@@ -18,7 +18,7 @@ article {
                 }
                 .cardBody {
                     .cardTitle {
-                        color: $color-red-75;
+                        color: var(--color-red-75);
                     }
                 }
             }
@@ -67,18 +67,18 @@ article {
                     .kanal,
                     .postTime {
                         font-size: clamp(8px, 1vw, 12px);
-                        color: $color-red-50;
+                        color: var(--color-red-50);
                         font-style: normal;
                         font-weight: 700;
                         line-height: 150%;
                     }
                     .postTime {
                         font-weight: 400;
-                        color: $color-dark-0;
+                        color: var(--color-dark-0);
                     }
                 }
                 .cardTitle {
-                    color: $color-dark-75;
+                    color: var(--color-dark-75);
                     display: -webkit-box;
                     -webkit-box-orient: vertical;
                     -webkit-line-clamp: 3;

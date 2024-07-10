@@ -6,7 +6,7 @@
         font-family: Inter, sans-serif;
         font-size: 14px;
         font-weight: 400;
-        color: $color-gray-100;
+        color: var(--color-grey-75);
     }
     .iconShare {
         position: relative;
@@ -28,7 +28,7 @@
             position: absolute;
             top: 40px;
             left: -45px;
-            background-color: rgba($color-dark-100, 0.9);
+            background-color: rgba(var(--color-dark-100), 0.9);
             padding: 4px 16px;
             border-radius: 32px;
             color: #fff;

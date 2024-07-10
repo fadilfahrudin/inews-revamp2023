@@ -1,0 +1,127 @@
+// widget popular bisa digunakan untuk:
+// - widget popular (news, photo, video)
+
+.widgetPopular {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    margin-bottom: 32px;
+    &__header {
+        display: flex;
+        flex-direction: row;
+        gap: 0 8px;
+        align-items: center;
+        margin-bottom: 16px;
+        &__title {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            h3 {
+                font-family: Inter-Bold, sans-serif;
+                color: var(--color-dark-100);
+            }
+            .ic-popular-widget {
+                position: relative;
+                content: url("../img/icon/ic-artikel-terkait.png");
+                width: 20px;
+                height: 19px;
+            }
+        }
+    }
+    &__body {
+        border-radius: 8px 8px 0 0;
+        padding: 16px;
+        padding-bottom: 0;
+        background-color: var(--color-light-50);
+        box-shadow: 0px 6px 12px rgba(28, 39, 49, 0.05);
+        &__wrappList {
+            transition: transform 0.3s ease-in-out;
+            display: flex;
+            gap: 16px;
+            overflow-x: scroll;
+            scrollbar-width: none;
+            .cardArticle {
+                flex-shrink: 0;
+            }
+            @include CardArticle(
+                $width: 211px,
+                $height: 100%,
+                $flex-direction: column,
+                $img-height: 143px,
+                $img-width: 100%,
+                $radius: 16px,
+                $paddingCard: 0,
+                $radiusCard: 0,
+                $gap: 8px,
+                $kanal-text-size: 12px,
+                $bg-color: transparent
+            );
+        }
+    }
+    &__footer {
+        border-radius: 0 0 8px 8px;
+        padding: 16px;
+        background-color: var(--color-light-50);
+        box-shadow: 0px 6px 12px rgba(28, 39, 49, 0.05);
+        display: flex;
+        justify-content: center;
+        gap: 11px;
+
+        &__btn {
+            position: relative;
+            cursor: pointer;
+
+            .ic-prev-popular {
+                display: block;
+                transform: rotate(180deg);
+                width: 18px;
+                height: 18px;
+                background: {
+                    image: url("../img/icon/ic-popular-active.png");
+                    repeat: no-repeat;
+                    position: center;
+                    size: 18px;
+                }
+            }
+
+            .ic-next-popular {
+                display: block;
+                width: 18px;
+                height: 18px;
+                background: {
+                    image: url("../img/icon/ic-popular-active.png");
+                    repeat: no-repeat;
+                    position: center;
+                    size: 18px;
+                }
+            }
+            &:disabled {
+                cursor: default;
+                .ic-prev-popular {
+                    display: block;
+                    transform: rotate(360deg);
+                    width: 18px;
+                    height: 18px;
+                    background: {
+                        image: url("../img/icon/ic-popular-disabled.png");
+                        repeat: no-repeat;
+                        position: center;
+                        size: 18px;
+                    }
+                }
+                .ic-next-popular {
+                    display: block;
+                    transform: rotate(180deg);
+                    width: 18px;
+                    height: 18px;
+                    background: {
+                        image: url("../img/icon/ic-popular-disabled.png");
+                        repeat: no-repeat;
+                        position: center;
+                        size: 18px;
+                    }
+                }
+            }
+        }
+    }
+}

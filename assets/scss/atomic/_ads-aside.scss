@@ -6,7 +6,7 @@
     @include media.ipad {
         width: 100%;
     }
-    background-color: $color-gray-75;
+    background-color: var(--color-light-0);
     display: flex;
     justify-content: center;
     align-items: start;
@@ -18,14 +18,16 @@
     }
     figcaption {
         position: absolute;
-        top: -20px;
+        top: -18px;
+        width: 100%;
+        border-radius: 24px 24px 0 0;
         align-self: center;
         text-align: center;
         font-family: Inter, sans-serif;
         font-size: 12px;
         font-weight: 400;
         line-height: 18px;
-        color: $color-gray-100;
-        background-color: $color-white;
+        color: #525252;
+        background-color: var(--color-light-50);
     }
 }

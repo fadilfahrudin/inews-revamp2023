@@ -12,7 +12,7 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            background-color: $color-light-100;
+            background-color: var(--color-light-100);
             border-radius: 20px;
             margin: 0 auto;
             margin-bottom: 24px;
@@ -24,7 +24,7 @@
                 font-size: 12px;
                 font-weight: 400;
                 line-height: 18px;
-                color: $color-gray-100;
+                color: var(--color-grey-75);
             }
             img {
                 width: clamp(400px, 100%, 970px);
@@ -45,18 +45,18 @@
                 line-height: 21px;
                 display: flex;
                 align-items: center;
-                color: $color-gray-100;
+                color: var(--color-grey-75);
                 gap: 0 4px;
                 & > a {
-                    color: $color-gray-100;
+                    color: var(--color-grey-75);
                 }
                 .lastPage {
                     cursor: default;
-                    color: $color-dark-0;
+                    color: var(--color-dark-0);
                 }
             }
             .headerTitle {
-                color: $color-dark-100;
+                color: var(--color-dark-100);
                 font-size: clamp(24px, 5vw, 32px);
             }
             .timeAndShare {
@@ -67,7 +67,7 @@
                     font-family: Inter, sans-serif;
                     font-size: 14px;
                     font-weight: 400;
-                    color: $color-dark-0;
+                    color: var(--color-dark-0);
                 }
                 .share {
                     display: flex;
@@ -77,7 +77,7 @@
                         font-family: Inter, sans-serif;
                         font-size: 14px;
                         font-weight: 400;
-                        color: $color-gray-100;
+                        color: var(--color-grey-75);
                     }
                     .iconShare {
                         position: relative;
@@ -99,7 +99,7 @@
                             position: absolute;
                             top: 40px;
                             left: -45px;
-                            background-color: rgba($color-dark-100, 0.9);
+                            background-color: rgba(var(--color-dark-100) ;, 0.9);
                             padding: 4px 16px;
                             border-radius: 32px;
                             color: #fff;
@@ -170,7 +170,7 @@
                         padding: 0 8px;
                         color: #252121;
                         &:hover {
-                            color: $color-dark-0;
+                            color: var(--color-dark-0);
                         }
                         img {
                             border-radius: 50%;
@@ -189,7 +189,7 @@
                     font-size: 12px;
                     font-weight: 400;
                     line-height: 18px;
-                    color: $color-dark-0;
+                    color: var(--color-dark-0);
                 }
                 img {
                     width: clamp(400px, 100%, 100%);
@@ -211,7 +211,7 @@
                 .bodyArticle {
                     p {
                         font-family: Inter, sans-serif;
-                        color: $color-dark-100;
+                        color: var(--color-dark-100);
                         margin-bottom: 24px;
                         font-size: 18px;
                         strong {
@@ -242,7 +242,7 @@
                             font-size: 12px;
                             font-weight: 400;
                             line-height: 18px;
-                            color: $color-dark-0;
+                            color: var(--color-dark-0);
                         }
                         img {
                             width: clamp(400px, 100%, 100%);
@@ -258,7 +258,7 @@
                             font-size: 12px;
                             font-weight: 400;
                             line-height: 18px;
-                            color: $color-dark-0;
+                            color: var(--color-dark-0);
                         }
                         img {
                             width: clamp(400px, 100%, 100%);
@@ -277,7 +277,7 @@
                             font-size: 12px;
                             font-weight: 400;
                             line-height: 18px;
-                            color: $color-dark-0;
+                            color: var(--color-dark-0);
                         }
                         img {
                             width: clamp(400px, 100%, 100%);
@@ -322,7 +322,7 @@
                 .asideAds {
                     width: 100%;
                     height: 250px;
-                    background-color: $color-gray-75;
+                    background-color: var(--color-grey-75);
 
                     &:nth-child(2) {
                         height: 600px;
@@ -340,8 +340,8 @@
                         font-size: 12px;
                         font-weight: 400;
                         line-height: 18px;
-                        color: $color-gray-100;
-                        background-color: $color-white;
+                        color: var(--color-grey-75);
+                        background-color: var(--color-white);
                     }
                 }
             }

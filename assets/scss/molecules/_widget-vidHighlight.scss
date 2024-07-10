@@ -1,8 +1,178 @@
 section {
-    &.widget__vidHighlight {
+    &.widgetVideoHighlight {
         position: relative;
         width: 100%;
-        height: 500px;
-        background-color: red;
+        height: 643px;
+        background-color: #171717;
+        margin: 24px 0;
+        padding-top: 30px;
+        padding-bottom: 62px;
+        @include media.ipad {
+            height: auto;
+        }
+        .container {
+            .widgetHeader {
+                display: flex;
+                justify-content: space-between;
+                h3 {
+                    color: var(--color-light-50);
+                }
+                .action {
+                    color: var(--color-light-50);
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 160%;
+                    padding: 8px 16px;
+
+                    border-radius: 32px;
+                    border: 1px solid var(--color-light-50);
+                    transition:
+                        background-color 0.3s ease-in-out,
+                        color 0.3s ease-in-out;
+                    &:hover {
+                        background-color: var(--color-light-50);
+                        color: var(--color-dark-75);
+                    }
+                }
+            }
+            .widgetBody {
+                display: flex;
+                gap: 16px;
+                .video-player {
+                    position: relative;
+                    flex-shrink: 0;
+                    width: 55%;
+                    height: 100%;
+                    overflow: hidden;
+                    border-radius: 16px 16px 0 0;
+                    #youtube-container {
+                        iframe {
+                            margin-bottom: 16px;
+                            aspect-ratio: 16 / 9;
+                            border: none;
+                            @include media.ipad {
+                                height: max-content;
+                            }
+                        }
+                    }
+
+                    .video-title {
+                        color: var(--color-white);
+                        display: -webkit-box;
+                        -webkit-box-orient: vertical;
+                        -webkit-line-clamp: 3;
+                        text-overflow: ellipsis;
+                        overflow: hidden;
+                    }
+                }
+                .playList {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 16px;
+                    .nextList {
+                        font-family: Inter-Bold, sans-serif;
+                        font-size: 18px;
+                        font-weight: 700;
+                        color: var(--color-white);
+                    }
+                    .listPlayer {
+                        position: relative;
+                        cursor: pointer;
+                        .playing {
+                            position: absolute;
+                            background-color: rgba(7, 7, 7, 0.637);
+                            z-index: 1;
+                            top: 0;
+                            left: 0;
+                            width: clamp(140px, 14vw, 180px);
+                            height: 100%;
+                            border-radius: 16px;
+
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+
+                            color: #eaeaea;
+                            font-family: Inter-Bold, sans-serif;
+                            font-size: 14px;
+                            font-weight: 700;
+                            font-style: normal;
+                        }
+                        article {
+                            &.cardArticle {
+                                cursor: pointer;
+                                position: relative;
+                                width: 100%;
+                                height: clamp(90px, 10vw, 101.25px);
+                                background-color: transparent;
+                                padding: 0;
+                                border-radius: 0;
+
+                                display: flex;
+                                gap: 16px;
+                                &:hover {
+                                    .cardImg {
+                                        .thumbCard {
+                                            transform: scale(1.03);
+                                        }
+                                    }
+                                    .cardBody {
+                                        .cardTitle {
+                                            color: var(--color-red);
+                                        }
+                                    }
+                                }
+                                .cardImg {
+                                    flex-shrink: 0;
+                                    position: relative;
+                                    width: clamp(140px, 14vw, 180px);
+                                    height: 100%;
+                                    overflow: hidden;
+                                    border-radius: 16px;
+                                    .thumbCard {
+                                        transition: transform 0.3s ease-in-out;
+                                        width: 100%;
+                                        height: 100%;
+                                        aspect-ratio: 5/3.5;
+                                        object-fit: cover;
+                                        object-position: center;
+                                    }
+                                    .ic-video,
+                                    .ic-img,
+                                    .ic-pie-chart {
+                                        position: absolute;
+                                        top: 11px;
+                                        left: 11px;
+                                        width: 24px;
+                                        height: 24px;
+                                    }
+                                    .ic-video {
+                                        content: url("../img/icon/ic-video-post.png");
+                                    }
+                                    .ic-img {
+                                        content: url("../img/icon/ic-img-post.png");
+                                    }
+                                    .ic-pie-chart {
+                                        content: url("../img/icon/ic-multi-post.png");
+                                    }
+                                }
+                                .cardBody {
+                                    .cardTitle {
+                                        font-family: Inter-Bold, sans-serif;
+                                        color: var(--color-light-50);
+                                        display: -webkit-box;
+                                        -webkit-box-orient: vertical;
+                                        -webkit-line-clamp: 3;
+                                        text-overflow: ellipsis;
+                                        overflow: hidden;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 }

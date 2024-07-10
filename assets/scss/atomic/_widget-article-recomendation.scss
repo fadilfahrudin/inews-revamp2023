@@ -12,7 +12,7 @@
             font-style: normal;
             font-weight: 700;
             line-height: 150%;
-            color: $color-dark-100;
+            color: var(--color-dark-100);
         }
     }
     .recommendedBody {
@@ -21,7 +21,7 @@
         gap: 16px;
         border-radius: 12px;
         padding: 16px;
-        background-color: $color-light-50;
+        background-color: var(--color-light-50);
         box-shadow: 0px 6px 12px rgba(28, 39, 49, 0.05);
 
         .listRecommended {
@@ -36,7 +36,7 @@
                         transform: scale(1.1);
                     }
                     .recommendedTitle {
-                        color: $color-red-75;
+                        color: var(--color-red-75);
                     }
                 }
                 .imgWrapp {
@@ -68,15 +68,15 @@
                         font-weight: 700;
                         font-size: clamp(8px, 1vw, 12px);
                         line-height: 18px;
-                        color: $color-red-50;
+                        color: var(--color-red-50);
                     }
                     .postTime {
-                        color: $color-dark-0;
+                        color: var(--color-dark-0);
                     }
                 }
                 .recommendedTitle {
                     font-size: clamp(10px, 1.5vw, 14px);
-                    color: $color-dark-75;
+                    color: var(--color-dark-75);
                     display: -webkit-box;
                     -webkit-box-orient: vertical;
                     -webkit-line-clamp: 4;
