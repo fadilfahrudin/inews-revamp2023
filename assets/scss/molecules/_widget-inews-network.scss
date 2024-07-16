@@ -32,7 +32,8 @@ section {
                 $gap: 8px,
                 $bg-color: transparent,
                 $font-family: Inter-Bold,
-                $title-color: #bdbdbd
+                $title-color: #bdbdbd,
+                $title-hover: var(--color-red-25)
             );
 
             .cardArticle:not(:first-child) {

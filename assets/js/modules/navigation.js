@@ -14,7 +14,7 @@ const dropDownNavigation = () => {
 
 const stickyNavigationMainPage = () => {
     let scrollY = $(this).scrollTop() || document.documentElement.scrollTop;
-    if (scrollY > 195) {
+    if (scrollY > $('.portalception').offset().top) {
         $('.nav__main').addClass('sticky');
     } else {
         $('.nav__main').removeClass('sticky');

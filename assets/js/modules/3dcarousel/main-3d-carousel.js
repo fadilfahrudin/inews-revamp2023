@@ -27,25 +27,21 @@ export default function main3dCarousel() {
     cloneSlide()
     setClassSlide()
 
-    $(".slide").each((i, el) => {
-        $(el).click(() => {
-            // if ($(el).index() == action.getCurrentIndex()) {
-            //     console.log('hi')
-            // }
-        })
-    })
-
-
-    $('#carousel3d .slide img').click((e) => action.objectClick(e.currentTarget));
+    $('#carousel3d .slide img').click((e) => {
+        setTimeout(() =>{
+            action.objectClick(e.currentTarget)
+        },100)
+    });
     $('#prev').click(() => action.prev());
     $('#next').click(() => action.next());
 
-    // $('#carousel3d ').on("click", (e) => {
-    //     console.log($(e.currentTarget).index())
-    //     console.log(action.getCurrentIndex())
-    //     if ($(e.currentTarget).index() == action.getCurrentIndex()) {
-    //         console.log('hi')
-    //     }
-    // })
+    $('#carousel3d .slide').on("click", (e) => {
+        if ($(e.currentTarget).hasClass("selected")) {
+            window.location.href = $(e.currentTarget).attr('data-link')
+        }
+    })
 
+    if ($("#widget3dCarousel").attr('data-auto-play') === 'true') {
+        setInterval(() => action.next(), 5000)
+    }
 }

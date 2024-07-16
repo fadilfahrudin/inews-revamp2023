@@ -180,12 +180,20 @@ nav.nav__main {
   box-shadow: 0 4px 5px rgba(0, 0, 0, 0.12);
 }
 nav.nav__main.sticky {
-  position: fixed;
-  top: 46px;
+  position: sticky;
   left: 0;
+  animation: animate 0.6s forwards ease-in-out;
 }
 nav.nav__main.sticky .container {
   margin-bottom: 0;
+}
+@keyframes animate {
+  0% {
+    top: 0;
+  }
+  100% {
+    top: 46px;
+  }
 }
 nav.nav__main .container {
   position: relative;
@@ -210,12 +218,11 @@ nav.nav__main .container .navList {
 nav.nav__main .container .navList:has(.navLink-active) {
   background-color: var(--color-light-75);
 }
-nav.nav__main .container .navList:hover .navLink::after {
-  transform: translateY(0);
-  transition: all 0.3s ease-in-out;
-}
 nav.nav__main .container .navList:hover {
   background-color: var(--color-light-75);
+}
+nav.nav__main .container .navList:hover .navLink {
+  color: var(--color-maroon-25);
 }
 nav.nav__main .container .navList .navLink {
   position: relative;
@@ -1042,7 +1049,12 @@ footer .license {
 .widgetNewsHeadline article.cardArticle a:hover .cardImg .thumbCard {
   transform: scale(1.03);
 }
+.widgetNewsHeadline article.cardArticle a:hover .cardBody .kanalAndTime .kanal {
+  transition: color 0.3s ease-in-out;
+  color: var(--color-maroon-25);
+}
 .widgetNewsHeadline article.cardArticle a:hover .cardBody .cardTitle {
+  transition: color 0.3s ease-in-out;
   color: var(--color-red);
 }
 .widgetNewsHeadline article.cardArticle a .cardImg {
@@ -1252,7 +1264,12 @@ footer .license {
 .widgetListArticle.col .widgetListArticle__body article.cardArticle a:hover .cardImg .thumbCard {
   transform: scale(1.03);
 }
+.widgetListArticle.col .widgetListArticle__body article.cardArticle a:hover .cardBody .kanalAndTime .kanal {
+  transition: color 0.3s ease-in-out;
+  color: var(--color-maroon-25);
+}
 .widgetListArticle.col .widgetListArticle__body article.cardArticle a:hover .cardBody .cardTitle {
+  transition: color 0.3s ease-in-out;
   color: var(--color-red);
 }
 .widgetListArticle.col .widgetListArticle__body article.cardArticle a .cardImg {
@@ -1378,7 +1395,12 @@ footer .license {
 .widgetListArticle.row .widgetListArticle__body article.cardArticle a:hover .cardImg .thumbCard {
   transform: scale(1.03);
 }
+.widgetListArticle.row .widgetListArticle__body article.cardArticle a:hover .cardBody .kanalAndTime .kanal {
+  transition: color 0.3s ease-in-out;
+  color: var(--color-maroon-25);
+}
 .widgetListArticle.row .widgetListArticle__body article.cardArticle a:hover .cardBody .cardTitle {
+  transition: color 0.3s ease-in-out;
   color: var(--color-red);
 }
 .widgetListArticle.row .widgetListArticle__body article.cardArticle a .cardImg {
@@ -1537,7 +1559,12 @@ footer .license {
 .widgetPopular__body__wrappList article.cardArticle a:hover .cardImg .thumbCard {
   transform: scale(1.03);
 }
+.widgetPopular__body__wrappList article.cardArticle a:hover .cardBody .kanalAndTime .kanal {
+  transition: color 0.3s ease-in-out;
+  color: var(--color-maroon-25);
+}
 .widgetPopular__body__wrappList article.cardArticle a:hover .cardBody .cardTitle {
+  transition: color 0.3s ease-in-out;
   color: var(--color-red);
 }
 .widgetPopular__body__wrappList article.cardArticle a .cardImg {
@@ -1722,7 +1749,12 @@ section.widgetElectionCenter .widget__body article.cardArticle a {
 section.widgetElectionCenter .widget__body article.cardArticle a:hover .cardImg .thumbCard {
   transform: scale(1.03);
 }
+section.widgetElectionCenter .widget__body article.cardArticle a:hover .cardBody .kanalAndTime .kanal {
+  transition: color 0.3s ease-in-out;
+  color: var(--color-maroon-25);
+}
 section.widgetElectionCenter .widget__body article.cardArticle a:hover .cardBody .cardTitle {
+  transition: color 0.3s ease-in-out;
   color: var(--color-red);
 }
 section.widgetElectionCenter .widget__body article.cardArticle a .cardImg {
@@ -1890,7 +1922,12 @@ section.widgetLitigasi .widget__body article.cardArticle a {
 section.widgetLitigasi .widget__body article.cardArticle a:hover .cardImg .thumbCard {
   transform: scale(1.03);
 }
+section.widgetLitigasi .widget__body article.cardArticle a:hover .cardBody .kanalAndTime .kanal {
+  transition: color 0.3s ease-in-out;
+  color: var(--color-maroon-25);
+}
 section.widgetLitigasi .widget__body article.cardArticle a:hover .cardBody .cardTitle {
+  transition: color 0.3s ease-in-out;
   color: var(--color-red);
 }
 section.widgetLitigasi .widget__body article.cardArticle a .cardImg {
@@ -2047,8 +2084,13 @@ section.widgetNewsNetwork .widget__body article.cardArticle a {
 section.widgetNewsNetwork .widget__body article.cardArticle a:hover .cardImg .thumbCard {
   transform: scale(1.03);
 }
+section.widgetNewsNetwork .widget__body article.cardArticle a:hover .cardBody .kanalAndTime .kanal {
+  transition: color 0.3s ease-in-out;
+  color: var(--color-maroon-25);
+}
 section.widgetNewsNetwork .widget__body article.cardArticle a:hover .cardBody .cardTitle {
-  color: var(--color-red);
+  transition: color 0.3s ease-in-out;
+  color: var(--color-red-25);
 }
 section.widgetNewsNetwork .widget__body article.cardArticle a .cardImg {
   flex-shrink: 0;
@@ -2204,8 +2246,13 @@ section.widgetMultimedia .widget__body article.cardArticle a {
 section.widgetMultimedia .widget__body article.cardArticle a:hover .cardImg .thumbCard {
   transform: scale(1.03);
 }
+section.widgetMultimedia .widget__body article.cardArticle a:hover .cardBody .kanalAndTime .kanal {
+  transition: color 0.3s ease-in-out;
+  color: var(--color-maroon-25);
+}
 section.widgetMultimedia .widget__body article.cardArticle a:hover .cardBody .cardTitle {
-  color: var(--color-red);
+  transition: color 0.3s ease-in-out;
+  color: var(--color-red-25);
 }
 section.widgetMultimedia .widget__body article.cardArticle a .cardImg {
   flex-shrink: 0;
@@ -2312,11 +2359,11 @@ section.widgetMultimedia .widget__footer a {
   border: 1px solid var(--color-white);
   border-radius: 32px;
   color: #f4f4f4;
-  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out, border 0.3s ease-in-out;
 }
 section.widgetMultimedia .widget__footer a:hover {
-  background-color: var(--color-dark-25);
-  color: var(--color-white);
+  background-color: var(--color-red);
+  border: 1px solid var(--color-red);
 }
 
 .portalception {

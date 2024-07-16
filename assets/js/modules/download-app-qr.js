@@ -1,4 +1,4 @@
-export const modalQrtoApp = () => {
+export const downloadAppQR = () => {
     $(window).on('click', function (event) {
         switch (event.target) {
             case $(".modal-app-gateway")[0]:

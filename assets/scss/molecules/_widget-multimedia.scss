@@ -29,7 +29,8 @@ section {
                 $gap: 16px,
                 $kanal-text-size: 14px,
                 $bg-color: transparent,
-                $title-color: var(--color-light-0)
+                $title-color: var(--color-light-0),
+                $title-hover: var(--color-red-25)
             );
         }
         .widget__footer {
@@ -45,11 +46,10 @@ section {
                 border-radius: 32px;
                 color: #f4f4f4;
                 transition:
-                    background-color 0.3s ease-in-out,
-                    color 0.3s ease-in-out;
+                    background-color 0.3s ease-in-out, border 0.3s ease-in-out;
                 &:hover {
-                    background-color: var(--color-dark-25);
-                    color: var(--color-white);
+                    background-color: var(--color-red);
+                    border: 1px solid var(--color-red);
                 }
             }
         }
