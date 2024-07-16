@@ -10,12 +10,14 @@ import { schaduleSlider } from "./_modules/newsTv.js"
 import { Navigation } from "./modules/navigation.js";
 import { popularWidget } from "./modules/popular-widget.js";
 import { videoHighlightWidget } from "./modules/video-highlight-widget.js"
+import main3dCarousel from "./modules/3dcarousel/main-3d-carousel.js";
 
 function initialize() {
     initNav()
     iniPopWidget()
     initGeoLocationWidget()
     initVideoHighlightWidget()
+    ini3dCarousel()
 }
 
 function initNav() {
@@ -41,6 +43,12 @@ function initGeoLocationWidget() {
 function initVideoHighlightWidget() {
     if ($('.widgetVideoHighlight').length > 0) {
         videoHighlightWidget()
+    }
+}
+
+function ini3dCarousel() {
+    if ($("#widget3dCarousel").length > 0) {
+        main3dCarousel()
     }
 }
 

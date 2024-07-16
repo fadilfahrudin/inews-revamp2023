@@ -1,0 +1,167 @@
+.breadcrumb {
+  margin: 24px 0;
+  font-family: Inter, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  display: flex;
+  align-items: center;
+  color: var(--color-grey-75);
+  gap: 0 4px;
+}
+.breadcrumb > a {
+  color: var(--color-grey-75);
+}
+.breadcrumb .lastPage {
+  cursor: default;
+  color: var(--color-dark-0);
+}
+
+section.WidgetPhotoGalery {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 549px;
+  background-color: #171717;
+  margin-bottom: 24px;
+  padding: 24px 0;
+}
+section.WidgetPhotoGalery .container .widget__header {
+  font-family: Inter-Bold, sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 38.4px;
+  color: var(--color-white);
+  text-align: center;
+  margin-bottom: 20px;
+}
+section.WidgetPhotoGalery .container #carousel3d {
+  position: relative;
+  height: 320px;
+  width: 100%;
+  margin: auto;
+}
+section.WidgetPhotoGalery .container #carousel3d .slide {
+  position: absolute;
+  transition: transform 1s, left 1s, opacity 1s, z-index 0s, opacity 1s;
+  opacity: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+section.WidgetPhotoGalery .container #carousel3d .slide img {
+  width: 563px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  transition: width 1s, height 1s;
+  border-radius: 16px;
+  overflow: hidden;
+}
+section.WidgetPhotoGalery .container #carousel3d .slide .titleImg {
+  width: 563px;
+  height: 114px;
+  opacity: 0;
+  color: #fff;
+  font-family: Inter-Bold, sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 38.4px;
+  position: absolute;
+  bottom: -122px;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+section.WidgetPhotoGalery .container #carousel3d .slide.selected {
+  z-index: 10;
+  left: 50%;
+  transform: translateY(0px) translateX(-50%);
+  height: 100%;
+}
+section.WidgetPhotoGalery .container #carousel3d .slide.selected img {
+  height: 317px;
+}
+section.WidgetPhotoGalery .container #carousel3d .slide.selected .titleImg {
+  opacity: 1;
+}
+section.WidgetPhotoGalery .container #carousel3d .slide.hideLeft {
+  left: 0%;
+  opacity: 0;
+  transform: translateY(-5%) translateX(50%);
+  height: 100%;
+}
+section.WidgetPhotoGalery .container #carousel3d .slide.hideLeft img {
+  width: 300px;
+  height: 150px;
+}
+section.WidgetPhotoGalery .container #carousel3d .slide.hideRight {
+  left: 100%;
+  opacity: 0;
+  transform: translateY(-5%) translateX(-500px);
+  height: 100%;
+}
+section.WidgetPhotoGalery .container #carousel3d .slide.hideRight img {
+  width: 300px;
+  height: 150px;
+}
+section.WidgetPhotoGalery .container #carousel3d .slide.prev {
+  z-index: 5;
+  left: 30%;
+  transform: translateX(-50%);
+  height: 100%;
+}
+section.WidgetPhotoGalery .container #carousel3d .slide.prev img {
+  width: 425px;
+  height: 239px;
+}
+section.WidgetPhotoGalery .container #carousel3d .slide.next {
+  z-index: 5;
+  left: 70%;
+  transform: translateX(-50%);
+  height: 100%;
+}
+section.WidgetPhotoGalery .container #carousel3d .slide.next img {
+  width: 425px;
+  height: 239px;
+}
+section.WidgetPhotoGalery .container #carousel3d .slide.prevLeftSecond {
+  z-index: 4;
+  left: 18%;
+  transform: translateX(-50%);
+  opacity: 0.7;
+  height: 100%;
+}
+section.WidgetPhotoGalery .container #carousel3d .slide.prevLeftSecond img {
+  width: 337px;
+  height: 190px;
+  border-radius: 16px;
+  overflow: hidden;
+}
+section.WidgetPhotoGalery .container #carousel3d .slide.nextRightSecond {
+  z-index: 4;
+  left: 83%;
+  transform: translateX(-50%);
+  opacity: 0.7;
+  height: 100%;
+}
+section.WidgetPhotoGalery .container #carousel3d .slide.nextRightSecond img {
+  width: 337px;
+  height: 190px;
+  border-radius: 16px;
+  overflow: hidden;
+}
+section.WidgetPhotoGalery .container .buttonsCarousel {
+  z-index: 22;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  bottom: 67px;
+}
+section.WidgetPhotoGalery .container .buttonsCarousel .container {
+  display: flex;
+  justify-content: space-between;
+}/*# sourceMappingURL=page-multimedia.css.map */

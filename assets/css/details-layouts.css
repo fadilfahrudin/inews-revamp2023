@@ -52,7 +52,7 @@ body {
   scroll-behavior: smooth;
   min-height: 100vh;
   scrollbar-color: var(--color-red-75) var(--color-dark-25);
-  background-color: var(--color-white);
+  background-color: var(--color-white) !important;
 }
 
 h1 {
@@ -1599,6 +1599,7 @@ article.cardArticle.card__headline a .cardBody .kanalAndTime .postTime {
 }
 
 .breadcrumb {
+  margin: 24px 0;
   font-family: Inter, sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -1733,7 +1734,7 @@ article.cardArticle.card__headline a .cardBody .kanalAndTime .postTime {
   font-size: 12px;
   font-weight: 400;
   line-height: 18px;
-  color: var(--color-grey-75);
+  color: var(--color-black);
 }
 .adsPlacement a img {
   width: clamp(400px, 100%, 970px);

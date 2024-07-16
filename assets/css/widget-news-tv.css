@@ -52,7 +52,7 @@ body {
   scroll-behavior: smooth;
   min-height: 100vh;
   scrollbar-color: var(--color-red-75) var(--color-dark-25);
-  background-color: var(--color-white);
+  background-color: var(--color-white) !important;
 }
 
 h1 {
