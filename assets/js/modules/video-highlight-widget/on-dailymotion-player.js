@@ -1,7 +1,6 @@
 
-const playlist = $('.listPlayer')
+import { setDailymotionPlayer } from "./video-highlight-widget.js";
 let videoID
-const playing = `<div class="playing"><img src="./assets/img/icon/ic-playing-video.png" alt="play" width="24" height="24"loading="lazy"> Now Playing</div>`
 
 function loadDailymotionScript(callback) {
     let script = document.createElement('script');
@@ -17,12 +16,13 @@ const createDailymotionPlayer = () => {
 
     dailymotion.getPlayer()
         .then((player) => {
-            getPlayerControl(player)
-            setVideoPlayer(player)
+            videoPlayerControl(player)
+            setDailymotionPlayer(player)
+            // setPlaylist(player)
         }).catch((e) => console.error(e));
 }
 
-const getPlayerControl = async (player) => {
+const videoPlayerControl = async (player) => {
     window.addEventListener('scroll', () => {
         if ($(window).scrollTop() > $('.widgetVideoHighlight').offset().top - $('.widgetVideoHighlight').height() && $(window).scrollTop() < $('.widgetVideoHighlight').offset().top + $('.widgetVideoHighlight').height()) {
             player.play()
@@ -34,29 +34,7 @@ const getPlayerControl = async (player) => {
 
 }
 
-const setVideoPlayer = (player) => {
-    playlist.each((index, element) => {
-        // if (index == 0) {
-        //     $(element).prepend(playing)
-        //     $('.video-title').text($(element).data("title"))
-        //     videoID = $(element).data("link-dailymotion").split("embed/video/")[1]
-        //     player.loadContent({ video: videoID })
-        // }
-        $(element).on("click", () => {
-            videoID = $(element).data("link-dailymotion").split("embed/video/")[1]
-            $('.playing').remove()
-            $(element).prepend(playing)
-            $('.video-title').text($(element).data("title"))
-            console.log(videoID)
-            player.loadContent({ video: videoID })
-            // player.on(dailymotion.PLAYER_VIDEOCHANGE, () => {
-            //     player.loadContent({ video: videoID })
-            // })
-        })
-    })
-}
 export const onDailymotionPlayer = () => {
-
     if (window.dailymotion === undefined) {
         window.dailymotion = {
             onScriptLoaded: () => createDailymotionPlayer()

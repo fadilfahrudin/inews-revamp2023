@@ -39,7 +39,6 @@
     <meta name="twitter:url" content="https://www.inews.id/sport/soccer">
     <meta name="twitter:domain" content="https://www.inews.id/sport/soccer">
     <link rel="preload" href="https://geo.dailymotion.com/libs/player.js" as="script">
-    <link rel="preload" href="https://imasdk.googleapis.com/js/sdkloader/ima3.js" as="script">
     <!-- JQuery -->
     <script src="./assets/js/lib/jquery-3.7.1.min.js"></script>
     <!-- CSS -->
@@ -753,19 +752,17 @@
             </div>
             <div class="widgetBody">
                 <div class="video-player">
-                    <!-- <div id="youtube-container"></div> -->
-                    <div id="dailymotion-container"></div>
+                    <div class="main-video-container">
+                        <div id="youtube-container"></div>
+                        <div id="dailymotion-container"></div>
+                    </div>
                     <h2 class="video-title">Badai Musim Dingin Mengganas, Joe Biden Umumkan Keadaan Darurat di New York,
                         Donald Trump Murka
                         Pada Dunia</h2>
                 </div>
                 <div class="playList">
                     <span class="nextList">Up Next</span>
-                    <div class="listPlayer" data-link-dailymotion="https://www.dailymotion.com/embed/video/x6o6sby"
-                        data-youtubeID="PBzagZEIXDE" data-title="Badai Musim Dingin Mengganas, Joe Biden Umumkan Keadaan Darurat di
-                    New York,
-                    Donald Trump Murka
-                    Pada Dunia">
+                    <div class="listPlayer" data-link="https://www.youtube.com/embed/4hpsACcMIig" data-title="Badai Musim Dingin Mengganas, Joe Biden Umumkan Keadaan Darurat di New York, Donald Trump Murka Pada Dunia">
                         <article class="cardArticle">
                             <figure class="cardImg">
                                 <img class="thumbCard" src="https://img.youtube.com/vi/PBzagZEIXDE/hqdefault.jpg"
@@ -782,9 +779,8 @@
                             </div>
                         </article>
                     </div>
-                    <div class="listPlayer" data-link-dailymotion="https://www.dailymotion.com/embed/video/x6o6sa9"
-                        data-youtubeID="_kYxLnh7FmY" data-title="Jerat Bandar Narkoba dengan TPPU, Bareskrim Sita
-                    Sejumlah Kendaraan Mewah. Lorem ipsum dolor, sit amet consectetur adipisicing
+                    <div class="listPlayer" data-link="https://www.dailymotion.com/embed/video/x6o6sby"
+                        data-title="Jerat Bandar Narkoba dengan TPPU, Bareskrim Sita Sejumlah Kendaraan Mewah. Lorem ipsum dolor, sit amet consectetur adipisicing
                     elit.">
                         <article class="cardArticle">
                             <figure class="cardImg">
@@ -801,8 +797,8 @@
                             </div>
                         </article>
                     </div>
-                    <div class="listPlayer" data-youtubeID="KyGY_HC7bws" data-title="Jerat Bandar Narkoba dengan TPPU, Bareskrim Sita
-                    Sejumlah Kendaraan Mewah.">
+                    <div class="listPlayer" data-link="https://www.dailymotion.com/embed/video/x7nkx8e"
+                        data-title="Jerat Bandar Narkoba dengan TPPU, Bareskrim Sita Sejumlah Kendaraan Mewah.">
                         <article class="cardArticle">
                             <figure class="cardImg">
                                 <img class="thumbCard" src="https://img.youtube.com/vi/KyGY_HC7bws/hqdefault.jpg"
@@ -817,7 +813,7 @@
                             </div>
                         </article>
                     </div>
-                    <div class="listPlayer" data-youtubeID="kZ7wgJ2Fumg" data-title="Lorem ipsum dolor, sit amet consectetur adipisicing
+                    <div class="listPlayer" data-link="https://www.youtube.com/embed/4hpsACcMIig" data-title="Lorem ipsum dolor, sit amet consectetur adipisicing
                                     elit. Iste">
                         <article class="cardArticle">
                             <figure class="cardImg">
@@ -1801,7 +1797,6 @@
     <!-- End Stiky Ads -->
     <!-- JS -->
     <script type="module" src="./assets/js/main.js"></script>
-    <script src="https://www.youtube.com/iframe_api"></script>
 </body>
 
 </html>

@@ -105,3 +105,4 @@ function initJumpToOtherNews() {
 
 // Initialize all the modules
 document.addEventListener("DOMContentLoaded", initialize);
+

@@ -46,14 +46,22 @@ section {
                     height: 100%;
                     overflow: hidden;
                     border-radius: 16px 16px 0 0;
-                    #youtube-container,
-                    #daildymotion-container {
-                        iframe {
-                            margin-bottom: 16px;
-                            aspect-ratio: 16 / 9;
-                            border: none;
-                            @include media.ipad {
-                                height: max-content;
+                    @include media.ipad{
+                        width: 60%;
+                    }
+                    .main-video-container{
+                        width: 100%;
+                        height: 329px;
+                        @include media.ipad {
+                            height: auto;
+                        }
+                        #youtube-container,
+                        #dailymotion-container {
+                            display: none;
+                            iframe {
+                                margin-bottom: 16px;
+                                aspect-ratio: 16 / 9;
+                                border: none;
                             }
                         }
                     }
@@ -128,7 +136,7 @@ section {
                                 .cardImg {
                                     flex-shrink: 0;
                                     position: relative;
-                                    width: clamp(140px, 14vw, 180px);
+                                    width: clamp(120px, 14vw, 180px);
                                     height: 100%;
                                     overflow: hidden;
                                     border-radius: 16px;

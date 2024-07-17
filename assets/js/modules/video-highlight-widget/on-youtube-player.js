@@ -1,9 +1,39 @@
-const playing = `<div class="playing"><img src="./assets/img/icon/ic-playing-video.png" alt="play" width="24" height="24"loading="lazy"> Now Playing</div>`
-const playlist = $('.listPlayer')
+import { isPlatformPlaying, setYoutubePlayer } from "./video-highlight-widget.js"
 let player
-let youtubeID = $('.listPlayer').data("youtubeid");
+let youtubeID
 
-function onYouTubeIframeAPIReady() {
+const loadYoutubeScript = () => {
+    return new Promise((resolve, reject) => {
+        // Check if the script is already loaded
+        if (document.getElementById('youtube-iframe-api')) {
+            resolve();
+            return;
+        }
+
+        // Create a script element to load the YouTube IFrame API
+        const tag = document.createElement('script');
+        tag.src = 'https://www.youtube.com/iframe_api';
+        tag.id = 'youtube-iframe-api';
+        tag.onload = () => {
+            // Wait for the YT object to be available
+            const checkYTReady = () => {
+                if (window.YT && window.YT.Player) {
+                    resolve();
+                } else {
+                    setTimeout(checkYTReady, 100);
+                }
+            };
+            checkYTReady();
+        };
+        tag.onerror = (error) => reject(error);
+
+        // Append the script to the document body
+        document.body.appendChild(tag);
+
+    });
+}
+
+const onYouTubeIframeAPIReady = () => {
     player = new YT.Player('youtube-container', {
         height: '329',
         width: '100%',
@@ -14,53 +44,30 @@ function onYouTubeIframeAPIReady() {
         },
         events: {
             'onReady': onPlayerReady,
-            'onStateChange': onPlayerStateChange
         }
     });
 }
 
 function onPlayerReady(event) {
-    setYoutubePlayer();
-}
-
-function onPlayerStateChange(event) {
-    // if (event.data == YT.PlayerState.PLAYING && !playingEnd) {
-    //     setTimeout(stopVideo, 6000);
-    //     playingEnd = true;
-    // }
-    // state ini akan di jalankan ketika video di mulai atau di pause
-}
-function stopVideo() {
-    player.stopVideo();
-}
-
-function playVideo() {
-    player.playVideo();
-}
-
-const setYoutubePlayer = async () => {
-    playlist.each((index, element) => {
-        if (index == 0) {
-            $(element).prepend(playing)
-            $('.video-title').text($(element).data("title"))
+    setYoutubePlayer(player)
+    window.addEventListener('scroll', () => {
+        if ($(window).scrollTop() > $('.widgetVideoHighlight').offset().top - $('.widgetVideoHighlight').height() && $(window).scrollTop() < $('.widgetVideoHighlight').offset().top + $('.widgetVideoHighlight').height()) {
+            isPlatformPlaying() == "youtube" ? player.playVideo() : null;
+        } else {
+            isPlatformPlaying() == "youtube" ? player.stopVideo() : null;
         }
-        $(element).on("click", () => {
-            youtubeID = $(element).data("youtubeid")
-            player.loadVideoById(youtubeID)
-            $('.playing').remove()
-            $(element).prepend(playing)
-            $('.video-title').text($(element).data("title"))
-        })
     })
 }
 
 export const onYoutubePlayer = () => {
-    onYouTubeIframeAPIReady()
-    window.addEventListener('scroll', () => {
-        if ($(window).scrollTop() > $('.widgetVideoHighlight').offset().top - $('.widgetVideoHighlight').height() && $(window).scrollTop() < $('.widgetVideoHighlight').offset().top + $('.widgetVideoHighlight').height()) {
-            playVideo()
-        } else {
-            stopVideo()
-        }
-    })
+    loadYoutubeScript()
+        .then(() => {
+            // Ensure the YouTube API is ready
+            if (typeof YT === 'undefined' || typeof YT.Player === 'undefined') {
+                console.error('YouTube API is not ready');
+                return;
+            }
+            onYouTubeIframeAPIReady()
+        })
+        .catch((error) => console.error('Failed to load YouTube script:', error));
 }
