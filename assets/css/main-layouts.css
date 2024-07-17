@@ -266,7 +266,7 @@ nav.nav__main .container .ic-dropdown-kanal {
   content: url("../img/icon/ic-dropdown-kanal.png");
   width: 16.667px;
   height: 8.333px;
-  transform: scaleY(1);
+  transform: rotate(0deg);
   transition: transform 0.3s ease-in-out;
 }
 @media screen and (max-width: 1365px) {
@@ -275,7 +275,7 @@ nav.nav__main .container .ic-dropdown-kanal {
   }
 }
 nav.nav__main .container .ic-dropdown-kanal.dropDown {
-  transform: scaleY(-1);
+  transform: rotate(180deg);
 }
 
 .topBarWrap {

@@ -60,6 +60,7 @@ section.WidgetPhotoGalery .container #carousel3d .slide img {
   transition: width 1s, height 1s;
   border-radius: 16px;
   overflow: hidden;
+  box-shadow: 0px 0px 40px -15px rgba(255, 255, 255, 0.678);
 }
 section.WidgetPhotoGalery .container #carousel3d .slide .titleImg {
   width: 563px;

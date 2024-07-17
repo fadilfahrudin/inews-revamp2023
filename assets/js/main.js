@@ -9,7 +9,7 @@ import { backToTop } from "./modules/backToTop.js"
 import { schaduleSlider } from "./modules/newsTv.js"
 import { Navigation } from "./modules/navigation.js";
 import { popularWidget } from "./modules/popular-widget.js";
-import { videoHighlightWidget } from "./modules/video-highlight-widget.js"
+import { videoHighlightWidget } from "./modules/video-highlight-widget/video-highlight-widget.js";
 import main3dCarousel from "./modules/3dcarousel/main-3d-carousel.js";
 
 function initialize() {
@@ -17,7 +17,7 @@ function initialize() {
     iniPopWidget()
     initGeoLocationWidget()
     initVideoHighlightWidget()
-    ini3dCarousel()
+    init3dCarousel()
     downloadAppQR()
     burgerMenu()
     networkDropdown()
@@ -56,13 +56,13 @@ function initVideoHighlightWidget() {
     }
 }
 
-function ini3dCarousel() {
+function init3dCarousel() {
     if ($("#widget3dCarousel").length > 0) {
         main3dCarousel()
     }
 }
 
-function initStickyFeatureDetailPage(){
+function initStickyFeatureDetailPage() {
     if ($('.stickyFeature').length > 0) {
         sticky()
         resizeFontToggle()
@@ -73,24 +73,24 @@ function initStickyFeatureDetailPage(){
     $('.share').length > 0 && copyLink();
 }
 
-function initNewsTVFeaturePage(){
+function initNewsTVFeaturePage() {
     if ($('.schedule__tv').length > 0) {
         schaduleSlider()
     }
 }
 
-function initPaginationInDetailPage(){
+function initPaginationInDetailPage() {
     if ($('.pagination').length > 0) {
         pagination()
     }
 }
 
-function initJumpToOtherNews(){
+function initJumpToOtherNews() {
     if ($('.btnMoreNews').length > 0) {
         $('.btnMoreNews').on('click', function () {
             let target = $(this).attr('target');
             let to = $(target)
-    
+
             if (to.length > 0) {
                 window.scrollTo({
                     top: to.offset().top - 120,

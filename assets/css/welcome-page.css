@@ -657,13 +657,15 @@ section.widgetVideoHighlight .container .widgetBody .video-player {
   overflow: hidden;
   border-radius: 16px 16px 0 0;
 }
-section.widgetVideoHighlight .container .widgetBody .video-player #youtube-container iframe {
+section.widgetVideoHighlight .container .widgetBody .video-player #youtube-container iframe,
+section.widgetVideoHighlight .container .widgetBody .video-player #daildymotion-container iframe {
   margin-bottom: 16px;
   aspect-ratio: 16/9;
   border: none;
 }
 @media screen and (max-width: 1365px) {
-  section.widgetVideoHighlight .container .widgetBody .video-player #youtube-container iframe {
+  section.widgetVideoHighlight .container .widgetBody .video-player #youtube-container iframe,
+  section.widgetVideoHighlight .container .widgetBody .video-player #daildymotion-container iframe {
     height: -moz-max-content;
     height: max-content;
   }

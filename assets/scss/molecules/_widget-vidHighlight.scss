@@ -46,7 +46,8 @@ section {
                     height: 100%;
                     overflow: hidden;
                     border-radius: 16px 16px 0 0;
-                    #youtube-container {
+                    #youtube-container,
+                    #daildymotion-container {
                         iframe {
                             margin-bottom: 16px;
                             aspect-ratio: 16 / 9;

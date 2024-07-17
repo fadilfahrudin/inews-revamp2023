@@ -98,7 +98,7 @@ nav {
                 content: url("../img/icon/ic-dropdown-kanal.png");
                 width: 16.667px;
                 height: 8.333px;
-                transform: scaleY(1);
+                transform: rotate(0deg);
                 transition: transform 0.3s ease-in-out;
 
                 @include media.ipad {
@@ -106,7 +106,7 @@ nav {
                 }
 
                 &.dropDown {
-                    transform: scaleY(-1);
+                    transform: rotate(180deg);
                 }
             }
         }

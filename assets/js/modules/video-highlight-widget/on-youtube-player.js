@@ -1,7 +1,7 @@
-const playlist = $('.listPlayer')
 const playing = `<div class="playing"><img src="./assets/img/icon/ic-playing-video.png" alt="play" width="24" height="24"loading="lazy"> Now Playing</div>`
-let youtubeID = $('.listPlayer').data("youtubeid");
+const playlist = $('.listPlayer')
 let player
+let youtubeID = $('.listPlayer').data("youtubeid");
 
 function onYouTubeIframeAPIReady() {
     player = new YT.Player('youtube-container', {
@@ -54,7 +54,7 @@ const setYoutubePlayer = async () => {
     })
 }
 
-export const videoHighlightWidget = () => {
+export const onYoutubePlayer = () => {
     onYouTubeIframeAPIReady()
     window.addEventListener('scroll', () => {
         if ($(window).scrollTop() > $('.widgetVideoHighlight').offset().top - $('.widgetVideoHighlight').height() && $(window).scrollTop() < $('.widgetVideoHighlight').offset().top + $('.widgetVideoHighlight').height()) {
