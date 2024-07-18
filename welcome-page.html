@@ -78,13 +78,33 @@
                 </div>
             </div>
             <!-- center section -->
-            <div>
+            <div id="serach-header">
                 <form class="searchForm">
-                    <input type="text" name="search" id="search" placeholder="Search">
+                    <input type="text" name="search" id="search" placeholder="Search" autocomplete="off">
                     <button class="btnSearch" type="submit" aria-label="search">
                         <img src="./assets/img/icon/ic-search.png" alt="search" width="24" height="24">
                     </button>
                 </form>
+                <div id="data-list">
+                    <ul class="search-on-keyup">
+                        <!-- <li class="list-search">kata kunci list</li> -->
+                    </ul>
+                    <ul class="recent-search">  <!-- punya class hidden ketika blm login-->
+                        <li class="list-title">Recent Search <span id="clear-recent">Clear all</span></li>
+                        <li class="list-search">Thailand <span class="remove-recent"></span></li>
+                        <li class="list-search">Coldplay <span class="remove-recent"></span></li>
+                        <li class="list-search">Euro 2024 <span class="remove-recent"></span></li>
+                        <li class="list-search">Perindo <span class="remove-recent"></span></li>
+                        <li class="list-search">Free Palestine <span class="remove-recent"></span></li>
+                    </ul>
+                    <ul class="trending-topic"> 
+                        <li class="list-title">Trending Topic</li>
+                        <li class="list-search">Thailand <span class="ic-hot-search"></span></li>
+                        <li class="list-search">Coldplay <span class="ic-hot-search"></span></li>
+                        <li class="list-search">CHat GPT</li>
+                        <li class="list-search">Free Palestina</li>
+                    </ul>
+                </div>
             </div>
             <!-- right section -->
             <div>
@@ -762,23 +782,7 @@
                 </div>
                 <div class="playList">
                     <span class="nextList">Up Next</span>
-                    <div class="listPlayer" data-link="https://www.youtube.com/embed/4hpsACcMIig" data-title="Badai Musim Dingin Mengganas, Joe Biden Umumkan Keadaan Darurat di New York, Donald Trump Murka Pada Dunia">
-                        <article class="cardArticle">
-                            <figure class="cardImg">
-                                <img class="thumbCard" src="https://img.youtube.com/vi/PBzagZEIXDE/hqdefault.jpg"
-                                    alt="rekomendasi" width="213" height="143" loading="lazy">
-                                <span class="ic-video"></span>
-                                <!-- available class ic-img | ic-pie-chart  -->
-                            </figure>
-                            <div class="cardBody">
-                                <h5 class="cardTitle">Badai Musim Dingin Mengganas, Joe Biden Umumkan Keadaan Darurat di
-                                    New York,
-                                    Donald Trump Murka
-                                    Pada Dunia
-                                </h5>
-                            </div>
-                        </article>
-                    </div>
+                    
                     <div class="listPlayer" data-link="https://www.dailymotion.com/embed/video/x6o6sby"
                         data-title="Jerat Bandar Narkoba dengan TPPU, Bareskrim Sita Sejumlah Kendaraan Mewah. Lorem ipsum dolor, sit amet consectetur adipisicing
                     elit.">
@@ -793,6 +797,23 @@
                                 <h5 class="cardTitle">Jerat Bandar Narkoba dengan TPPU, Bareskrim Sita
                                     Sejumlah Kendaraan Mewah. Lorem ipsum dolor, sit amet consectetur adipisicing
                                     elit.
+                                </h5>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="listPlayer" data-link="https://www.youtube.com/embed/4hpsACcMIig" data-title="Badai Musim Dingin Mengganas, Joe Biden Umumkan Keadaan Darurat di New York, Donald Trump Murka Pada Dunia">
+                        <article class="cardArticle">
+                            <figure class="cardImg">
+                                <img class="thumbCard" src="https://img.youtube.com/vi/PBzagZEIXDE/hqdefault.jpg"
+                                    alt="rekomendasi" width="213" height="143" loading="lazy">
+                                <span class="ic-video"></span>
+                                <!-- available class ic-img | ic-pie-chart  -->
+                            </figure>
+                            <div class="cardBody">
+                                <h5 class="cardTitle">Badai Musim Dingin Mengganas, Joe Biden Umumkan Keadaan Darurat di
+                                    New York,
+                                    Donald Trump Murka
+                                    Pada Dunia
                                 </h5>
                             </div>
                         </article>

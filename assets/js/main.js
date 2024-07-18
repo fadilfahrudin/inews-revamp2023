@@ -11,6 +11,7 @@ import { Navigation } from "./modules/navigation.js";
 import { popularWidget } from "./modules/popular-widget.js";
 import { videoHighlightWidget } from "./modules/video-highlight-widget/video-highlight-widget.js";
 import main3dCarousel from "./modules/3dcarousel/main-3d-carousel.js";
+import { searchModul } from "./modules/search.js";
 
 function initialize() {
     initNav()
@@ -28,6 +29,7 @@ function initialize() {
     ssoLogin()
     backToTop()
     initJumpToOtherNews()
+    searchModul()
 }
 
 function initNav() {

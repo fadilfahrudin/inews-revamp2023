@@ -323,6 +323,110 @@ aside.sideLeft {
   top: 50%;
   transform: translateY(-50%);
 }
+.topBarWrap .topBar > div:nth-child(2) #data-list {
+  display: none;
+  position: absolute;
+  top: 48px;
+  width: clamp(150px, 23vw, 310px);
+  height: auto;
+  background-color: #fff;
+  border-radius: 10px;
+  border: 1px solid #e3e3e3;
+  box-shadow: 15px -1px 31px 10px rgba(141, 141, 141, 0.2509803922);
+  padding: 20px 16px;
+}
+.topBarWrap .topBar > div:nth-child(2) #data-list .searc-on-keyup {
+  display: none;
+  list-style: none;
+  margin-bottom: 12px;
+  min-height: 60px;
+  width: 100%;
+}
+.topBarWrap .topBar > div:nth-child(2) #data-list .searc-on-keyup list-search {
+  cursor: pointer;
+  display: block;
+  margin: 8px 0;
+  padding: 4px 0;
+  font-family: Inter, sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+  color: #171717;
+  width: 100%;
+}
+.topBarWrap .topBar > div:nth-child(2) #data-list .recent-search {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+.topBarWrap .topBar > div:nth-child(2) #data-list .recent-search .list-title {
+  display: block;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  font-family: Inter, sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 21px;
+  color: #171717;
+  margin-bottom: 12px;
+}
+.topBarWrap .topBar > div:nth-child(2) #data-list .recent-search .list-title #clear-recent {
+  cursor: pointer;
+  color: #990100;
+  font-weight: 500;
+}
+.topBarWrap .topBar > div:nth-child(2) #data-list .recent-search .list-search {
+  cursor: pointer;
+  padding: 4px 0;
+  font-family: Inter, sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+  color: #171717;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.topBarWrap .topBar > div:nth-child(2) #data-list .recent-search .list-search .remove-recent {
+  content: url(../img/icon/ic-remove-search.svg);
+  width: 16px;
+  height: 16px;
+}
+.topBarWrap .topBar > div:nth-child(2) #data-list .trending-topic {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.topBarWrap .topBar > div:nth-child(2) #data-list .trending-topic .list-title {
+  display: block;
+  width: 100%;
+  font-family: Inter, sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 21px;
+  color: #171717;
+  margin-bottom: 4px;
+}
+.topBarWrap .topBar > div:nth-child(2) #data-list .trending-topic .list-search {
+  cursor: pointer;
+  padding: 4px 8px;
+  font-family: Inter, sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+  border: 0.5px solid #171717;
+  border-radius: 20px;
+  color: #171717;
+}
+.topBarWrap .topBar > div:nth-child(2) #data-list .trending-topic .list-search .ic-hot-search {
+  content: url(../img/icon/ic-hot-search.svg);
+  width: 7.5px;
+  height: auto;
+}
 .topBarWrap .topBar > div:last-child {
   gap: 0 24px;
 }
