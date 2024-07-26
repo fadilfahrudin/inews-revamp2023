@@ -613,7 +613,7 @@ section.widgetVideoHighlight {
   position: relative;
   width: 100%;
   height: 643px;
-  background-color: #171717;
+  background-color: var(--color-dark-75);
   margin: 24px 0;
   padding-top: 30px;
   padding-bottom: 62px;

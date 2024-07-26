@@ -42,11 +42,12 @@
                 .cardImg {
                     width: 100%;
                     height: clamp(261px, 25vw, 354px);
+                    border-radius: 16px;
                     .ic-video,
                     .ic-img,
                     .ic-pie-chart {
                         position: absolute;
-                        top: 51px;
+                        top: 12px;
                         left: 12px;
                         width: 36px;
                         height: 36px;

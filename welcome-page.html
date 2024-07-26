@@ -25,20 +25,16 @@
     <meta property="og:description"
         content="Berita Hari Ini Seputar Sepakbola, klasemen dan hasil pertandingan liga Indonesia, liga Inggris, liga Italia, liga Jerman, liga Spanyol, Liga Champions.">
     <meta property="og:type" content="article">
-    <meta property="og:url" content="https://www.inews.id/sport/soccer">
-    <meta property="og:image" content="https://img.inews.co.id/media/1200//files/inews_new/2019/08/05/kanal_sport.png">
-    <meta property="og:site_name" content="iNews.ID">
 
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:site" content="@OfficialiNewsTV">
-    <meta name="twitter:creator" content="@OfficialiNewsTV">
     <meta name="twitter:title" content="Berita Bola Hari Ini - iNews Portal">
     <meta name="twitter:description"
-        content="Berita Hari Ini Seputar Sepakbola, klasemen dan hasil pertandingan liga Indonesia, liga Inggris, liga Italia, liga Jerman, liga Spanyol, Liga Champions. ">
-    <meta name="twitter:image" content="https://img.inews.co.id/media/1200//files/inews_new/2019/08/05/kanal_sport.png">
-    <meta name="twitter:url" content="https://www.inews.id/sport/soccer">
-    <meta name="twitter:domain" content="https://www.inews.id/sport/soccer">
+        content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid repellat earum laboriosam">
+    <meta name="twitter:image" content="./assets/img/icon/ic-inews-kanal.png">
+    <meta name="twitter:url" content="https://www.inews.id">
     <link rel="preload" href="https://geo.dailymotion.com/libs/player.js" as="script">
+    <link rel="preload" href="https://www.youtube.com/iframe_api" as=" script">
+    <link rel="preload" href="assets/js/lib/jquery-3.7.1.min.js" as="script">
     <!-- JQuery -->
     <script src="./assets/js/lib/jquery-3.7.1.min.js"></script>
     <!-- CSS -->
@@ -78,26 +74,28 @@
                 </div>
             </div>
             <!-- center section -->
-            <div id="serach-header">
-                <form class="searchForm">
+            <div>
+                <div class="searchForm">
                     <input type="text" name="search" id="search" placeholder="Search" autocomplete="off">
-                    <button class="btnSearch" type="submit" aria-label="search">
-                        <img src="./assets/img/icon/ic-search.png" alt="search" width="24" height="24">
+                    <button class="btnSearch" type="button" aria-label="search">
+                        <img src="./assets/img/icon/ic-search.png" alt="search" width="20" height="20">
                     </button>
-                </form>
+                </div>
                 <div id="data-list">
                     <ul class="search-on-keyup">
                         <!-- <li class="list-search">kata kunci list</li> -->
                     </ul>
-                    <ul class="recent-search">  <!-- punya class hidden ketika blm login-->
+                    <ul class="recent-search"> <!-- punya class hidden ketika blm login-->
                         <li class="list-title">Recent Search <span id="clear-recent">Clear all</span></li>
-                        <li class="list-search">Thailand <span class="remove-recent"></span></li>
-                        <li class="list-search">Coldplay <span class="remove-recent"></span></li>
-                        <li class="list-search">Euro 2024 <span class="remove-recent"></span></li>
-                        <li class="list-search">Perindo <span class="remove-recent"></span></li>
-                        <li class="list-search">Free Palestine <span class="remove-recent"></span></li>
+                        <!-- contoh list recent -->
+                        <li class="list-search hidden">
+                            <span class="recent-search-text ">Thailand Lorem, ipsum dolor sit amet
+                                consectetur adipisicing elit.
+                                Cupiditate, fugit!</span>
+                            <span class="remove-recent"></span>
+                        </li>
                     </ul>
-                    <ul class="trending-topic"> 
+                    <ul class="trending-topic">
                         <li class="list-title">Trending Topic</li>
                         <li class="list-search">Thailand <span class="ic-hot-search"></span></li>
                         <li class="list-search">Coldplay <span class="ic-hot-search"></span></li>
@@ -162,7 +160,7 @@
         <div class="container">
             <div class="header">
                 <div class="brand">
-                    <img src="./assets/img/logo-inews-tv.png" alt="inews" width="146" height="55" loading="lazy">
+                    <img src="./assets/img/logo-kanal-inews.png" alt="inews" width="146" height="55" loading="lazy">
                 </div>
                 <div class="adsHeader">
                     <img src="./assets/img/dummy/dummy-ads-720x90.png" alt="ads" width="100%" height="100%"
@@ -190,15 +188,17 @@
     <!-- Navigation WP | Home -->
     <nav class="nav__main">
         <ul id="navbar-nav" class="container">
-            <li class="navList"><a href="wp.html" class="navLink navLink-active">Home</a></li>
-            <li class="navList"><a href="/daerah" class="navLink ">Daerah</a></li>
-            <li class="navList"><a href="/news" class="navLink ">News</a></li>
-            <li class="navList"><a href="/lifestyle" class="navLink ">Lifestyle</a></li>
-            <li class="navList"><a href="/multimedia" class="navLink ">Multimedia</a></li>
-            <li class="navList"><a href="/techno" class="navLink ">Techno</a></li>
-            <li class="navList"><a href="/sport" class="navLink ">Sport</a></li>
-            <li class="navList"><a href="/otomotif" class="navLink ">Otomotif</a></li>
-            <li class="navList"><a href="/travel" class="navLink ">Travel</a></li>
+            <li class="navList"><a href="welcome-page.html" class="navLink navLink-active">Home</a></li>
+            <li class="navList"><a href="page-daerah-home.html" class="navLink ">Daerah</a></li>
+            <li class="navList"><a href="page-news-home.html" class="navLink ">News</a></li>
+            <li class="navList"><a href="page-lifestyle-home.html" class="navLink ">Lifestyle</a></li>
+            <li class="navList"><a href="page-multimedia-home.html" class="navLink ">Multimedia</a></li>
+            <li class="navList"><a href="page-techno-home.html" class="navLink ">Techno</a></li>
+            <li class="navList"><a href="page-sport-home.html" class="navLink ">Sport</a></li>
+            <li class="navList"><a href="page-otomotif-home.html" class="navLink ">Otomotif</a></li>
+            <li class="navList"><a href="page-travel-home.html" class="navLink ">Travel</a></li>
+            <li class="navList"><a href="page-finance-home.html" class="navLink ">Finance</a></li>
+            <li class="navList"><a href="page-index.html" class="navLink ">Indeks</a></li>
         </ul>
     </nav>
     <!-- End Navigation WP | Home -->
@@ -223,7 +223,7 @@
         <!-- ads 970x250 -->
         <figure class="adsPlacement size970x250">
             <figcaption>Advertisement . Scroll to see content</figcaption>
-            <img src="./assets/img/dummy/dummy-ads-970x250.png" alt="ads" width="100%" height="100%" loading="lazy">
+            <img src="./assets/img/dummy/dummy-ads-970x250.png" alt="ads" width="970" height="250" loading="lazy">
         </figure>
         <!-- end ads 970x250 -->
         <section class="widgetNewsTV">
@@ -237,7 +237,7 @@
                     <article class="cardArticle">
                         <a href="#">
                             <figure class="cardImg">
-                                <img class="thumbCard" src="./assets/img/dummy/dummy-header-img.png" alt="rekomendasi"
+                                <img class="thumbCard" src="./assets/img/dummy/dummy-header-img.avif" alt="rekomendasi"
                                     width="213" height="143" loading="lazy">
                                 <span class="ic-video"></span>
                                 <!-- available class ic-img | ic-pie-chart  -->
@@ -256,7 +256,7 @@
                     <article class="cardArticle">
                         <a href="#">
                             <figure class="cardImg">
-                                <img class="thumbCard" src="./assets/img/dummy/dummy-header-img.png" alt="rekomendasi"
+                                <img class="thumbCard" src="./assets/img/dummy/dummy-header-img.avif" alt="rekomendasi"
                                     width="213" height="143" loading="lazy">
                                 <span class="ic-video"></span>
                                 <!-- available class ic-img | ic-pie-chart  -->
@@ -275,7 +275,7 @@
                     <article class="cardArticle">
                         <a href="#">
                             <figure class="cardImg">
-                                <img class="thumbCard" src="./assets/img/dummy/dummy-header-img.png" alt="rekomendasi"
+                                <img class="thumbCard" src="./assets/img/dummy/dummy-header-img.avif" alt="rekomendasi"
                                     width="213" height="143" loading="lazy">
                                 <span class="ic-video"></span>
                                 <!-- available class ic-img | ic-pie-chart  -->
@@ -294,7 +294,7 @@
                     <article class="cardArticle">
                         <a href="#">
                             <figure class="cardImg">
-                                <img class="thumbCard" src="./assets/img/dummy/dummy-header-img.png" alt="rekomendasi"
+                                <img class="thumbCard" src="./assets/img/dummy/dummy-header-img.avif" alt="rekomendasi"
                                     width="213" height="143" loading="lazy">
                                 <span class="ic-video"></span>
                                 <!-- available class ic-img | ic-pie-chart  -->
@@ -320,7 +320,7 @@
             <article class="cardArticle headline1">
                 <a href="#">
                     <figure class="cardImg">
-                        <img class="thumbCard" src="./assets/img/dummy/dummy-header-img.png" alt="rekomendasi"
+                        <img class="thumbCard" src="./assets/img/dummy/dummy-header-img.avif" alt="rekomendasi"
                             width="213" height="143" loading="lazy">
                         <span class="ic-video"></span>
                         <!-- available class ic-img | ic-pie-chart  -->
@@ -338,7 +338,7 @@
             <article class="cardArticle headline2">
                 <a href="#">
                     <figure class="cardImg">
-                        <img class="thumbCard" src="./assets/img/dummy/dummy-header-img.png" alt="rekomendasi"
+                        <img class="thumbCard" src="./assets/img/dummy/dummy-header-img.avif" alt="rekomendasi"
                             width="213" height="143" loading="lazy">
                         <span class="ic-video"></span>
                         <!-- available class ic-img | ic-pie-chart  -->
@@ -359,7 +359,7 @@
             <article class="cardArticle headline3">
                 <a href="#">
                     <figure class="cardImg">
-                        <img class="thumbCard" src="./assets/img/dummy/dummy-header-img.png" alt="rekomendasi"
+                        <img class="thumbCard" src="./assets/img/dummy/dummy-header-img.avif" alt="rekomendasi"
                             width="213" height="143" loading="lazy">
                         <span class="ic-video"></span>
                         <!-- available class ic-img | ic-pie-chart  -->
@@ -380,7 +380,7 @@
             <article class="cardArticle headline4">
                 <a href="#">
                     <figure class="cardImg">
-                        <img class="thumbCard" src="./assets/img/dummy/dummy-header-img.png" alt="rekomendasi"
+                        <img class="thumbCard" src="./assets/img/dummy/dummy-header-img.avif" alt="rekomendasi"
                             width="213" height="143" loading="lazy">
                         <span class="ic-video"></span>
                         <!-- available class ic-img | ic-pie-chart  -->
@@ -401,7 +401,7 @@
             <article class="cardArticle headline5">
                 <a href="#">
                     <figure class="cardImg">
-                        <img class="thumbCard" src="./assets/img/dummy/dummy-header-img.png" alt="rekomendasi"
+                        <img class="thumbCard" src="./assets/img/dummy/dummy-header-img.avif" alt="rekomendasi"
                             width="213" height="143" loading="lazy">
                         <span class="ic-video"></span>
                         <!-- available class ic-img | ic-pie-chart  -->
@@ -422,7 +422,7 @@
         </section>
         <figure class="adsPlacement size728x90">
             <figcaption>Advertisement . Scroll to see content</figcaption>
-            <img src="./assets/img/dummy/dummy-ads-970x250.png" alt="ads" width="100%" height="100%" loading="lazy">
+            <img src="./assets/img/dummy/dummy-ads-970x250.png" alt="ads" width="970" height="250" loading="lazy">
         </figure>
         <section class="mainBody">
             <main class="sideLeft">
@@ -439,7 +439,7 @@
                         <article class="cardArticle">
                             <a href="#">
                                 <figure class="cardImg">
-                                    <img class="thumbCard" src="./assets/img/dummy/dummy-header-img.png"
+                                    <img class="thumbCard" src="./assets/img/dummy/dummy-header-img.avif"
                                         alt="rekomendasi" width="213" height="143" loading="lazy">
                                     <span class="ic-video"></span>
                                     <!-- available class ic-img | ic-pie-chart  -->
@@ -460,7 +460,7 @@
                         <article class="cardArticle">
                             <a href="#">
                                 <figure class="cardImg">
-                                    <img class="thumbCard" src="./assets/img/dummy/dummy-header-img.png"
+                                    <img class="thumbCard" src="./assets/img/dummy/dummy-header-img.avif"
                                         alt="rekomendasi" width="213" height="143" loading="lazy">
                                     <span class="ic-video"></span>
                                     <!-- available class ic-img | ic-pie-chart  -->
@@ -481,7 +481,7 @@
                         <article class="cardArticle">
                             <a href="#">
                                 <figure class="cardImg">
-                                    <img class="thumbCard" src="./assets/img/dummy/dummy-header-img.png"
+                                    <img class="thumbCard" src="./assets/img/dummy/dummy-header-img.avif"
                                         alt="rekomendasi" width="213" height="143" loading="lazy">
                                     <span class="ic-video"></span>
                                     <!-- available class ic-img | ic-pie-chart  -->
@@ -514,7 +514,7 @@
                             <article class="cardArticle cardPopular">
                                 <a href="#">
                                     <figure class="cardImg">
-                                        <img class="thumbCard" src="./assets/img/dummy/dummy-header-img.png"
+                                        <img class="thumbCard" src="./assets/img/dummy/dummy-header-img.avif"
                                             alt="rekomendasi" width="213" height="143" loading="lazy">
                                         <span class="ic-video"></span>
                                         <!-- available class ic-img | ic-pie-chart  -->
@@ -537,7 +537,7 @@
                             <article class="cardArticle cardPopular">
                                 <a href="#">
                                     <figure class="cardImg">
-                                        <img class="thumbCard" src="./assets/img/dummy/dummy-header-img.png"
+                                        <img class="thumbCard" src="./assets/img/dummy/dummy-header-img.avif"
                                             alt="rekomendasi" width="213" height="143" loading="lazy">
                                         <span class="ic-video"></span>
                                         <!-- available class ic-img | ic-pie-chart  -->
@@ -560,7 +560,7 @@
                             <article class="cardArticle cardPopular">
                                 <a href="#">
                                     <figure class="cardImg">
-                                        <img class="thumbCard" src="./assets/img/dummy/dummy-header-img.png"
+                                        <img class="thumbCard" src="./assets/img/dummy/dummy-header-img.avif"
                                             alt="rekomendasi" width="213" height="143" loading="lazy">
                                         <span class="ic-video"></span>
                                         <!-- available class ic-img | ic-pie-chart  -->
@@ -583,7 +583,7 @@
                             <article class="cardArticle cardPopular">
                                 <a href="#">
                                     <figure class="cardImg">
-                                        <img class="thumbCard" src="./assets/img/dummy/dummy-header-img.png"
+                                        <img class="thumbCard" src="./assets/img/dummy/dummy-header-img.avif"
                                             alt="rekomendasi" width="213" height="143" loading="lazy">
                                         <span class="ic-video"></span>
                                         <!-- available class ic-img | ic-pie-chart  -->
@@ -606,7 +606,7 @@
                             <article class="cardArticle cardPopular">
                                 <a href="#">
                                     <figure class="cardImg">
-                                        <img class="thumbCard" src="./assets/img/dummy/dummy-header-img.png"
+                                        <img class="thumbCard" src="./assets/img/dummy/dummy-header-img.avif"
                                             alt="rekomendasi" width="213" height="143" loading="lazy">
                                         <span class="ic-video"></span>
                                         <!-- available class ic-img | ic-pie-chart  -->
@@ -672,7 +672,7 @@
                                 <article class="cardArticle">
                                     <a href="#">
                                         <figure class="cardImg">
-                                            <img class="thumbCard" src="./assets/img/dummy/dummy-header-img.png"
+                                            <img class="thumbCard" src="./assets/img/dummy/dummy-header-img.avif"
                                                 alt="rekomendasi" width="213" height="143" loading="lazy">
                                             <span class="ic-video"></span>
                                             <!-- available class ic-img | ic-pie-chart  -->
@@ -692,7 +692,7 @@
                                 <article class="cardArticle">
                                     <a href="#">
                                         <figure class="cardImg">
-                                            <img class="thumbCard" src="./assets/img/dummy/dummy-header-img.png"
+                                            <img class="thumbCard" src="./assets/img/dummy/dummy-header-img.avif"
                                                 alt="rekomendasi" width="213" height="143" loading="lazy">
                                             <span class="ic-video"></span>
                                             <!-- available class ic-img | ic-pie-chart  -->
@@ -712,7 +712,7 @@
                                 <article class="cardArticle">
                                     <a href="#">
                                         <figure class="cardImg">
-                                            <img class="thumbCard" src="./assets/img/dummy/dummy-header-img.png"
+                                            <img class="thumbCard" src="./assets/img/dummy/dummy-header-img.avif"
                                                 alt="rekomendasi" width="213" height="143" loading="lazy">
                                             <span class="ic-video"></span>
                                             <!-- available class ic-img | ic-pie-chart  -->
@@ -782,26 +782,8 @@
                 </div>
                 <div class="playList">
                     <span class="nextList">Up Next</span>
-                    
-                    <div class="listPlayer" data-link="https://www.dailymotion.com/embed/video/x6o6sby"
-                        data-title="Jerat Bandar Narkoba dengan TPPU, Bareskrim Sita Sejumlah Kendaraan Mewah. Lorem ipsum dolor, sit amet consectetur adipisicing
-                    elit.">
-                        <article class="cardArticle">
-                            <figure class="cardImg">
-                                <img class="thumbCard" src="https://img.youtube.com/vi/_kYxLnh7FmY/hqdefault.jpg"
-                                    alt="rekomendasi" width="213" height="143" loading="lazy">
-                                <span class="ic-video"></span>
-                                <!-- available class ic-img | ic-pie-chart  -->
-                            </figure>
-                            <div class="cardBody">
-                                <h5 class="cardTitle">Jerat Bandar Narkoba dengan TPPU, Bareskrim Sita
-                                    Sejumlah Kendaraan Mewah. Lorem ipsum dolor, sit amet consectetur adipisicing
-                                    elit.
-                                </h5>
-                            </div>
-                        </article>
-                    </div>
-                    <div class="listPlayer" data-link="https://www.youtube.com/embed/4hpsACcMIig" data-title="Badai Musim Dingin Mengganas, Joe Biden Umumkan Keadaan Darurat di New York, Donald Trump Murka Pada Dunia">
+                    <div class="listPlayer" data-link="https://www.youtube.com/embed/4hpsACcMIig"
+                        data-title="Badai Musim Dingin Mengganas, Joe Biden Umumkan Keadaan Darurat di New York, Donald Trump Murka Pada Dunia">
                         <article class="cardArticle">
                             <figure class="cardImg">
                                 <img class="thumbCard" src="https://img.youtube.com/vi/PBzagZEIXDE/hqdefault.jpg"
@@ -814,6 +796,23 @@
                                     New York,
                                     Donald Trump Murka
                                     Pada Dunia
+                                </h5>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="listPlayer" data-link="https://www.dailymotion.com/embed/video/x6o6sby" data-title="Jerat Bandar Narkoba dengan TPPU, Bareskrim Sita Sejumlah Kendaraan Mewah. Lorem ipsum dolor, sit amet consectetur adipisicing
+                    elit.">
+                        <article class="cardArticle">
+                            <figure class="cardImg">
+                                <img class="thumbCard" src="https://img.youtube.com/vi/_kYxLnh7FmY/hqdefault.jpg"
+                                    alt="rekomendasi" width="213" height="143" loading="lazy">
+                                <span class="ic-video"></span>
+                                <!-- available class ic-img | ic-pie-chart  -->
+                            </figure>
+                            <div class="cardBody">
+                                <h5 class="cardTitle">Jerat Bandar Narkoba dengan TPPU, Bareskrim Sita
+                                    Sejumlah Kendaraan Mewah. Lorem ipsum dolor, sit amet consectetur adipisicing
+                                    elit.
                                 </h5>
                             </div>
                         </article>
@@ -871,7 +870,7 @@
                         <article class="cardArticle">
                             <a href="#">
                                 <figure class="cardImg">
-                                    <img class="thumbCard" src="./assets/img/dummy/dummy-header-img.png"
+                                    <img class="thumbCard" src="./assets/img/dummy/dummy-header-img.avif"
                                         alt="rekomendasi" width="213" height="143" loading="lazy">
                                     <span class="ic-video"></span>
                                     <!-- available class ic-img | ic-pie-chart  -->
@@ -893,7 +892,7 @@
                         <article class="cardArticle">
                             <a href="#">
                                 <figure class="cardImg">
-                                    <img class="thumbCard" src="./assets/img/dummy/dummy-header-img.png"
+                                    <img class="thumbCard" src="./assets/img/dummy/dummy-header-img.avif"
                                         alt="rekomendasi" width="213" height="143" loading="lazy">
                                     <span class="ic-video"></span>
                                     <!-- available class ic-img | ic-pie-chart  -->
@@ -912,7 +911,7 @@
                         <article class="cardArticle">
                             <a href="#">
                                 <figure class="cardImg">
-                                    <img class="thumbCard" src="./assets/img/dummy/dummy-header-img.png"
+                                    <img class="thumbCard" src="./assets/img/dummy/dummy-header-img.avif"
                                         alt="rekomendasi" width="213" height="143" loading="lazy">
                                     <span class="ic-video"></span>
                                     <!-- available class ic-img | ic-pie-chart  -->
@@ -932,7 +931,7 @@
                         <article class="cardArticle">
                             <a href="#">
                                 <figure class="cardImg">
-                                    <img class="thumbCard" src="./assets/img/dummy/dummy-header-img.png"
+                                    <img class="thumbCard" src="./assets/img/dummy/dummy-header-img.avif"
                                         alt="rekomendasi" width="213" height="143" loading="lazy">
                                     <span class="ic-video"></span>
                                     <!-- available class ic-img | ic-pie-chart  -->
@@ -952,7 +951,7 @@
                         <article class="cardArticle">
                             <a href="#">
                                 <figure class="cardImg">
-                                    <img class="thumbCard" src="./assets/img/dummy/dummy-header-img.png"
+                                    <img class="thumbCard" src="./assets/img/dummy/dummy-header-img.avif"
                                         alt="rekomendasi" width="213" height="143" loading="lazy">
                                     <span class="ic-video"></span>
                                     <!-- available class ic-img | ic-pie-chart  -->
@@ -983,7 +982,7 @@
                         <article class="cardArticle">
                             <a href="#">
                                 <figure class="cardImg">
-                                    <img class="thumbCard" src="./assets/img/dummy/dummy-header-img.png"
+                                    <img class="thumbCard" src="./assets/img/dummy/dummy-header-img.avif"
                                         alt="rekomendasi" width="213" height="143" loading="lazy">
                                     <span class="ic-video"></span>
                                     <!-- available class ic-img | ic-pie-chart  -->
@@ -1004,7 +1003,7 @@
                         <article class="cardArticle">
                             <a href="#">
                                 <figure class="cardImg">
-                                    <img class="thumbCard" src="./assets/img/dummy/dummy-header-img.png"
+                                    <img class="thumbCard" src="./assets/img/dummy/dummy-header-img.avif"
                                         alt="rekomendasi" width="213" height="143" loading="lazy">
                                     <span class="ic-video"></span>
                                     <!-- available class ic-img | ic-pie-chart  -->
@@ -1025,7 +1024,7 @@
                         <article class="cardArticle">
                             <a href="#">
                                 <figure class="cardImg">
-                                    <img class="thumbCard" src="./assets/img/dummy/dummy-header-img.png"
+                                    <img class="thumbCard" src="./assets/img/dummy/dummy-header-img.avif"
                                         alt="rekomendasi" width="213" height="143" loading="lazy">
                                     <span class="ic-video"></span>
                                     <!-- available class ic-img | ic-pie-chart  -->
@@ -1051,7 +1050,7 @@
                         <article class="cardArticle">
                             <a href="#">
                                 <figure class="cardImg">
-                                    <img class="thumbCard" src="./assets/img/dummy/dummy-header-img.png"
+                                    <img class="thumbCard" src="./assets/img/dummy/dummy-header-img.avif"
                                         alt="rekomendasi" width="213" height="143" loading="lazy">
                                     <span class="ic-video"></span>
                                     <!-- available class ic-img | ic-pie-chart  -->
@@ -1073,7 +1072,7 @@
                         <article class="cardArticle">
                             <a href="#">
                                 <figure class="cardImg">
-                                    <img class="thumbCard" src="./assets/img/dummy/dummy-header-img.png"
+                                    <img class="thumbCard" src="./assets/img/dummy/dummy-header-img.avif"
                                         alt="rekomendasi" width="213" height="143" loading="lazy">
                                     <span class="ic-video"></span>
                                     <!-- available class ic-img | ic-pie-chart  -->
@@ -1092,7 +1091,7 @@
                         <article class="cardArticle">
                             <a href="#">
                                 <figure class="cardImg">
-                                    <img class="thumbCard" src="./assets/img/dummy/dummy-header-img.png"
+                                    <img class="thumbCard" src="./assets/img/dummy/dummy-header-img.avif"
                                         alt="rekomendasi" width="213" height="143" loading="lazy">
                                     <span class="ic-video"></span>
                                     <!-- available class ic-img | ic-pie-chart  -->
@@ -1112,7 +1111,7 @@
                         <article class="cardArticle">
                             <a href="#">
                                 <figure class="cardImg">
-                                    <img class="thumbCard" src="./assets/img/dummy/dummy-header-img.png"
+                                    <img class="thumbCard" src="./assets/img/dummy/dummy-header-img.avif"
                                         alt="rekomendasi" width="213" height="143" loading="lazy">
                                     <span class="ic-video"></span>
                                     <!-- available class ic-img | ic-pie-chart  -->
@@ -1132,7 +1131,7 @@
                         <article class="cardArticle">
                             <a href="#">
                                 <figure class="cardImg">
-                                    <img class="thumbCard" src="./assets/img/dummy/dummy-header-img.png"
+                                    <img class="thumbCard" src="./assets/img/dummy/dummy-header-img.avif"
                                         alt="rekomendasi" width="213" height="143" loading="lazy">
                                     <span class="ic-video"></span>
                                     <!-- available class ic-img | ic-pie-chart  -->
@@ -1162,7 +1161,7 @@
                         <article class="cardArticle">
                             <a href="#">
                                 <figure class="cardImg">
-                                    <img class="thumbCard" src="./assets/img/dummy/dummy-header-img.png"
+                                    <img class="thumbCard" src="./assets/img/dummy/dummy-header-img.avif"
                                         alt="rekomendasi" width="213" height="143" loading="lazy">
                                     <span class="ic-video"></span>
                                     <!-- available class ic-img | ic-pie-chart  -->
@@ -1184,7 +1183,7 @@
                         <article class="cardArticle">
                             <a href="#">
                                 <figure class="cardImg">
-                                    <img class="thumbCard" src="./assets/img/dummy/dummy-header-img.png"
+                                    <img class="thumbCard" src="./assets/img/dummy/dummy-header-img.avif"
                                         alt="rekomendasi" width="213" height="143" loading="lazy">
                                     <span class="ic-video"></span>
                                     <!-- available class ic-img | ic-pie-chart  -->
@@ -1203,7 +1202,7 @@
                         <article class="cardArticle">
                             <a href="#">
                                 <figure class="cardImg">
-                                    <img class="thumbCard" src="./assets/img/dummy/dummy-header-img.png"
+                                    <img class="thumbCard" src="./assets/img/dummy/dummy-header-img.avif"
                                         alt="rekomendasi" width="213" height="143" loading="lazy">
                                     <span class="ic-video"></span>
                                     <!-- available class ic-img | ic-pie-chart  -->
@@ -1223,7 +1222,7 @@
                         <article class="cardArticle">
                             <a href="#">
                                 <figure class="cardImg">
-                                    <img class="thumbCard" src="./assets/img/dummy/dummy-header-img.png"
+                                    <img class="thumbCard" src="./assets/img/dummy/dummy-header-img.avif"
                                         alt="rekomendasi" width="213" height="143" loading="lazy">
                                     <span class="ic-video"></span>
                                     <!-- available class ic-img | ic-pie-chart  -->
@@ -1243,7 +1242,7 @@
                         <article class="cardArticle">
                             <a href="#">
                                 <figure class="cardImg">
-                                    <img class="thumbCard" src="./assets/img/dummy/dummy-header-img.png"
+                                    <img class="thumbCard" src="./assets/img/dummy/dummy-header-img.avif"
                                         alt="rekomendasi" width="213" height="143" loading="lazy">
                                     <span class="ic-video"></span>
                                     <!-- available class ic-img | ic-pie-chart  -->
@@ -1263,7 +1262,7 @@
                     </div>
                 </section>
 
-                <button id="btn-load-more" type="button">Load More</button>
+                <button id="btn-load-more" type="button"> Load More</button>
             </main>
             <aside class="sideRight" aria-label="sidebar">
                 <figure class="asideAds">
@@ -1279,7 +1278,7 @@
                         <article class="cardArticle ">
                             <a href="#">
                                 <figure class="cardImg">
-                                    <img class="thumbCard" src="./assets/img/dummy/dummy-header-img.png"
+                                    <img class="thumbCard" src="./assets/img/dummy/dummy-header-img.avif"
                                         alt="rekomendasi" width="213" height="143" loading="lazy">
                                     <span class="ic-video"></span>
                                     <!-- available class ic-img | ic-pie-chart  -->
@@ -1294,7 +1293,7 @@
                         <article class="cardArticle">
                             <a href="#">
                                 <figure class="cardImg">
-                                    <img class="thumbCard" src="./assets/img/dummy/dummy-header-img.png"
+                                    <img class="thumbCard" src="./assets/img/dummy/dummy-header-img.avif"
                                         alt="rekomendasi" width="213" height="143" loading="lazy">
                                     <span class="ic-video"></span>
                                     <!-- available class ic-img | ic-pie-chart  -->
@@ -1309,7 +1308,7 @@
                         <article class="cardArticle">
                             <a href="#">
                                 <figure class="cardImg">
-                                    <img class="thumbCard" src="./assets/img/dummy/dummy-header-img.png"
+                                    <img class="thumbCard" src="./assets/img/dummy/dummy-header-img.avif"
                                         alt="rekomendasi" width="213" height="143" loading="lazy">
                                     <span class="ic-video"></span>
                                     <!-- available class ic-img | ic-pie-chart  -->
@@ -1324,7 +1323,7 @@
                         <article class="cardArticle">
                             <a href="#">
                                 <figure class="cardImg">
-                                    <img class="thumbCard" src="./assets/img/dummy/dummy-header-img.png"
+                                    <img class="thumbCard" src="./assets/img/dummy/dummy-header-img.avif"
                                         alt="rekomendasi" width="213" height="143" loading="lazy">
                                     <span class="ic-video"></span>
                                     <!-- available class ic-img | ic-pie-chart  -->
@@ -1339,7 +1338,7 @@
                         <article class="cardArticle">
                             <a href="#">
                                 <figure class="cardImg">
-                                    <img class="thumbCard" src="./assets/img/dummy/dummy-header-img.png"
+                                    <img class="thumbCard" src="./assets/img/dummy/dummy-header-img.avif"
                                         alt="rekomendasi" width="213" height="143" loading="lazy">
                                     <span class="ic-video"></span>
                                     <!-- available class ic-img | ic-pie-chart  -->
@@ -1365,7 +1364,7 @@
                         <article class="cardArticle ">
                             <a href="#">
                                 <figure class="cardImg">
-                                    <img class="thumbCard" src="./assets/img/dummy/dummy-header-img.png"
+                                    <img class="thumbCard" src="./assets/img/dummy/dummy-header-img.avif"
                                         alt="rekomendasi" width="213" height="143" loading="lazy">
                                     <span class="ic-video"></span>
                                     <!-- available class ic-img | ic-pie-chart  -->
@@ -1380,7 +1379,7 @@
                         <article class="cardArticle">
                             <a href="#">
                                 <figure class="cardImg">
-                                    <img class="thumbCard" src="./assets/img/dummy/dummy-header-img.png"
+                                    <img class="thumbCard" src="./assets/img/dummy/dummy-header-img.avif"
                                         alt="rekomendasi" width="213" height="143" loading="lazy">
                                     <span class="ic-video"></span>
                                     <!-- available class ic-img | ic-pie-chart  -->
@@ -1395,7 +1394,7 @@
                         <article class="cardArticle">
                             <a href="#">
                                 <figure class="cardImg">
-                                    <img class="thumbCard" src="./assets/img/dummy/dummy-header-img.png"
+                                    <img class="thumbCard" src="./assets/img/dummy/dummy-header-img.avif"
                                         alt="rekomendasi" width="213" height="143" loading="lazy">
                                     <!-- available class ic-img | ic-pie-chart  -->
                                 </figure>
@@ -1409,7 +1408,7 @@
                         <article class="cardArticle">
                             <a href="#">
                                 <figure class="cardImg">
-                                    <img class="thumbCard" src="./assets/img/dummy/dummy-header-img.png"
+                                    <img class="thumbCard" src="./assets/img/dummy/dummy-header-img.avif"
                                         alt="rekomendasi" width="213" height="143" loading="lazy">
                                     <span class="ic-pie-chart"></span>
                                     <!-- available class ic-img | ic-pie-chart  -->
@@ -1424,7 +1423,7 @@
                         <article class="cardArticle">
                             <a href="#">
                                 <figure class="cardImg">
-                                    <img class="thumbCard" src="./assets/img/dummy/dummy-header-img.png"
+                                    <img class="thumbCard" src="./assets/img/dummy/dummy-header-img.avif"
                                         alt="rekomendasi" width="213" height="143" loading="lazy">
                                     <span class="ic-img"></span>
                                     <!-- available class ic-img | ic-pie-chart  -->
@@ -1448,7 +1447,7 @@
                         <article class="cardArticle ">
                             <a href="#">
                                 <figure class="cardImg">
-                                    <img class="thumbCard" src="./assets/img/dummy/dummy-header-img.png"
+                                    <img class="thumbCard" src="./assets/img/dummy/dummy-header-img.avif"
                                         alt="rekomendasi" width="213" height="143" loading="lazy">
                                     <span class="ic-img"></span>
                                 </figure>
@@ -1462,7 +1461,7 @@
                         <article class="cardArticle">
                             <a href="#">
                                 <figure class="cardImg">
-                                    <img class="thumbCard" src="./assets/img/dummy/dummy-header-img.png"
+                                    <img class="thumbCard" src="./assets/img/dummy/dummy-header-img.avif"
                                         alt="rekomendasi" width="213" height="143" loading="lazy">
                                     <span class="ic-img"></span>
                                 </figure>
@@ -1485,7 +1484,7 @@
                         <article class="cardArticle ">
                             <a href="#">
                                 <figure class="cardImg">
-                                    <img class="thumbCard" src="./assets/img/dummy/dummy-header-img.png"
+                                    <img class="thumbCard" src="./assets/img/dummy/dummy-header-img.avif"
                                         alt="rekomendasi" width="213" height="143" loading="lazy">
                                     <span class="ic-pie-chart"></span>
                                 </figure>
@@ -1499,7 +1498,7 @@
                         <article class="cardArticle">
                             <a href="#">
                                 <figure class="cardImg">
-                                    <img class="thumbCard" src="./assets/img/dummy/dummy-header-img.png"
+                                    <img class="thumbCard" src="./assets/img/dummy/dummy-header-img.avif"
                                         alt="rekomendasi" width="213" height="143" loading="lazy">
                                     <span class="ic-pie-chart"></span>
                                 </figure>
@@ -1524,7 +1523,7 @@
                         <article class="cardArticle ">
                             <a href="#">
                                 <figure class="cardImg">
-                                    <img class="thumbCard" src="./assets/img/dummy/dummy-header-img.png"
+                                    <img class="thumbCard" src="./assets/img/dummy/dummy-header-img.avif"
                                         alt="rekomendasi" width="213" height="143" loading="lazy">
                                     <span class="ic-video"></span>
                                     <!-- available class ic-img | ic-pie-chart  -->
@@ -1539,7 +1538,7 @@
                         <article class="cardArticle">
                             <a href="#">
                                 <figure class="cardImg">
-                                    <img class="thumbCard" src="./assets/img/dummy/dummy-header-img.png"
+                                    <img class="thumbCard" src="./assets/img/dummy/dummy-header-img.avif"
                                         alt="rekomendasi" width="213" height="143" loading="lazy">
                                     <span class="ic-video"></span>
                                     <!-- available class ic-img | ic-pie-chart  -->
@@ -1554,7 +1553,7 @@
                         <article class="cardArticle">
                             <a href="#">
                                 <figure class="cardImg">
-                                    <img class="thumbCard" src="./assets/img/dummy/dummy-header-img.png"
+                                    <img class="thumbCard" src="./assets/img/dummy/dummy-header-img.avif"
                                         alt="rekomendasi" width="213" height="143" loading="lazy">
                                     <span class="ic-video"></span>
                                     <!-- available class ic-img | ic-pie-chart  -->
@@ -1569,7 +1568,7 @@
                         <article class="cardArticle">
                             <a href="#">
                                 <figure class="cardImg">
-                                    <img class="thumbCard" src="./assets/img/dummy/dummy-header-img.png"
+                                    <img class="thumbCard" src="./assets/img/dummy/dummy-header-img.avif"
                                         alt="rekomendasi" width="213" height="143" loading="lazy">
                                     <span class="ic-video"></span>
                                     <!-- available class ic-img | ic-pie-chart  -->
@@ -1584,7 +1583,7 @@
                         <article class="cardArticle">
                             <a href="#">
                                 <figure class="cardImg">
-                                    <img class="thumbCard" src="./assets/img/dummy/dummy-header-img.png"
+                                    <img class="thumbCard" src="./assets/img/dummy/dummy-header-img.avif"
                                         alt="rekomendasi" width="213" height="143" loading="lazy">
                                     <span class="ic-video"></span>
                                     <!-- available class ic-img | ic-pie-chart  -->

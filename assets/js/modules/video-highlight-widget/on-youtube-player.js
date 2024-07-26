@@ -40,7 +40,8 @@ const onYouTubeIframeAPIReady = () => {
         videoId: youtubeID,
         playerVars: {
             'playsinline': 1,
-            'autoplay': 1,
+            'autoplay': 0,
+            "mute": 1
         },
         events: {
             'onReady': onPlayerReady,

@@ -1,16 +1,24 @@
 @use "media";
-@import "library";
+@use "library" as *;
 @import "global";
 
 // Molecules
 @import "molecules/header";
+@import "molecules/navigation-details";
 @import "molecules/footer";
 @import "molecules/sticky-feature";
 @import "molecules/burger-menu";
 @import "molecules/network-dropdown";
 @import "molecules/widget-list-article";
+@import "molecules/widget-geolocation";
+@import "molecules/page-detail-main";
+@import "molecules/widget-baca-juga";
 
 // Atomic
+@import "./atomic/pagination";
+@import "./atomic/subscribe-inews";
+@import "./atomic/tags";
+@import "./atomic/sr-only";
 @import "atomic/card-article";
 @import "atomic/breadcrumb";
 @import "atomic/share-group";

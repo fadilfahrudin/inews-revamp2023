@@ -1,5 +1,6 @@
 .alert-wrapp {
     display: flex;
+    align-items: center;
     flex-wrap: wrap;
     height: auto;
     padding: 13px;
@@ -35,12 +36,13 @@
                 font-weight: 700;
                 text-decoration: none;
                 color: #0c2a75;
+                padding: 10px 0;
             }
         }
     }
     .alert-close {
-        width: 20px;
-        height: 20px;
+        width: 26px;
+        height: 26px;
         cursor: pointer;
     }
 }

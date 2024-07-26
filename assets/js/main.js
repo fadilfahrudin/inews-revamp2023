@@ -11,8 +11,10 @@ import { Navigation } from "./modules/navigation.js";
 import { popularWidget } from "./modules/popular-widget.js";
 import { videoHighlightWidget } from "./modules/video-highlight-widget/video-highlight-widget.js";
 import main3dCarousel from "./modules/3dcarousel/main-3d-carousel.js";
-import { searchModul } from "./modules/search.js";
-
+import { searchModule } from "./modules/search.js";
+import { indexModuls } from "./modules/index/indexModuls.js";
+import { detailVideo } from "./modules/page-video/video-detail.js"
+import { multimedia } from "./modules/multimedia/multimedia.js";
 function initialize() {
     initNav()
     iniPopWidget()
@@ -29,15 +31,31 @@ function initialize() {
     ssoLogin()
     backToTop()
     initJumpToOtherNews()
-    searchModul()
+    searchModule()
+    initPageIndex()
+    iniDetailPageVideo()
+    initMultimedia()
 }
 
+function initMultimedia() {
+    if (("#detail-photo").length > 0 || $("#detail-infographic").length > 0) {
+        multimedia()
+    }
+}
+
+function iniDetailPageVideo() {
+    if ($("#detail-video").length > 0) {
+        detailVideo()
+    }
+}
+function initPageIndex() {
+    if ($('#index-page').length > 0) {
+        indexModuls()
+    }
+}
 function initNav() {
     if ($('#navbar-nav').length > 0) {
         Navigation.dropDown()
-        if ($('.nav__main').length > 0) {
-            Navigation.stickyNavigationMainPage()
-        }
     }
 }
 
@@ -65,7 +83,7 @@ function init3dCarousel() {
 }
 
 function initStickyFeatureDetailPage() {
-    if ($('.stickyFeature').length > 0) {
+    if ($('#detail-video').length > 0 || $('#detail-page').length > 0) {
         sticky()
         resizeFontToggle()
         progressBar()
@@ -107,4 +125,3 @@ function initJumpToOtherNews() {
 
 // Initialize all the modules
 document.addEventListener("DOMContentLoaded", initialize);
-

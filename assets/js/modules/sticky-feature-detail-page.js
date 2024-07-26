@@ -1,8 +1,8 @@
 export const sticky = () => {
     $(window).on('scroll', function () {
         let scrollY = $(this).scrollTop() || document.documentElement.scrollTop;
-        if (scrollY > 195) {
-            $('.stickyFeature').css('transform', 'translateY(0)');
+        if (scrollY > $(".navigationKanal").offset().top) {
+            $('.stickyFeature').css('transform', 'translateY(-10px)');
         } else {
             $('.stickyFeature').css('transform', 'translateY(-270px)');
         }

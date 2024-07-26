@@ -1,0 +1,46 @@
+.bacaJuga {
+    width: clamp(400px, 100%, 672px);
+    height: 96px;
+    background-color: var(--color-light-50);
+    margin-bottom: 24px;
+    padding: 8px 16px 8px 20px;
+    border-radius: 10px;
+    border-left: 8px solid var(--color-red-75);
+    a {
+        display: flex;
+        align-items: center;
+        gap: 0 12px;
+        img {
+            border-radius: 20px;
+            object-fit: cover;
+            object-position: center center;
+        }
+        article {
+            .bacaJugatitle {
+                color: var(--color-red-75);
+                font-weight: 700;
+                line-height: 24px;
+                font-size: 16px;
+                font-style: normal;
+            }
+
+            .bacaJugaExcerpt {
+                color: var(--color-dark-100);
+                font-weight: 700;
+                line-height: 24px;
+
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp: 2;
+                text-overflow: ellipsis;
+                overflow: hidden;
+            }
+        }
+    }
+
+    transition: all ease-in-out 0.3s;
+    &:hover {
+        transform: translate(-1px, -4px);
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+}

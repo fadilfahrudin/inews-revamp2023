@@ -141,22 +141,44 @@
                     position: relative;
                     width: clamp(150px, 23vw, 310px);
                     height: 32px;
+                    border-radius: 128px;
+                    background: var(--color-light-75);
+                    border: 1px solid #e3e3e3;
+                    overflow: hidden;
                     input {
-                        width: 100%;
+                        width: 80%;
                         height: 100%;
-                        border: 1px solid var(--color-grey-75);
-                        border-radius: 16px;
                         padding: 4px 16px;
 
+                        border: none;
+                        background: var(--color-light-75);
+
+                        color: #8c8c8c;
+                        font-family: Inter, sans-serif;
+                        font-size: 14px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 150%;
+                        transition: background-color 0.3s ease;
+
                         &:focus {
-                            outline: 1px solid var(--color-dark-100);
+                            outline: none;
+                            // background-color: #e3e3e3;
                         }
                     }
+
                     .btnSearch {
+                        cursor: pointer;
+                        display: flex;
+                        justify-content: end;
+                        align-items: center;
+
                         position: absolute;
                         right: 16px;
                         top: 50%;
                         transform: translateY(-50%);
+                        width: 50px;
+                        height: 100%;
                     }
                 }
                 #data-list {
@@ -170,7 +192,7 @@
                     border: 1px solid #e3e3e3;
                     box-shadow: 15px -1px 31px 10px #8d8d8d40;
                     padding: 20px 16px;
-                    .searc-on-keyup{
+                    .searc-on-keyup {
                         display: none;
                         list-style: none;
                         margin-bottom: 12px;
@@ -182,31 +204,32 @@
                             margin: 8px 0;
                             padding: 4px 0;
                             font-family: Inter, sans-serif;
-                            font-size: 12px;
+                            font-size: clamp(8px, 1.5vw, 12px);
                             font-weight: 400;
                             line-height: 18px;
                             color: #171717;
                             width: 100%;
                         }
                     }
-                    .recent-search{
+                    .recent-search {
                         list-style: none;
                         display: flex;
                         flex-direction: column;
                         gap: 8px;
                         margin-bottom: 12px;
+                        width: 100%;
+                        overflow: hidden;
                         .list-title {
-                            display: block;
                             width: 100%;
                             display: flex;
                             justify-content: space-between;
                             font-family: Inter, sans-serif;
-                            font-size: 14px;
+                            font-size: clamp(12px, 1.5vw, 14px);
                             font-weight: 700;
                             line-height: 21px;
                             color: #171717;
                             margin-bottom: 12px;
-                            #clear-recent{
+                            #clear-recent {
                                 cursor: pointer;
                                 color: #990100;
                                 font-weight: 500;
@@ -216,19 +239,23 @@
                             cursor: pointer;
                             padding: 4px 0;
                             font-family: Inter, sans-serif;
-                            font-size: 12px;
+                            font-size: clamp(8px, 1.5vw, 12px);
                             font-weight: 400;
                             line-height: 18px;
                             color: #171717;
-                            width: 100%;
                             display: flex;
                             justify-content: space-between;
-                            .remove-recent{
+                            .recent-search-text {
+                                width: 80%;
+                                white-space: nowrap;
+                                overflow: hidden;
+                                text-overflow: ellipsis;
+                            }
+                            .remove-recent {
                                 content: url(../img/icon/ic-remove-search.svg);
-                                width:16px;
+                                width: 16px;
                                 height: 16px;
                             }
-
                         }
                     }
                     .trending-topic {
@@ -240,7 +267,7 @@
                             display: block;
                             width: 100%;
                             font-family: Inter, sans-serif;
-                            font-size: 14px;
+                            font-size: clamp(12px, 1.5vw, 14px);
                             font-weight: 700;
                             line-height: 21px;
                             color: #171717;
@@ -250,19 +277,18 @@
                             cursor: pointer;
                             padding: 4px 8px;
                             font-family: Inter, sans-serif;
-                            font-size: 12px;
+                            font-size: clamp(8px, 1.5vw, 12px);
                             font-weight: 400;
                             line-height: 18px;
                             border: 0.5px solid #171717;
                             border-radius: 20px;
                             color: #171717;
 
-                            .ic-hot-search{
+                            .ic-hot-search {
                                 content: url(../img/icon/ic-hot-search.svg);
-                                width:7.5px;
+                                width: 7.5px;
                                 height: auto;
                             }
-
                         }
                     }
                 }
@@ -303,6 +329,7 @@
                         cursor: pointer;
                         display: flex;
                         align-items: center;
+                        padding: 10px 0;
                         .networkLabel {
                             font-family: Inter, sans-serif;
                             font-size: 14px;
@@ -345,6 +372,7 @@ header {
             width: auto;
             height: 55px;
             img {
+                width: auto;
                 height: 55px;
                 object-fit: contain;
             }
@@ -356,6 +384,8 @@ header {
             height: 100%;
             overflow: hidden;
             img {
+                width: 100%;
+                height: 100%;
                 object-fit: cover;
                 object-position: center center;
             }

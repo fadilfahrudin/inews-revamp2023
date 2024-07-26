@@ -2,6 +2,9 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border-radius: 8px;
+    background: #f9f9f9;
+    padding: 8px 20px;
     label {
         font-size: 14px;
         line-height: 21px;
@@ -44,9 +47,22 @@
         }
         .showAll {
             a {
+                border-radius: 32px;
+                border: 1px solid #171717;
+                padding: 4px 16px;
+                transition:
+                    background-color 0.2s ease-in-out,
+                    border 0.2s ease-in-out,
+                    color 0.2s ease-in-out;
+
+                &:hover {
+                    background-color: var(--color-red);
+                    border: 1px solid var(--color-red);
+                    color: var(--color-white);
+                }
                 font-size: 14px;
                 font-weight: 400;
-                line-height: 21px;
+                line-height: 150%;
                 color: var(--color-dark-100);
             }
         }

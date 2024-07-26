@@ -3,7 +3,7 @@ section {
         position: relative;
         width: 100%;
         height: 643px;
-        background-color: #171717;
+        background-color: var(--color-dark-75);
         margin: 24px 0;
         padding-top: 30px;
         padding-bottom: 62px;
@@ -46,10 +46,10 @@ section {
                     height: 100%;
                     overflow: hidden;
                     border-radius: 16px 16px 0 0;
-                    @include media.ipad{
+                    @include media.ipad {
                         width: 60%;
                     }
-                    .main-video-container{
+                    .main-video-container {
                         width: 100%;
                         height: 329px;
                         @include media.ipad {

@@ -1,0 +1,145 @@
+#detail-photo,
+#detail-infographic {
+    .footerDetailMultimediaPhoto {
+        position: relative;
+        z-index: 2;
+        background-color: #333;
+        width: 100%;
+        height: auto;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 47px;
+        padding-bottom: 46px;
+        .footer__header {
+            padding: 0 41px;
+            margin-bottom: 16px;
+            .partOf {
+                display: flex;
+                gap: 8px;
+                align-items: center;
+                color: var(--color-white);
+                font-family: Inter, sans-serif;
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 150%; /* 21px */
+            }
+        }
+        .footer__body {
+            width: 100%;
+            padding: 0 41px;
+            display: flex;
+            flex-direction: column;
+            @include media.ipad {
+                flex-direction: row;
+                justify-content: center;
+                gap: 16px;
+            }
+            .col__listOtherPage {
+                position: relative;
+                display: flex;
+                gap: 32px;
+                justify-content: space-between;
+                width: 100%;
+                height: auto;
+                padding-top: 32px;
+                margin-bottom: 16px;
+
+                &:last-child {
+                    margin-bottom: 24px;
+                    @include media.ipad {
+                        flex-direction: column;
+                        gap: 8px;
+                        width: calc(100% / 2);
+                        .listOtherPage {
+                            width: 100%;
+                        }
+                    }
+                }
+                .listTitle {
+                    top: 0;
+                    position: absolute;
+                    color: var(--color-white);
+                    font-family: Inter, sans-serif;
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: 150%; /* 21px */
+                }
+                .listOtherPage {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 8px;
+                    width: calc((100% - 32px) / 2);
+                    list-style: none;
+
+                    .listItem {
+                        a {
+                            color: var(--color-white);
+                            font-family: Inter, sans-serif;
+                            font-size: 14px;
+                            font-style: normal;
+                            font-weight: 400;
+                            line-height: 150%; /* 21px */
+                            transition: color 0.3s ease-in-out;
+                            &:hover {
+                                color: var(--color-grey-0);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .socialMediaWrapper {
+            padding: 0 41px;
+            list-style: none;
+            width: 100%;
+            height: auto;
+            display: flex;
+            justify-content: center;
+            gap: 18px;
+            margin-bottom: 16px;
+        }
+        .appsDownloadWrapper {
+            padding: 0 41px;
+            width: 100%;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 16px;
+            .actionText {
+                color: var(--color-white);
+
+                font-family: Inter, sans-serif;
+                font-size: 12px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 150%; /* 18px */
+            }
+            .actionPlatformWrapp {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                gap: 16px;
+            }
+        }
+        .copyRight {
+            width: 100%;
+            height: auto;
+            text-align: center;
+            padding: 8px 0;
+            background-color: var(--color-dark-75);
+
+            color: #c5c5c5;
+            text-align: center;
+            font-family: Inter, sans-serif;
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 150%; /* 18px */
+        }
+    }
+}
