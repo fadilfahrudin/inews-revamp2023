@@ -160,13 +160,13 @@ aside.sideLeft {
   height: auto;
 }
 
-@media screen and (max-width: 1365px) {
+@media screen and (max-width: 1024px) {
   .container {
     width: 100%;
     padding: 0 clamp(2rem, 5vw, 128px);
   }
 }
-@media (min-width: 1366px) {
+@media (min-width: 1025px) {
   .container {
     width: 1024px;
     margin: auto;
@@ -238,7 +238,7 @@ aside.sideLeft {
   padding: 24px;
   overflow: hidden;
 }
-@media screen and (max-width: 1365px) {
+@media screen and (max-width: 1024px) {
   .topBarWrap .topBar > div:first-child .app-gateway .modal-app-gateway {
     left: -122px;
   }
@@ -962,7 +962,7 @@ footer .license {
   transform-origin: 0%;
   transition: transform 0.5s linear;
 }
-@media screen and (max-width: 1365px) {
+@media screen and (max-width: 1024px) {
   .stickyFeature .stikyContent .resizeFont {
     margin: 0;
   }
@@ -1262,7 +1262,7 @@ footer .license {
   background-color: #990100;
   color: var(--color-white);
 }
-@media screen and (max-width: 1365px) {
+@media screen and (max-width: 1024px) {
   #networkDropdown .dropdownMenu .networkChannel .pulau {
     width: 50%;
   }
@@ -1308,7 +1308,7 @@ footer .license {
   background-color: #990100;
   color: var(--color-white);
 }
-@media screen and (max-width: 1365px) {
+@media screen and (max-width: 1024px) {
   #networkDropdown .dropdownMenu .networkChannel #listNetwork {
     width: 50%;
   }
@@ -2571,7 +2571,15 @@ section.detailWrapper .mainBody main .btnMoreNews:hover {
   gap: 0 4px;
 }
 .breadcrumb > a {
+  position: relative;
   color: var(--color-grey-75);
+  display: flex;
+  gap: 8px;
+}
+.breadcrumb > a::after {
+  content: url(../img/icon/ic-arrow-breadcrumb.svg);
+  width: 8px;
+  height: 8px;
 }
 .breadcrumb .lastPage {
   cursor: default;
@@ -2696,7 +2704,7 @@ section.detailWrapper .mainBody main .btnMoreNews:hover {
   margin: auto;
   z-index: 1;
 }
-@media screen and (max-width: 1365px) {
+@media screen and (max-width: 1024px) {
   .adsPlacement.parallaxWrapper {
     width: 100%;
   }
@@ -2755,7 +2763,7 @@ section.detailWrapper .mainBody main .btnMoreNews:hover {
   justify-content: center;
   align-items: start;
 }
-@media screen and (max-width: 1365px) {
+@media screen and (max-width: 1024px) {
   .asideAds {
     width: 100%;
   }
@@ -2952,7 +2960,7 @@ section.detailWrapper .mainBody main .btnMoreNews:hover {
   background-color: var(--color-dark-0);
   color: var(--color-light-100);
 }
-@media screen and (max-width: 1365px) {
+@media screen and (max-width: 1024px) {
   .stickyAds {
     width: 80%;
   }

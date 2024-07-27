@@ -6,7 +6,7 @@
   border-radius: 16px 16px 0 0;
   overflow: hidden;
 }
-@media screen and (max-width: 1365px) {
+@media screen and (max-width: 1024px) {
   .widgetNewsTV {
     height: clamp(240px, 34vw, 280px);
   }
@@ -618,7 +618,7 @@ section.widgetVideoHighlight {
   padding-top: 30px;
   padding-bottom: 62px;
 }
-@media screen and (max-width: 1365px) {
+@media screen and (max-width: 1024px) {
   section.widgetVideoHighlight {
     height: auto;
   }
@@ -657,7 +657,7 @@ section.widgetVideoHighlight .container .widgetBody .video-player {
   overflow: hidden;
   border-radius: 16px 16px 0 0;
 }
-@media screen and (max-width: 1365px) {
+@media screen and (max-width: 1024px) {
   section.widgetVideoHighlight .container .widgetBody .video-player {
     width: 60%;
   }
@@ -666,7 +666,7 @@ section.widgetVideoHighlight .container .widgetBody .video-player .main-video-co
   width: 100%;
   height: 329px;
 }
-@media screen and (max-width: 1365px) {
+@media screen and (max-width: 1024px) {
   section.widgetVideoHighlight .container .widgetBody .video-player .main-video-container {
     height: auto;
   }
