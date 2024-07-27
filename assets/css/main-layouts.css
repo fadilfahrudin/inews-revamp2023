@@ -2150,6 +2150,14 @@ section.widgetLitigasi .widget__body article.cardArticle.card__headline a .cardI
 section.widgetLitigasi .widget__body article.cardArticle.card__headline a .cardBody .kanalAndTime .postTime {
   font-size: clamp(10px, 1vw, 14px);
 }
+section.widgetLitigasi .widget__body .cardArticle {
+  border-bottom: 1px solid rgba(27, 56, 123, 0.4);
+  padding-bottom: 12px !important;
+}
+section.widgetLitigasi .widget__body .cardArticle:last-child {
+  border-bottom: 0;
+  padding-bottom: 0 !important;
+}
 section.widgetLitigasi .widget__footer {
   display: flex;
   justify-content: center;
@@ -2159,7 +2167,7 @@ section.widgetLitigasi .widget__footer a {
   width: -moz-max-content;
   width: max-content;
   background-color: #fcab26;
-  color: var(--color-dark-100);
+  color: var(--color-white);
   font-size: 16px;
   font-weight: 700;
   padding: 6px 44px;
@@ -2596,6 +2604,9 @@ section.widgetMultimedia .widget__footer a:hover {
   justify-content: center;
   align-items: start;
 }
+.asideAds.ads-600x300 {
+  height: 600px;
+}
 @media screen and (max-width: 1024px) {
   .asideAds {
     width: 100%;
@@ -2883,6 +2894,11 @@ section.widgetMultimedia .widget__footer a:hover {
 }
 
 .alert-wrapp {
+  position: absolute;
+  z-index: 9999;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 200px;
   display: flex;
   align-items: center;
   flex-wrap: wrap;

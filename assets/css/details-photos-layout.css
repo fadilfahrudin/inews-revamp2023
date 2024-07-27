@@ -1459,6 +1459,11 @@ nav .container .rightSection .loginBurgerMenuWrap #burgerBtn .ic-burger-btn {
 }
 
 .alert-wrapp {
+  position: absolute;
+  z-index: 9999;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 200px;
   display: flex;
   align-items: center;
   flex-wrap: wrap;

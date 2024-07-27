@@ -22,12 +22,14 @@
                 line-height: 24px;
                 font-size: 16px;
                 font-style: normal;
+                margin: unset !important;
             }
 
             .bacaJugaExcerpt {
                 color: var(--color-dark-100);
                 font-weight: 700;
                 line-height: 24px;
+                margin: unset !important;
 
                 display: -webkit-box;
                 -webkit-box-orient: vertical;
