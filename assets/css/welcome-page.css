@@ -144,6 +144,7 @@
   display: flex;
   flex-direction: column;
   gap: 8px;
+  width: 100%;
 }
 .widgetNewsTV__body__listCard article.cardArticle a .cardBody .kanalAndTime {
   display: flex;
@@ -431,6 +432,7 @@ section.widgetGeoLocation .locationBody .geo-location-active .newsInLocation art
   display: flex;
   flex-direction: column;
   gap: 8px;
+  width: 100%;
 }
 section.widgetGeoLocation .locationBody .geo-location-active .newsInLocation article.cardArticle a .cardBody .kanalAndTime {
   display: flex;

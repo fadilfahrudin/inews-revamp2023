@@ -1527,6 +1527,7 @@ footer .license {
   display: flex;
   flex-direction: column;
   gap: 8px;
+  width: 100%;
 }
 .widgetListArticle.col .widgetListArticle__body article.cardArticle a .cardBody .kanalAndTime {
   display: flex;
@@ -1658,6 +1659,7 @@ footer .license {
   display: flex;
   flex-direction: column;
   gap: 8px;
+  width: 100%;
 }
 .widgetListArticle.row .widgetListArticle__body article.cardArticle a .cardBody .kanalAndTime {
   display: flex;
@@ -1880,6 +1882,7 @@ section.widgetGeoLocation .locationBody .geo-location-active .newsInLocation art
   display: flex;
   flex-direction: column;
   gap: 8px;
+  width: 100%;
 }
 section.widgetGeoLocation .locationBody .geo-location-active .newsInLocation article.cardArticle a .cardBody .kanalAndTime {
   display: flex;
@@ -2148,6 +2151,7 @@ section.widgetNewsNetwork .widget__body article.cardArticle a .cardBody {
   display: flex;
   flex-direction: column;
   gap: 8px;
+  width: 100%;
 }
 section.widgetNewsNetwork .widget__body article.cardArticle a .cardBody .kanalAndTime {
   display: flex;
@@ -2321,6 +2325,7 @@ section.widgetLitigasi .widget__body article.cardArticle a .cardBody {
   display: flex;
   flex-direction: column;
   gap: 8px;
+  width: 100%;
 }
 section.widgetLitigasi .widget__body article.cardArticle a .cardBody .kanalAndTime {
   display: flex;

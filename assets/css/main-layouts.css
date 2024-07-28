@@ -1218,6 +1218,7 @@ footer .license {
   display: flex;
   flex-direction: column;
   gap: 8px;
+  width: 100%;
 }
 .widgetNewsHeadline article.cardArticle a .cardBody .kanalAndTime {
   display: flex;
@@ -1440,6 +1441,7 @@ footer .license {
   display: flex;
   flex-direction: column;
   gap: 8px;
+  width: 100%;
 }
 .widgetListArticle.col .widgetListArticle__body article.cardArticle a .cardBody .kanalAndTime {
   display: flex;
@@ -1571,6 +1573,7 @@ footer .license {
   display: flex;
   flex-direction: column;
   gap: 8px;
+  width: 100%;
 }
 .widgetListArticle.row .widgetListArticle__body article.cardArticle a .cardBody .kanalAndTime {
   display: flex;
@@ -1735,6 +1738,7 @@ footer .license {
   display: flex;
   flex-direction: column;
   gap: 8px;
+  width: 100%;
 }
 .widgetPopular__body__wrappList article.cardArticle a .cardBody .kanalAndTime {
   display: flex;
@@ -1925,6 +1929,7 @@ section.widgetElectionCenter .widget__body article.cardArticle a .cardBody {
   display: flex;
   flex-direction: column;
   gap: 8px;
+  width: 100%;
 }
 section.widgetElectionCenter .widget__body article.cardArticle a .cardBody .kanalAndTime {
   display: flex;
@@ -2098,6 +2103,7 @@ section.widgetLitigasi .widget__body article.cardArticle a .cardBody {
   display: flex;
   flex-direction: column;
   gap: 8px;
+  width: 100%;
 }
 section.widgetLitigasi .widget__body article.cardArticle a .cardBody .kanalAndTime {
   display: flex;
@@ -2268,6 +2274,7 @@ section.widgetNewsNetwork .widget__body article.cardArticle a .cardBody {
   display: flex;
   flex-direction: column;
   gap: 8px;
+  width: 100%;
 }
 section.widgetNewsNetwork .widget__body article.cardArticle a .cardBody .kanalAndTime {
   display: flex;
@@ -2430,6 +2437,7 @@ section.widgetMultimedia .widget__body article.cardArticle a .cardBody {
   display: flex;
   flex-direction: column;
   gap: 8px;
+  width: 100%;
 }
 section.widgetMultimedia .widget__body article.cardArticle a .cardBody .kanalAndTime {
   display: flex;

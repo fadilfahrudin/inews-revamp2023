@@ -9,5 +9,6 @@
   ],
   "liveSassCompile.settings.includeItems": ["/**/scss/*.scss"],
   "liveSassCompile.settings.excludeList": [".vscode/**"],
-  "liveSassCompile.settings.generateMap": true
+  "liveSassCompile.settings.generateMap": true,
+  "svn.ignoreMissingSvnWarning": true
 }
