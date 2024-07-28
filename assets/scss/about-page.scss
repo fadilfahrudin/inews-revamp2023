@@ -1,0 +1,113 @@
+@use "media";
+@import "global";
+
+// Molecules
+@import "molecules/navigation-main";
+@import "molecules/header";
+@import "molecules/footer";
+@import "molecules/burger-menu";
+@import "molecules/network-dropdown";
+
+// Atomic
+@import "./atomic/sr-only";
+@import "atomic/sso-login";
+@import "atomic/hidden";
+@import "atomic/sticky-ads";
+@import "atomic/alert-sso";
+@import "atomic/back-to-top";
+
+#about-page {
+    header {
+        position: sticky;
+        top: 48px;
+        box-shadow: 0px 6px 12px 0px #1c27310d;
+    }
+    .mainBody {
+        margin-top: 40px;
+        aside {
+            &.sideLeft {
+                .listMenuAbout {
+                    position: sticky;
+                    top: 170px;
+                    width: auto;
+                    height: auto;
+                    border-radius: 16px;
+                    background-color: var(--color-light-75);
+                    list-style: none;
+                    .listMenu {
+                        padding: 12px 20px;
+                        border-bottom: 1px solid var(--color-light-25);
+                        &:last-child {
+                            border-bottom: unset;
+                        }
+                        a {
+                            color: var(--color-black);
+                            font-family: Inter-Bold, sans-serif;
+                            font-size: 18px;
+                            font-style: normal;
+                            font-weight: 700;
+                            line-height: 160%; /* 28.8px */
+                            transition: color 0.3s ease-in-out;
+                        }
+                        &:hover {
+                            a {
+                                color: var(--color-maroon);
+                            }
+                        }
+                        &.active {
+                            a {
+                                color: var(--color-maroon);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        main {
+            &.sideRight {
+                .backdrop-wrapper {
+                    position: relative;
+                    width: 100%;
+                    height: auto;
+                    .titleSection {
+                        position: absolute;
+                        top: 40px;
+                        left: 50%;
+                        transform: translateX(-50%);
+
+                        font-family: Inter-Bold, sans-serif;
+                        font-size: 32px;
+                        font-weight: 700;
+                        line-height: 48px;
+                        color: var(--color-white);
+                    }
+                    img {
+                        width: 100%;
+                        height: auto;
+                        object-fit: contain;
+                    }
+                }
+                .about-content {
+                    position: relative;
+                    top: -46px;
+                    z-index: 1;
+                    width: 96%;
+                    height: auto;
+                    background-color: var(--color-white);
+                    box-shadow: 0px 4px 15px 0px rgba(205, 205, 205, 0.2509803922);
+                    border-radius: 8px;
+                    margin: auto;
+                    padding: 24px;
+                    p {
+                        font-family: Inter, sans-serif;
+                        font-size: clamp(12px, 1.2vw, 14px);
+                        font-weight: 400;
+                        line-height: 22px;
+                        margin-bottom: 24px;
+                        color: var(--color-black);
+                    }
+                }
+            }
+        }
+    }
+}

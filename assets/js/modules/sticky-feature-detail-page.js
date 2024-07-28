@@ -102,18 +102,31 @@ export const counterLike = () => {
 }
 
 export const copyLink = () => {
+    const url = window.location.href;
     $(".ic-link-share").on('click', function () {
         $("#copied").addClass("active");
-
-        setTimeout(() => {
-            $("#copied").removeClass("active");
-        }, 3000)
+        navigator.clipboard.writeText(url)
+        .then(() => {
+            setTimeout(() => {
+                $("#copied").removeClass("active");
+            }, 3000)
+        })
+        .catch((error) => {
+            console.error(error);
+        });
+        
     })
     $(".ic-link-share-2").on('click', function () {
         $("#copied-2").addClass("active");
-
-        setTimeout(() => {
-            $("#copied-2").removeClass("active");
-        }, 3000)
+        navigator.clipboard.writeText(url)
+        .then(() => {
+            setTimeout(() => {
+                $("#copied-2").removeClass("active");
+            }, 3000)
+        })
+        .catch((error) => {
+            console.error(error);
+        });
+        
     })
 }

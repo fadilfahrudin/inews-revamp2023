@@ -5,13 +5,13 @@
 }
 
 @mixin ipad {
-  @media screen and (max-width: 1365px) {
+  @media screen and (max-width: 1024px) {
     @content;
   }
 }
 
 @mixin desktop {
-  @media (min-width: 1366px) {
+  @media (min-width: 1025px) {
     @content;
   }
 }

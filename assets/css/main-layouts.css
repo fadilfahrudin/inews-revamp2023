@@ -160,13 +160,13 @@ aside.sideLeft {
   height: auto;
 }
 
-@media screen and (max-width: 1365px) {
+@media screen and (max-width: 1024px) {
   .container {
     width: 100%;
     padding: 0 clamp(2rem, 5vw, 128px);
   }
 }
-@media (min-width: 1366px) {
+@media (min-width: 1025px) {
   .container {
     width: 1024px;
     margin: auto;
@@ -259,7 +259,7 @@ nav.nav__main .container .ic-dropdown-kanal {
   transform: rotate(0deg);
   transition: transform 0.3s ease-in-out;
 }
-@media screen and (max-width: 1365px) {
+@media screen and (max-width: 1024px) {
   nav.nav__main .container .ic-dropdown-kanal {
     right: 5%;
   }
@@ -334,7 +334,7 @@ nav.nav__main .container .ic-dropdown-kanal.dropDown {
   padding: 24px;
   overflow: hidden;
 }
-@media screen and (max-width: 1365px) {
+@media screen and (max-width: 1024px) {
   .topBarWrap .topBar > div:first-child .app-gateway .modal-app-gateway {
     left: -122px;
   }
@@ -1010,7 +1010,7 @@ footer .license {
   background-color: #990100;
   color: var(--color-white);
 }
-@media screen and (max-width: 1365px) {
+@media screen and (max-width: 1024px) {
   #networkDropdown .dropdownMenu .networkChannel .pulau {
     width: 50%;
   }
@@ -1056,7 +1056,7 @@ footer .license {
   background-color: #990100;
   color: var(--color-white);
 }
-@media screen and (max-width: 1365px) {
+@media screen and (max-width: 1024px) {
   #networkDropdown .dropdownMenu .networkChannel #listNetwork {
     width: 50%;
   }
@@ -1218,6 +1218,7 @@ footer .license {
   display: flex;
   flex-direction: column;
   gap: 8px;
+  width: 100%;
 }
 .widgetNewsHeadline article.cardArticle a .cardBody .kanalAndTime {
   display: flex;
@@ -1440,6 +1441,7 @@ footer .license {
   display: flex;
   flex-direction: column;
   gap: 8px;
+  width: 100%;
 }
 .widgetListArticle.col .widgetListArticle__body article.cardArticle a .cardBody .kanalAndTime {
   display: flex;
@@ -1571,6 +1573,7 @@ footer .license {
   display: flex;
   flex-direction: column;
   gap: 8px;
+  width: 100%;
 }
 .widgetListArticle.row .widgetListArticle__body article.cardArticle a .cardBody .kanalAndTime {
   display: flex;
@@ -1735,6 +1738,7 @@ footer .license {
   display: flex;
   flex-direction: column;
   gap: 8px;
+  width: 100%;
 }
 .widgetPopular__body__wrappList article.cardArticle a .cardBody .kanalAndTime {
   display: flex;
@@ -1925,6 +1929,7 @@ section.widgetElectionCenter .widget__body article.cardArticle a .cardBody {
   display: flex;
   flex-direction: column;
   gap: 8px;
+  width: 100%;
 }
 section.widgetElectionCenter .widget__body article.cardArticle a .cardBody .kanalAndTime {
   display: flex;
@@ -2098,6 +2103,7 @@ section.widgetLitigasi .widget__body article.cardArticle a .cardBody {
   display: flex;
   flex-direction: column;
   gap: 8px;
+  width: 100%;
 }
 section.widgetLitigasi .widget__body article.cardArticle a .cardBody .kanalAndTime {
   display: flex;
@@ -2150,6 +2156,14 @@ section.widgetLitigasi .widget__body article.cardArticle.card__headline a .cardI
 section.widgetLitigasi .widget__body article.cardArticle.card__headline a .cardBody .kanalAndTime .postTime {
   font-size: clamp(10px, 1vw, 14px);
 }
+section.widgetLitigasi .widget__body .cardArticle {
+  border-bottom: 1px solid rgba(27, 56, 123, 0.4);
+  padding-bottom: 12px !important;
+}
+section.widgetLitigasi .widget__body .cardArticle:last-child {
+  border-bottom: 0;
+  padding-bottom: 0 !important;
+}
 section.widgetLitigasi .widget__footer {
   display: flex;
   justify-content: center;
@@ -2159,7 +2173,7 @@ section.widgetLitigasi .widget__footer a {
   width: -moz-max-content;
   width: max-content;
   background-color: #fcab26;
-  color: var(--color-dark-100);
+  color: var(--color-white);
   font-size: 16px;
   font-weight: 700;
   padding: 6px 44px;
@@ -2260,6 +2274,7 @@ section.widgetNewsNetwork .widget__body article.cardArticle a .cardBody {
   display: flex;
   flex-direction: column;
   gap: 8px;
+  width: 100%;
 }
 section.widgetNewsNetwork .widget__body article.cardArticle a .cardBody .kanalAndTime {
   display: flex;
@@ -2422,6 +2437,7 @@ section.widgetMultimedia .widget__body article.cardArticle a .cardBody {
   display: flex;
   flex-direction: column;
   gap: 8px;
+  width: 100%;
 }
 section.widgetMultimedia .widget__body article.cardArticle a .cardBody .kanalAndTime {
   display: flex;
@@ -2519,7 +2535,15 @@ section.widgetMultimedia .widget__footer a:hover {
   gap: 0 4px;
 }
 .breadcrumb > a {
+  position: relative;
   color: var(--color-grey-75);
+  display: flex;
+  gap: 8px;
+}
+.breadcrumb > a::after {
+  content: url(../img/icon/ic-arrow-breadcrumb.svg);
+  width: 8px;
+  height: 8px;
 }
 .breadcrumb .lastPage {
   cursor: default;
@@ -2588,7 +2612,10 @@ section.widgetMultimedia .widget__footer a:hover {
   justify-content: center;
   align-items: start;
 }
-@media screen and (max-width: 1365px) {
+.asideAds.ads-600x300 {
+  height: 600px;
+}
+@media screen and (max-width: 1024px) {
   .asideAds {
     width: 100%;
   }
@@ -2792,7 +2819,7 @@ section.widgetMultimedia .widget__footer a:hover {
   margin: auto;
   z-index: 1;
 }
-@media screen and (max-width: 1365px) {
+@media screen and (max-width: 1024px) {
   .adsPlacement.parallaxWrapper {
     width: 100%;
   }
@@ -2868,13 +2895,18 @@ section.widgetMultimedia .widget__footer a:hover {
   background-color: var(--color-dark-0);
   color: var(--color-light-100);
 }
-@media screen and (max-width: 1365px) {
+@media screen and (max-width: 1024px) {
   .stickyAds {
     width: 80%;
   }
 }
 
 .alert-wrapp {
+  position: absolute;
+  z-index: 9999;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 200px;
   display: flex;
   align-items: center;
   flex-wrap: wrap;

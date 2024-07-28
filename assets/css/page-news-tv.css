@@ -1,0 +1,119 @@
+article.cardArticle {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  padding: 0;
+  border-radius: 0;
+}
+article.cardArticle a {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+}
+article.cardArticle a:hover .cardImg .thumbCard {
+  transform: scale(1.03);
+}
+article.cardArticle a:hover .cardBody .kanalAndTime .kanal {
+  transition: color 0.3s ease-in-out;
+  color: var(--color-maroon-25);
+}
+article.cardArticle a:hover .cardBody .cardTitle {
+  transition: color 0.3s ease-in-out;
+  color: var(--color-red);
+}
+article.cardArticle a .cardImg {
+  flex-shrink: 0;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 20px;
+}
+article.cardArticle a .cardImg .thumbCard {
+  transition: transform 0.3s ease-in-out;
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 5/3.5;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center top;
+     object-position: center top;
+}
+article.cardArticle a .cardImg .ic-video,
+article.cardArticle a .cardImg .ic-img,
+article.cardArticle a .cardImg .ic-pie-chart {
+  position: absolute;
+  top: 11px;
+  left: 11px;
+  width: 24px;
+  height: 24px;
+}
+article.cardArticle a .cardImg .ic-video {
+  content: url("../img/icon/ic-video-post.png");
+}
+article.cardArticle a .cardImg .ic-img {
+  content: url("../img/icon/ic-img-post.png");
+}
+article.cardArticle a .cardImg .ic-pie-chart {
+  content: url("../img/icon/ic-multi-post.png");
+}
+article.cardArticle a .cardBody {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}
+article.cardArticle a .cardBody .kanalAndTime {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+article.cardArticle a .cardBody .kanalAndTime .kanal,
+article.cardArticle a .cardBody .kanalAndTime .postTime {
+  font-size: clamp(8px, 1.5vw, 12px);
+  color: var(--color-red);
+  font-style: normal;
+  font-weight: 700;
+  line-height: 150%;
+}
+article.cardArticle a .cardBody .kanalAndTime .postTime {
+  font-weight: 400;
+  color: var(--color-dark-0);
+}
+article.cardArticle a .cardBody .cardTitle {
+  font-family: Inter, sans-serif;
+  color: var(--color-dark-75);
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+article.cardArticle.card__multimed a .cardImg {
+  height: clamp(80px, 11vw, 120px);
+}
+article.cardArticle.card__headline {
+  height: auto;
+}
+article.cardArticle.card__headline a {
+  flex-direction: column;
+}
+article.cardArticle.card__headline a .cardImg {
+  width: 100%;
+  height: clamp(320px, 100%, 489px);
+}
+article.cardArticle.card__headline a .cardImg .ic-video,
+article.cardArticle.card__headline a .cardImg .ic-img,
+article.cardArticle.card__headline a .cardImg .ic-pie-chart {
+  position: absolute;
+  top: 51px;
+  left: 12px;
+  width: 36px;
+  height: 36px;
+}
+article.cardArticle.card__headline a .cardBody .kanalAndTime .postTime {
+  font-size: clamp(10px, 1vw, 14px);
+}/*# sourceMappingURL=page-news-tv.css.map */

@@ -160,13 +160,13 @@ aside.sideLeft {
   height: auto;
 }
 
-@media screen and (max-width: 1365px) {
+@media screen and (max-width: 1024px) {
   .container {
     width: 100%;
     padding: 0 clamp(2rem, 5vw, 128px);
   }
 }
-@media (min-width: 1366px) {
+@media (min-width: 1025px) {
   .container {
     width: 1024px;
     margin: auto;

@@ -151,7 +151,8 @@
             display: flex;
             align-items: center;
             gap: 0 16px;
-            a {
+            #linkShare {
+                cursor: pointer;
                 .ic-link-share {
                     display: block;
                     content: url("../img/icon/ic-link-share.png");
@@ -181,6 +182,7 @@
                         opacity: 1;
                         display: block;
                         animation: copyAnimate 0.5s ease-in-out forwards;
+                        background-color: var(--color-dark-100);
                     }
 
                     @keyframes copyAnimate {
@@ -192,6 +194,8 @@
                         }
                     }
                 }
+            }
+            a {
                 .ic-wa {
                     display: block;
                     content: url("../img/icon/ic-wa.png");

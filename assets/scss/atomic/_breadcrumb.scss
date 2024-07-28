@@ -10,7 +10,15 @@
     color: var(--color-grey-75);
     gap: 0 4px;
     & > a {
+        position: relative;
         color: var(--color-grey-75);
+        display: flex;
+        gap: 8px;
+        &::after{
+            content: url(../img/icon/ic-arrow-breadcrumb.svg);
+            width: 8px;
+            height: 8px;
+        }
     }
     .lastPage {
         cursor: default;

@@ -1,145 +1,231 @@
-// @use "media";
-// @import "./molecules/navigation-main";
-// article {
-//     &.headline__tv {
-//         .headlineTitle__tv {
-//             display: flex;
-//             justify-content: space-between;
-//             margin-bottom: 25px;
-//             h3 {
-//                 position: relative;
-//                 &::before {
-//                     display: inline-block;
-//                     content: url("../img/icon/ic-news-tv-title.png");
-//                     width: 17.5px;
-//                     height: 17.5px;
-//                     margin-right: 10px;
-//                     position: relative;
-//                     top: 3px;
-//                 }
-//             }
-//         }
-//         .video__tv {
-//             aspect-ratio: 16 / 9;
-//             border-radius: 20px;
-//             margin-bottom: 21px;
-//         }
-//         .schedule__tv {
-//             margin-bottom: 32px;
-//             display: flex;
-//             flex-direction: column;
-//             gap: 28px 0;
-//             position: relative;
-//             width: 100%;
-//             height: auto;
-//             overflow: hidden;
-//             .scheduleWrapper {
-//                 display: flex;
-//                 width: 100%;
-//                 scrollbar-width: none;
-//                 scroll-behavior: smooth;
-//                 height: 146px;
-//                 overflow-x: scroll;
-//                 border-radius: var(--Radius-md, 8px);
-//                 border: 1px solid var(--Neutral-600, #f6f6f6);
-//                 background: var(--Neutral-500, #f9f9f9);
-//                 cursor: move;
-//                 .schaduleList {
-//                     flex: 0 0 auto;
-//                     position: relative;
-//                     display: flex;
-//                     flex-direction: column;
-//                     width: 240px;
-//                     padding: 14px 28px 12px;
-//                     border-top: 1px solid #990100;
-//                     margin-top: 24px;
-//                     &:first-child {
-//                         margin-left: 10px;
-//                     }
-//                     &:last-child {
-//                         margin-right: 10px;
-//                     }
-//                     &.active {
-//                         &::after {
-//                             content: "";
-//                             position: absolute;
-//                             z-index: 1;
-//                             top: -12px;
-//                             left: 0;
-//                             right: 0;
-//                             margin: auto;
-//                             width: 24px;
-//                             height: 24px;
-//                             border-radius: 50%;
-//                             background-color: #990100;
-//                             border: none;
-//                         }
-//                         .schaduleTitle {
-//                             font-weight: 700;
-//                         }
-//                     }
+article {
+    &.headline__tv {
+        .headlineTitle__tv {
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+            gap: 8px;
+            margin-bottom: 25px;
+            h3 {
+                position: relative;
+                &::before {
+                    display: inline-block;
+                    content: url("../img/icon/ic-news-tv-title.png");
+                    width: 17.5px;
+                    height: 17.5px;
+                    margin-right: 10px;
+                    position: relative;
+                    top: 3px;
+                }
+            }
+            .share {
+                display: flex;
+                align-items: center;
+                color: #8c8c8c;
+                gap: 5px;
+                .iconShare {
+                    position: relative;
+                    display: flex;
+                    align-items: center;
+                    gap: 0 4px;
+                    #linkShare {
+                        cursor: pointer;
+                        .ic-link-share-2 {
+                            display: block;
+                            content: url("../img/icon/ic-link-share.png");
+                            width: 32px;
+                            height: 32px;
+                            &:hover {
+                                content: url("../img/icon/ic-link-share-active.png");
+                            }
+                        }
+                        #copied-2 {
+                            display: none;
+                            opacity: 0;
+                            position: absolute;
+                            top: 40px;
+                            left: -45px;
+                            background-color: rgba(var(--color-dark-100), 0.9);
+                            padding: 4px 16px;
+                            border-radius: 32px;
+                            color: #fff;
+                            text-align: center;
+                            font-size: 16px;
+                            font-style: normal;
+                            font-weight: 500;
+                            line-height: 150%; /* 24px */
 
-//                     &::before {
-//                         content: "";
-//                         position: absolute;
-//                         z-index: 1;
-//                         top: -12px;
-//                         left: 0;
-//                         right: 0;
-//                         margin: auto;
-//                         width: 24px;
-//                         height: 24px;
-//                         border-radius: 50%;
-//                         background-color: #990100;
-//                     }
-//                     &::after {
-//                         content: "";
-//                         position: absolute;
-//                         z-index: 1;
-//                         top: -11px;
-//                         left: 0;
-//                         right: 0;
-//                         margin: auto;
-//                         width: 18px;
-//                         height: 18px;
-//                         border-radius: 50%;
-//                         background-color: #990100;
-//                         border: 2px solid #fff;
-//                     }
+                            &.active {
+                                opacity: 1;
+                                display: block;
+                                animation: copyAnimate 0.5s ease-in-out forwards;
+                                background-color: var(--color-dark-100);
+                            }
 
-//                     .schaduleTime {
-//                         text-align: center;
-//                         color: #212121;
-//                         &::-moz-selection {
-//                             /* Code for Firefox */
-//                             color: #e9e9e9;
-//                             background: transparent;
-//                         }
+                            @keyframes copyAnimate {
+                                0% {
+                                    opacity: 0;
+                                }
+                                100% {
+                                    opacity: 1;
+                                }
+                            }
+                        }
+                    }
+                    a {
+                        .ic-wa {
+                            display: block;
+                            content: url("../img/icon/ic-wa.png");
+                            width: 32px;
+                            height: 32px;
+                            &:hover {
+                                content: url("../img/icon/ic-wa-active.png");
+                            }
+                        }
+                        .ic-fb {
+                            display: block;
+                            content: url("../img/icon/ic-fb.png");
+                            width: 32px;
+                            height: 32px;
+                            &:hover {
+                                content: url("../img/icon/ic-fb-active.png");
+                            }
+                        }
+                        .ic-x {
+                            display: block;
+                            content: url("../img/icon/ic-x.png");
+                            width: 32px;
+                            height: 32px;
 
-//                         &::selection {
-//                             background: transparent;
-//                         }
-//                     }
-//                     .schaduleTitle {
-//                         text-align: center;
-//                         font-size: 18px;
-//                         color: #212121;
-//                         &::-moz-selection {
-//                             /* Code for Firefox */
-//                             color: #e9e9e9;
-//                             background: transparent;
-//                         }
+                            &:hover {
+                                content: url("../img/icon/ic-x-active.png");
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .video__tv {
+            aspect-ratio: 16 / 9;
+            border-radius: 20px;
+            margin-bottom: 21px;
+        }
+        .schedule__tv {
+            margin-bottom: 32px;
+            display: flex;
+            flex-direction: column;
+            gap: 28px 0;
+            position: relative;
+            width: 100%;
+            height: auto;
+            overflow: hidden;
+            .scheduleWrapper {
+                display: flex;
+                width: 100%;
+                scrollbar-width: none;
+                scroll-behavior: smooth;
+                height: 146px;
+                overflow-x: scroll;
+                border-radius: var(--Radius-md, 8px);
+                border: 1px solid var(--Neutral-600, #f6f6f6);
+                background: var(--Neutral-500, #f9f9f9);
+                cursor: move;
+                .schaduleList {
+                    flex: 0 0 auto;
+                    position: relative;
+                    display: flex;
+                    flex-direction: column;
+                    width: 240px;
+                    padding: 14px 28px 12px;
+                    border-top: 1px solid #990100;
+                    margin-top: 24px;
+                    &:first-child {
+                        margin-left: 10px;
+                    }
+                    &:last-child {
+                        margin-right: 10px;
+                    }
+                    &.active {
+                        &::after {
+                            content: "";
+                            position: absolute;
+                            z-index: 1;
+                            top: -12px;
+                            left: 0;
+                            right: 0;
+                            margin: auto;
+                            width: 24px;
+                            height: 24px;
+                            border-radius: 50%;
+                            background-color: #990100;
+                            border: none;
+                        }
+                        .schaduleTitle {
+                            font-weight: 700;
+                        }
+                    }
 
-//                         &::selection {
-//                             background: transparent;
-//                         }
-//                     }
-//                 }
-//             }
-//         }
-//         .desc__tv {
-//             font-size: clamp(14px, 1.5vw, 18px);
-//             line-height: 160%;
-//         }
-//     }
-// }
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        z-index: 1;
+                        top: -12px;
+                        left: 0;
+                        right: 0;
+                        margin: auto;
+                        width: 24px;
+                        height: 24px;
+                        border-radius: 50%;
+                        background-color: #990100;
+                    }
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        z-index: 1;
+                        top: -11px;
+                        left: 0;
+                        right: 0;
+                        margin: auto;
+                        width: 18px;
+                        height: 18px;
+                        border-radius: 50%;
+                        background-color: #990100;
+                        border: 2px solid #fff;
+                    }
+
+                    .schaduleTime {
+                        text-align: center;
+                        color: #212121;
+                        &::-moz-selection {
+                            /* Code for Firefox */
+                            color: #e9e9e9;
+                            background: transparent;
+                        }
+
+                        &::selection {
+                            background: transparent;
+                        }
+                    }
+                    .schaduleTitle {
+                        text-align: center;
+                        font-size: 18px;
+                        color: #212121;
+                        &::-moz-selection {
+                            /* Code for Firefox */
+                            color: #e9e9e9;
+                            background: transparent;
+                        }
+
+                        &::selection {
+                            background: transparent;
+                        }
+                    }
+                }
+            }
+        }
+        .desc__tv {
+            font-size: clamp(14px, 1.5vw, 18px);
+            line-height: 160%;
+        }
+    }
+}

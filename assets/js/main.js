@@ -108,7 +108,7 @@ function initPaginationInDetailPage() {
 function initJumpToOtherNews() {
     if ($('.btnMoreNews').length > 0) {
         $('.btnMoreNews').on('click', function () {
-            let target = $(this).attr('target');
+            let target = $(this).attr('data-target');
             let to = $(target)
 
             if (to.length > 0) {

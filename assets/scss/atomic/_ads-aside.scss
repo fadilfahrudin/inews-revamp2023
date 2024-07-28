@@ -3,6 +3,10 @@
     position: relative;
     width: 300px;
     min-height: 250px;
+
+    &.ads-600x300{
+        height: 600px;
+    }
     @include media.ipad {
         width: 100%;
     }

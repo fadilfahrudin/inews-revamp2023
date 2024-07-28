@@ -38,16 +38,16 @@
     <meta name="twitter:image" content="https://img.inews.co.id/media/1200//files/inews_new/2019/08/05/kanal_sport.png">
     <meta name="twitter:url" content="https://www.inews.id/sport/soccer">
     <meta name="twitter:domain" content="https://www.inews.id/sport/soccer">
+    <link rel="preload" href="https://www.youtube.com/iframe_api" as=" script">
+    <link rel="preload" href="assets/js/lib/jquery-3.7.1.min.js" as="script">
 
     <!-- JQuery -->
-    <script src="./assets/js/jquery-3.7.1.min.js"></script>
+    <script src="./assets/js/lib/jquery-3.7.1.min.js"></script>
     <!-- CSS -->
-    <link rel="stylesheet" href="./assets/css/details-layouts.css">
-    <link rel="stylesheet" href="./assets/css/page-detail-news-tv.css">
+    <link rel="stylesheet" href="./assets/css/about-page.css">
 </head>
 
-<body id="detail-article">
-
+<body id="about-page">
     <!-- Header -->
     <div class="topBarWrap">
         <div class="container topBar">
@@ -79,12 +79,34 @@
             </div>
             <!-- center section -->
             <div>
-                <form class="searchForm">
-                    <input type="text" name="search" id="search" placeholder="Search">
-                    <button class="btnSearch" type="submit" aria-label="search">
-                        <img src="./assets/img/icon/ic-search.png" alt="search" width="24" height="24">
+                <div class="searchForm">
+                    <input type="text" name="search" id="search" placeholder="Search" autocomplete="off">
+                    <button class="btnSearch" type="button" aria-label="search">
+                        <img src="./assets/img/icon/ic-search.svg" alt="search" width="20" height="20">
                     </button>
-                </form>
+                </div>
+                <div id="data-list">
+                    <ul class="search-on-keyup">
+                        <!-- <li class="list-search">kata kunci list</li> -->
+                    </ul>
+                    <ul class="recent-search"> <!-- punya class hidden ketika blm login-->
+                        <li class="list-title">Recent Search <span id="clear-recent">Clear all</span></li>
+                        <!-- contoh list recent -->
+                        <li class="list-search hidden">
+                            <span class="recent-search-text ">Thailand Lorem, ipsum dolor sit amet
+                                consectetur adipisicing elit.
+                                Cupiditate, fugit!</span>
+                            <span class="remove-recent"></span>
+                        </li>
+                    </ul>
+                    <ul class="trending-topic">
+                        <li class="list-title">Trending Topic</li>
+                        <li class="list-search">Thailand <span class="ic-hot-search"></span></li>
+                        <li class="list-search">Coldplay <span class="ic-hot-search"></span></li>
+                        <li class="list-search">CHat GPT</li>
+                        <li class="list-search">Free Palestina</li>
+                    </ul>
+                </div>
             </div>
             <!-- right section -->
             <div>
@@ -144,16 +166,12 @@
                 <div class="brand">
                     <img src="./assets/img/logo-inews-tv.png" alt="inews" width="146" height="55" loading="lazy">
                 </div>
-                <div class="adsHeader">
-                    <img src="./assets/img/dummy/dummy-ads-720x90.png" alt="ads" width="100%" height="100%"
-                        loading="lazy">
-                </div>
             </div>
         </div>
     </header>
     <!-- End Header -->
     <!-- Alert SSO -->
-    <div class="alert-wrapp container">
+    <div class="alert-wrapp container hidden">
         <div class="alert-img">
             <img src="assets/img/icon/ic-info-alert-sso.svg" title="icon info sso" alt="icon info sso"
                 pinger-seen="true" width="21" height="21">
@@ -167,242 +185,43 @@
         </button>
     </div>
     <!-- END Alert SSO -->
-    <!-- Navigation WP | Home -->
-    <nav class="nav__main">
-        <ul id="navbar-nav" class="container">
-            <li class="navList"><a href="page-news-tv.html" class="navLink ">Home</a></li>
-            <li class="navList"><a href="detail-news-tv.html" class="navLink navLink-active">Tv Streaming</a></li>
-        </ul>
-    </nav>
-    <!-- End Navigation WP | Home -->
     <!-- Main -->
     <main class="container">
-        <!-- ads 970x250 -->
-        <figure class="ads-970x250">
-            <figcaption>Advertisement . Scroll to see content</figcaption>
-            <img src="./assets/img/dummy/dummy-ads-970x250.png" alt="ads" width="100%" height="100%" loading="lazy">
-        </figure>
-        <!-- end ads 970x250 -->
-
-        <section class="mainHeadline">
-            <!-- Breadcrumb -->
-            <div class="breadcrumb">
-                <a href="#">Home</a>
-                <img src="./assets/img/icon/ic-next-page-breadcrumb.png" alt="breadcrumb" width="8" height="8" />
-                <a href="#">iNews TV</a>
-                <img src="./assets/img/icon/ic-next-page-breadcrumb.png" alt="breadcrumb" width="8" height="8" />
-                <span class="lastPage">TV Streaming</span>
-            </div>
-            <!-- end Breadcrumb -->
-        </section>
         <section class="mainBody">
-            <main class="sideLeft">
-                <!-- headline tv -->
-                <article class="headline__tv">
-                    <div class="headlineTitle__tv">
-                        <h3>The Prime Show With Aiman</h3>
-                        <div class="share">
-                            <label for="share">Share</label>
-                            <div class="iconShare">
-                                <a href="javascript:void(0)" aria-label="link">
-                                    <span class="ic-link-share-2"></span>
-                                    <span id="copied-2">Link Copied!</span>
-                                </a>
-                                <a href="#" aria-label="whatsapp"><span class="ic-wa"></span></a>
-                                <a href="#" aria-label="facebook"><span class="ic-fb"></span></a>
-                                <a href="#" aria-label="twitter"><span class="ic-x"></span></a>
-                            </div>
-                        </div>
-                    </div>
-                    <iframe class="video__tv" title="inews live" width="100%" height="100%"
-                        src="https://www.youtube.com/embed/C1OgoyHfhSw?si=AxfDjUQxdjEeJqMg" title="YouTube video player"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                    <div class="schedule__tv">
-                        <h2>Today Schedule</h2>
-                        <ul id="scheduleWrapper" class="scheduleWrapper">
-                            <li class="schaduleList active">
-                                <span class="schaduleTime">00:27 - 00:30</span>
-                                <p class="schaduleTitle">The Prime Show
-                                    With Aiman</p>
-                            </li>
-                            <li class="schaduleList">
-                                <span class="schaduleTime">00:27 - 00:30</span>
-                                <p class="schaduleTitle">Ramadhan Story</p>
-                            </li>
-                            <li class="schaduleList">
-                                <span class="schaduleTime">00:27 - 00:30</span>
-                                <p class="schaduleTitle">Ramadhan Story</p>
-                            </li>
-                            <li class="schaduleList">
-                                <span class="schaduleTime">00:27 - 00:30</span>
-                                <p class="schaduleTitle">Ramadhan Story</p>
-                            </li>
-                            <li class="schaduleList">
-                                <span class="schaduleTime">00:27 - 00:30</span>
-                                <p class="schaduleTitle">Ramadhan Story</p>
-                            </li>
-                        </ul>
-                    </div>
-                    <p class="desc__tv">iNews TV merupakan telivisi nasional yang memiliki jaringan daerah terbesar di
-                        Indonesia. Diluncurkan pertama kali pada 5 Maret 2008 dengan nama SUN TV, kini berbagai
-                        perubahan dan
-                        inovasi telah dilakukan hingga berubah menjadi iNews TV pada 6 April 2015. Dengan jaringan
-                        telivisi lokal terbanyak di Indonesia, iNews menyajikan konten lokal terbaru dan terbaik dari
-                        masing-masing daerah.</p>
-                </article>
-                <!-- end headline tv -->
-
-                <!-- widget -->
-                <section class="widget__col">
-                    <div class="widgetHeader__col">
-                        <!-- here icon widget | null -->
-                        <h3 class="widgetTitle">Latest from iNews TV</h3>
-                        <a href="/page-news-tv.html" class="seeAll">See All</a>
-                    </div>
-                    <div class="widgetBody__col">
-                        <article class="cardArticle card__col ">
-                            <a href="#">
-                                <figure class="cardImg">
-                                    <img class="thumbCard" src="./assets/img/dummy/dummy-header-img.png"
-                                        alt="rekomendasi" width="213" height="143" loading="lazy">
-                                    <span class="ic-video"></span>
-                                    <!-- available class ic-img | ic-pie-chart  -->
-                                </figure>
-                                <div class="cardBody">
-                                    <div class="kanalAndTime">
-                                        <span class="postTime">33 menit lalu</span>
-                                    </div>
-                                    <h5 class="cardTitle">Jerat Bandar Narkoba dengan TPPU, Bareskrim Sita
-                                        Sejumlah Kendaraan Mewah. Lorem ipsum dolor, sit amet consectetur adipisicing
-                                        elit. Iste
-                                        amet voluptatum vitae tempore laboriosam quisquam nostrum placeat commodi nihil
-                                        fuga.
-                                    </h5>
-                                </div>
-                            </a>
-                        </article>
-                        <article class="cardArticle card__col ">
-                            <a href="#">
-                                <figure class="cardImg">
-                                    <img class="thumbCard" src="./assets/img/dummy/dummy-header-img.png"
-                                        alt="rekomendasi" width="213" height="143" loading="lazy">
-                                    <span class="ic-video"></span>
-                                    <!-- available class ic-img | ic-pie-chart  -->
-                                </figure>
-                                <div class="cardBody">
-                                    <div class="kanalAndTime">
-                                        <span class="postTime">33 menit lalu</span>
-                                    </div>
-                                    <h5 class="cardTitle">Jerat Bandar Narkoba dengan TPPU, Bareskrim Sita
-                                        Sejumlah Kendaraan Mewah. Lorem ipsum dolor, sit amet consectetur adipisicing
-                                        elit. Iste
-                                        amet voluptatum vitae tempore laboriosam quisquam nostrum placeat commodi nihil
-                                        fuga.
-                                    </h5>
-                                </div>
-                            </a>
-                        </article>
-                        <article class="cardArticle card__col ">
-                            <a href="#">
-                                <figure class="cardImg">
-                                    <img class="thumbCard" src="./assets/img/dummy/dummy-header-img.png"
-                                        alt="rekomendasi" width="213" height="143" loading="lazy">
-                                    <span class="ic-video"></span>
-                                    <!-- available class ic-img | ic-pie-chart  -->
-                                </figure>
-                                <div class="cardBody">
-                                    <div class="kanalAndTime">
-                                        <span class="postTime">33 menit lalu</span>
-                                    </div>
-                                    <h5 class="cardTitle">Jerat Bandar Narkoba dengan TPPU, Bareskrim Sita
-                                        Sejumlah Kendaraan Mewah. Lorem ipsum dolor, sit amet consectetur adipisicing
-                                        elit. Iste
-                                        amet voluptatum vitae tempore laboriosam quisquam nostrum placeat commodi nihil
-                                        fuga.
-                                    </h5>
-                                </div>
-                            </a>
-                        </article>
-                        <article class="cardArticle card__col ">
-                            <a href="#">
-                                <figure class="cardImg">
-                                    <img class="thumbCard" src="./assets/img/dummy/dummy-header-img.png"
-                                        alt="rekomendasi" width="213" height="143" loading="lazy">
-                                    <span class="ic-video"></span>
-                                    <!-- available class ic-img | ic-pie-chart  -->
-                                </figure>
-                                <div class="cardBody">
-                                    <div class="kanalAndTime">
-                                        <span class="postTime">33 menit lalu</span>
-                                    </div>
-                                    <h5 class="cardTitle">Jerat Bandar Narkoba dengan TPPU, Bareskrim Sita
-                                        Sejumlah Kendaraan Mewah. Lorem ipsum dolor, sit amet consectetur adipisicing
-                                        elit. Iste
-                                        amet voluptatum vitae tempore laboriosam quisquam nostrum placeat commodi nihil
-                                        fuga.
-                                    </h5>
-                                </div>
-                            </a>
-                        </article>
-                        <article class="cardArticle card__col ">
-                            <a href="#">
-                                <figure class="cardImg">
-                                    <img class="thumbCard" src="./assets/img/dummy/dummy-header-img.png"
-                                        alt="rekomendasi" width="213" height="143" loading="lazy">
-                                    <span class="ic-video"></span>
-                                    <!-- available class ic-img | ic-pie-chart  -->
-                                </figure>
-                                <div class="cardBody">
-                                    <div class="kanalAndTime">
-                                        <span class="postTime">33 menit lalu</span>
-                                    </div>
-                                    <h5 class="cardTitle">Jerat Bandar Narkoba dengan TPPU, Bareskrim Sita
-                                        Sejumlah Kendaraan Mewah. Lorem ipsum dolor, sit amet consectetur adipisicing
-                                        elit. Iste
-                                        amet voluptatum vitae tempore laboriosam quisquam nostrum placeat commodi nihil
-                                        fuga.
-                                    </h5>
-                                </div>
-                            </a>
-                        </article>
-                        <article class="cardArticle card__col ">
-                            <a href="#">
-                                <figure class="cardImg">
-                                    <img class="thumbCard" src="./assets/img/dummy/dummy-header-img.png"
-                                        alt="rekomendasi" width="213" height="143" loading="lazy">
-                                    <span class="ic-video"></span>
-                                    <!-- available class ic-img | ic-pie-chart  -->
-                                </figure>
-                                <div class="cardBody">
-                                    <div class="kanalAndTime">
-                                        <span class="postTime">33 menit lalu</span>
-                                    </div>
-                                    <h5 class="cardTitle">Jerat Bandar Narkoba dengan TPPU, Bareskrim Sita
-                                        Sejumlah Kendaraan Mewah. Lorem ipsum dolor, sit amet consectetur adipisicing
-                                        elit. Iste
-                                        amet voluptatum vitae tempore laboriosam quisquam nostrum placeat commodi nihil
-                                        fuga.
-                                    </h5>
-                                </div>
-                            </a>
-                        </article>
-                    </div>
-                </section>
-                <!-- end widget -->
-            </main>
-            <aside class="sideRight">
-                <figure class="asideAds">
-                    <figcaption>Advertisement</figcaption>
-                    <!-- <img src="./assets/img/dummy/dummy-side-ads.png" alt="ads" width="100%" height="100%"
-                        loading="lazy"> -->
-                </figure>
-                <figure class="asideAds">
-                    <figcaption>Advertisement</figcaption>
-                    <!-- <img src="./assets/img/dummy/dummy-side-ads2.png" alt="ads" width="100%" height="100%"
-                        loading="lazy"> -->
-                </figure>
+            <!-- Jika search ada -->
+            <aside class="sideLeft" aria-label="sidebar">
+                <ul class="listMenuAbout">
+                    <li class="listMenu active"><a href="">Tentang Kami</a></li>
+                    <li class="listMenu"><a href="">Redaksi</a></li>
+                    <li class="listMenu"><a href="">Pedoman Media Siber</a></li>
+                    <li class="listMenu"><a href="">Disclimer</a></li>
+                    <li class="listMenu"><a href="">Terms of Service</a></li>
+                    <li class="listMenu"><a href="">Privacy Policy</a></li>
+                    <li class="listMenu"><a href="">Kontak Kami</a></li>
+                </ul>
             </aside>
+            <main class="sideRight">
+                <div class="backdrop-wrapper">
+                    <div class="titleSection">Tentang Kami</div>
+                    <img src="./assets/img/backdrop-about-page.png" alt="backdrop about us" width="835" height="223"
+                        loading="lazy">
+                </div>
+                <div class="about-content">
+                    <p>iNews.id adalah news portal berjaringan yang terdiri atas portal berita nasional dan portal
+                        daerah, bagian dari MNC Group. iNews.id mengusung visi menjadi portal berita nasional dan
+                        regional yang inspiratif dan informatif serta memiliki misi menyajikan berita dan
+                        fitur online yang enak dibaca, mendalam, akurat, atraktif (multimedia base), juga menginspirasi
+                        siapa saja, di mana saja, kapan saja.</p>
+                    <p>iNews.id menyajikan konten beragam mencakup berita nasional (politik, hukum, megapolitan dan
+                        peristiwa), internasional, ekonomi, olah raga, lifestyle, otomotif, teknologi, dan travel.
+                        Berbagai konten itu diperkaya dengan berita-berita daerah dari seluruh Indonesia yang bersinergi
+                        dengan stasiun televisi iNews.
+                    </p>
+                    <p>Berbagai konten iNews.id juga selaras dengan pemberitaan semua media di MNC Group, antara
+                        lain RCTI, MNC TV, GTV, MNC Channel, Koran Sindo, Okezone.com, Sindonews.com, dan MNC Trijaya
+                        FM.</p>
+                </div>
+            </main>
         </section>
     </main>
     <!-- End Main -->
@@ -579,7 +398,7 @@
     </div>
     <!-- End Stiky Ads -->
     <!-- JS -->
-    <script type="module" src="./assets/js/script.js"></script>
+    <script type="module" src="./assets/js/main.js"></script>
 </body>
 
 </html>

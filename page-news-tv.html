@@ -40,13 +40,13 @@
     <meta name="twitter:domain" content="https://www.inews.id/sport/soccer">
 
     <!-- JQuery -->
-    <script src="./assets/js/jquery-3.7.1.min.js"></script>
+    <script src="./assets/js/lib/jquery-3.7.1.min.js"></script>
     <!-- CSS -->
     <link rel="stylesheet" href="./assets/css/main-layouts.css">
+    <link rel="stylesheet" href="./assets/css/page-news-tv.css">
 </head>
 
-<body id="detail-article">
-
+<body id="news-tv">
     <!-- Header -->
     <div class="topBarWrap">
         <div class="container topBar">
@@ -78,12 +78,34 @@
             </div>
             <!-- center section -->
             <div>
-                <form class="searchForm">
-                    <input type="text" name="search" id="search" placeholder="Search">
-                    <button class="btnSearch" type="submit" aria-label="search">
-                        <img src="./assets/img/icon/ic-search.png" alt="search" width="24" height="24">
+                <div class="searchForm">
+                    <input type="text" name="search" id="search" placeholder="Search" autocomplete="off">
+                    <button class="btnSearch" type="button" aria-label="search">
+                        <img src="./assets/img/icon/ic-search.svg" alt="search" width="20" height="20">
                     </button>
-                </form>
+                </div>
+                <div id="data-list">
+                    <ul class="search-on-keyup">
+                        <!-- <li class="list-search">kata kunci list</li> -->
+                    </ul>
+                    <ul class="recent-search"> <!-- punya class hidden ketika blm login-->
+                        <li class="list-title">Recent Search <span id="clear-recent">Clear all</span></li>
+                        <!-- contoh list recent -->
+                        <li class="list-search hidden">
+                            <span class="recent-search-text ">Thailand Lorem, ipsum dolor sit amet
+                                consectetur adipisicing elit.
+                                Cupiditate, fugit!</span>
+                            <span class="remove-recent"></span>
+                        </li>
+                    </ul>
+                    <ul class="trending-topic">
+                        <li class="list-title">Trending Topic</li>
+                        <li class="list-search">Thailand <span class="ic-hot-search"></span></li>
+                        <li class="list-search">Coldplay <span class="ic-hot-search"></span></li>
+                        <li class="list-search">CHat GPT</li>
+                        <li class="list-search">Free Palestina</li>
+                    </ul>
+                </div>
             </div>
             <!-- right section -->
             <div>
@@ -152,7 +174,7 @@
     </header>
     <!-- End Header -->
     <!-- Alert SSO -->
-    <div class="alert-wrapp container">
+    <div class="alert-wrapp container hidden">
         <div class="alert-img">
             <img src="assets/img/icon/ic-info-alert-sso.svg" title="icon info sso" alt="icon info sso"
                 pinger-seen="true" width="21" height="21">
@@ -169,15 +191,16 @@
     <!-- Navigation WP | Home -->
     <nav class="nav__main">
         <ul id="navbar-nav" class="container">
-            <li class="navList"><a href="page-news-tv.html" class="navLink navLink-active">Home</a></li>
-            <li class="navList"><a href="detail-news-tv.html" class="navLink ">Tv Streaming</a></li>
+            <li class="navList"><a href="welcome-page.html" class="navLink navLink-active">Home</a></li>
+            <li class="navList"><a href="page-daerah-home.html" class="navLink ">Tv Streaming</a></li>
         </ul>
     </nav>
     <!-- End Navigation WP | Home -->
+
     <!-- Main -->
     <main class="container">
         <!-- ads 970x250 -->
-        <figure class="ads-970x250">
+        <figure class="adsPlacement size970x250">
             <figcaption>Advertisement . Scroll to see content</figcaption>
             <img src="./assets/img/dummy/dummy-ads-970x250.png" alt="ads" width="100%" height="100%" loading="lazy">
         </figure>
@@ -185,8 +208,7 @@
 
         <section class="mainBody">
             <main class="sideLeft">
-
-                <!-- default card article adalah row -->
+                <!-- headline -->
                 <article class="cardArticle card__headline">
                     <a href="#">
                         <figure class="cardImg">
@@ -205,100 +227,103 @@
                         </div>
                     </a>
                 </article>
-                <article class="cardArticle">
-                    <a href="#">
-                        <figure class="cardImg">
-                            <img class="thumbCard" src="./assets/img/dummy/dummy-header-img.png" alt="rekomendasi"
-                                width="213" height="143" loading="lazy">
-                            <span class="ic-video"></span>
-                            <!-- available class ic-img | ic-pie-chart  -->
-                        </figure>
-                        <div class="cardBody">
-                            <div class="kanalAndTime">
-                                <span class="postTime">33 menit lalu</span>
-                            </div>
-                            <h3 class="cardTitle">Jerat Bandar Narkoba dengan TPPU, Bareskrim Sita
-                                Sejumlah Kendaraan Mewah. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iste
-                                amet voluptatum vitae tempore laboriosam quisquam nostrum placeat commodi nihil fuga.
-                            </h3>
-                        </div>
-                    </a>
-                </article>
-                <article class="cardArticle">
-                    <a href="#">
-                        <figure class="cardImg">
-                            <img class="thumbCard" src="./assets/img/dummy/dummy-header-img.png" alt="rekomendasi"
-                                width="213" height="143" loading="lazy">
-                            <span class="ic-video"></span>
-                            <!-- available class ic-img | ic-pie-chart  -->
-                        </figure>
-                        <div class="cardBody">
-                            <div class="kanalAndTime">
-                                <span class="postTime">33 menit lalu</span>
-                            </div>
-                            <h3 class="cardTitle">Jerat Bandar Narkoba dengan TPPU, Bareskrim Sita
-                                Sejumlah Kendaraan Mewah. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iste
-                                amet voluptatum vitae tempore laboriosam quisquam nostrum placeat commodi nihil fuga.
-                            </h3>
-                        </div>
-                    </a>
-                </article>
-                <article class="cardArticle">
-                    <a href="#">
-                        <figure class="cardImg">
-                            <img class="thumbCard" src="./assets/img/dummy/dummy-img-artikel-terkait.png"
-                                alt="rekomendasi" width="213" height="143" loading="lazy">
-                            <span class="ic-video"></span>
-                            <!-- available class ic-img | ic-pie-chart  -->
-                        </figure>
-                        <div class="cardBody">
-                            <div class="kanalAndTime">
-                                <span class="postTime">33 menit lalu</span>
-                            </div>
-                            <h3 class="cardTitle">Jerat Bandar Narkoba dengan TPPU, Bareskrim Sita
-                                Sejumlah Kendaraan Mewah.
-                            </h3>
-                        </div>
-                    </a>
-                </article>
-                <article class="cardArticle">
-                    <a href="#">
-                        <figure class="cardImg">
-                            <img class="thumbCard" src="./assets/img/dummy/dummy-header-img.png" alt="rekomendasi"
-                                width="213" height="143" loading="lazy">
-                            <span class="ic-video"></span>
-                            <!-- available class ic-img | ic-pie-chart  -->
-                        </figure>
-                        <div class="cardBody">
-                            <div class="kanalAndTime">
-                                <span class="postTime">33 menit lalu</span>
-                            </div>
-                            <h3 class="cardTitle">Jerat Bandar Narkoba dengan TPPU, Bareskrim Sita
-                                Sejumlah Kendaraan Mewah. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iste
-                                amet voluptatum vitae tempore laboriosam quisquam nostrum placeat commodi nihil fuga.
-                            </h3>
-                        </div>
-                    </a>
-                </article>
-                <article class="cardArticle">
-                    <a href="#">
-                        <figure class="cardImg">
-                            <img class="thumbCard" src="./assets/img/dummy/dummy-header-img.png" alt="rekomendasi"
-                                width="213" height="143" loading="lazy">
-                            <span class="ic-video"></span>
-                            <!-- available class ic-img | ic-pie-chart  -->
-                        </figure>
-                        <div class="cardBody">
-                            <div class="kanalAndTime">
-                                <span class="postTime">33 menit lalu</span>
-                            </div>
-                            <h3 class="cardTitle">Jerat Bandar Narkoba dengan TPPU, Bareskrim Sita
-                                Sejumlah Kendaraan Mewah. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iste
-                                amet voluptatum vitae tempore laboriosam quisquam nostrum placeat commodi nihil fuga.
-                            </h3>
-                        </div>
-                    </a>
-                </article>
+                <!-- List Article -->
+                <section class="widgetListArticle row">
+                    <div class="widgetListArticle__body">
+                        <article class="cardArticle">
+                            <a href="#">
+                                <figure class="cardImg">
+                                    <img class="thumbCard" src="./assets/img/dummy/dummy-header-img.avif"
+                                        alt="rekomendasi" width="213" height="143" loading="lazy">
+                                    <span class="ic-video"></span>
+                                    <!-- available class ic-img | ic-pie-chart  -->
+                                </figure>
+                                <div class="cardBody">
+                                    <div class="kanalAndTime">
+                                        <div class="postTime">20 menit lalu</div>
+                                    </div>
+                                    <h3 class="cardTitle">Jerat Bandar Narkoba dengan TPPU
+                                    </h3>
+                                </div>
+                            </a>
+                        </article>
+                        <article class="cardArticle">
+                            <a href="#">
+                                <figure class="cardImg">
+                                    <img class="thumbCard" src="./assets/img/dummy/dummy-header-img.avif"
+                                        alt="rekomendasi" width="213" height="143" loading="lazy">
+                                    <span class="ic-video"></span>
+                                    <!-- available class ic-img | ic-pie-chart  -->
+                                </figure>
+                                <div class="cardBody">
+                                    <div class="kanalAndTime">
+                                        <div class="postTime">20 menit lalu</div>
+                                    </div>
+                                    <h3 class="cardTitle">Jerat Bandar Narkoba dengan TPPU, Bareskrim Sita
+                                        Sejumlah Kendaraan Mewah.
+                                    </h3>
+                                </div>
+                            </a>
+                        </article>
+                        <article class="cardArticle">
+                            <a href="#">
+                                <figure class="cardImg">
+                                    <img class="thumbCard" src="./assets/img/dummy/dummy-header-img.avif"
+                                        alt="rekomendasi" width="213" height="143" loading="lazy">
+                                    <span class="ic-video"></span>
+                                    <!-- available class ic-img | ic-pie-chart  -->
+                                </figure>
+                                <div class="cardBody">
+                                    <div class="kanalAndTime">
+                                        <div class="postTime">20 menit lalu</div>
+                                    </div>
+                                    <h3 class="cardTitle">Jerat Bandar Narkoba dengan TPPU, Bareskrim Sita
+                                        Sejumlah Kendaraan Mewah. Lorem ipsum dolor, sit amet consectetur adipisicing
+                                        elit.
+                                    </h3>
+                                </div>
+                            </a>
+                        </article>
+                        <article class="cardArticle">
+                            <a href="#">
+                                <figure class="cardImg">
+                                    <img class="thumbCard" src="./assets/img/dummy/dummy-header-img.avif"
+                                        alt="rekomendasi" width="213" height="143" loading="lazy">
+                                    <span class="ic-video"></span>
+                                    <!-- available class ic-img | ic-pie-chart  -->
+                                </figure>
+                                <div class="cardBody">
+                                    <div class="kanalAndTime">
+                                        <div class="postTime">20 menit lalu</div>
+                                    </div>
+                                    <h3 class="cardTitle">Jerat Bandar Narkoba dengan TPPU, Bareskrim Sita
+                                        Sejumlah Kendaraan Mewah. Lorem ipsum dolor, sit amet consectetur adipisicing
+                                        elit.
+                                    </h3>
+                                </div>
+                            </a>
+                        </article>
+                        <article class="cardArticle">
+                            <a href="#">
+                                <figure class="cardImg">
+                                    <img class="thumbCard" src="./assets/img/dummy/dummy-header-img.avif"
+                                        alt="rekomendasi" width="213" height="143" loading="lazy">
+                                    <span class="ic-video"></span>
+                                    <!-- available class ic-img | ic-pie-chart  -->
+                                </figure>
+                                <div class="cardBody">
+                                    <div class="kanalAndTime">
+                                        <div class="postTime">20 menit lalu</div>
+                                    </div>
+                                    <h3 class="cardTitle">Jerat Bandar Narkoba dengan TPPU, Bareskrim Sita
+                                        Sejumlah Kendaraan Mewah. Lorem ipsum dolor, sit amet consectetur adipisicing
+                                        elit.
+                                    </h3>
+                                </div>
+                            </a>
+                        </article>
+                    </div>
+                </section>
 
                 <button type="button" id="btn-load-more">Load More</button>
             </main>
@@ -308,7 +333,7 @@
                     <!-- <img src="./assets/img/dummy/dummy-side-ads.png" alt="ads" width="100%" height="100%"
                         loading="lazy"> -->
                 </figure>
-                <figure class="asideAds">
+                <figure class="asideAds ads-600x300">
                     <figcaption>Advertisement</figcaption>
                     <!-- <img src="./assets/img/dummy/dummy-side-ads2.png" alt="ads" width="100%" height="100%"
                         loading="lazy"> -->
@@ -495,7 +520,7 @@
     </div>
     <!-- End Stiky Ads -->
     <!-- JS -->
-    <script type="module" src="./assets/js/script.js"></script>
+    <script type="module" src="./assets/js/main.js"></script>
 </body>
 
 </html>
