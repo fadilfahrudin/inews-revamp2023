@@ -76,7 +76,7 @@
                 <div class="searchForm">
                     <input type="text" name="search" id="search" placeholder="Search" autocomplete="off">
                     <button class="btnSearch" type="button" aria-label="search">
-                        <img src="./assets/img/icon/ic-search.png" alt="search" width="20" height="20">
+                        <img src="./assets/img/icon/ic-search.svg" alt="search" width="20" height="20">
                     </button>
                 </div>
                 <div id="data-list">
@@ -185,19 +185,22 @@
     <!-- END Alert SSO -->
     <!-- Navigation WP | Home -->
     <nav class="nav__main">
-        <ul id="navbar-nav" class="container">
-            <li class="navList"><a href="welcome-page.html" class="navLink navLink-active">Home</a></li>
-            <li class="navList"><a href="page-daerah-home.html" class="navLink ">Daerah</a></li>
-            <li class="navList"><a href="page-news-home.html" class="navLink ">News</a></li>
-            <li class="navList"><a href="page-lifestyle-home.html" class="navLink ">Lifestyle</a></li>
-            <li class="navList"><a href="page-multimedia-home.html" class="navLink ">Multimedia</a></li>
-            <li class="navList"><a href="page-techno-home.html" class="navLink ">Techno</a></li>
-            <li class="navList"><a href="page-sport-home.html" class="navLink ">Sport</a></li>
-            <li class="navList"><a href="page-otomotif-home.html" class="navLink ">Otomotif</a></li>
-            <li class="navList"><a href="page-travel-home.html" class="navLink ">Travel</a></li>
-            <li class="navList"><a href="page-finance-home.html" class="navLink ">Finance</a></li>
-            <li class="navList"><a href="page-index.html" class="navLink ">Indeks</a></li>
-        </ul>
+        <div class="container">
+            <ul id="navbar-nav">
+                <li class="navList"><a href="welcome-page.html" class="navLink navLink-active">Home</a></li>
+                <li class="navList"><a href="page-daerah-home.html" class="navLink ">Daerah</a></li>
+                <li class="navList"><a href="page-news-home.html" class="navLink ">News</a></li>
+                <li class="navList"><a href="page-lifestyle-home.html" class="navLink ">Lifestyle</a></li>
+                <li class="navList"><a href="page-multimedia-home.html" class="navLink ">Multimedia</a></li>
+                <li class="navList"><a href="page-techno-home.html" class="navLink ">Techno</a></li>
+                <li class="navList"><a href="page-sport-home.html" class="navLink ">Sport</a></li>
+                <li class="navList"><a href="page-otomotif-home.html" class="navLink ">Otomotif</a></li>
+                <li class="navList"><a href="page-travel-home.html" class="navLink ">Travel</a></li>
+                <li class="navList"><a href="page-finance-home.html" class="navLink ">Finance</a></li>
+                <li class="navList"><a href="page-index.html" class="navLink ">Indeks</a></li>
+            </ul>
+            <div id="dropdown" ><span class="ic-dropdown-kanal hidden"></span></div>
+        </div>
     </nav>
     <!-- End Navigation WP | Home -->
 
@@ -214,7 +217,6 @@
         <div class="container">
             <div class="breadcrumb">
                 <a href="welcome-page.html">Home</a>
-                <img src="./assets/img/icon/ic-next-page-breadcrumb.png" alt="breadcrumb" width="8" height="8" />
                 <span class="lastPage">Tag</span>
             </div>
         </div>
@@ -345,33 +347,7 @@
                         </article>
                     </div>
                 </section>
-                <!-- Pagination -->
-                <div class="pagination">
-                    <label for="page">Page:</label>
-                    <ul id="page" class="paginationContent">
-                        <li>
-                            <a class="prev" href="#" aria-label="prev-left">
-                                <span class="ic-prev"></span>
-                            </a>
-                        </li>
-                        <!-- li Punya class avtive -->
-                        <li class="pageList active"><a href="#">1</a></li>
-                        <li class="pageList"><a href="#">2</a></li>
-                        <li class="pageList"><a href="#">3</a></li>
-                        <li>...</li>
-                        <li class="pageList"><a href="#">5</a></li>
-                        <li class="pageList"><a href="#">6</a></li>
-                        <li class="pageList"><a href="#">7</a></li>
-                        <!--  -->
-                        <li>
-                            <a class="next" href="#" aria-label="next">
-                                <span class="ic-next-active"></span>
-                            </a>
-                        </li>
-                        <li class="showAll"><a href="#">Show All</a></li>
-                    </ul>
-                </div>
-                <!-- End Pagination -->
+                <button id="btn-load-more" type="button"> Load More</button>
             </main>
         </section>
     </section>
@@ -473,6 +449,8 @@
                         <li class="listKanal"><a href="#">Travel <span class="ic-travel-burger"></span></a></li>
                         <li class="listKanal"><a href="#">Otomotif <span class="ic-otomotif-burger"></span></a></li>
                         <li class="listKanal"><a href="#">Techno <span class="ic-techno-burger"></span></a></li>
+                        <li class="listKanal"><a href="#">Multimedia <span class="ic-multimedia-burger"></span></a></li>
+                        <li class="listKanal"><a href="#">Indeks <span class="ic-indeks-burger"></span></a></li>
                     </ul>
                 </div>
                 <div class="mncPortal">

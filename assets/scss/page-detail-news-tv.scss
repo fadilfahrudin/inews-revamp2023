@@ -223,6 +223,34 @@ article {
                 }
             }
         }
+        .channel__tv{
+            list-style: none;
+            background-color: #F9F9F9;
+            border-radius: 8px;
+            padding: 12px;
+            overflow: hidden;
+            .channelList{
+                display: flex;
+                gap: 16px;
+                .channel{
+                    cursor: grab;
+                    flex-shrink: 0;
+                    width: 150px;
+                    height: 100px;
+                    border-radius: 10px;
+                    background-color: #EBEBEB;
+
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    a{
+                        &:hover{
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+        }
         .desc__tv {
             font-size: clamp(14px, 1.5vw, 18px);
             line-height: 160%;

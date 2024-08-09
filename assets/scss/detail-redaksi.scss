@@ -1,0 +1,301 @@
+@use "media";
+
+#detail-redaksi {
+    section {
+        &.container {
+            width: 1120px;
+
+            @include media.ipad {
+                width: 100%;
+            }
+            section {
+                &.mainBody {
+                    main {
+                        &.sideRight {
+                            width: 75%;
+                            .buttonFilterWrapper {
+                                display: flex;
+                                gap: 12px;
+                                margin-bottom: 12px;
+                                .btn-filter {
+                                    padding: 12px 32px;
+                                    width: max-content;
+                                    height: auto;
+                                    background-color: #ebebeb;
+
+                                    font-family: Inter-Bold, sans-serif;
+                                    font-size: 16px;
+                                    font-weight: 700;
+                                    line-height: 24px;
+                                    color: #525252;
+                                    border-radius: 30px;
+                                    transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+                                    &.active{
+                                        color: #FFFFFF;
+                                        background-color: #D80605;
+                                    }
+
+                                    &:hover {
+                                        background-color: #D80605;
+                                        color: #FFFFFF;
+                                    }
+                                }
+                            }
+                            @include media.ipad {
+                                width: 70%;
+                            }
+                        }
+                    }
+                    aside {
+                        &.sideLeft {
+                            width: calc(25% - 20px);
+                            .profileCard {
+                                position: sticky;
+                                top: 50px;
+                                border-radius: 16px;
+                                overflow: hidden;
+                                background-color: #2d2d2a;
+                                display: flex;
+                                flex-direction: column;
+                                align-items: center;
+                                gap: 16px;
+                                padding-top: 16px;
+                                padding-bottom: 32px;
+
+                                &::before {
+                                    position: absolute;
+                                    left: 0;
+                                    top: 0;
+                                    content: "";
+                                    display: block;
+                                    width: 86px;
+                                    height: 250px;
+                                    background-size: cover;
+                                    background-repeat: no-repeat;
+                                    background-image: url(../img/element-redaksi-page--right.png);
+                                    transform: scale(-1, 1);
+                                }
+                                &::after {
+                                    position: absolute;
+                                    right: 0;
+                                    top: 0;
+                                    content: "";
+                                    display: block;
+                                    width: 86px;
+                                    height: 250px;
+                                    background-size: cover;
+                                    background-repeat: no-repeat;
+                                    background-image: url(../img/element-redaksi-page--right.png);
+                                }
+                                @include media.ipad {
+                                    &::before {
+                                        width: 55px;
+                                        height: 93px;
+                                    }
+                                    &::after {
+                                        width: 55px;
+                                        height: 93px;
+                                    }
+                                }
+                                .profile__Img {
+                                    width: 156px;
+                                    height: 156px;
+                                    overflow: hidden;
+                                    border-radius: 50%;
+                                    @include media.ipad {
+                                        width: 106px;
+                                        height: 106px;
+                                    }
+                                    img {
+                                        aspect-ratio: 1/1;
+                                        object-fit: cover;
+                                        object-position: top center;
+                                    }
+                                }
+                                .profile__title {
+                                    background-color: #d80605;
+                                    border-radius: 4px;
+                                    padding: 4px 8px;
+                                    color: #fff;
+                                    font-family: Inter, sans-serif;
+                                    font-size: clamp(10px, 1vw, 14px);
+                                    font-weight: 400;
+                                    line-height: 16.94px;
+                                }
+                                .profile__name {
+                                    font-family: Inter-Bold, sans-serif;
+                                    font-size: clamp(12px, 1.5vw, 16px);
+                                    font-weight: 700;
+                                    line-height: 24px;
+                                    color: #fff;
+                                    margin-top: calc(4px - 16px);
+                                }
+                                .profile__achievement {
+                                    font-family: Inter, sans-serif;
+                                    font-size: clamp(10px, 1vw, 14px);
+                                    font-weight: 400;
+                                    line-height: 16.94px;
+                                    color: #fff;
+                                    margin-top: calc(4px - 16px);
+                                    b {
+                                        color: #d80605;
+                                    }
+                                }
+                                .profile__desc {
+                                    font-family: Inter, sans-serif;
+                                    font-size: clamp(10px, 1vw, 14px);
+                                    font-weight: 400;
+                                    line-height: 18px;
+                                    text-align: center;
+                                    color: #fff;
+                                }
+                                .socialMedia {
+                                    list-style: none;
+                                    display: flex;
+                                    gap: clamp(6px, 1vw, 16px);
+                                    align-items: center;
+                                    .platform {
+                                        transition: transform 0.3s ease-in-out;
+                                        &:hover {
+                                            transform: rotate(30deg);
+                                        }
+                                        flex-shrink: 0;
+                                        a {
+                                            width: max-content;
+                                            height: auto;
+                                            .ic-instagram,
+                                            .ic-facebook,
+                                            .ic-youtube,
+                                            .ic-twitter,
+                                            .ic-tiktok {
+                                                display: block;
+                                                width: clamp(20px, 3vw, 28px);
+                                                height: clamp(20px, 3vw, 28px);
+                                                background-repeat: no-repeat;
+                                                background-size: clamp(20px, 3vw, 28px) clamp(20px, 3vw, 28px);
+                                            }
+                                            .ic-instagram {
+                                                background-image: url(../img/icon/ic-ig-redaksi.svg);
+                                            }
+                                            .ic-facebook {
+                                                background-image: url(../img/icon/ic-fb-redaksi.svg);
+                                            }
+                                            .ic-youtube {
+                                                background-image: url(../img/icon/ic-yt-redaksi.svg);
+                                            }
+                                            .ic-twitter {
+                                                background-image: url(../img/icon/ic-x-redaksi.svg);
+                                            }
+                                            .ic-tiktok {
+                                                background-image: url(../img/icon/ic-tt-redaksi.svg);
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            @include media.ipad {
+                                width: calc(30% - 20px);
+                            }
+                        }
+                    }
+                    .redaksiLainnya {
+                        margin-top: 32px;
+                        display: flex;
+                        flex-wrap: wrap;
+                        gap: 24px;
+                        width: 100%;
+                        height: auto;
+                        .title-redaksiLainnya {
+                            display: block;
+                            font-family: Inter-Bold, sans-serif;
+                            font-size: 20px;
+                            font-weight: 700;
+                            line-height: 30px;
+                            color: #2d2d2a;
+                            width: 100%;
+                        }
+                        .cardRedaksi {
+                            flex-shrink: 0;
+                            position: relative;
+                            display: flex;
+                            flex-direction: row;
+                            justify-content: start;
+                            background: #f5f5f5;
+                            box-shadow: 0px 2px 6px 0px #1c273114;
+                            padding: 0 clamp(16px, 2vw, 22px);
+                            float: left;
+                            width: calc(100% / 3 - 32px);
+                            height: 129px;
+                            margin: 8px;
+                            border-radius: 5px;
+                            .profile {
+                                display: flex;
+                                flex-direction: row;
+                                gap: 8px;
+                                align-items: center;
+                                .profile__img {
+                                    flex-shrink: 0;
+                                    width: clamp(40px, 3vw, 60px);
+                                    height: clamp(40px, 3vw, 60px);
+                                    border-radius: 50%;
+                                    overflow: hidden;
+                                    img {
+                                        width: 100%;
+                                        height: 100%;
+                                        object-fit: cover;
+                                        object-position: top center;
+                                    }
+                                }
+                                .profile_detail {
+                                    display: flex;
+                                    flex-direction: column;
+                                    gap: 8px;
+                                    .profile__title {
+                                        color: #525252;
+                                        //styleName: Dekstop/Text & Button/14px - Regular;
+                                        font-family: Inter, sans-serif;
+                                        font-size: clamp(8px, 1.2vw, 12px);
+                                        font-weight: 400;
+                                        line-height: 16.94px;
+                                    }
+                                    .profile_name {
+                                        //styleName: Dekstop/Body Text/16px - Bold - 150%;
+                                        font-family: Inter-Bold, sans-serif;
+                                        font-size: clamp(12px, 1.2vw, 16px);
+                                        font-weight: 700;
+                                        line-height: 24px;
+                                        text-align: left;
+                                    }
+                                    .article-created {
+                                        margin-top: -4px;
+                                        font-family: Inter, sans-serif;
+                                        font-size: clamp(8px, 1vw, 14px);
+                                        font-weight: 400;
+                                        line-height: 18px;
+                                        color: var(--color-dark-50);
+                                        .number {
+                                            font-family: Inter-Bold, sans-serif;
+                                            color: var(--color-red);
+                                            font-weight: 700;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .widgetListArticle {
+                        &.col {
+                            .widgetListArticle__body {
+                                article {
+                                    &.cardArticle {
+                                        width: calc(100% / 4 - 12px);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

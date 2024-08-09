@@ -87,7 +87,6 @@
   padding: 2px;
 }
 #index-page .mainBody main.sideRight .indexControl .selectControl .kalender {
-  display: none;
   position: absolute;
   top: 100%;
   right: 0;

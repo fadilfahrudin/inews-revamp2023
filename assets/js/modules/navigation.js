@@ -1,12 +1,14 @@
 const dropDownNavigation = () => {
-    const listWidth = $('.navList').outerWidth(true)
     const containerWidth = $('#navbar-nav').width()
-    const totalListWidth = listWidth * $('.navList').length
+    let totalListWidth = 0
+    $('.navList').each(function (i, el) {
+        totalListWidth += $(el).outerWidth(true)
+    })
     if (totalListWidth >= containerWidth) {
-        $('#navbar-nav').append(`<li class="ic-dropdown-kanal"></li>`)
+        $('.ic-dropdown-kanal').removeClass('hidden')
     }
 
-    $('#navbar-nav').on('click', '.ic-dropdown-kanal', function () {
+    $('#dropdown').on('click', '.ic-dropdown-kanal', function () {
         $('#navbar-nav').toggleClass('dropDown')
         $(this).toggleClass('dropDown')
     })

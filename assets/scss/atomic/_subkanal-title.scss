@@ -1,0 +1,13 @@
+.breadcrumb{
+    padding-left: 8px;
+}
+span {
+    &.titleSubKanal {
+        font-family: Inter-Bold, sans-serif;
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 38.4px;
+        color: #000;
+        padding-left: 8px;
+    }
+}

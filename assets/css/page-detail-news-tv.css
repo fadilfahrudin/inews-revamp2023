@@ -210,6 +210,31 @@ article.headline__tv .schedule__tv .scheduleWrapper .schaduleList .schaduleTitle
 article.headline__tv .schedule__tv .scheduleWrapper .schaduleList .schaduleTitle::selection {
   background: transparent;
 }
+article.headline__tv .channel__tv {
+  list-style: none;
+  background-color: #F9F9F9;
+  border-radius: 8px;
+  padding: 12px;
+  overflow: hidden;
+}
+article.headline__tv .channel__tv .channelList {
+  display: flex;
+  gap: 16px;
+}
+article.headline__tv .channel__tv .channelList .channel {
+  cursor: grab;
+  flex-shrink: 0;
+  width: 150px;
+  height: 100px;
+  border-radius: 10px;
+  background-color: #EBEBEB;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+article.headline__tv .channel__tv .channelList .channel a:hover {
+  cursor: pointer;
+}
 article.headline__tv .desc__tv {
   font-size: clamp(14px, 1.5vw, 18px);
   line-height: 160%;

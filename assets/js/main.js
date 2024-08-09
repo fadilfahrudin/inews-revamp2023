@@ -6,7 +6,7 @@ import { pagination } from "./modules/pagination.js";
 import { ssoLogin } from "./modules/sso.js";
 import { counterLike, progressBar, resizeFontToggle, sticky, copyLink } from "./modules/sticky-feature-detail-page.js";
 import { backToTop } from "./modules/backToTop.js"
-import { schaduleSlider } from "./modules/newsTv.js"
+import { schaduleSlider, widgetNewsTV, channelSlider } from "./modules/newsTv.js"
 import { Navigation } from "./modules/navigation.js";
 import { popularWidget } from "./modules/popular-widget.js";
 import { videoHighlightWidget } from "./modules/video-highlight-widget/video-highlight-widget.js";
@@ -15,6 +15,7 @@ import { searchModule } from "./modules/search.js";
 import { indexModuls } from "./modules/index/indexModuls.js";
 import { detailVideo } from "./modules/page-video/video-detail.js"
 import { multimedia } from "./modules/multimedia/multimedia.js";
+import { aboutModule } from "./modules/about-module.js";
 function initialize() {
     initNav()
     iniPopWidget()
@@ -35,6 +36,23 @@ function initialize() {
     initPageIndex()
     iniDetailPageVideo()
     initMultimedia()
+    initwidgetNewsTV()
+    initAboutModul()
+}
+
+function initwidgetNewsTV() {
+    if ($('.widgetNewsTV').length > 0) {
+        widgetNewsTV()
+    }
+    if ($('.channelList').length > 0) {
+        channelSlider()
+    }
+}
+
+function initAboutModul() {
+    if ($('#about-page').length > 0 || $('#browser-setting-page').length > 0) {
+        aboutModule()
+    }
 }
 
 function initMultimedia() {
@@ -89,8 +107,10 @@ function initStickyFeatureDetailPage() {
         progressBar()
         counterLike()
         copyLink()
+        console.log('klik')
     }
     $('.share').length > 0 && copyLink();
+    $('#detailPhotoInfo__copied').length > 0 && copyLink();
 }
 
 function initNewsTVFeaturePage() {

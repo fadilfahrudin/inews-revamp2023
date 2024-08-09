@@ -1,0 +1,287 @@
+#detail-redaksi section.container {
+  width: 1120px;
+}
+@media screen and (max-width: 1025px) {
+  #detail-redaksi section.container {
+    width: 100%;
+  }
+}
+#detail-redaksi section.container section.mainBody main.sideRight {
+  width: 75%;
+}
+#detail-redaksi section.container section.mainBody main.sideRight .buttonFilterWrapper {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+#detail-redaksi section.container section.mainBody main.sideRight .buttonFilterWrapper .btn-filter {
+  padding: 12px 32px;
+  width: -moz-max-content;
+  width: max-content;
+  height: auto;
+  background-color: #ebebeb;
+  font-family: Inter-Bold, sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  color: #525252;
+  border-radius: 30px;
+  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+#detail-redaksi section.container section.mainBody main.sideRight .buttonFilterWrapper .btn-filter.active {
+  color: #FFFFFF;
+  background-color: #D80605;
+}
+#detail-redaksi section.container section.mainBody main.sideRight .buttonFilterWrapper .btn-filter:hover {
+  background-color: #D80605;
+  color: #FFFFFF;
+}
+@media screen and (max-width: 1025px) {
+  #detail-redaksi section.container section.mainBody main.sideRight {
+    width: 70%;
+  }
+}
+#detail-redaksi section.container section.mainBody aside.sideLeft {
+  width: calc(25% - 20px);
+}
+#detail-redaksi section.container section.mainBody aside.sideLeft .profileCard {
+  position: sticky;
+  top: 50px;
+  border-radius: 16px;
+  overflow: hidden;
+  background-color: #2d2d2a;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding-top: 16px;
+  padding-bottom: 32px;
+}
+#detail-redaksi section.container section.mainBody aside.sideLeft .profileCard::before {
+  position: absolute;
+  left: 0;
+  top: 0;
+  content: "";
+  display: block;
+  width: 86px;
+  height: 250px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url(../img/element-redaksi-page--right.png);
+  transform: scale(-1, 1);
+}
+#detail-redaksi section.container section.mainBody aside.sideLeft .profileCard::after {
+  position: absolute;
+  right: 0;
+  top: 0;
+  content: "";
+  display: block;
+  width: 86px;
+  height: 250px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url(../img/element-redaksi-page--right.png);
+}
+@media screen and (max-width: 1025px) {
+  #detail-redaksi section.container section.mainBody aside.sideLeft .profileCard::before {
+    width: 55px;
+    height: 93px;
+  }
+  #detail-redaksi section.container section.mainBody aside.sideLeft .profileCard::after {
+    width: 55px;
+    height: 93px;
+  }
+}
+#detail-redaksi section.container section.mainBody aside.sideLeft .profileCard .profile__Img {
+  width: 156px;
+  height: 156px;
+  overflow: hidden;
+  border-radius: 50%;
+}
+@media screen and (max-width: 1025px) {
+  #detail-redaksi section.container section.mainBody aside.sideLeft .profileCard .profile__Img {
+    width: 106px;
+    height: 106px;
+  }
+}
+#detail-redaksi section.container section.mainBody aside.sideLeft .profileCard .profile__Img img {
+  aspect-ratio: 1/1;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top center;
+     object-position: top center;
+}
+#detail-redaksi section.container section.mainBody aside.sideLeft .profileCard .profile__title {
+  background-color: #d80605;
+  border-radius: 4px;
+  padding: 4px 8px;
+  color: #fff;
+  font-family: Inter, sans-serif;
+  font-size: clamp(10px, 1vw, 14px);
+  font-weight: 400;
+  line-height: 16.94px;
+}
+#detail-redaksi section.container section.mainBody aside.sideLeft .profileCard .profile__name {
+  font-family: Inter-Bold, sans-serif;
+  font-size: clamp(12px, 1.5vw, 16px);
+  font-weight: 700;
+  line-height: 24px;
+  color: #fff;
+  margin-top: -12px;
+}
+#detail-redaksi section.container section.mainBody aside.sideLeft .profileCard .profile__achievement {
+  font-family: Inter, sans-serif;
+  font-size: clamp(10px, 1vw, 14px);
+  font-weight: 400;
+  line-height: 16.94px;
+  color: #fff;
+  margin-top: -12px;
+}
+#detail-redaksi section.container section.mainBody aside.sideLeft .profileCard .profile__achievement b {
+  color: #d80605;
+}
+#detail-redaksi section.container section.mainBody aside.sideLeft .profileCard .profile__desc {
+  font-family: Inter, sans-serif;
+  font-size: clamp(10px, 1vw, 14px);
+  font-weight: 400;
+  line-height: 18px;
+  text-align: center;
+  color: #fff;
+}
+#detail-redaksi section.container section.mainBody aside.sideLeft .profileCard .socialMedia {
+  list-style: none;
+  display: flex;
+  gap: clamp(6px, 1vw, 16px);
+  align-items: center;
+}
+#detail-redaksi section.container section.mainBody aside.sideLeft .profileCard .socialMedia .platform {
+  transition: transform 0.3s ease-in-out;
+  flex-shrink: 0;
+}
+#detail-redaksi section.container section.mainBody aside.sideLeft .profileCard .socialMedia .platform:hover {
+  transform: rotate(30deg);
+}
+#detail-redaksi section.container section.mainBody aside.sideLeft .profileCard .socialMedia .platform a {
+  width: -moz-max-content;
+  width: max-content;
+  height: auto;
+}
+#detail-redaksi section.container section.mainBody aside.sideLeft .profileCard .socialMedia .platform a .ic-instagram,
+#detail-redaksi section.container section.mainBody aside.sideLeft .profileCard .socialMedia .platform a .ic-facebook,
+#detail-redaksi section.container section.mainBody aside.sideLeft .profileCard .socialMedia .platform a .ic-youtube,
+#detail-redaksi section.container section.mainBody aside.sideLeft .profileCard .socialMedia .platform a .ic-twitter,
+#detail-redaksi section.container section.mainBody aside.sideLeft .profileCard .socialMedia .platform a .ic-tiktok {
+  display: block;
+  width: clamp(20px, 3vw, 28px);
+  height: clamp(20px, 3vw, 28px);
+  background-repeat: no-repeat;
+  background-size: clamp(20px, 3vw, 28px) clamp(20px, 3vw, 28px);
+}
+#detail-redaksi section.container section.mainBody aside.sideLeft .profileCard .socialMedia .platform a .ic-instagram {
+  background-image: url(../img/icon/ic-ig-redaksi.svg);
+}
+#detail-redaksi section.container section.mainBody aside.sideLeft .profileCard .socialMedia .platform a .ic-facebook {
+  background-image: url(../img/icon/ic-fb-redaksi.svg);
+}
+#detail-redaksi section.container section.mainBody aside.sideLeft .profileCard .socialMedia .platform a .ic-youtube {
+  background-image: url(../img/icon/ic-yt-redaksi.svg);
+}
+#detail-redaksi section.container section.mainBody aside.sideLeft .profileCard .socialMedia .platform a .ic-twitter {
+  background-image: url(../img/icon/ic-x-redaksi.svg);
+}
+#detail-redaksi section.container section.mainBody aside.sideLeft .profileCard .socialMedia .platform a .ic-tiktok {
+  background-image: url(../img/icon/ic-tt-redaksi.svg);
+}
+@media screen and (max-width: 1025px) {
+  #detail-redaksi section.container section.mainBody aside.sideLeft {
+    width: calc(30% - 20px);
+  }
+}
+#detail-redaksi section.container section.mainBody .redaksiLainnya {
+  margin-top: 32px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  width: 100%;
+  height: auto;
+}
+#detail-redaksi section.container section.mainBody .redaksiLainnya .title-redaksiLainnya {
+  display: block;
+  font-family: Inter-Bold, sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 30px;
+  color: #2d2d2a;
+  width: 100%;
+}
+#detail-redaksi section.container section.mainBody .redaksiLainnya .cardRedaksi {
+  flex-shrink: 0;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  background: #f5f5f5;
+  box-shadow: 0px 2px 6px 0px rgba(28, 39, 49, 0.0784313725);
+  padding: 0 clamp(16px, 2vw, 22px);
+  float: left;
+  width: calc(33.3333333333% - 32px);
+  height: 129px;
+  margin: 8px;
+  border-radius: 5px;
+}
+#detail-redaksi section.container section.mainBody .redaksiLainnya .cardRedaksi .profile {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  align-items: center;
+}
+#detail-redaksi section.container section.mainBody .redaksiLainnya .cardRedaksi .profile .profile__img {
+  flex-shrink: 0;
+  width: clamp(40px, 3vw, 60px);
+  height: clamp(40px, 3vw, 60px);
+  border-radius: 50%;
+  overflow: hidden;
+}
+#detail-redaksi section.container section.mainBody .redaksiLainnya .cardRedaksi .profile .profile__img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top center;
+     object-position: top center;
+}
+#detail-redaksi section.container section.mainBody .redaksiLainnya .cardRedaksi .profile .profile_detail {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+#detail-redaksi section.container section.mainBody .redaksiLainnya .cardRedaksi .profile .profile_detail .profile__title {
+  color: #525252;
+  font-family: Inter, sans-serif;
+  font-size: clamp(8px, 1.2vw, 12px);
+  font-weight: 400;
+  line-height: 16.94px;
+}
+#detail-redaksi section.container section.mainBody .redaksiLainnya .cardRedaksi .profile .profile_detail .profile_name {
+  font-family: Inter-Bold, sans-serif;
+  font-size: clamp(12px, 1.2vw, 16px);
+  font-weight: 700;
+  line-height: 24px;
+  text-align: left;
+}
+#detail-redaksi section.container section.mainBody .redaksiLainnya .cardRedaksi .profile .profile_detail .article-created {
+  margin-top: -4px;
+  font-family: Inter, sans-serif;
+  font-size: clamp(8px, 1vw, 14px);
+  font-weight: 400;
+  line-height: 18px;
+  color: var(--color-dark-50);
+}
+#detail-redaksi section.container section.mainBody .redaksiLainnya .cardRedaksi .profile .profile_detail .article-created .number {
+  font-family: Inter-Bold, sans-serif;
+  color: var(--color-red);
+  font-weight: 700;
+}
+#detail-redaksi section.container section.mainBody .widgetListArticle.col .widgetListArticle__body article.cardArticle {
+  width: calc(25% - 12px);
+}/*# sourceMappingURL=detail-redaksi.css.map */

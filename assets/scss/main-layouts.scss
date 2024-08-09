@@ -11,10 +11,12 @@
 @import "molecules/widget-headline";
 @import "molecules/widget-list-article";
 @import "molecules/widget-popular";
+@import "molecules/widget-popular-topic";
 @import "molecules/widget-election-center";
 @import "molecules/widget-litigasi";
 @import "molecules/widget-inews-network";
 @import "molecules/widget-multimedia";
+@import "molecules/widget-geolocation";
 
 // Atomic
 @import "./atomic/sr-only";
@@ -28,3 +30,4 @@
 @import "atomic/sticky-ads";
 @import "atomic/alert-sso";
 @import "atomic/back-to-top";
+@import "atomic/subkanal-title";

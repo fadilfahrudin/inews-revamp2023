@@ -1,7 +1,7 @@
 export const sticky = () => {
     $(window).on('scroll', function () {
         let scrollY = $(this).scrollTop() || document.documentElement.scrollTop;
-        if (scrollY > $(".navigationKanal").offset().top) {
+        if ( scrollY > $(".navigationKanal").offset().top) {
             $('.stickyFeature').css('transform', 'translateY(-10px)');
         } else {
             $('.stickyFeature').css('transform', 'translateY(-270px)');
@@ -105,10 +105,14 @@ export const copyLink = () => {
     const url = window.location.href;
     $(".ic-link-share").on('click', function () {
         $("#copied").addClass("active");
+        $("#detailPhotoInfo__copied").addClass("active");
+        $("#detailPhotoInfo__copied2").addClass("active");
         navigator.clipboard.writeText(url)
         .then(() => {
             setTimeout(() => {
                 $("#copied").removeClass("active");
+                $("#detailPhotoInfo__copied").removeClass("active");
+                $("#detailPhotoInfo__copied2").removeClass("active");
             }, 3000)
         })
         .catch((error) => {

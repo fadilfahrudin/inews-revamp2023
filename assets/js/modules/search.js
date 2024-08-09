@@ -124,15 +124,8 @@ const searchPage = () => {
         }
     })
 }
-const pageOnScroll = () => {
-    $(window).on("scroll", function () {
-        if ($(this).scrollTop() > $(".widgetListArticle").offset().top - 200) {
-            $(".showFor").hide();
-        } else {
-            $(".showFor").show();
-        }
-    })
-}
+
+
 const initSearchPage = () => {
     const params = new URLSearchParams(window.location.search);
     if ($("#search-input").length > 0) {
@@ -140,9 +133,6 @@ const initSearchPage = () => {
         cleanSearch()
         $("#keyWord").text(params.get('search'));
         $(".searchKey").text(params.get('search'));
-    }
-    if ($(".showFor").length > 0) {
-        pageOnScroll()
     }
 }
 

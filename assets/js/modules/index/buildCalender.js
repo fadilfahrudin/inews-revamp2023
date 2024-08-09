@@ -100,7 +100,7 @@ function buildCalendar(year, month) {
             selectedDate = new Date(year, month, $(this).text());
             const formattedDate = formatDate(selectedDate);
             dateInput.val(formattedDate);
-            calendar.hide();
+            calendar.toggleClass('hidden');
         }
     });
 
@@ -129,28 +129,16 @@ function formatDate(date) {
     return `${year}-${month}-${day}`;
 }
 function build() {
-    dateInput.on('focus click', function () {
-        dateInput.attr('type', 'date')
-        calendar.show();
+    $("#date-input").on('click', function (e) {
         buildCalendar(currentYear, currentMonth);
+        calendar.toggleClass('hidden');
         $(".kanal-list").addClass("hidden");
-    });
-    $('.ic-kanal-dropdown').each(function (i, el) {
-        $(el).on(' click', function () {
-            if ($(el).prev("#date-input").length > 0) {
-                dateInput.attr('type', 'date')
-                calendar.show();
-                buildCalendar(currentYear, currentMonth);
-                $(".kanal-list").addClass("hidden");
-            }
-        });
     })
     $(document).click(function (event) {
         if (!$(event.target).closest('.selectControl').length) {
-            calendar.hide();
+            calendar.addClass('hidden');
         }
     });
-
     calendar.on('click', function (event) {
         event.stopPropagation();
     });

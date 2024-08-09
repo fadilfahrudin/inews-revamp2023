@@ -14,9 +14,9 @@ nav {
             position: relative;
             height: 40px;
             display: flex;
+            flex-wrap: wrap;
             align-items: center;
             justify-content: start;
-            flex-wrap: wrap;
             list-style: none;
             overflow-y: hidden;
             transition: height 0.3s ease-in-out;
@@ -98,6 +98,9 @@ nav {
             align-items: center;
             gap: 40px;
             .searchWrap {
+                @include media.ipad {
+                    display: none;
+                }
                 .searchForm {
                     position: relative;
                     width: clamp(150px, 23vw, 310px);
@@ -254,6 +257,15 @@ nav {
                     }
                 }
             }
+            .searchOnIpad{
+                display: none;
+                padding: 10px 0px 10px 20px;
+                width: max-content;
+                height: auto;
+                @include media.ipad {
+                    display: block;
+                }
+            }
             .loginBurgerMenuWrap {
                 display: flex;
                 align-items: center;
@@ -268,7 +280,7 @@ nav {
                         font-size: 14px;
                         font-weight: 700;
                         line-height: 21px;
-                        color: var(--color-dark-0);
+                        color: var(--color-dark-50);
                         .ic-login {
                             content: url("../img/icon/ic-user.png");
                             width: 24px;
@@ -288,7 +300,7 @@ nav {
                         height: 32px;
                     }
                 }
-            }
+            } 
         }
     }
 }

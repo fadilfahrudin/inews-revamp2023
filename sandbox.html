@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery</title>
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .carousel {
+            position: relative;
+            width: 80%;
+            margin: 0 auto;
+            overflow: hidden;
+            border: 1px solid #ccc;
+        }
+
+        .carousel-images {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .carousel-image {
+            min-width: 100%;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .prev,
+        .next,
+        .fullscreen {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .prev {
+            left: 10px;
+        }
+
+        .next {
+            right: 10px;
+        }
+
+        .fullscreen {
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .fullscreen-carousel {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+        }
+
+        .fullscreen-carousel.active {
+            display: flex;
+        }
+
+        .fullscreen-image {
+            max-width: 90%;
+            max-height: 90%;
+        }
+
+        .fullscreen-prev,
+        .fullscreen-next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .fullscreen-prev {
+            left: 10px;
+        }
+
+        .fullscreen-next {
+            right: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="carousel">
+        <button class="prev">Prev</button>
+        <div class="carousel-images">
+            <img src="https://img.inews.co.id/media/776/files/inews_new/2024/07/23/jubir_kpk_tessa__2_.JPG"
+                alt="Image 1" class="carousel-image">
+            <img src="https://img.inews.co.id/media/776/files/inews_new/2024/07/23/jubir_kpk_tessa__3_.JPG"
+                alt="Image 2" class="carousel-image">
+            <img src="assets/img/dummy/img-detail-potrait.jpg" alt="Image 3" class="carousel-image">
+            <!-- Tambahkan lebih banyak gambar sesuai kebutuhan -->
+        </div>
+        <button class="next">Next</button>
+        <button class="fullscreen">Fullscreen</button>
+    </div>
+
+    <div class="fullscreen-carousel">
+        <button class="fullscreen-prev">Prev</button>
+        <img src="" alt="Fullscreen" class="fullscreen-image">
+        <button class="fullscreen-next">Next</button>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            const $carouselImages = $('.carousel-images');
+            const $carouselImage = $('.carousel-image');
+            const $fullscreenCarousel = $('.fullscreen-carousel');
+            const $fullscreenImage = $('.fullscreen-image');
+            let currentIndex = 0;
+
+            function updateCarousel() {
+                // $carouselImages.css('transition', `transform 0.5s ease-in-out`);
+                setTimeout(function () {
+                    $carouselImages.css('transform', `translateX(-${currentIndex * 100}%)`);
+                    $fullscreenImage.attr('src', $carouselImage.eq(currentIndex).attr('src'));
+                },100)
+            }
+
+            $('.next').on('click', function () {
+                if (currentIndex < $carouselImage.length - 1) {
+                    currentIndex++;
+                    updateCarousel();
+                }
+            });
+
+            $('.prev').on('click', function () {
+                if (currentIndex > 0) {
+                    currentIndex--;
+                    updateCarousel();
+                }
+            });
+
+            $('.fullscreen').on('click', function () {
+                $fullscreenCarousel.addClass('active');
+                $fullscreenImage.attr('src', $carouselImage.eq(currentIndex).attr('src'));
+                if ($fullscreenCarousel[0].requestFullscreen) {
+                    $fullscreenCarousel[0].requestFullscreen();
+                } else if ($fullscreenCarousel[0].webkitRequestFullscreen) { /* Safari */
+                    $fullscreenCarousel[0].webkitRequestFullscreen();
+                } else if ($fullscreenCarousel[0].msRequestFullscreen) { /* IE11 */
+                    $fullscreenCarousel[0].msRequestFullscreen();
+                }
+            });
+
+            $('.fullscreen-next').on('click', function () {
+                if (currentIndex < $carouselImage.length - 1) {
+                    currentIndex++;
+                    updateCarousel();
+                }
+            });
+
+            $('.fullscreen-prev').on('click', function () {
+                if (currentIndex > 0) {
+                    currentIndex--;
+                    updateCarousel();
+                }
+            });
+
+            // Exit fullscreen mode
+            $(document).on('fullscreenchange webkitfullscreenchange mozfullscreenchange MSFullscreenChange', function () {
+                if (!document.fullscreenElement && !document.webkitFullscreenElement && !document.mozFullScreenElement && !document.msFullscreenElement) {
+                    $fullscreenCarousel.removeClass('active');
+                }
+            });
+
+            updateCarousel();
+        });
+
+    </script>
+</body>
+
+</html>

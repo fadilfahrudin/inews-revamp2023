@@ -8,6 +8,7 @@
 // - widget latest news TV
 // - widget related (news, photo, video)
 // - widget Article Terkait
+// - widget location list article
 
 .widgetListArticle {
     width: 100%;
@@ -21,6 +22,7 @@
         align-items: center;
         margin-bottom: 16px;
         margin-top: 32px;
+        padding-left: 16px;
         &__title {
             display: flex;
             align-items: center;
@@ -46,6 +48,12 @@
             .ic-hotNews {
                 position: relative;
                 content: url("../img/icon/ic-hotnews.png");
+                width: 24px;
+                height: 24px;
+            }
+            .ic-location {
+                position: relative;
+                content: url("../img/icon/ic-location.svg");
                 width: 24px;
                 height: 24px;
             }

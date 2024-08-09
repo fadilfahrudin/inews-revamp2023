@@ -86,8 +86,7 @@
 }
 
 #tag-page .responseTagWrapp {
-  position: sticky;
-  top: 120px;
+  position: relative;
 }
 #tag-page .responseTagWrapp .tagKey {
   display: block;
@@ -106,6 +105,7 @@
   margin-bottom: 32px;
 }
 #tag-page .responseTagWrapp .tagInfo .showFor {
+  width: calc(32% - 20px);
   color: #171717;
   font-family: Inter, sans-serif;
   font-size: 16px;
@@ -127,7 +127,7 @@
 }
 #tag-page .filterTag {
   position: sticky;
-  top: 200px;
+  top: 120px;
   border-radius: 16px;
   border: 1px solid var(--color-light-0);
   background: #f9f9f9;

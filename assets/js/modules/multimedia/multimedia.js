@@ -32,6 +32,7 @@ const actionInit = () => {
     })
 }
 
+
 export function multimedia() {
     initImage()
     onScroll();

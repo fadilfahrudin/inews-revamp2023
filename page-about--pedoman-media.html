@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="index,follow">
+    <meta name="robots" content="max-image-preview:large">
+
+    <!-- HTML Meta Tags -->
+    <title>iNews Live Video -- Lorem ipsum dolor sit amet consectetur. </title>
+
+    <meta name="title" content="iNews Live Video -- Lorem ipsum dolor sit amet consectetur.">
+    <meta name="description"
+        content=" Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid repellat earum laboriosam officiis nihil ratione dolores aut porro facilis suscipit iusto">
+
+    <meta name="keywords"
+        content="inews, berita terkini, berita hari ini, berita terbaru, kabar terkini, kabar terbaru, seputar indonesia, berita daerah, berita indonesia">
+    <meta property="fb:app_id" content="963875223784135">
+    <meta property="fb:admins" content="inews.portal.98">
+    <meta property="fb:pages" content="1914899798526721">
+    <meta property="fb:pages" content="223280997726259">
+    <meta property="og:title" content="iNews Live Video -- Lorem ipsum dolor sit amet consectetur.">
+    <meta property="og:description"
+        content="Berita Hari Ini Seputar Sepakbola, klasemen dan hasil pertandingan liga Indonesia, liga Inggris, liga Italia, liga Jerman, liga Spanyol, Liga Champions.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://www.inews.id/sport/soccer">
+    <meta property="og:image" content="https://img.inews.co.id/media/1200//files/inews_new/2019/08/05/kanal_sport.png">
+    <meta property="og:site_name" content="iNews.ID">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@OfficialiNewsTV">
+    <meta name="twitter:creator" content="@OfficialiNewsTV">
+    <meta name="twitter:title" content="Berita Bola Hari Ini - iNews Portal">
+    <meta name="twitter:description"
+        content="Berita Hari Ini Seputar Sepakbola, klasemen dan hasil pertandingan liga Indonesia, liga Inggris, liga Italia, liga Jerman, liga Spanyol, Liga Champions. ">
+    <meta name="twitter:image" content="https://img.inews.co.id/media/1200//files/inews_new/2019/08/05/kanal_sport.png">
+    <meta name="twitter:url" content="https://www.inews.id/sport/soccer">
+    <meta name="twitter:domain" content="https://www.inews.id/sport/soccer">
+    <link rel="preload" href="https://www.youtube.com/iframe_api" as=" script">
+    <link rel="preload" href="assets/js/lib/jquery-3.7.1.min.js" as="script">
+
+    <!-- JQuery -->
+    <script src="./assets/js/lib/jquery-3.7.1.min.js"></script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="./assets/css/about-page.css">
+</head>
+
+<body id="about-page">
+    <!-- Header -->
+    <div class="topBarWrap">
+        <div class="container topBar">
+            <!-- left section -->
+            <div>
+                <a class="logo" href="./index.html" aria-label="logon"><img src="./assets/img/icon/ic-inews.png"
+                        alt="iNews.id" width="40" height="40" loading="lazy"></a>
+                <a class="logo" href="./index.html" target="_blank" aria-label="logon"><span
+                        class="ic-inews-tv"></span></a>
+                <div class="app-gateway">
+                    <img src="./assets/img/icon/ic-get-app.png" alt="get app" width="100%" height="100%">
+                    <div class="modal-app-gateway">
+                        <div class="qrcode-app">
+                            <img src="./assets/img/barcode-get-app.png" alt="qrcode" height="100%" width="100%">
+                        </div>
+                        <div class="get-app-wrappp">
+                            <p>Scan this QR or download app from:</p>
+                            <div class="app-available">
+                                <a href="#" target="_blank" aria-label="play store">
+                                    <img src="./assets/img/play-store.png" alt="play store" width="105" height="36">
+                                </a>
+                                <a href="#" target="_blank" aria-label="app store">
+                                    <img src="./assets/img/app-store.png" alt="app store" width="314" height="120">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- center section -->
+            <div>
+                <div class="searchForm">
+                    <input type="text" name="search" id="search" placeholder="Search" autocomplete="off">
+                    <button class="btnSearch" type="button" aria-label="search">
+                        <img src="./assets/img/icon/ic-search.svg" alt="search" width="20" height="20">
+                    </button>
+                </div>
+                <div id="data-list">
+                    <ul class="search-on-keyup">
+                        <!-- <li class="list-search">kata kunci list</li> -->
+                    </ul>
+                    <ul class="recent-search"> <!-- punya class hidden ketika blm login-->
+                        <li class="list-title">Recent Search <span id="clear-recent">Clear all</span></li>
+                        <!-- contoh list recent -->
+                        <li class="list-search hidden">
+                            <span class="recent-search-text ">Thailand Lorem, ipsum dolor sit amet
+                                consectetur adipisicing elit.
+                                Cupiditate, fugit!</span>
+                            <span class="remove-recent"></span>
+                        </li>
+                    </ul>
+                    <ul class="trending-topic">
+                        <li class="list-title">Trending Topic</li>
+                        <li class="list-search">Thailand <span class="ic-hot-search"></span></li>
+                        <li class="list-search">Coldplay <span class="ic-hot-search"></span></li>
+                        <li class="list-search">CHat GPT</li>
+                        <li class="list-search">Free Palestina</li>
+                    </ul>
+                </div>
+            </div>
+            <!-- right section -->
+            <div>
+                <div id="login" class="loginSection">
+                    <!-- Login -->
+                    <!-- punya class hide -->
+                    <a class="btnLogin" href="#">
+                        Login
+                        <span class="ic-login"></span>
+                    </a>
+
+                    <!-- sudah login -->
+                    <button type="button" id="openModalSSO" class="hide">
+                        <img id="profileThumb" src="./assets/img/dummy/profile-dummy.png" alt="user name" width="28"
+                            height="28" loading="lazy">
+                    </button>
+
+                    <div id="modalSSO" class="modalLogin hide">
+                        <div class="modalHeader">
+                            <a href="#" target="_blank">
+                                <img src="./assets/img/icon/ic-user.png" alt="user name" width="48" height="48"
+                                    loading="lazy">
+                                <div class="userInfo">
+                                    <span class="detail-username">@Username</span>
+                                    <span class="detail-name">Username</span>
+                                </div>
+                            </a>
+                            <button type="button" id="closeModalSSO">
+                                <span class="ic-close-modal-sso"></span>
+                            </button>
+                        </div>
+                        <div class="modalBody">
+                            <div class="warning">Kelengkapan data diri 30%</div>
+                            <div class="infoModal">Bantu kami untuk merekomendasikan konten dengan melengkapi data diri
+                                Anda <a href="#">di sini</a></div>
+                        </div>
+                        <a class="modalAction" href="#">Dashboard</a>
+                        <a id="disconect" class="modalAction" href="#">Disconect</a>
+                    </div>
+                </div>
+                <div class="networkNav">
+                    <span class="ic-news-network"></span>
+                    <button id="dropDownNetworkBtn" type="button" class="dropDownBtn">
+                        <span class="networkLabel">Network</span>
+                        <span class="ic-dropdown-network"></span>
+                    </button>
+                </div>
+                <button id="burgerBtn" type="button" aria-label="burger-btn">
+                    <span class="ic-burger-btn"></span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <header>
+        <div class="container">
+            <div class="header">
+                <div class="brand">
+                    <img src="./assets/img/logo-kanal-inews.png" alt="inews" width="146" height="55" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- End Header -->
+    <!-- Alert SSO -->
+    <div class="alert-wrapp container hidden">
+        <div class="alert-img">
+            <img src="assets/img/icon/ic-info-alert-sso.svg" title="icon info sso" alt="icon info sso"
+                pinger-seen="true" width="21" height="21">
+        </div>
+        <div class="alert-text">
+            <b id="progession-alert2">Kelengkapan data diri 28%</b>: Bantu kami untuk merekomendasikan konten dengan
+            melengkapi data diri Anda <b><a target="_blank" href="https://orion.mncportal.id/profile">di sini</a></b>
+        </div>
+        <button type="button" class="alert-close" onclick="$('.alert-wrapp').hide()">
+            <img src="assets/img/icon/ic-close-alert-sso.svg" title="icon close" alt="icon close" pinger-seen="true">
+        </button>
+    </div>
+    <!-- END Alert SSO -->
+    <!-- Main -->
+    <main class="container">
+        <section class="mainBody">
+            <!-- Jika search ada -->
+            <aside class="sideLeft" aria-label="sidebar">
+                <ul class="listMenuAbout">
+                    <li class="listMenu "><a href="">Tentang Kami</a></li>
+                    <li class="listMenu"><a href="">Redaksi</a></li>
+                    <li class="listMenu active"><a href="">Pedoman Media Siber</a></li>
+                    <li class="listMenu"><a href="">Disclimer</a></li>
+                    <li class="listMenu"><a href="">Terms of Service</a></li>
+                    <li class="listMenu"><a href="">Privacy Policy</a></li>
+                    <li class="listMenu"><a href="">Kontak Kami</a></li>
+                </ul>
+            </aside>
+            <main class="sideRight">
+                <div class="backdrop-wrapper">
+                    <div class="titleSection">Pedoman Media Siber</div>
+                    <img src="./assets/img/backdrop-about-page.png" alt="backdrop about us" width="835" height="223"
+                        loading="lazy">
+                </div>
+                <div class="about-content">
+                    <p>Kemerdekaan berpendapat, kemerdekaan berekspresi, dan kemerdekaan pers adalah hak asasi manusia yang dilindungi Pancasila, Undang-Undang Dasar 1945, dan Deklarasi Universal Hak Asasi Manusia PBB. Keberadaan media siber di Indonesia juga merupakan bagian dari kemerdekaan berpendapat, kemerdekaan berekspresi, dan kemerdekaan pers.
+                    <br>
+                    Media siber memiliki karakter khusus sehingga memerlukan pedoman agar pengelolaannya dapat dilaksanakan secara profesional, memenuhi fungsi, hak, dan kewajibannya sesuai Undang-Undang Nomor 40 Tahun 1999 tentang Pers dan Kode Etik Jurnalistik. Untuk itu Dewan Pers bersama organisasi pers, pengelola media siber, dan masyarakat menyusun Pedoman Pemberitaan Media Siber sebagai berikut:</p>
+                    <ol>
+                        <li>
+                            <span>Ruang Lingkup</span>
+                            <ol>
+                                <li>Media Siber adalah segala bentuk media yang menggunakan wahana internet dan melaksanakan kegiatan jurnalistik, serta memenuhi persyaratan Undang-Undang Pers dan Standar Perusahaan Pers yang ditetapkan Dewan Pers.</li>
+                                <li>Isi Buatan Pengguna (User Generated Content) adalah segala isi yang dibuat dan atau dipublikasikan oleh pengguna media siber, antara lain, artikel, gambar, komentar, suara, video dan berbagai bentuk unggahan yang melekat pada media siber, seperti blog, forum, komentar pembaca atau pemirsa, dan bentuk lain.</li>
+                            </ol>
+                        </li>
+                        <li>
+                            <span>Verifikasi dan Keberimbangan Berita</span>
+                            <ol>
+                                <li>Pada prinsipnya setiap berita harus melalui verifikasi.</li>
+                                <li>Berita yang dapat merugikan pihak lain memerlukan verifikasi pada berita yang sama untuk memenuhi prinsip akurasi dan keberimbangan.</li>
+                                <li>Ketentuan dalam butir (a) di atas dikecualikan, dengan syarat:
+                                    <ol>
+                                        <li>Berita benar-benar mengandung kepentingan publik yang bersifat mendesak;</li>
+                                        <li>Sumber berita yang pertama adalah sumber yang jelas disebutkan identitasnya, kredibel dan kompeten;</li>
+                                        <li>Subyek berita yang harus dikonfirmasi tidak diketahui keberadaannya dan atau tidak dapat diwawancarai;</li>
+                                        <li>Media memberikan penjelasan kepada pembaca bahwa berita tersebut masih memerlukan verifikasi lebih lanjut yang diupayakan dalam waktu secepatnya. Penjelasan dimuat pada bagian akhir dari berita yang sama, di dalam kurung dan menggunakan huruf miring.</li>
+                                    </ol>
+                                </li>
+                                <li>Setelah memuat berita sesuai dengan butir (c), media wajib meneruskan upaya verifikasi, dan setelah verifikasi didapatkan, hasil verifikasi dicantumkan pada berita pemutakhiran (update) dengan tautan pada berita yang belum terverifikasi.</li>
+                            </ol>
+                        </li>
+                        <li>
+                            <span>Isi Buatan Pengguna (User Generated Content)</span>
+                            <ol>
+                                <li>Media siber wajib mencantumkan syarat dan ketentuan mengenai Isi Buatan Pengguna yang tidak bertentangan dengan Undang-Undang No. 40 tahun 1999 tentang Pers dan Kode Etik Jurnalistik, yang ditempatkan secara terang dan jelas.</li>
+                                <li>Media siber mewajibkan setiap pengguna untuk melakukan registrasi keanggotaan dan melakukan proses log-in terlebih dahulu untuk dapat mempublikasikan semua bentuk Isi Buatan Pengguna. Ketentuan mengenai log-in akan diatur lebih lanjut.</li>
+                                <li>Dalam registrasi tersebut, media siber mewajibkan pengguna memberi persetujuan tertulis bahwa Isi Buatan Pengguna yang dipublikasikan:
+                                    <ol>
+                                        <li>Tidak memuat isi bohong, fitnah, sadis dan cabul;</li>
+                                        <li>Tidak memuat isi yang mengandung prasangka dan kebencian terkait dengan suku, agama, ras, dan antargolongan (SARA), serta menganjurkan tindakan kekerasan;</li>
+                                        <li>Tidak memuat isi diskriminatif atas dasar perbedaan jenis kelamin dan bahasa, serta tidak merendahkan martabat orang lemah, miskin, sakit, cacat jiwa, atau cacat jasmani.</li>
+                                    </ol>
+                                </li>
+                                <li>Media siber memiliki kewenangan mutlak untuk mengedit atau menghapus Isi Buatan Pengguna yang bertentangan dengan butir (c)</li>
+                                <li>Media siber wajib menyediakan mekanisme pengaduan Isi Buatan Pengguna yang dinilai melanggar ketentuan pada butir (c). Mekanisme tersebut harus disediakan di tempat yang dengan mudah dapat diakses pengguna.</li>
+                                <li>Media siber wajib menyunting, menghapus, dan melakukan tindakan koreksi setiap Isi Buatan Pengguna yang dilaporkan dan melanggar ketentuan butir (c), sesegera mungkin secara proporsional selambat-lambatnya 2 x 24 jam setelah pengaduan diterima.</li>
+                                <li>Media siber yang telah memenuhi ketentuan pada butir (a), (b), (c), dan (f) tidak dibebani tanggung jawab atas masalah yang ditimbulkan akibat pemuatan isi yang melanggar ketentuan pada butir (c).</li>
+                                <li>Media siber bertanggung jawab atas Isi Buatan Pengguna yang dilaporkan bila tidak mengambil tindakan koreksi setelah batas waktu sebagaimana tersebut pada butir (f).</li>
+                            </ol>
+                        </li>
+                        <li>
+                            <span>Ralat, Koreksi, dan Hak Jawab</span>
+                            <ol>
+                                <li>Ralat, koreksi, dan hak jawab mengacu pada Undang-Undang Pers, Kode Etik Jurnalistik, dan Pedoman Hak Jawab yang ditetapkan Dewan Pers.</li>
+                                <li>Ralat, koreksi dan atau hak jawab wajib ditautkan pada berita yang diralat, dikoreksi atau yang diberi hak jawab</li>
+                                <li>Di setiap berita ralat, koreksi, dan hak jawab wajib dicantumkan waktu pemuatan ralat, koreksi, dan atau hak jawab tersebut</li>
+                                <li>Bila suatu berita media siber tertentu disebarluaskan media siber lain, maka:
+                                    <ol>
+                                        <li>Tanggung jawab media siber pembuat berita terbatas pada berita yang dipublikasikan di media siber tersebut atau media siber yang berada di bawah otoritas teknisnya;</li>
+                                        <li>Koreksi berita yang dilakukan oleh sebuah media siber, juga harus dilakukan oleh media siber lain yang mengutip berita dari media siber yang dikoreksi itu;</li>
+                                        <li>Media yang menyebarluaskan berita dari sebuah media siber dan tidak melakukan koreksi atas berita sesuai yang dilakukan oleh media siber pemilik dan atau pembuat berita tersebut, bertanggung jawab penuh atas semua akibat hukum dari berita yang tidak dikoreksinya itu.</li>
+                                    </ol>
+                                </li>
+                                <li>Sesuai dengan Undang-Undang Pers, media siber yang tidak melayani hak jawab dapat dijatuhi sanksi hukum pidana denda paling banyak Rp500.000.000 (Lima ratus juta rupiah).</li>
+                            </ol>
+                        </li>
+                        <li>
+                            <span>Pencabutan Berita</span>
+                            <ol>
+                                <li>Berita yang sudah dipublikasikan tidak dapat dicabut karena alasan penyensoran dari pihak luar redaksi, kecuali terkait masalah SARA, kesusilaan, masa depan anak, pengalaman traumatik korban atau berdasarkan pertimbangan khusus lain yang ditetapkan Dewan Pers.</li>
+                                <li>Media siber lain wajib mengikuti pencabutan kutipan berita dari media asal yang telah dicabut.</li>
+                                <li>Pencabutan berita wajib disertai dengan alasan pencabutan dan diumumkan kepada publik</li>
+                            </ol>
+                        </li>
+                        <li>
+                            <span>Iklan</span>
+                            <ol>
+                                <li>Media siber wajib membedakan dengan tegas antara produk berita dan iklan.</li>
+                                <li>Setiap berita/artikel/isi yang merupakan iklan dan atau isi berbayar wajib mencantumkan keterangan 'advertorial', 'iklan', 'ads', 'sponsored', atau kata lain yang menjelaskan bahwa berita/artikel/isi tersebut adalah iklan.</li>
+                            </ol>
+                        </li>
+                        <li>
+                            <span>Hak Cipta</span>
+                            <p>Media siber wajib menghormati hak cipta sebagaimana diatur dalam peraturan perundang-undangan yang berlaku.</p>
+                        </li>
+                        <li>
+                            <span>Pencantuman Pedoman</span>
+                            <p>Media siber wajib mencantumkan Pedoman Pemberitaan Media Siber ini di medianya secara terang dan jelas.</p>
+                        </li>
+                        <li>
+                            <span>Sengketa</span>
+                            <p>Penilaian akhir atas sengketa mengenai pelaksanaan Pedoman Pemberitaan Media Siber ini diselesaikan oleh Dewan Pers.<br/>
+                                Jakarta, 3 Februari 2012<br/>(Pedoman ini ditandatangani oleh Dewan Pers dan komunitas pers di Jakarta, 3 Februari 2012).</p>
+                        </li>
+                    </ol>
+                    <p><b>HAK JAWAB</b> <br/> 
+                        Dewan Pers dan masyarakat pers telah mengesahkan Pedoman Pemberitaan Media Siber. Jika ada berita yang tidak sesuai dengan Kode Etik Jurnalistik atau Pedoman Pemberitaan Media Siber, silakan gunakan Hak Jawab dan mengadu langsung ke redaksi iNews.id (kontak kami). Bila Anda tidak mendapat pelayanan semestinya, silakan mengadu ke Dewan Pers.
+                    </p>
+                </div>
+            </main>
+        </section>
+    </main>
+    <!-- End Main -->
+    <button type="button" id="backToTop" aria-label="backToTop"><span class="backToTop"></span></button>
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footerBody">
+                <div class="withImg">
+                    <a href="#">
+                        <img src="./assets/img/logo-footer-inews.png" alt="iNews" width="185" height="67"
+                            loading="lazy">
+                    </a>
+
+                    <div class="socmed">
+                        <a href="#">
+                            <img src="./assets/img/icon/ic-sosmed-ig.png" alt="instagram" width="32" height="32"
+                                loading="lazy">
+                        </a>
+                        <a href="#">
+                            <img src="./assets/img/icon/ic-sosmed-fb.png" alt="facebook" width="32" height="32"
+                                loading="lazy">
+                        </a>
+                        <a href="#">
+                            <img src="./assets/img/icon/ic-sosmed-x.png" alt="x" width="32" height="32" loading="lazy">
+                        </a>
+                        <a href="#">
+                            <img src="./assets/img/icon/ic-sosmed-yt.png" alt="youtube" width="32" height="32"
+                                loading="lazy">
+                        </a>
+                        <a href="#">
+                            <img src="./assets/img/icon/ic-sosmed-tt.png" alt="tiktok" width="32" height="32"
+                                loading="lazy">
+                        </a>
+                    </div>
+                    <div class="donwloadApp">
+                        <a href="#">
+                            <img src="./assets/img/get-app-playstore.png" alt="play store" width="103.21" height="38"
+                                loading="lazy">
+                        </a>
+                        <a href="#">
+                            <img src="./assets/img/get-app-appstore.png" alt="play store" width="103" height="39"
+                                loading="lazy">
+                        </a>
+                    </div>
+                </div>
+                <ul class="listInfoFooter">
+                    <li>Company Profile</li>
+                    <li><a href="#">Tentang Kamil</a></li>
+                    <li><a href="#">Redaksi</a></li>
+                    <li><a href="#">Pedoman Media Siber</a></li>
+                    <li><a href="#">Disclaimer</a></li>
+                    <li><a href="#">Terms of Services</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Kontak Kami</a></li>
+                    <li><a href="#">Sitemap</a></li>
+                </ul>
+                <ul class="listInfoFooter">
+                    <li>Informasi</li>
+                    <li><a href="#">Karir</a></li>
+                    <li><a href="#">MNC Group Business</a></li>
+                    <li><a href="#">Profile MNC Group</a></li>
+                    <li><a href="#">MNC Peduli</a></li>
+                </ul>
+                <ul class="listInfoFooter">
+                    <li>MNC portal</li>
+                    <li><a href="#">Okezone</a></li>
+                    <li><a href="#">SINDOnews</a></li>
+                    <li><a href="#">IDXChannel</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="license">Copyright ©2023 iNews.id. All Rights Reserved</div>
+    </footer>
+    <!-- End Footer -->
+
+
+    <!-- Modals -->
+    <div class="modalContainer">
+        <!-- Burger Navigation -->
+        <div id="burgerMenu">
+            <div class="headerBurgerMenu">
+                <img src="./assets/img/logo-kanal-inews.png" alt="iNews.id" width="151.866" height="55" loading="lazy">
+                <button type="button" id="closeBurgerMenu">
+                    <span class="ic-close-burger-menu"></span>
+                </button>
+            </div>
+            <div class="bodyBurgerMenu">
+                <div class="menuKanal">
+                    <div class="headerMenuKanal">Kanal</div>
+                    <ul class="listMenuKanal">
+                        <li class="listKanal"><a href="#">News <span class="ic-news-burger"></span></a></li>
+                        <li class="listKanal"><a href="#">Daerah <span class="ic-daerah-burger"></span></a></li>
+                        <li class="listKanal"><a href="#">Finance <span class="ic-finance-burger"></span></a></li>
+                        <li class="listKanal"><a href="#">Sport <span class="ic-sport-burger"></span></a></li>
+                        <li class="listKanal"><a href="#">Lifestyle <span class="ic-lifestyle-burger"></span></a></li>
+                        <li class="listKanal"><a href="#">Travel <span class="ic-travel-burger"></span></a></li>
+                        <li class="listKanal"><a href="#">Otomotif <span class="ic-otomotif-burger"></span></a></li>
+                        <li class="listKanal"><a href="#">Techno <span class="ic-techno-burger"></span></a></li>
+                        <li class="listKanal"><a href="#">Multimedia <span class="ic-multimedia-burger"></span></a></li>
+                        <li class="listKanal"><a href="#">Indeks <span class="ic-indeks-burger"></span></a></li>
+                    </ul>
+                </div>
+                <div class="mncPortal">
+                    <div class="headerMenuKanal">Kanal</div>
+                    <ul>
+                        <li><a href="#" target="_blank">Okezone</a></li>
+                        <li><a href="#" target="_blank">IDX Channel</a></li>
+                        <li><a href="#" target="_blank">SINDOnews</a></li>
+                    </ul>
+                </div>
+                <div class="liveTV">
+                    <div class="headerMenuKanal">MNC Portal dan Live TV</div>
+                    <ul>
+                        <li><a href="#">iNews TV</a></li>
+                        <li><a href="#">RCTI</a></li>
+                        <li><a href="#">IDX Channel</a></li>
+                        <li><a href="#">MNC TV</a></li>
+                        <li><a href="#">GTV</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- End Burger Navigation -->
+
+        <!-- Network Dropdown -->
+        <div id="networkDropdown">
+            <div class="container">
+                <div class="networkHeader">
+                    <span class="textHeader">iNews Network</span>
+                    <button type="button" id="closeDropdown">
+                        <span class="ic-close-dropdown"></span>
+                    </button>
+                    <div class="textDesc">Kami membuka kesempatan bagi Anda yang ingin menjadi pebisnis media melalui
+                        program iNews.id
+                        Network. <a href="#"> Klik lebih lanjut</a></div>
+                </div>
+                <div class="dropdownMenu">
+                    <div class="networkChannel">
+                        <ul class="pulau">
+                            <li class="listPulau" data-pulau="sumatera">Sumatra</li>
+                            <li class="listPulau" data-pulau="jawa">Jawa</li>
+                            <li class="listPulau" data-pulau="kalimantan">Kalimantan</li>
+                            <li class="listPulau" data-pulau="sulawesi">Sulawesi</li>
+                            <li class="listPulau" data-pulau="papua">Papua</li>
+                            <li class="listPulau" data-pulau="kep-nusa-tenggara">Kepulauan Nusa Tenggara</li>
+                            <li class="listPulau" data-pulau="kep-bali">Kepulauan Bali</li>
+                            <li class="listPulau" data-pulau="kep-maluku">Kepulauan Maluku</li>
+                        </ul>
+                        <span class="lineVertical"></span>
+                        <section id="listNetwork">
+                            <ul id="kabupaten"></ul>
+                        </section>
+                    </div>
+                    <div class="networkUpdate">
+                        <a href="#">
+                            <span>Network Updates</span>
+                            <span>News updates from 99+ regions</span>
+                            <span class="ic-network-updates"></span>
+                        </a>
+                        <a href="#">
+                            <span>Personalize Your News</span>
+                            <span>Get your customized local news</span>
+                            <span class="ic-personalize"></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Network Dropdown -->
+    </div>
+    <!-- Stiky Ads -->
+    <div class="stickyAds">
+        <button type="button" id="closeAds" onclick="$('.stickyAds').hide()">Close Ads X</button>
+        <!-- Ads here -->
+    </div>
+    <!-- End Stiky Ads -->
+    <!-- JS -->
+    <script type="module" src="./assets/js/main.js"></script>
+</body>
+
+</html>

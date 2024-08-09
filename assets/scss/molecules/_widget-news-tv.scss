@@ -2,16 +2,16 @@
     position: relative;
     background-color: #171717;
     width: 100%;
-    height: 315px;
-    @include media.ipad {
-        height: clamp(240px, 34vw, 280px);
-    }
-    border-radius: 16px 16px 0 0;
+    min-height: 315px;
+    border-radius: 16px;
     overflow: hidden;
+    @include media.ipad{
+        min-height: auto;
+    }
     &__body {
         position: relative;
         width: 100%;
-        height: calc(100% - 68px);
+        height: clamp(200px, 26vw ,250px);
         padding: 19px 16px 18px 24px;
         display: flex;
         gap: 24px;
@@ -87,74 +87,178 @@
             );
         }
     }
-    &__footer {
-        position: relative;
+    &__news24Jam {
         width: 100%;
-        height: 68px;
-        padding: 0 24px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        z-index: 1;
-        &::before {
-            content: "";
-            z-index: 0;
-            position: absolute;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            background: {
-                color: #171717;
-                image: url("../img/object-pattern--inews-tv-widget.png");
-                position: center center;
-                size: cover;
-                repeat: no-repeat;
+        height: auto;
+        padding: 20px;
+        background-color: hsl(0, 0%, 21%);
+        
+        &--container {
+            border-radius: 10px;
+            overflow: hidden;
+            height: auto;
+            box-shadow: none;
+            &.hover{
+                transition: box-shadow 0.3s ease-in-out;
+                &:hover{
+                    box-shadow: 0px 0px 20px -3px rgba(243, 243, 243, 0.808);
+                }
             }
-            opacity: 0.2;
-        }
-        background: linear-gradient(90deg, #2d2d2a 8.64%, #171717 100%);
-        &__text {
-            position: relative;
-            z-index: 1;
-            color: var(--color-white);
-            font-size: 20px;
-            font-family: Inter-Bold, sans-serif;
-            font-style: normal;
-            line-height: 30px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-
-            &::before {
-                position: relative;
-                content: "";
-                display: inline-block;
-                width: 10px;
-                height: 10px;
-                border-radius: 50%;
-                background-color: var(--color-red);
-                border: 4px solid var(--color-white);
-                outline: 2px solid var(--color-red);
-
-                animation: signalAnimate 1.5s infinite 2s ease-in-out;
-
-                @keyframes signalAnimate {
-                    0% {
-                        background-color: var(--color-red);
+            .video-area {
+                width: 100%;
+                height: 354px;
+                padding: 20px;
+                background-color: #ebebeb;
+                display: flex;
+                justify-content: space-between;
+                gap: 20px;
+                @include media.ipad {
+                    height: auto;
+                }
+                #YTnewsContainer {
+                    width: 60%;
+                    height: 100%;
+                    flex-shrink: 0;
+                    iframe {
+                        border: none;
+                        aspect-ratio: 16 / 9;
+                        border-radius: 5px;
+                        overflow: hidden;
+                        width: 100%;
+                        height: auto;
                     }
-                    100% {
-                        background-color: var(--color-white);
+                }
+                .moreNewsInfo {
+                    width: 40%;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 12px;
+                    position: relative;
+                    .headline {
+                        font-family: Inter-Bold, sans-serif;
+                        font-size: clamp(14px, 1.5vw, 18px);
+                        font-weight: 700;
+                        line-height: 28.8px;
+                    }
+                    .newsTitle {
+                        font-family: Inter-Bold, sans-serif;
+                        font-weight: 700;
+                        line-height: 30px;
+                    }
+                    .sponsorPlacement {
+                        display: flex;
+                        list-style: none;
+                        align-self: flex-end;
+                        position: absolute;
+                        bottom: 0;
+                        gap: 8px;
+                        @include media.ipad{
+                            align-self: flex-start;
+                        }
+                        .sponsor {
+                            flex-shrink: 0;
+                            background-color: #fff;
+                            border-radius: 8px;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            padding: 12px;
+                            width: clamp(54px, 8vw, 72px);
+                            height: clamp(36px, 5vw, 44px);
+                            &.title {
+                                width: auto;
+                                background-color: unset;
+                                font-family: Inter, sans-serif;
+                                font-size: clamp(12px, 1.5vw, 16px);
+                                font-weight: 400;
+                                line-height: 25.6px;
+                                padding: 12px 0;
+
+                                @include media.ipad {
+                                    display: none;
+                                }
+                            }
+                            img {
+                                flex-shrink: 0;
+                                object-fit: contain;
+                                height: auto;
+                                width: 100%;
+                            }
+                        }
                     }
                 }
             }
-        }
-        .ic-play-widget {
-            position: relative;
-            z-index: 1;
-            content: url("../img/icon/ic-play-inews-tv.png");
-            width: 36px;
-            height: 36px;
+            .news24Jam__gateway {
+                position: relative;
+                width: 100%;
+                height: 68px;
+                padding: 0 24px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                z-index: 1;
+
+                &::before {
+                    content: "";
+                    z-index: 0;
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    width: 100%;
+                    height: 100%;
+                    background: {
+                        color: #171717;
+                        image: url("../img/object-pattern--inews-tv-widget.png");
+                        position: center left;
+                        size: cover;
+                        repeat: no-repeat;
+                    }
+                    opacity: 0.2;
+                }
+                background: linear-gradient(90deg, #0b0b0b 8.64%, #0b0b0b 100%);
+                &--text {
+                    position: relative;
+                    z-index: 1;
+                    color: var(--color-white);
+                    font-size: 20px;
+                    font-family: Inter-Bold, sans-serif;
+                    font-style: normal;
+                    line-height: 30px;
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+
+                    &::before {
+                        position: relative;
+                        content: "";
+                        display: inline-block;
+                        width: 10px;
+                        height: 10px;
+                        border-radius: 50%;
+                        background-color: var(--color-red);
+                        border: 4px solid var(--color-white);
+                        outline: 2px solid var(--color-red);
+
+                        animation: signalAnimate 1.5s infinite 2s ease-in-out;
+
+                        @keyframes signalAnimate {
+                            0% {
+                                background-color: var(--color-red);
+                            }
+                            100% {
+                                background-color: var(--color-white);
+                            }
+                        }
+                    }
+                }
+                .ic-play-widget {
+                    position: relative;
+                    z-index: 1;
+                    content: url("../img/icon/ic-play-inews-tv.png");
+                    width: 36px;
+                    height: 36px;
+                }
+            }
         }
     }
 }

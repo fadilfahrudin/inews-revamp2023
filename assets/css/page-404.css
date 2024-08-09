@@ -1,0 +1,1099 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: Inter;
+  src: url("../../assets/fonts/Inter/static/Inter-Regular.woff2"), format("woff2"), url("../../assets/fonts/Inter/static/Inter-Regular.ttf"), format("truetype");
+}
+@font-face {
+  font-family: Inter-Bold;
+  src: url("../../assets/fonts/Inter/static/Inter-Bold.woff2"), format("woff2"), url("../../assets/fonts/Inter/static/Inter-Bold.ttf"), format("truetype");
+}
+:root {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-dark-25, #0d0d0d) var(--color-light-100);
+  --color-red: #d80605;
+  --color-white: #fff;
+  --color-black: #2d2d2a;
+  --color-maroon: #8a0100;
+  --color-grey: #aeaeae;
+  --color-dark-100: #0b0b0b;
+  --color-dark-75: #171717;
+  --color-dark-50: #2d2d2a;
+  --color-dark-25: #3d3d3d;
+  --color-dark-0: #525252;
+  --color-grey-100: #8c8c8c;
+  --color-grey-75: #9a9a9a;
+  --color-grey-50: #aeaeae;
+  --color-grey-25: #bababa;
+  --color-grey-0: #d1d1d1;
+  --color-light-100: #fff;
+  --color-light-75: #fafafa;
+  --color-light-50: #f4f4f4;
+  --color-light-25: #ebebeb;
+  --color-light-0: #e3e3e3;
+  --color-red-100: #bd0100;
+  --color-red-75: #c80201;
+  --color-red-50: #d80605;
+  --color-red-25: #ff8383;
+  --color-red-0: #ffb9b9;
+  --color-red-light: #fee0e0;
+  --color-maroon-100: #4e0909;
+  --color-maroon-75: #630a0a;
+  --color-maroon-50: #8a0100;
+  --color-maroon-25: #990100;
+  --color-link: #00bfff;
+}
+
+body {
+  font-family: Inter, sans-serif;
+  scroll-behavior: smooth;
+  min-height: 100vh;
+  scrollbar-color: var(--color-red-75) var(--color-dark-25);
+  background-color: var(--color-white) !important;
+}
+
+h1 {
+  font-size: clamp(24px, 3vw, 32px);
+  font-style: normal;
+  font-weight: 700;
+  line-height: 51.2px;
+}
+
+h2 {
+  font-size: clamp(20px, 2vw, 24px);
+  font-style: normal;
+  font-weight: 700;
+  line-height: 150%;
+}
+
+h3 {
+  font-size: clamp(18px, 1.5vw, 20px);
+  font-style: normal;
+  font-weight: 700;
+  line-height: 150%;
+}
+
+h4 {
+  font-size: clamp(14px, 1.5vw, 16px);
+  font-style: normal;
+  font-weight: 700;
+  line-height: 150%;
+}
+
+h5 {
+  font-size: clamp(12px, 1.5vw, 14px);
+  font-style: normal;
+  font-weight: 700;
+  line-height: 150%;
+}
+
+p {
+  font-size: clamp(14px, 1.5vw, 16px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 25.6px;
+}
+
+a {
+  color: var(--color-link);
+  text-decoration: none;
+  display: block;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+}
+
+.modalContainer {
+  background: rgba(33, 33, 33, 0.6);
+  /* BackgroundBlur - M */
+  -webkit-backdrop-filter: blur(7.5px);
+          backdrop-filter: blur(7.5px);
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  display: none;
+}
+
+section.mainHeadline {
+  flex-shrink: 0;
+  width: 100%;
+  height: auto;
+  margin: 24px 0 16px;
+}
+section.mainBody {
+  position: relative;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0px 20px;
+}
+
+main.sideRight {
+  width: 68%;
+  height: auto;
+}
+main.sideLeft {
+  width: 68%;
+  height: auto;
+}
+
+aside.sideRight {
+  width: calc(32% - 20px);
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 32px 0;
+  overflow: hidden;
+}
+aside.sideLeft {
+  width: calc(32% - 20px);
+  height: auto;
+}
+
+@media screen and (max-width: 1025px) {
+  .container {
+    width: 100%;
+    padding: 0 clamp(2rem, 5vw, 128px);
+  }
+}
+@media (min-width: 1026px) {
+  .container {
+    width: 1024px;
+    margin: auto;
+  }
+}
+.topBarWrap {
+  position: sticky;
+  top: -1px;
+  z-index: 999;
+  width: 100%;
+  height: auto;
+  background-color: var(--color-light-100);
+}
+.topBarWrap .topBar {
+  height: 48px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.topBarWrap .topBar > div {
+  display: flex;
+  align-items: center;
+}
+.topBarWrap .topBar > div:first-child {
+  gap: 0 16px;
+}
+.topBarWrap .topBar > div:first-child a .ic-inews-tv {
+  width: 32.382px;
+  height: 28.279px;
+  animation: tvAnimate 2.5s linear infinite;
+}
+@keyframes tvAnimate {
+  0% {
+    content: url("../img/icon/ic-inews-tv.png");
+  }
+  100% {
+    content: url("../img/icon/ic-inews-tv-active.png");
+  }
+}
+.topBarWrap .topBar > div:first-child .app-gateway {
+  position: relative;
+  width: auto;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.topBarWrap .topBar > div:first-child .app-gateway img {
+  width: 112px;
+  height: auto;
+}
+.topBarWrap .topBar > div:first-child .app-gateway .modal-app-gateway {
+  display: none;
+  position: absolute;
+  z-index: 999;
+  top: 43px;
+  left: -88px;
+  width: 370px;
+  height: 182px;
+  background-image: url("../img/pattren-bg.png");
+  background-size: 106%;
+  background-position: center center;
+  transform: translateY(0);
+  opacity: 0;
+  border-radius: 0px 0px 10px 10px;
+  box-shadow: 0px 1px 4px 0px rgba(143, 143, 143, 0.25);
+  align-items: center;
+  gap: 32px;
+  padding: 24px;
+  overflow: hidden;
+}
+@media screen and (max-width: 1025px) {
+  .topBarWrap .topBar > div:first-child .app-gateway .modal-app-gateway {
+    left: -122px;
+  }
+}
+.topBarWrap .topBar > div:first-child .app-gateway .modal-app-gateway.modal-app-gateway-open {
+  display: flex;
+  animation: open 0.5s linear forwards;
+}
+@keyframes open {
+  0% {
+    opacity: 0;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(10px);
+  }
+}
+.topBarWrap .topBar > div:first-child .app-gateway .modal-app-gateway.modal-app-gateway-close {
+  display: flex;
+  animation: close 0.3s linear reverse forwards;
+}
+@keyframes close {
+  0% {
+    opacity: 0;
+    transform: translateY(0);
+    display: none;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(10px);
+  }
+}
+.topBarWrap .topBar > div:first-child .app-gateway .modal-app-gateway .qrcode-app img {
+  width: 120px;
+  height: 120px;
+  aspect-ratio: 1/1;
+}
+.topBarWrap .topBar > div:first-child .app-gateway .modal-app-gateway .get-app-wrappp {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+}
+.topBarWrap .topBar > div:first-child .app-gateway .modal-app-gateway .get-app-wrappp p {
+  cursor: default;
+  text-align: center;
+  color: #000;
+  font-family: "Century Gothic", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-bottom: 0;
+}
+.topBarWrap .topBar > div:first-child .app-gateway .modal-app-gateway .get-app-wrappp .app-available {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.topBarWrap .topBar > div:first-child .app-gateway .modal-app-gateway .get-app-wrappp .app-available img {
+  width: 105px;
+  height: auto;
+}
+.topBarWrap .topBar > div:nth-child(2) .searchForm {
+  position: relative;
+  width: clamp(150px, 23vw, 310px);
+  height: 32px;
+  border-radius: 128px;
+  background: var(--color-light-75);
+  border: 1px solid #e3e3e3;
+  overflow: hidden;
+}
+.topBarWrap .topBar > div:nth-child(2) .searchForm input {
+  width: 80%;
+  height: 100%;
+  padding: 4px 16px;
+  border: none;
+  background: var(--color-light-75);
+  color: #8c8c8c;
+  font-family: Inter, sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  transition: background-color 0.3s ease;
+}
+.topBarWrap .topBar > div:nth-child(2) .searchForm input:focus {
+  outline: none;
+}
+.topBarWrap .topBar > div:nth-child(2) .searchForm .btnSearch {
+  cursor: pointer;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 100%;
+}
+.topBarWrap .topBar > div:nth-child(2) #data-list {
+  display: none;
+  position: absolute;
+  top: 48px;
+  width: clamp(150px, 23vw, 310px);
+  height: auto;
+  background-color: #fff;
+  border-radius: 10px;
+  border: 1px solid #e3e3e3;
+  box-shadow: 15px -1px 31px 10px rgba(141, 141, 141, 0.2509803922);
+  padding: 20px 16px;
+}
+.topBarWrap .topBar > div:nth-child(2) #data-list .searc-on-keyup {
+  display: none;
+  list-style: none;
+  margin-bottom: 12px;
+  min-height: 60px;
+  width: 100%;
+}
+.topBarWrap .topBar > div:nth-child(2) #data-list .searc-on-keyup list-search {
+  cursor: pointer;
+  display: block;
+  margin: 8px 0;
+  padding: 4px 0;
+  font-family: Inter, sans-serif;
+  font-size: clamp(8px, 1.5vw, 12px);
+  font-weight: 400;
+  line-height: 18px;
+  color: #171717;
+  width: 100%;
+}
+.topBarWrap .topBar > div:nth-child(2) #data-list .recent-search {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 12px;
+  width: 100%;
+  overflow: hidden;
+}
+.topBarWrap .topBar > div:nth-child(2) #data-list .recent-search .list-title {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  font-family: Inter, sans-serif;
+  font-size: clamp(12px, 1.5vw, 14px);
+  font-weight: 700;
+  line-height: 21px;
+  color: #171717;
+  margin-bottom: 12px;
+}
+.topBarWrap .topBar > div:nth-child(2) #data-list .recent-search .list-title #clear-recent {
+  cursor: pointer;
+  color: #990100;
+  font-weight: 500;
+}
+.topBarWrap .topBar > div:nth-child(2) #data-list .recent-search .list-search {
+  cursor: pointer;
+  padding: 4px 0;
+  font-family: Inter, sans-serif;
+  font-size: clamp(8px, 1.5vw, 12px);
+  font-weight: 400;
+  line-height: 18px;
+  color: #171717;
+  display: flex;
+  justify-content: space-between;
+}
+.topBarWrap .topBar > div:nth-child(2) #data-list .recent-search .list-search .recent-search-text {
+  width: 80%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.topBarWrap .topBar > div:nth-child(2) #data-list .recent-search .list-search .remove-recent {
+  content: url(../img/icon/ic-remove-search.svg);
+  width: 16px;
+  height: 16px;
+}
+.topBarWrap .topBar > div:nth-child(2) #data-list .trending-topic {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.topBarWrap .topBar > div:nth-child(2) #data-list .trending-topic .list-title {
+  display: block;
+  width: 100%;
+  font-family: Inter, sans-serif;
+  font-size: clamp(12px, 1.5vw, 14px);
+  font-weight: 700;
+  line-height: 21px;
+  color: #171717;
+  margin-bottom: 4px;
+}
+.topBarWrap .topBar > div:nth-child(2) #data-list .trending-topic .list-search {
+  cursor: pointer;
+  padding: 4px 8px;
+  font-family: Inter, sans-serif;
+  font-size: clamp(8px, 1.5vw, 12px);
+  font-weight: 400;
+  line-height: 18px;
+  border: 0.5px solid #171717;
+  border-radius: 20px;
+  color: #171717;
+}
+.topBarWrap .topBar > div:nth-child(2) #data-list .trending-topic .list-search .ic-hot-search {
+  content: url(../img/icon/ic-hot-search.svg);
+  width: 7.5px;
+  height: auto;
+}
+.topBarWrap .topBar > div:last-child {
+  gap: 0 24px;
+}
+.topBarWrap .topBar > div:last-child .loginSection {
+  position: relative;
+}
+.topBarWrap .topBar > div:last-child .loginSection .btnLogin {
+  display: flex;
+  align-items: center;
+  gap: 0 8px;
+  font-family: Inter-Bold, sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 21px;
+  color: var(--color-dark-50);
+}
+.topBarWrap .topBar > div:last-child .loginSection .btnLogin .ic-login {
+  content: url("../img/icon/ic-user.png");
+  width: 24px;
+  height: 24px;
+}
+.topBarWrap .topBar > div:last-child .loginSection .btnLogin.hide {
+  display: none;
+}
+.topBarWrap .topBar > div:last-child .networkNav {
+  display: flex;
+  align-items: center;
+}
+.topBarWrap .topBar > div:last-child .networkNav .ic-news-network {
+  content: url("../img/icon/ic-inews-network.png");
+  width: 32px;
+  height: 32px;
+}
+.topBarWrap .topBar > div:last-child .networkNav .dropDownBtn {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+}
+.topBarWrap .topBar > div:last-child .networkNav .dropDownBtn .networkLabel {
+  font-family: Inter, sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  font-style: normal;
+  line-height: 21px;
+  color: var(--color-dark-50);
+}
+.topBarWrap .topBar > div:last-child .networkNav .dropDownBtn .ic-dropdown-network {
+  content: url("../img/icon/ic-drop-down.png");
+  width: 18px;
+  height: 21px;
+}
+.topBarWrap .topBar > div:last-child #burgerBtn {
+  cursor: pointer;
+}
+.topBarWrap .topBar > div:last-child #burgerBtn .ic-burger-btn {
+  content: url("../img/icon/ic-burger-btn.png");
+  width: 32px;
+  height: 32px;
+}
+
+header {
+  width: 100%;
+  position: relative;
+  z-index: 99;
+  background-color: #fff;
+}
+header .header {
+  height: 98px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0 16px;
+}
+header .header .brand {
+  width: auto;
+  height: 55px;
+}
+header .header .brand img {
+  width: auto;
+  height: 55px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+header .header .adsHeader {
+  display: flex;
+  align-items: center;
+  width: clamp(400px, 100%, 720px);
+  height: 100%;
+  overflow: hidden;
+}
+header .header .adsHeader img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center center;
+     object-position: center center;
+}
+
+footer {
+  width: 100%;
+  height: auto;
+  background-color: var(--color-dark-25);
+  background-image: url("../img/footer-bg.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  background-blend-mode: multiply;
+  border-top: 5px solid var(--color-red-100);
+  position: relative;
+  bottom: -20px;
+}
+footer .footerBody {
+  width: 100%;
+  padding: 56px 0;
+  display: flex;
+  justify-content: space-between;
+}
+footer .footerBody .withImg {
+  display: flex;
+  flex-direction: column;
+  gap: 32px 0;
+  margin-right: 8vw;
+}
+footer .footerBody .withImg .partOf {
+  display: flex;
+  align-items: center;
+  gap: 0 8px;
+}
+footer .footerBody .withImg .partOf span {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 25.6px;
+  color: var(--color-white);
+}
+footer .footerBody .withImg .socmed {
+  display: flex;
+  gap: 0 18px;
+}
+footer .footerBody .withImg .donwloadApp {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+footer .footerBody .listInfoFooter {
+  justify-self: flex-end;
+  list-style: none;
+  padding: 0 5px;
+}
+footer .footerBody .listInfoFooter li {
+  margin-bottom: 8px;
+}
+footer .footerBody .listInfoFooter li:first-child {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 28.8px;
+  color: var(--color-white);
+  margin-bottom: 16px;
+}
+footer .footerBody .listInfoFooter li:hover a {
+  transition: all 0.3s ease-in-out;
+  color: var(--color-grey-75);
+}
+footer .footerBody .listInfoFooter li a {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+  color: var(--color-white);
+}
+footer .license {
+  padding: 8px;
+  width: 100%;
+  background-color: var(--color-dark-100);
+  text-align: center;
+  font-size: 12px;
+  line-height: 14.52px;
+  font-weight: 400;
+  color: #c5c5c5;
+}
+
+#page-404 header, #page-apps-static header {
+  box-shadow: 0px 6px 12px 0px rgba(28, 39, 49, 0.0509803922);
+}
+#page-404 header .static-apps-container, #page-apps-static header .static-apps-container {
+  width: 640px;
+}
+#page-404 section.container, #page-apps-static section.container {
+  width: 640px;
+  min-height: calc(100vh - 150px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#page-404 section.container .imageWrapper__404 img, #page-apps-static section.container .imageWrapper__404 img {
+  aspect-ratio: 2/3;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+#page-404 section.container .imageWrapper__404 figcaption, #page-apps-static section.container .imageWrapper__404 figcaption {
+  text-align: center;
+  font-family: Inter, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+}
+#page-404 section.container .imageWrapper__404 figcaption.title, #page-apps-static section.container .imageWrapper__404 figcaption.title {
+  font-family: Inter-Bold, sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 28.8px;
+}
+#page-404 section.container main, #page-apps-static section.container main {
+  margin-top: 40px;
+}
+#page-404 section.container main .backdrop-wrapper, #page-apps-static section.container main .backdrop-wrapper {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+#page-404 section.container main .backdrop-wrapper .titleSection, #page-apps-static section.container main .backdrop-wrapper .titleSection {
+  position: absolute;
+  top: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: Inter-Bold, sans-serif;
+  font-size: clamp(24px, 2.4vw, 32px);
+  font-weight: 700;
+  line-height: 48px;
+  color: var(--color-white);
+  width: 100%;
+  text-align: center;
+}
+#page-404 section.container main .backdrop-wrapper img, #page-apps-static section.container main .backdrop-wrapper img {
+  width: 100%;
+  height: auto;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+#page-404 section.container main .about-content, #page-apps-static section.container main .about-content {
+  position: relative;
+  top: -46px;
+  z-index: 1;
+  width: 96%;
+  height: auto;
+  background-color: var(--color-white);
+  box-shadow: 0px 4px 15px 0px rgba(205, 205, 205, 0.2509803922);
+  border-radius: 8px;
+  margin: auto;
+  padding: 24px;
+}
+#page-404 section.container main .about-content.redaksi, #page-apps-static section.container main .about-content.redaksi {
+  top: unset;
+  box-shadow: unset;
+  padding: unset;
+}
+#page-404 section.container main .about-content.redaksi section.accordion, #page-apps-static section.container main .about-content.redaksi section.accordion {
+  margin: 24px 0;
+  width: 100%;
+  height: auto;
+}
+#page-404 section.container main .about-content.redaksi section.accordion .accordion__header, #page-apps-static section.container main .about-content.redaksi section.accordion .accordion__header {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+#page-404 section.container main .about-content.redaksi section.accordion .accordion__header .title, #page-apps-static section.container main .about-content.redaksi section.accordion .accordion__header .title {
+  font-family: Inter-Bold, sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 30px;
+  color: var(--color-dark-50);
+}
+#page-404 section.container main .about-content.redaksi section.accordion .accordion__header .dropdown, #page-apps-static section.container main .about-content.redaksi section.accordion .accordion__header .dropdown {
+  cursor: pointer;
+  padding: 2px;
+}
+#page-404 section.container main .about-content.redaksi section.accordion .accordion__header .dropdown img, #page-apps-static section.container main .about-content.redaksi section.accordion .accordion__header .dropdown img {
+  transform: rotate(180deg);
+  transition: transform 0.3s ease-in-out;
+}
+#page-404 section.container main .about-content.redaksi section.accordion .accordion__header .dropdown.active img, #page-apps-static section.container main .about-content.redaksi section.accordion .accordion__header .dropdown.active img {
+  transform: rotate(0deg);
+}
+#page-404 section.container main .about-content.redaksi section.accordion .accordion__body, #page-apps-static section.container main .about-content.redaksi section.accordion .accordion__body {
+  display: none;
+  width: 100%;
+  height: -moz-max-content;
+  height: max-content;
+  overflow: hidden;
+  border-bottom: 1px solid #e3e3e3;
+}
+#page-404 section.container main .about-content.redaksi section.accordion .accordion__body.show, #page-apps-static section.container main .about-content.redaksi section.accordion .accordion__body.show {
+  height: -moz-max-content;
+  height: max-content;
+  border: none;
+  display: block;
+}
+#page-404 section.container main .about-content.redaksi section.accordion .accordion__body .cardRedaksi, #page-apps-static section.container main .about-content.redaksi section.accordion .accordion__body .cardRedaksi {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  background: #f5f5f5;
+  box-shadow: 0px 2px 6px 0px rgba(28, 39, 49, 0.0784313725);
+  padding: 0 clamp(16px, 2vw, 22px);
+  float: left;
+  width: calc(50% - 16px);
+  height: 129px;
+  margin: 8px;
+  border-radius: 5px;
+}
+#page-404 section.container main .about-content.redaksi section.accordion .accordion__body .cardRedaksi .profile, #page-apps-static section.container main .about-content.redaksi section.accordion .accordion__body .cardRedaksi .profile {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  align-items: center;
+}
+#page-404 section.container main .about-content.redaksi section.accordion .accordion__body .cardRedaksi .profile .profile__img, #page-apps-static section.container main .about-content.redaksi section.accordion .accordion__body .cardRedaksi .profile .profile__img {
+  flex-shrink: 0;
+  width: clamp(40px, 3vw, 60px);
+  height: clamp(40px, 3vw, 60px);
+  border-radius: 50%;
+  overflow: hidden;
+}
+#page-404 section.container main .about-content.redaksi section.accordion .accordion__body .cardRedaksi .profile .profile__img img, #page-apps-static section.container main .about-content.redaksi section.accordion .accordion__body .cardRedaksi .profile .profile__img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top center;
+     object-position: top center;
+}
+#page-404 section.container main .about-content.redaksi section.accordion .accordion__body .cardRedaksi .profile .profile_detail, #page-apps-static section.container main .about-content.redaksi section.accordion .accordion__body .cardRedaksi .profile .profile_detail {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+#page-404 section.container main .about-content.redaksi section.accordion .accordion__body .cardRedaksi .profile .profile_detail .profile__title, #page-apps-static section.container main .about-content.redaksi section.accordion .accordion__body .cardRedaksi .profile .profile_detail .profile__title {
+  color: #525252;
+  font-family: Inter, sans-serif;
+  font-size: clamp(8px, 1.2vw, 12px);
+  font-weight: 400;
+  line-height: 16.94px;
+}
+#page-404 section.container main .about-content.redaksi section.accordion .accordion__body .cardRedaksi .profile .profile_detail .profile_name, #page-apps-static section.container main .about-content.redaksi section.accordion .accordion__body .cardRedaksi .profile .profile_detail .profile_name {
+  font-family: Inter-Bold, sans-serif;
+  font-size: clamp(12px, 1.2vw, 16px);
+  font-weight: 700;
+  line-height: 24px;
+  text-align: left;
+}
+#page-404 section.container main .about-content.redaksi section.accordion .accordion__body .cardRedaksi .profile .profile_detail .article-created, #page-apps-static section.container main .about-content.redaksi section.accordion .accordion__body .cardRedaksi .profile .profile_detail .article-created {
+  margin-top: -4px;
+  font-family: Inter, sans-serif;
+  font-size: clamp(8px, 1vw, 14px);
+  font-weight: 400;
+  line-height: 18px;
+  color: var(--color-dark-50);
+}
+#page-404 section.container main .about-content.redaksi section.accordion .accordion__body .cardRedaksi .profile .profile_detail .article-created .number, #page-apps-static section.container main .about-content.redaksi section.accordion .accordion__body .cardRedaksi .profile .profile_detail .article-created .number {
+  font-family: Inter-Bold, sans-serif;
+  color: var(--color-red);
+  font-weight: 700;
+}
+#page-404 section.container main .about-content.redaksi section.accordion .accordion__body .cardRedaksi.pimpinanRedaksi, #page-apps-static section.container main .about-content.redaksi section.accordion .accordion__body .cardRedaksi.pimpinanRedaksi {
+  width: calc(50% - 16px);
+  height: 417px;
+  flex-direction: column;
+  justify-content: center;
+}
+#page-404 section.container main .about-content.redaksi section.accordion .accordion__body .cardRedaksi.pimpinanRedaksi .profile, #page-apps-static section.container main .about-content.redaksi section.accordion .accordion__body .cardRedaksi.pimpinanRedaksi .profile {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: center;
+}
+#page-404 section.container main .about-content.redaksi section.accordion .accordion__body .cardRedaksi.pimpinanRedaksi .profile .profile__img, #page-apps-static section.container main .about-content.redaksi section.accordion .accordion__body .cardRedaksi.pimpinanRedaksi .profile .profile__img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+#page-404 section.container main .about-content.redaksi section.accordion .accordion__body .cardRedaksi.pimpinanRedaksi .profile .profile__img img, #page-apps-static section.container main .about-content.redaksi section.accordion .accordion__body .cardRedaksi.pimpinanRedaksi .profile .profile__img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top center;
+     object-position: top center;
+}
+#page-404 section.container main .about-content.redaksi section.accordion .accordion__body .cardRedaksi.pimpinanRedaksi .profile .profile_detail, #page-apps-static section.container main .about-content.redaksi section.accordion .accordion__body .cardRedaksi.pimpinanRedaksi .profile .profile_detail {
+  flex-direction: column;
+  align-items: center;
+}
+#page-404 section.container main .about-content.redaksi section.accordion .accordion__body .cardRedaksi.pimpinanRedaksi .profile .profile_detail .profile__title, #page-apps-static section.container main .about-content.redaksi section.accordion .accordion__body .cardRedaksi.pimpinanRedaksi .profile .profile_detail .profile__title {
+  width: -moz-max-content;
+  width: max-content;
+  padding: 4px 8px 4px 8px;
+  gap: 10px;
+  border-radius: 4px;
+  opacity: 0px;
+  background-color: #de2027;
+  color: var(--color-white);
+  font-family: Inter, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16.94px;
+}
+#page-404 section.container main .about-content.redaksi section.accordion .accordion__body .cardRedaksi.pimpinanRedaksi .profile .profile_detail .profile_name, #page-apps-static section.container main .about-content.redaksi section.accordion .accordion__body .cardRedaksi.pimpinanRedaksi .profile .profile_detail .profile_name {
+  font-family: Inter-Bold, sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  text-align: left;
+}
+#page-404 section.container main .about-content.redaksi section.accordion .accordion__body .cardRedaksi.pimpinanRedaksi .profile .profile_detail .article-created, #page-apps-static section.container main .about-content.redaksi section.accordion .accordion__body .cardRedaksi.pimpinanRedaksi .profile .profile_detail .article-created {
+  margin-top: -4px;
+}
+#page-404 section.container main .about-content.redaksi section.accordion .accordion__body .cardRedaksi.pembina, #page-apps-static section.container main .about-content.redaksi section.accordion .accordion__body .cardRedaksi.pembina {
+  width: 100%;
+  height: 210px;
+  flex-direction: column;
+  justify-content: center;
+  float: unset;
+}
+#page-404 section.container main .about-content.redaksi section.accordion .accordion__body .cardRedaksi.pembina .element-obj-L, #page-apps-static section.container main .about-content.redaksi section.accordion .accordion__body .cardRedaksi.pembina .element-obj-L {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+#page-404 section.container main .about-content.redaksi section.accordion .accordion__body .cardRedaksi.pembina .element-obj-R, #page-apps-static section.container main .about-content.redaksi section.accordion .accordion__body .cardRedaksi.pembina .element-obj-R {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+#page-404 section.container main .about-content.redaksi section.accordion .accordion__body .cardRedaksi.pembina .profile, #page-apps-static section.container main .about-content.redaksi section.accordion .accordion__body .cardRedaksi.pembina .profile {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: center;
+}
+#page-404 section.container main .about-content.redaksi section.accordion .accordion__body .cardRedaksi.pembina .profile .profile__img, #page-apps-static section.container main .about-content.redaksi section.accordion .accordion__body .cardRedaksi.pembina .profile .profile__img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+#page-404 section.container main .about-content.redaksi section.accordion .accordion__body .cardRedaksi.pembina .profile .profile__img img, #page-apps-static section.container main .about-content.redaksi section.accordion .accordion__body .cardRedaksi.pembina .profile .profile__img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top center;
+     object-position: top center;
+}
+#page-404 section.container main .about-content.redaksi section.accordion .accordion__body .cardRedaksi.pembina .profile .profile_detail, #page-apps-static section.container main .about-content.redaksi section.accordion .accordion__body .cardRedaksi.pembina .profile .profile_detail {
+  flex-direction: column;
+  align-items: center;
+}
+#page-404 section.container main .about-content.redaksi section.accordion .accordion__body .cardRedaksi.pembina .profile .profile_detail .profile__title, #page-apps-static section.container main .about-content.redaksi section.accordion .accordion__body .cardRedaksi.pembina .profile .profile_detail .profile__title {
+  width: -moz-max-content;
+  width: max-content;
+  padding: 4px 8px 4px 8px;
+  gap: 10px;
+  border-radius: 4px;
+  opacity: 0px;
+  background-color: #de2027;
+  color: var(--color-white);
+  font-family: Inter, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16.94px;
+}
+#page-404 section.container main .about-content.redaksi section.accordion .accordion__body .cardRedaksi.pembina .profile .profile_detail .profile_name, #page-apps-static section.container main .about-content.redaksi section.accordion .accordion__body .cardRedaksi.pembina .profile .profile_detail .profile_name {
+  font-family: Inter-Bold, sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  text-align: left;
+}
+#page-404 section.container main .about-content p, #page-apps-static section.container main .about-content p {
+  font-family: Inter, sans-serif;
+  font-size: clamp(12px, 1.2vw, 14px);
+  font-weight: 400;
+  line-height: 22px;
+  margin-bottom: 24px;
+  color: var(--color-black);
+}
+#page-404 section.container main .about-content p.p-termOfService, #page-apps-static section.container main .about-content p.p-termOfService {
+  margin-bottom: 0px;
+}
+#page-404 section.container main .about-content p a, #page-apps-static section.container main .about-content p a {
+  color: var(--color-black);
+  text-decoration: underline;
+}
+#page-404 section.container main .about-content ol.termOfService, #page-apps-static section.container main .about-content ol.termOfService {
+  margin-bottom: 24px;
+}
+#page-404 section.container main .about-content ol.termOfService li, #page-apps-static section.container main .about-content ol.termOfService li {
+  font-family: Inter, sans-serif;
+  font-weight: 400;
+  margin-bottom: 0;
+}
+#page-404 section.container main .about-content ol.disclimer li, #page-apps-static section.container main .about-content ol.disclimer li {
+  margin-bottom: 0px;
+}
+#page-404 section.container main .about-content ol.disclimer li p, #page-apps-static section.container main .about-content ol.disclimer li p {
+  margin-bottom: 0px;
+}
+#page-404 section.container main .about-content ol li, #page-apps-static section.container main .about-content ol li {
+  font-family: Inter-Bold, sans-serif;
+  font-size: clamp(12px, 1.2vw, 14px);
+  font-weight: 700;
+  line-height: 22px;
+  margin-bottom: 24px;
+  color: var(--color-black);
+  padding-left: 4px;
+  margin-left: 14px;
+}
+#page-404 section.container main .about-content ol li ol li, #page-apps-static section.container main .about-content ol li ol li {
+  margin-left: 0;
+  font-family: Inter, sans-serif;
+  font-size: clamp(12px, 1.2vw, 14px);
+  font-weight: 400;
+  line-height: 22px;
+  margin-bottom: 0px;
+  color: var(--color-black);
+}
+#page-404 section.container main .about-content ol li ol li ol li, #page-apps-static section.container main .about-content ol li ol li ol li {
+  list-style: lower-alpha;
+  margin-left: 14px;
+}
+#page-404 section.container main .about-content .bannerMitra, #page-apps-static section.container main .about-content .bannerMitra {
+  width: 100%;
+  height: auto;
+  -o-object-fit: contain;
+     object-fit: contain;
+  overflow: hidden;
+  border-radius: 12px;
+  margin-bottom: 24px;
+}
+#page-404 section.container main .about-content .joinAction, #page-apps-static section.container main .about-content .joinAction {
+  margin: 0 auto;
+  width: -moz-max-content;
+  width: max-content;
+  height: auto;
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+#page-404 section.container main .about-content .joinAction .btn-join, #page-apps-static section.container main .about-content .joinAction .btn-join {
+  width: -moz-max-content;
+  width: max-content;
+  padding: 16px;
+  background-color: #000;
+  border-radius: 10px;
+  color: #fff;
+}
+#page-404 section.container main .about-content .joinAction .share, #page-apps-static section.container main .about-content .joinAction .share {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px;
+}
+#page-404 section.container main .about-content .joinAction .share .iconShare, #page-apps-static section.container main .about-content .joinAction .share .iconShare {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0 16px;
+}
+#page-404 section.container main .about-content .joinAction .share .iconShare #linkShare, #page-apps-static section.container main .about-content .joinAction .share .iconShare #linkShare {
+  cursor: pointer;
+}
+#page-404 section.container main .about-content .joinAction .share .iconShare #linkShare .ic-link-share-2, #page-apps-static section.container main .about-content .joinAction .share .iconShare #linkShare .ic-link-share-2 {
+  display: block;
+  content: url("../img/icon/ic-link-share.png");
+  width: 32px;
+  height: 32px;
+}
+#page-404 section.container main .about-content .joinAction .share .iconShare #linkShare .ic-link-share-2:hover, #page-apps-static section.container main .about-content .joinAction .share .iconShare #linkShare .ic-link-share-2:hover {
+  content: url("../img/icon/ic-link-share-active.png");
+}
+#page-404 section.container main .about-content .joinAction .share .iconShare #linkShare #copied-2, #page-apps-static section.container main .about-content .joinAction .share .iconShare #linkShare #copied-2 {
+  display: none;
+  opacity: 0;
+  position: absolute;
+  top: 40px;
+  left: -45px;
+  background-color: rgba(var(--color-dark-100), 0.9);
+  padding: 4px 16px;
+  border-radius: 32px;
+  color: #fff;
+  text-align: center;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%; /* 24px */
+}
+#page-404 section.container main .about-content .joinAction .share .iconShare #linkShare #copied-2.active, #page-apps-static section.container main .about-content .joinAction .share .iconShare #linkShare #copied-2.active {
+  opacity: 1;
+  display: block;
+  animation: copyAnimate 0.5s ease-in-out forwards;
+  background-color: var(--color-dark-100);
+}
+@keyframes copyAnimate {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+#page-404 section.container main .about-content .joinAction .share .iconShare button, #page-apps-static section.container main .about-content .joinAction .share .iconShare button {
+  cursor: pointer;
+}
+#page-404 section.container main .about-content .joinAction .share .iconShare button .ic-wa, #page-apps-static section.container main .about-content .joinAction .share .iconShare button .ic-wa {
+  display: block;
+  content: url("../img/icon/ic-wa.png");
+  width: 32px;
+  height: 32px;
+}
+#page-404 section.container main .about-content .joinAction .share .iconShare button .ic-wa:hover, #page-apps-static section.container main .about-content .joinAction .share .iconShare button .ic-wa:hover {
+  content: url("../img/icon/ic-wa-active.png");
+}
+#page-404 section.container main .about-content .joinAction .share .iconShare button .ic-fb, #page-apps-static section.container main .about-content .joinAction .share .iconShare button .ic-fb {
+  display: block;
+  content: url("../img/icon/ic-fb.png");
+  width: 32px;
+  height: 32px;
+}
+#page-404 section.container main .about-content .joinAction .share .iconShare button .ic-fb:hover, #page-apps-static section.container main .about-content .joinAction .share .iconShare button .ic-fb:hover {
+  content: url("../img/icon/ic-fb-active.png");
+}
+#page-404 section.container main .about-content .joinAction .share .iconShare button .ic-x, #page-apps-static section.container main .about-content .joinAction .share .iconShare button .ic-x {
+  display: block;
+  content: url("../img/icon/ic-x.png");
+  width: 32px;
+  height: 32px;
+}
+#page-404 section.container main .about-content .joinAction .share .iconShare button .ic-x:hover, #page-apps-static section.container main .about-content .joinAction .share .iconShare button .ic-x:hover {
+  content: url("../img/icon/ic-x-active.png");
+}/*# sourceMappingURL=page-404.css.map */

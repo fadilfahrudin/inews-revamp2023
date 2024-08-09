@@ -42,10 +42,13 @@
     <nav>
         <div class="container">
             <ul class="navigationKanal">
+                <li><a href="welcome-page.html" class="navLink"><img src="./assets/img/icon-inews.svg" alt="inews"
+                            width="40" height="40"></a></li>
                 <li class="navList"><a href="page-multimedia-home.html" class="navLink">Home</a></li>
                 <li class="navList"><a href="page-multimedia-video.html" class="navLink ">Video</a></li>
                 <li class="navList"><a href="page-multimedia-photo.html" class="navLink ">Photo</a></li>
-                <li class="navList"><a href="page-multimedia-infographic.html" class="navLink navLink-active">Infographic</a></li>
+                <li class="navList"><a href="page-multimedia-infographic.html"
+                        class="navLink navLink-active">Infographic</a></li>
             </ul>
             <div class="rightSection">
                 <div class="searchWrap">
@@ -78,6 +81,10 @@
                         </ul>
                     </div>
                 </div>
+                <a href="page-search.html" class="searchOnIpad">
+                    <span class="sr-only">Search</span>
+                    <img src="./assets/img/icon/ic-search.svg" alt="search" width="20" height="20">
+                </a>
                 <div class="loginBurgerMenuWrap">
                     <div id="login" class="loginSection">
                         <!-- Login -->
@@ -158,11 +165,12 @@
             <div class="listImage">
                 <figure class="imgWrapper">
                     <div class="img-container">
-                        <img src="https://img.inews.co.id/media/776/files/inews_new/2024/07/23/jubir_kpk_tessa__2_.JPG"
-                            alt="dummy title" width="776" height="437" loading="lazy">
+                        <img src="./assets/img/dummy/img-detail-potrait.jpg" alt="dummy title" width="776" height="437"
+                            loading="lazy">
+                        <!-- <img src="https://img.inews.co.id/media/776/files/inews_new/2024/07/23/jubir_kpk_tessa__2_.JPG"
+                            alt="dummy title" width="776" height="437" loading="lazy"> -->
                     </div>
                 </figure>
-                
             </div>
             <div class="listThumbImg">
                 <button id="prev-img" type="button" disabled><span class="sr-only">prev</span><span
@@ -190,7 +198,7 @@
                 <div class="breadcrumb">
                     <a href="#">Multimedia</a>
                     <a href="#">Infographic</a>
-                    <span class="lastPage">Detail</span>
+                    <span class="lastPage">Detail Berita</span>
                 </div>
                 <article class="header">
                     <div class="title">Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, dignissimos!
@@ -503,13 +511,13 @@
                     </div>
                     <span class="resizeFont">Aa</span>
                     <div class="iconShare">
-                        <a href="javascript:void(0)" aria-label="link">
+                        <button type="button" id="linkShare" aria-label="link">
                             <span class="ic-link-share"></span>
-                            <span id="copied">Link Copied!</span>
-                        </a>
-                        <a href="#" aria-label="whatsapp"><span class="ic-wa"></span></a>
-                        <a href="#" aria-label="facebook"><span class="ic-fb"></span></a>
-                        <a href="#" aria-label="twitter"><span class="ic-x"></span></a>
+                            <span id="detailPhotoInfo__copied">Link Copied!</span>
+                        </button>
+                        <button type="button" aria-label="whatsapp"><span class="ic-wa"></span></button>
+                        <button type="button" aria-label="facebook"><span class="ic-fb"></span></button>
+                        <button type="button" aria-label="twitter"><span class="ic-x"></span></button>
                     </div>
                 </div>
             </div>
@@ -570,7 +578,8 @@
                     <li class="listPlatform">
                         <a href="">
                             <span class="sr-only">X</span>
-                            <img src="./assets/img/icon/ic-sosmed-x.svg" alt="twitter icon" width="32" height="32" loading="lazy">
+                            <img src="./assets/img/icon/ic-sosmed-x.svg" alt="twitter icon" width="32" height="32"
+                                loading="lazy">
                         </a>
                     </li>
                     <li class="listPlatform">
@@ -629,13 +638,13 @@
                 <img src="./assets/img/icon/ic-zoom-out.svg" alt="zoom out" width="24" height="24" loading="lazy">
             </button>
             <div class="iconShare__fullscreen">
-                <a href="javascript:void(0)" aria-label="link">
+                <button type="button" id="linkShare" aria-label="link">
                     <span class="ic-link-share"></span>
-                    <span id="copied">Link Copied!</span>
-                </a>
-                <a href="#" aria-label="whatsapp"><span class="ic-wa"></span></a>
-                <a href="#" aria-label="facebook"><span class="ic-fb"></span></a>
-                <a href="#" aria-label="twitter"><span class="ic-x"></span></a>
+                    <span id="detailPhotoInfo__copied2">Link Copied!</span>
+                </button>
+                <button type="button" aria-label="whatsapp"><span class="ic-wa"></span></button>
+                <button type="button" aria-label="facebook"><span class="ic-fb"></span></button>
+                <button type="button" aria-label="twitter"><span class="ic-x"></span></button>
             </div>
         </div>
     </div>
@@ -663,6 +672,8 @@
                         <li class="listKanal"><a href="#">Travel <span class="ic-travel-burger"></span></a></li>
                         <li class="listKanal"><a href="#">Otomotif <span class="ic-otomotif-burger"></span></a></li>
                         <li class="listKanal"><a href="#">Techno <span class="ic-techno-burger"></span></a></li>
+                        <li class="listKanal"><a href="#">Multimedia <span class="ic-multimedia-burger"></span></a></li>
+                        <li class="listKanal"><a href="#">Indeks <span class="ic-indeks-burger"></span></a></li>
                     </ul>
                 </div>
                 <div class="mncPortal">

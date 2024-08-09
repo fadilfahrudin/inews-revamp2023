@@ -78,7 +78,7 @@
                 <div class="searchForm">
                     <input type="text" name="search" id="search" placeholder="Search" autocomplete="off">
                     <button class="btnSearch" type="button" aria-label="search">
-                        <img src="./assets/img/icon/ic-search.png" alt="search" width="20" height="20">
+                        <img src="./assets/img/icon/ic-search.svg" alt="search" width="20" height="20">
                     </button>
                 </div>
                 <div id="data-list">
@@ -187,19 +187,22 @@
     <!-- END Alert SSO -->
     <!-- Navigation WP | Home -->
     <nav class="nav__main">
-        <ul id="navbar-nav" class="container">
-            <li class="navList"><a href="welcome-page.html" class="navLink navLink-active">Home</a></li>
-            <li class="navList"><a href="page-daerah-home.html" class="navLink ">Daerah</a></li>
-            <li class="navList"><a href="page-news-home.html" class="navLink ">News</a></li>
-            <li class="navList"><a href="page-lifestyle-home.html" class="navLink ">Lifestyle</a></li>
-            <li class="navList"><a href="page-multimedia-home.html" class="navLink ">Multimedia</a></li>
-            <li class="navList"><a href="page-techno-home.html" class="navLink ">Techno</a></li>
-            <li class="navList"><a href="page-sport-home.html" class="navLink ">Sport</a></li>
-            <li class="navList"><a href="page-otomotif-home.html" class="navLink ">Otomotif</a></li>
-            <li class="navList"><a href="page-travel-home.html" class="navLink ">Travel</a></li>
-            <li class="navList"><a href="page-finance-home.html" class="navLink ">Finance</a></li>
-            <li class="navList"><a href="page-index.html" class="navLink ">Indeks</a></li>
-        </ul>
+        <div class="container">
+            <ul id="navbar-nav">
+                <li class="navList"><a href="welcome-page.html" class="navLink navLink-active">Home</a></li>
+                <li class="navList"><a href="page-daerah-home.html" class="navLink ">Daerah</a></li>
+                <li class="navList"><a href="page-news-home.html" class="navLink ">News</a></li>
+                <li class="navList"><a href="page-lifestyle-home.html" class="navLink ">Lifestyle</a></li>
+                <li class="navList"><a href="page-multimedia-home.html" class="navLink ">Multimedia</a></li>
+                <li class="navList"><a href="page-techno-home.html" class="navLink ">Techno</a></li>
+                <li class="navList"><a href="page-sport-home.html" class="navLink ">Sport</a></li>
+                <li class="navList"><a href="page-otomotif-home.html" class="navLink ">Otomotif</a></li>
+                <li class="navList"><a href="page-travel-home.html" class="navLink ">Travel</a></li>
+                <li class="navList"><a href="page-finance-home.html" class="navLink ">Finance</a></li>
+                <li class="navList"><a href="page-index.html" class="navLink ">Indeks</a></li>
+            </ul>
+            <div id="dropdown" ><span class="ic-dropdown-kanal hidden"></span></div>
+        </div>
     </nav>
     <!-- End Navigation WP | Home -->
 
@@ -311,11 +314,34 @@
                     </article>
                 </div>
             </div>
-            <a href="page-tv-streaming.html" class="widgetNewsTV__footer">
-                <span class="widgetNewsTV__footer__text">iNews Live Streaming 24 Jam</span>
-                <span class="ic-play-widget"></span>
-            </a>
+            <div class="widgetNewsTV__news24Jam">
+                <div class="widgetNewsTV__news24Jam--container">
+                    <!-- video-area punya tambahan class hidden -->
+                    <div class="video-area">
+                        <div id="YTnewsContainer">
+                            <iframe src="https://www.youtube.com/embed/hJ7Rg1821Q0?si=uQnll5o1tfV0tqBf" title="Breaking News"
+                                width="558" height="314">
+                            </iframe>
+                        </div>
+                        <div class="moreNewsInfo">
+                            <span class="headline">BREAKING NEWS</span>
+                            <h3 class="newsTitle">Ahli Hukum Pidana Bersaksi Kasus Vina Cirebon Pada Sidang PK Saka Tatal</h3>
+                            <ul class="sponsorPlacement">
+                                <li class="sponsor title">Sponsored by:</li>
+                                <li class="sponsor"><img src="./assets/img/dummy/sponsor-dummy2.png" alt="sponsor name" width="100" height="100"></li>
+                                <li class="sponsor"><img src="./assets/img/dummy/sponsor-dummy.png" alt="sponsor name" width="100" height="100"></li>
+                            </ul>
+                        </div>
+
+                    </div>
+                    <a href="page-tv-streaming.html" class="news24Jam__gateway">
+                        <span class="news24Jam__gateway--text">iNews Live Streaming 24 Jam</span>
+                        <span class="ic-play-widget"></span>
+                    </a>
+                </div>
+            </div>
         </section>
+        
         <section class="widgetNewsHeadline">
             <article class="cardArticle headline1">
                 <a href="#">
@@ -1269,6 +1295,21 @@
                     <figcaption>Advertisement</figcaption>
                     <!-- ads here -->
                 </figure>
+                <section class="widgetPopularTopic">
+                    <div class="headerPop">Popular Topics</div>
+                    <ul>
+                        <li class="one popularTopicList loading"><a
+                                href="https://www.inews.id/topic/penyandang-disabilitas">Penyandang Disabilitas</a></li>
+                        <li class="two popularTopicList loading"><a
+                                href="https://www.inews.id/topic/bintara-polri">Bintara Polri</a></li>
+                        <li class="three popularTopicList loading"><a
+                                href="https://www.inews.id/topic/piala-aff-u-19-2024">piala aff u-19 2024</a></li>
+                        <li class="four popularTopicList loading"><a href="https://www.inews.id/topic/kkb-opm">KKB
+                                OPM</a></li>
+                        <li class="five popularTopicList loading"><a
+                                href="https://www.inews.id/topic/kisah-inspiratif">Kisah Inspiratif</a></li>
+                    </ul>
+                </section>
                 <section class="widgetElectionCenter">
                     <div class="widget__header">
                         <img src="./assets/img/header-img-election-center.png" alt="election center" width="300"
@@ -1712,7 +1753,7 @@
                 </ul>
             </div>
         </div>
-        <div class="license">Copyright ©2023 iNews.id. All Rights Reserved</div>
+        <div class="license">Copyright ©2024 iNews.id. All Rights Reserved</div>
     </footer>
     <!-- End Footer -->
 
@@ -1739,6 +1780,8 @@
                         <li class="listKanal"><a href="#">Travel <span class="ic-travel-burger"></span></a></li>
                         <li class="listKanal"><a href="#">Otomotif <span class="ic-otomotif-burger"></span></a></li>
                         <li class="listKanal"><a href="#">Techno <span class="ic-techno-burger"></span></a></li>
+                        <li class="listKanal"><a href="#">Multimedia <span class="ic-multimedia-burger"></span></a></li>
+                        <li class="listKanal"><a href="#">Indeks <span class="ic-indeks-burger"></span></a></li>
                     </ul>
                 </div>
                 <div class="mncPortal">

@@ -143,7 +143,7 @@
     </header>
     <!-- End Header -->
     <!-- Alert SSO -->
-    <div class="alert-wrapp container">
+    <div class="alert-wrapp container hidden">
         <div class="alert-img">
             <img src="assets/img/icon/ic-info-alert-sso.svg" title="icon info sso" alt="icon info sso"
                 pinger-seen="true" width="21" height="21">
@@ -159,17 +159,22 @@
     <!-- END Alert SSO -->
     <!-- Navigation WP | Home -->
     <nav class="nav__main">
-        <ul id="navbar-nav" class="container">
-            <li class="navList"><a href="wp.html" class="navLink ">Home</a></li>
-            <li class="navList"><a href="/daerah" class="navLink ">Daerah</a></li>
-            <li class="navList"><a href="/news" class="navLink ">News</a></li>
-            <li class="navList"><a href="/lifestyle" class="navLink ">Lifestyle</a></li>
-            <li class="navList"><a href="/multimedia" class="navLink ">Multimedia</a></li>
-            <li class="navList"><a href="/techno" class="navLink ">Techno</a></li>
-            <li class="navList"><a href="/sport" class="navLink ">Sport</a></li>
-            <li class="navList"><a href="/otomotif" class="navLink ">Otomotif</a></li>
-            <li class="navList"><a href="/travel" class="navLink ">Travel</a></li>
-        </ul>
+        <div class="container">
+            <ul id="navbar-nav">
+                <li class="navList"><a href="wp.html" class="navLink ">Home</a></li>
+                <li class="navList"><a href="/daerah" class="navLink ">Daerah</a></li>
+                <li class="navList"><a href="/news" class="navLink ">News</a></li>
+                <li class="navList"><a href="/lifestyle" class="navLink ">Lifestyle</a></li>
+                <li class="navList"><a href="/multimedia" class="navLink ">Multimedia</a></li>
+                <li class="navList"><a href="/techno" class="navLink ">Techno</a></li>
+                <li class="navList"><a href="/sport" class="navLink ">Sport</a></li>
+                <li class="navList"><a href="/otomotif" class="navLink ">Otomotif</a></li>
+                <li class="navList"><a href="/travel" class="navLink ">Travel</a></li>
+                <li class="navList"><a href="/travel" class="navLink ">Finance</a></li>
+                <li class="navList"><a href="/travel" class="navLink ">Indeks</a></li>
+            </ul>
+            <div id="dropdown" ><span class="ic-dropdown-kanal hidden"></span></div>
+        </div>
     </nav>
     <!-- End Navigation WP | Home -->
 
@@ -179,7 +184,6 @@
         <div class="container">
             <div class="breadcrumb">
                 <a href="#">Home</a>
-                <img src="./assets/img/icon/ic-next-page-breadcrumb.png" alt="breadcrumb" width="8" height="8" />
                 <span class="lastPage">Search</span>
             </div>
         </div>
@@ -343,33 +347,7 @@
                         </article>
                     </div>
                 </section>
-                <!-- Pagination -->
-                <div class="pagination">
-                    <label for="page">Page:</label>
-                    <ul id="page" class="paginationContent">
-                        <li>
-                            <a class="prev" href="#" aria-label="prev-left">
-                                <span class="ic-prev"></span>
-                            </a>
-                        </li>
-                        <!-- li Punya class avtive -->
-                        <li class="pageList active"><a href="#">1</a></li>
-                        <li class="pageList"><a href="#">2</a></li>
-                        <li class="pageList"><a href="#">3</a></li>
-                        <li>...</li>
-                        <li class="pageList"><a href="#">5</a></li>
-                        <li class="pageList"><a href="#">6</a></li>
-                        <li class="pageList"><a href="#">7</a></li>
-                        <!--  -->
-                        <li>
-                            <a class="next" href="#" aria-label="next">
-                                <span class="ic-next-active"></span>
-                            </a>
-                        </li>
-                        <li class="showAll"><a href="#">Show All</a></li>
-                    </ul>
-                </div>
-                <!-- End Pagination -->
+                <button id="btn-load-more" type="button"> Load More</button>
             </main>
 
             <!-- Jika search tidak ada -->
@@ -479,6 +457,8 @@
                         <li class="listKanal"><a href="#">Travel <span class="ic-travel-burger"></span></a></li>
                         <li class="listKanal"><a href="#">Otomotif <span class="ic-otomotif-burger"></span></a></li>
                         <li class="listKanal"><a href="#">Techno <span class="ic-techno-burger"></span></a></li>
+                        <li class="listKanal"><a href="#">Multimedia <span class="ic-multimedia-burger"></span></a></li>
+                        <li class="listKanal"><a href="#">Indeks <span class="ic-indeks-burger"></span></a></li>
                     </ul>
                 </div>
                 <div class="mncPortal">

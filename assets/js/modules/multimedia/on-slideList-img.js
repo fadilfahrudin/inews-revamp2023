@@ -5,6 +5,10 @@ let totalListImgVisible = 4
 let scrollAmount = thumbWidth / totalListImgVisible
 let index
 
+$(window).on('resize', function () {
+    mainWidthImg = $('.imgWrapper').outerWidth()
+})
+
 function checkButtons() {
     let scrollLeft = listThumb.scrollLeft();
     let maxScrollLeft = listThumb[0].scrollWidth - thumbWidth;
@@ -36,7 +40,7 @@ const sliderObject = {
     onClick: (indexImg) => {
         index = indexImg
         $(".listImage").animate({ scrollLeft: `${index * mainWidthImg}` }, 500);
-        console.log(mainWidthImg)
+        // $(".listImage").css('transform', `translateX(${index * mainWidthImg}%)`);
     },
     setPosition: (indexImg) => {
         $(".listThumb").animate({ scrollLeft: `${indexImg * scrollAmount}` }, 100, () => {

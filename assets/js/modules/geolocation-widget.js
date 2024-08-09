@@ -11,6 +11,7 @@ export const geoLocationWidget = () => {
 
 const handleSwitch = () => {
     $("#modalAI").css("display", "flex");
+    geoActive = checked.prop("checked") ? true : false;
     if (geoActive) {
         msgModal.html(`Non-aktifkan berita di sekitarmu?`)
     } else {

@@ -67,9 +67,6 @@
                 }
                 #fullscreen-btn {
                     cursor: pointer;
-                    @include media.ipad {
-                        display: none;
-                    }
                 }
             }
             .listImage {
@@ -631,7 +628,8 @@
                         display: flex;
                         align-items: center;
                         gap: 0 16px;
-                        a {
+                        button {
+                            cursor: pointer;
                             .ic-link-share {
                                 display: block;
                                 content: url("../img/icon/ic-link-share.png");
@@ -641,13 +639,12 @@
                                     content: url("../img/icon/ic-link-share-active.png");
                                 }
                             }
-                            #copied {
+                            #detailPhotoInfo__copied {
                                 display: none;
                                 opacity: 0;
                                 position: absolute;
-                                top: 52px;
-                                left: 154px;
-                                background-color: rgba(var(--color-dark-100), 0.9);
+                                transform: translateY(-80px) translateX(-50px);
+                                background-color: var(--color-dark-100);
                                 padding: 4px 16px;
                                 border-radius: 32px;
                                 color: #fff;
@@ -760,7 +757,7 @@
                             img {
                                 width: auto;
                                 height: 100%;
-                                object-fit: cover;
+                                object-fit: contain;
                                 object-position: top center;
                                 overflow: hidden;
                                 border-radius: 16px;
@@ -784,6 +781,28 @@
                             font-style: normal;
                             font-weight: 400;
                             line-height: 150%; /* 21px */
+                        }
+
+                        @include media.ipad {
+                            justify-content: center;
+                            .img-container {
+                                width: auto;
+                                height: 90%;
+                                display: flex;
+                                align-items: center;
+                                overflow: hidden;
+                                border-radius: 16px;
+                                img {
+                                    width: 100%;
+                                    height: auto;
+                                }
+                                @media (orientation: landscape) { 
+                                    img {
+                                        width: auto;
+                                        height: 100%;
+                                    }
+                                }
+                            }
                         }
                     }
                 }
@@ -867,7 +886,7 @@
                 align-items: center;
                 gap: 4px;
                 background-color: #eaeaea;
-                a {
+                button {
                     .ic-link-share {
                         display: block;
                         content: url("../img/icon/ic-link-share.png");
@@ -877,13 +896,13 @@
                             content: url("../img/icon/ic-link-share-active.png");
                         }
                     }
-                    #copied {
+                    #detailPhotoInfo__copied2 {
                         display: none;
                         opacity: 0;
+                        width: max-content;
                         position: absolute;
-                        top: 52px;
-                        left: 154px;
-                        background-color: rgba(var(--color-dark-100), 0.9);
+                        transform: translateX(-140px) translateY(-30px);
+                        background-color: var(--color-dark-100);
                         padding: 4px 16px;
                         border-radius: 32px;
                         color: #fff;

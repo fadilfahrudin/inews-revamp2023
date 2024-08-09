@@ -160,13 +160,13 @@ aside.sideLeft {
   height: auto;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1025px) {
   .container {
     width: 100%;
     padding: 0 clamp(2rem, 5vw, 128px);
   }
 }
-@media (min-width: 1025px) {
+@media (min-width: 1026px) {
   .container {
     width: 1024px;
     margin: auto;
@@ -180,41 +180,46 @@ nav.nav__main {
   z-index: 99;
   background-color: var(--color-white);
   box-shadow: 0 4px 5px rgba(0, 0, 0, 0.12);
+  margin-bottom: 20px;
 }
 nav.nav__main .container {
-  position: relative;
+  display: flex;
+  align-items: start;
+}
+nav.nav__main .container #navbar-nav {
+  width: 100%;
   height: 40px;
   display: flex;
   align-items: center;
   justify-content: start;
   flex-wrap: wrap;
   list-style: none;
-  margin-bottom: 20px;
   overflow-y: hidden;
   transition: height 0.3s ease-in-out;
   scrollbar-width: none;
+  position: relative;
 }
-nav.nav__main .container::-webkit-scrollbar {
+nav.nav__main .container #navbar-nav::-webkit-scrollbar {
   display: none;
 }
-nav.nav__main .container.dropDown {
+nav.nav__main .container #navbar-nav.dropDown {
   height: 80px;
 }
-nav.nav__main .container .navList {
+nav.nav__main .container #navbar-nav .navList {
   padding: 8px 24px 0px 24px;
   border-radius: 8px 8px 0px 0px;
   transition: background-color 0.3s ease-in-out;
 }
-nav.nav__main .container .navList:has(.navLink-active) {
+nav.nav__main .container #navbar-nav .navList:has(.navLink-active) {
   background-color: var(--color-light-75);
 }
-nav.nav__main .container .navList:hover {
+nav.nav__main .container #navbar-nav .navList:hover {
   background-color: var(--color-light-75);
 }
-nav.nav__main .container .navList:hover .navLink {
+nav.nav__main .container #navbar-nav .navList:hover .navLink {
   color: var(--color-maroon-25);
 }
-nav.nav__main .container .navList .navLink {
+nav.nav__main .container #navbar-nav .navList .navLink {
   position: relative;
   overflow-y: hidden;
   padding-bottom: 8px;
@@ -224,7 +229,7 @@ nav.nav__main .container .navList .navLink {
   line-height: 24px;
   color: var(--color-black);
 }
-nav.nav__main .container .navList .navLink::after {
+nav.nav__main .container #navbar-nav .navList .navLink::after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -236,35 +241,35 @@ nav.nav__main .container .navList .navLink::after {
   transform: translateY(8px);
   transition: all 0.3s ease-in-out;
 }
-nav.nav__main .container .navList .navLink:focus {
+nav.nav__main .container #navbar-nav .navList .navLink:focus {
   color: var(--color-black);
 }
-nav.nav__main .container .navList .navLink:focus::after {
+nav.nav__main .container #navbar-nav .navList .navLink:focus::after {
   transform: translateY(0);
 }
-nav.nav__main .container .navList .navLink.navLink-active {
+nav.nav__main .container #navbar-nav .navList .navLink.navLink-active {
   color: var(--color-red);
 }
-nav.nav__main .container .navList .navLink.navLink-active::after {
+nav.nav__main .container #navbar-nav .navList .navLink.navLink-active::after {
   transform: translateY(0);
 }
-nav.nav__main .container .ic-dropdown-kanal {
+nav.nav__main .container #dropdown {
+  padding: 8px 24px 0px 24px;
+}
+nav.nav__main .container #dropdown .ic-dropdown-kanal {
   cursor: pointer;
-  position: absolute;
-  right: 0;
-  top: 18px;
   content: url("../img/icon/ic-dropdown-kanal.png");
   width: 16.667px;
   height: 8.333px;
   transform: rotate(0deg);
   transition: transform 0.3s ease-in-out;
 }
-@media screen and (max-width: 1024px) {
-  nav.nav__main .container .ic-dropdown-kanal {
+@media screen and (max-width: 1025px) {
+  nav.nav__main .container #dropdown .ic-dropdown-kanal {
     right: 5%;
   }
 }
-nav.nav__main .container .ic-dropdown-kanal.dropDown {
+nav.nav__main .container #dropdown .ic-dropdown-kanal.dropDown {
   transform: rotate(180deg);
 }
 
@@ -334,7 +339,7 @@ nav.nav__main .container .ic-dropdown-kanal.dropDown {
   padding: 24px;
   overflow: hidden;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1025px) {
   .topBarWrap .topBar > div:first-child .app-gateway .modal-app-gateway {
     left: -122px;
   }
@@ -561,7 +566,7 @@ nav.nav__main .container .ic-dropdown-kanal.dropDown {
   font-size: 14px;
   font-weight: 700;
   line-height: 21px;
-  color: var(--color-dark-0);
+  color: var(--color-dark-50);
 }
 .topBarWrap .topBar > div:last-child .loginSection .btnLogin .ic-login {
   content: url("../img/icon/ic-user.png");
@@ -855,6 +860,16 @@ footer .license {
   width: 24px;
   height: 24px;
 }
+#burgerMenu .bodyBurgerMenu .menuKanal .listMenuKanal .listKanal a .ic-multimedia-burger {
+  content: url("../img/icon/ic-menu-multimedia.svg");
+  width: 24px;
+  height: 24px;
+}
+#burgerMenu .bodyBurgerMenu .menuKanal .listMenuKanal .listKanal a .ic-indeks-burger {
+  content: url("../img/icon/ic-menu-indeks.svg");
+  width: 24px;
+  height: 24px;
+}
 #burgerMenu .bodyBurgerMenu .mncPortal .headerMenuKanal {
   color: #0c0b0b;
   font-size: 20px;
@@ -1010,7 +1025,7 @@ footer .license {
   background-color: #990100;
   color: var(--color-white);
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1025px) {
   #networkDropdown .dropdownMenu .networkChannel .pulau {
     width: 50%;
   }
@@ -1056,7 +1071,7 @@ footer .license {
   background-color: #990100;
   color: var(--color-white);
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1025px) {
   #networkDropdown .dropdownMenu .networkChannel #listNetwork {
     width: 50%;
   }
@@ -1310,7 +1325,7 @@ footer .license {
   background-color: var(--color-dark-0);
   color: var(--color-light-100);
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1025px) {
   .stickyAds {
     width: 80%;
   }
@@ -1318,10 +1333,10 @@ footer .license {
 
 .alert-wrapp {
   position: absolute;
-  z-index: 9999;
+  z-index: 11;
   left: 50%;
   transform: translateX(-50%);
-  top: 200px;
+  top: 243px;
   display: flex;
   align-items: center;
   flex-wrap: wrap;
@@ -1385,15 +1400,21 @@ footer .license {
   height: auto;
 }
 
-#about-page header {
+#about-page header,
+#browser-setting-page header,
+#mitra-page header {
   position: sticky;
-  top: 48px;
+  top: 46px;
   box-shadow: 0px 6px 12px 0px rgba(28, 39, 49, 0.0509803922);
 }
-#about-page .mainBody {
+#about-page .mainBody,
+#browser-setting-page .mainBody,
+#mitra-page .mainBody {
   margin-top: 40px;
 }
-#about-page .mainBody aside.sideLeft .listMenuAbout {
+#about-page .mainBody aside.sideLeft .listMenuAbout,
+#browser-setting-page .mainBody aside.sideLeft .listMenuAbout,
+#mitra-page .mainBody aside.sideLeft .listMenuAbout {
   position: sticky;
   top: 170px;
   width: auto;
@@ -1402,51 +1423,219 @@ footer .license {
   background-color: var(--color-light-75);
   list-style: none;
 }
-#about-page .mainBody aside.sideLeft .listMenuAbout .listMenu {
+#about-page .mainBody aside.sideLeft .listMenuAbout .listMenu,
+#browser-setting-page .mainBody aside.sideLeft .listMenuAbout .listMenu,
+#mitra-page .mainBody aside.sideLeft .listMenuAbout .listMenu {
   padding: 12px 20px;
   border-bottom: 1px solid var(--color-light-25);
 }
-#about-page .mainBody aside.sideLeft .listMenuAbout .listMenu:last-child {
+#about-page .mainBody aside.sideLeft .listMenuAbout .listMenu:last-child,
+#browser-setting-page .mainBody aside.sideLeft .listMenuAbout .listMenu:last-child,
+#mitra-page .mainBody aside.sideLeft .listMenuAbout .listMenu:last-child {
   border-bottom: unset;
 }
-#about-page .mainBody aside.sideLeft .listMenuAbout .listMenu a {
+#about-page .mainBody aside.sideLeft .listMenuAbout .listMenu a,
+#browser-setting-page .mainBody aside.sideLeft .listMenuAbout .listMenu a,
+#mitra-page .mainBody aside.sideLeft .listMenuAbout .listMenu a {
   color: var(--color-black);
   font-family: Inter-Bold, sans-serif;
-  font-size: 18px;
+  font-size: clamp(14px, 1.2vw, 18px);
   font-style: normal;
   font-weight: 700;
   line-height: 160%; /* 28.8px */
   transition: color 0.3s ease-in-out;
 }
-#about-page .mainBody aside.sideLeft .listMenuAbout .listMenu:hover a {
+#about-page .mainBody aside.sideLeft .listMenuAbout .listMenu:hover a,
+#browser-setting-page .mainBody aside.sideLeft .listMenuAbout .listMenu:hover a,
+#mitra-page .mainBody aside.sideLeft .listMenuAbout .listMenu:hover a {
   color: var(--color-maroon);
 }
-#about-page .mainBody aside.sideLeft .listMenuAbout .listMenu.active a {
+#about-page .mainBody aside.sideLeft .listMenuAbout .listMenu.active a,
+#browser-setting-page .mainBody aside.sideLeft .listMenuAbout .listMenu.active a,
+#mitra-page .mainBody aside.sideLeft .listMenuAbout .listMenu.active a {
   color: var(--color-maroon);
 }
-#about-page .mainBody main.sideRight .backdrop-wrapper {
+#about-page .mainBody main.sideRight.browserSettings,
+#browser-setting-page .mainBody main.sideRight.browserSettings,
+#mitra-page .mainBody main.sideRight.browserSettings {
+  margin: auto;
+  width: 90%;
+}
+#about-page .mainBody main.sideRight.browserSettings .about-content p:not(:first-child),
+#browser-setting-page .mainBody main.sideRight.browserSettings .about-content p:not(:first-child),
+#mitra-page .mainBody main.sideRight.browserSettings .about-content p:not(:first-child) {
+  margin-bottom: 0px;
+  margin-top: 10px;
+}
+#about-page .mainBody main.sideRight.browserSettings .about-content section.accordion,
+#browser-setting-page .mainBody main.sideRight.browserSettings .about-content section.accordion,
+#mitra-page .mainBody main.sideRight.browserSettings .about-content section.accordion {
+  margin-bottom: 4px;
+  margin-top: 0px;
+  width: 100%;
+  height: auto;
+}
+#about-page .mainBody main.sideRight.browserSettings .about-content section.accordion .accordion__header,
+#browser-setting-page .mainBody main.sideRight.browserSettings .about-content section.accordion .accordion__header,
+#mitra-page .mainBody main.sideRight.browserSettings .about-content section.accordion .accordion__header {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2px;
+}
+#about-page .mainBody main.sideRight.browserSettings .about-content section.accordion .accordion__header .title,
+#browser-setting-page .mainBody main.sideRight.browserSettings .about-content section.accordion .accordion__header .title,
+#mitra-page .mainBody main.sideRight.browserSettings .about-content section.accordion .accordion__header .title {
+  font-family: Inter, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 30px;
+  color: var(--color-dark-50);
+}
+#about-page .mainBody main.sideRight.browserSettings .about-content section.accordion .accordion__header .title.platform,
+#browser-setting-page .mainBody main.sideRight.browserSettings .about-content section.accordion .accordion__header .title.platform,
+#mitra-page .mainBody main.sideRight.browserSettings .about-content section.accordion .accordion__header .title.platform {
+  padding-left: 10px;
+}
+#about-page .mainBody main.sideRight.browserSettings .about-content section.accordion .accordion__header .dropdown,
+#browser-setting-page .mainBody main.sideRight.browserSettings .about-content section.accordion .accordion__header .dropdown,
+#mitra-page .mainBody main.sideRight.browserSettings .about-content section.accordion .accordion__header .dropdown {
+  cursor: pointer;
+  padding: 2px;
+}
+#about-page .mainBody main.sideRight.browserSettings .about-content section.accordion .accordion__header .dropdown img,
+#browser-setting-page .mainBody main.sideRight.browserSettings .about-content section.accordion .accordion__header .dropdown img,
+#mitra-page .mainBody main.sideRight.browserSettings .about-content section.accordion .accordion__header .dropdown img {
+  transform: rotate(180deg);
+  transition: transform 0.3s ease-in-out;
+}
+#about-page .mainBody main.sideRight.browserSettings .about-content section.accordion .accordion__header .dropdown.active img,
+#browser-setting-page .mainBody main.sideRight.browserSettings .about-content section.accordion .accordion__header .dropdown.active img,
+#mitra-page .mainBody main.sideRight.browserSettings .about-content section.accordion .accordion__header .dropdown.active img {
+  transform: rotate(0deg);
+}
+#about-page .mainBody main.sideRight.browserSettings .about-content section.accordion .accordion__body,
+#browser-setting-page .mainBody main.sideRight.browserSettings .about-content section.accordion .accordion__body,
+#mitra-page .mainBody main.sideRight.browserSettings .about-content section.accordion .accordion__body {
+  display: none;
+  width: 100%;
+  height: -moz-max-content;
+  height: max-content;
+  overflow: hidden;
+  border-bottom: none;
+}
+#about-page .mainBody main.sideRight.browserSettings .about-content section.accordion .accordion__body.show,
+#browser-setting-page .mainBody main.sideRight.browserSettings .about-content section.accordion .accordion__body.show,
+#mitra-page .mainBody main.sideRight.browserSettings .about-content section.accordion .accordion__body.show {
+  height: -moz-max-content;
+  height: max-content;
+  border: none;
+  display: block;
+}
+#about-page .mainBody main.sideRight.browserSettings .about-content section.accordion .accordion__body ul,
+#browser-setting-page .mainBody main.sideRight.browserSettings .about-content section.accordion .accordion__body ul,
+#mitra-page .mainBody main.sideRight.browserSettings .about-content section.accordion .accordion__body ul {
+  list-style-position: outside;
+  list-style-type: disc;
+}
+#about-page .mainBody main.sideRight.browserSettings .about-content section.accordion .accordion__body ul li,
+#browser-setting-page .mainBody main.sideRight.browserSettings .about-content section.accordion .accordion__body ul li,
+#mitra-page .mainBody main.sideRight.browserSettings .about-content section.accordion .accordion__body ul li {
+  margin-left: 30px;
+}
+#about-page .mainBody main.sideRight.sitemap,
+#browser-setting-page .mainBody main.sideRight.sitemap,
+#mitra-page .mainBody main.sideRight.sitemap {
+  margin: auto;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#about-page .mainBody main.sideRight.sitemap .about-content.sitemapWrapp,
+#browser-setting-page .mainBody main.sideRight.sitemap .about-content.sitemapWrapp,
+#mitra-page .mainBody main.sideRight.sitemap .about-content.sitemapWrapp {
+  height: -moz-max-content;
+  height: max-content;
+  float: left;
+}
+#about-page .mainBody main.sideRight.sitemap .about-content.sitemapWrapp .col-md-3,
+#browser-setting-page .mainBody main.sideRight.sitemap .about-content.sitemapWrapp .col-md-3,
+#mitra-page .mainBody main.sideRight.sitemap .about-content.sitemapWrapp .col-md-3 {
+  width: 25%;
+  height: auto;
+  float: left;
+}
+@media screen and (max-width: 1025px) {
+  #about-page .mainBody main.sideRight.sitemap .about-content.sitemapWrapp .col-md-3,
+  #browser-setting-page .mainBody main.sideRight.sitemap .about-content.sitemapWrapp .col-md-3,
+  #mitra-page .mainBody main.sideRight.sitemap .about-content.sitemapWrapp .col-md-3 {
+    width: 50%;
+  }
+}
+#about-page .mainBody main.sideRight.sitemap .about-content.sitemapWrapp .col-md-3:last-child,
+#browser-setting-page .mainBody main.sideRight.sitemap .about-content.sitemapWrapp .col-md-3:last-child,
+#mitra-page .mainBody main.sideRight.sitemap .about-content.sitemapWrapp .col-md-3:last-child {
+  width: -moz-max-content;
+  width: max-content;
+}
+#about-page .mainBody main.sideRight.sitemap .about-content.sitemapWrapp .col-md-3:nth-child(3),
+#browser-setting-page .mainBody main.sideRight.sitemap .about-content.sitemapWrapp .col-md-3:nth-child(3),
+#mitra-page .mainBody main.sideRight.sitemap .about-content.sitemapWrapp .col-md-3:nth-child(3) {
+  width: -moz-max-content;
+  width: max-content;
+}
+#about-page .mainBody main.sideRight.sitemap .about-content.sitemapWrapp .col-md-3 h3 a,
+#browser-setting-page .mainBody main.sideRight.sitemap .about-content.sitemapWrapp .col-md-3 h3 a,
+#mitra-page .mainBody main.sideRight.sitemap .about-content.sitemapWrapp .col-md-3 h3 a {
+  color: var(--color-red);
+}
+#about-page .mainBody main.sideRight.sitemap .about-content.sitemapWrapp .col-md-3 .sitemap li,
+#browser-setting-page .mainBody main.sideRight.sitemap .about-content.sitemapWrapp .col-md-3 .sitemap li,
+#mitra-page .mainBody main.sideRight.sitemap .about-content.sitemapWrapp .col-md-3 .sitemap li {
+  list-style-position: inside;
+  padding-left: 20px;
+}
+#about-page .mainBody main.sideRight.sitemap .about-content.sitemapWrapp .col-md-3 .sitemap li a,
+#browser-setting-page .mainBody main.sideRight.sitemap .about-content.sitemapWrapp .col-md-3 .sitemap li a,
+#mitra-page .mainBody main.sideRight.sitemap .about-content.sitemapWrapp .col-md-3 .sitemap li a {
+  display: inline-block;
+  color: var(--color-black);
+}
+#about-page .mainBody main.sideRight .backdrop-wrapper,
+#browser-setting-page .mainBody main.sideRight .backdrop-wrapper,
+#mitra-page .mainBody main.sideRight .backdrop-wrapper {
   position: relative;
   width: 100%;
   height: auto;
 }
-#about-page .mainBody main.sideRight .backdrop-wrapper .titleSection {
+#about-page .mainBody main.sideRight .backdrop-wrapper .titleSection,
+#browser-setting-page .mainBody main.sideRight .backdrop-wrapper .titleSection,
+#mitra-page .mainBody main.sideRight .backdrop-wrapper .titleSection {
   position: absolute;
   top: 40px;
   left: 50%;
   transform: translateX(-50%);
   font-family: Inter-Bold, sans-serif;
-  font-size: 32px;
+  font-size: clamp(24px, 2.4vw, 32px);
   font-weight: 700;
   line-height: 48px;
   color: var(--color-white);
+  width: 100%;
+  text-align: center;
 }
-#about-page .mainBody main.sideRight .backdrop-wrapper img {
+#about-page .mainBody main.sideRight .backdrop-wrapper img,
+#browser-setting-page .mainBody main.sideRight .backdrop-wrapper img,
+#mitra-page .mainBody main.sideRight .backdrop-wrapper img {
   width: 100%;
   height: auto;
   -o-object-fit: contain;
      object-fit: contain;
 }
-#about-page .mainBody main.sideRight .about-content {
+#about-page .mainBody main.sideRight .about-content,
+#browser-setting-page .mainBody main.sideRight .about-content,
+#mitra-page .mainBody main.sideRight .about-content {
   position: relative;
   top: -46px;
   z-index: 1;
@@ -1458,11 +1647,522 @@ footer .license {
   margin: auto;
   padding: 24px;
 }
-#about-page .mainBody main.sideRight .about-content p {
+#about-page .mainBody main.sideRight .about-content.redaksi,
+#browser-setting-page .mainBody main.sideRight .about-content.redaksi,
+#mitra-page .mainBody main.sideRight .about-content.redaksi {
+  top: unset;
+  box-shadow: unset;
+  padding: unset;
+}
+#about-page .mainBody main.sideRight .about-content.redaksi section.accordion,
+#browser-setting-page .mainBody main.sideRight .about-content.redaksi section.accordion,
+#mitra-page .mainBody main.sideRight .about-content.redaksi section.accordion {
+  margin: 24px 0;
+  width: 100%;
+  height: auto;
+}
+#about-page .mainBody main.sideRight .about-content.redaksi section.accordion .accordion__header,
+#browser-setting-page .mainBody main.sideRight .about-content.redaksi section.accordion .accordion__header,
+#mitra-page .mainBody main.sideRight .about-content.redaksi section.accordion .accordion__header {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+#about-page .mainBody main.sideRight .about-content.redaksi section.accordion .accordion__header .title,
+#browser-setting-page .mainBody main.sideRight .about-content.redaksi section.accordion .accordion__header .title,
+#mitra-page .mainBody main.sideRight .about-content.redaksi section.accordion .accordion__header .title {
+  font-family: Inter-Bold, sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 30px;
+  color: var(--color-dark-50);
+}
+#about-page .mainBody main.sideRight .about-content.redaksi section.accordion .accordion__header .dropdown,
+#browser-setting-page .mainBody main.sideRight .about-content.redaksi section.accordion .accordion__header .dropdown,
+#mitra-page .mainBody main.sideRight .about-content.redaksi section.accordion .accordion__header .dropdown {
+  cursor: pointer;
+  padding: 2px;
+}
+#about-page .mainBody main.sideRight .about-content.redaksi section.accordion .accordion__header .dropdown img,
+#browser-setting-page .mainBody main.sideRight .about-content.redaksi section.accordion .accordion__header .dropdown img,
+#mitra-page .mainBody main.sideRight .about-content.redaksi section.accordion .accordion__header .dropdown img {
+  transform: rotate(180deg);
+  transition: transform 0.3s ease-in-out;
+}
+#about-page .mainBody main.sideRight .about-content.redaksi section.accordion .accordion__header .dropdown.active img,
+#browser-setting-page .mainBody main.sideRight .about-content.redaksi section.accordion .accordion__header .dropdown.active img,
+#mitra-page .mainBody main.sideRight .about-content.redaksi section.accordion .accordion__header .dropdown.active img {
+  transform: rotate(0deg);
+}
+#about-page .mainBody main.sideRight .about-content.redaksi section.accordion .accordion__body,
+#browser-setting-page .mainBody main.sideRight .about-content.redaksi section.accordion .accordion__body,
+#mitra-page .mainBody main.sideRight .about-content.redaksi section.accordion .accordion__body {
+  display: none;
+  width: 100%;
+  height: -moz-max-content;
+  height: max-content;
+  overflow: hidden;
+  border-bottom: 1px solid #e3e3e3;
+}
+#about-page .mainBody main.sideRight .about-content.redaksi section.accordion .accordion__body.show,
+#browser-setting-page .mainBody main.sideRight .about-content.redaksi section.accordion .accordion__body.show,
+#mitra-page .mainBody main.sideRight .about-content.redaksi section.accordion .accordion__body.show {
+  height: -moz-max-content;
+  height: max-content;
+  border: none;
+  display: block;
+}
+#about-page .mainBody main.sideRight .about-content.redaksi section.accordion .accordion__body .cardRedaksi,
+#browser-setting-page .mainBody main.sideRight .about-content.redaksi section.accordion .accordion__body .cardRedaksi,
+#mitra-page .mainBody main.sideRight .about-content.redaksi section.accordion .accordion__body .cardRedaksi {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  background: #f5f5f5;
+  box-shadow: 0px 2px 6px 0px rgba(28, 39, 49, 0.0784313725);
+  padding: 0 clamp(16px, 2vw, 22px);
+  float: left;
+  width: calc(50% - 16px);
+  height: 129px;
+  margin: 8px;
+  border-radius: 5px;
+}
+#about-page .mainBody main.sideRight .about-content.redaksi section.accordion .accordion__body .cardRedaksi .profile,
+#browser-setting-page .mainBody main.sideRight .about-content.redaksi section.accordion .accordion__body .cardRedaksi .profile,
+#mitra-page .mainBody main.sideRight .about-content.redaksi section.accordion .accordion__body .cardRedaksi .profile {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  align-items: center;
+}
+#about-page .mainBody main.sideRight .about-content.redaksi section.accordion .accordion__body .cardRedaksi .profile .profile__img,
+#browser-setting-page .mainBody main.sideRight .about-content.redaksi section.accordion .accordion__body .cardRedaksi .profile .profile__img,
+#mitra-page .mainBody main.sideRight .about-content.redaksi section.accordion .accordion__body .cardRedaksi .profile .profile__img {
+  flex-shrink: 0;
+  width: clamp(40px, 3vw, 60px);
+  height: clamp(40px, 3vw, 60px);
+  border-radius: 50%;
+  overflow: hidden;
+}
+#about-page .mainBody main.sideRight .about-content.redaksi section.accordion .accordion__body .cardRedaksi .profile .profile__img img,
+#browser-setting-page .mainBody main.sideRight .about-content.redaksi section.accordion .accordion__body .cardRedaksi .profile .profile__img img,
+#mitra-page .mainBody main.sideRight .about-content.redaksi section.accordion .accordion__body .cardRedaksi .profile .profile__img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top center;
+     object-position: top center;
+}
+#about-page .mainBody main.sideRight .about-content.redaksi section.accordion .accordion__body .cardRedaksi .profile .profile_detail,
+#browser-setting-page .mainBody main.sideRight .about-content.redaksi section.accordion .accordion__body .cardRedaksi .profile .profile_detail,
+#mitra-page .mainBody main.sideRight .about-content.redaksi section.accordion .accordion__body .cardRedaksi .profile .profile_detail {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+#about-page .mainBody main.sideRight .about-content.redaksi section.accordion .accordion__body .cardRedaksi .profile .profile_detail .profile__title,
+#browser-setting-page .mainBody main.sideRight .about-content.redaksi section.accordion .accordion__body .cardRedaksi .profile .profile_detail .profile__title,
+#mitra-page .mainBody main.sideRight .about-content.redaksi section.accordion .accordion__body .cardRedaksi .profile .profile_detail .profile__title {
+  color: #525252;
+  font-family: Inter, sans-serif;
+  font-size: clamp(8px, 1.2vw, 12px);
+  font-weight: 400;
+  line-height: 16.94px;
+}
+#about-page .mainBody main.sideRight .about-content.redaksi section.accordion .accordion__body .cardRedaksi .profile .profile_detail .profile_name,
+#browser-setting-page .mainBody main.sideRight .about-content.redaksi section.accordion .accordion__body .cardRedaksi .profile .profile_detail .profile_name,
+#mitra-page .mainBody main.sideRight .about-content.redaksi section.accordion .accordion__body .cardRedaksi .profile .profile_detail .profile_name {
+  font-family: Inter-Bold, sans-serif;
+  font-size: clamp(12px, 1.2vw, 16px);
+  font-weight: 700;
+  line-height: 24px;
+  text-align: left;
+}
+#about-page .mainBody main.sideRight .about-content.redaksi section.accordion .accordion__body .cardRedaksi .profile .profile_detail .article-created,
+#browser-setting-page .mainBody main.sideRight .about-content.redaksi section.accordion .accordion__body .cardRedaksi .profile .profile_detail .article-created,
+#mitra-page .mainBody main.sideRight .about-content.redaksi section.accordion .accordion__body .cardRedaksi .profile .profile_detail .article-created {
+  margin-top: -4px;
+  font-family: Inter, sans-serif;
+  font-size: clamp(8px, 1vw, 14px);
+  font-weight: 400;
+  line-height: 18px;
+  color: var(--color-dark-50);
+}
+#about-page .mainBody main.sideRight .about-content.redaksi section.accordion .accordion__body .cardRedaksi .profile .profile_detail .article-created .number,
+#browser-setting-page .mainBody main.sideRight .about-content.redaksi section.accordion .accordion__body .cardRedaksi .profile .profile_detail .article-created .number,
+#mitra-page .mainBody main.sideRight .about-content.redaksi section.accordion .accordion__body .cardRedaksi .profile .profile_detail .article-created .number {
+  font-family: Inter-Bold, sans-serif;
+  color: var(--color-red);
+  font-weight: 700;
+}
+#about-page .mainBody main.sideRight .about-content.redaksi section.accordion .accordion__body .cardRedaksi.pimpinanRedaksi,
+#browser-setting-page .mainBody main.sideRight .about-content.redaksi section.accordion .accordion__body .cardRedaksi.pimpinanRedaksi,
+#mitra-page .mainBody main.sideRight .about-content.redaksi section.accordion .accordion__body .cardRedaksi.pimpinanRedaksi {
+  width: calc(50% - 16px);
+  height: 417px;
+  flex-direction: column;
+  justify-content: center;
+}
+#about-page .mainBody main.sideRight .about-content.redaksi section.accordion .accordion__body .cardRedaksi.pimpinanRedaksi .profile,
+#browser-setting-page .mainBody main.sideRight .about-content.redaksi section.accordion .accordion__body .cardRedaksi.pimpinanRedaksi .profile,
+#mitra-page .mainBody main.sideRight .about-content.redaksi section.accordion .accordion__body .cardRedaksi.pimpinanRedaksi .profile {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: center;
+}
+#about-page .mainBody main.sideRight .about-content.redaksi section.accordion .accordion__body .cardRedaksi.pimpinanRedaksi .profile .profile__img,
+#browser-setting-page .mainBody main.sideRight .about-content.redaksi section.accordion .accordion__body .cardRedaksi.pimpinanRedaksi .profile .profile__img,
+#mitra-page .mainBody main.sideRight .about-content.redaksi section.accordion .accordion__body .cardRedaksi.pimpinanRedaksi .profile .profile__img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+#about-page .mainBody main.sideRight .about-content.redaksi section.accordion .accordion__body .cardRedaksi.pimpinanRedaksi .profile .profile__img img,
+#browser-setting-page .mainBody main.sideRight .about-content.redaksi section.accordion .accordion__body .cardRedaksi.pimpinanRedaksi .profile .profile__img img,
+#mitra-page .mainBody main.sideRight .about-content.redaksi section.accordion .accordion__body .cardRedaksi.pimpinanRedaksi .profile .profile__img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top center;
+     object-position: top center;
+}
+#about-page .mainBody main.sideRight .about-content.redaksi section.accordion .accordion__body .cardRedaksi.pimpinanRedaksi .profile .profile_detail,
+#browser-setting-page .mainBody main.sideRight .about-content.redaksi section.accordion .accordion__body .cardRedaksi.pimpinanRedaksi .profile .profile_detail,
+#mitra-page .mainBody main.sideRight .about-content.redaksi section.accordion .accordion__body .cardRedaksi.pimpinanRedaksi .profile .profile_detail {
+  flex-direction: column;
+  align-items: center;
+}
+#about-page .mainBody main.sideRight .about-content.redaksi section.accordion .accordion__body .cardRedaksi.pimpinanRedaksi .profile .profile_detail .profile__title,
+#browser-setting-page .mainBody main.sideRight .about-content.redaksi section.accordion .accordion__body .cardRedaksi.pimpinanRedaksi .profile .profile_detail .profile__title,
+#mitra-page .mainBody main.sideRight .about-content.redaksi section.accordion .accordion__body .cardRedaksi.pimpinanRedaksi .profile .profile_detail .profile__title {
+  width: -moz-max-content;
+  width: max-content;
+  padding: 4px 8px 4px 8px;
+  gap: 10px;
+  border-radius: 4px;
+  opacity: 0px;
+  background-color: #de2027;
+  color: var(--color-white);
+  font-family: Inter, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16.94px;
+}
+#about-page .mainBody main.sideRight .about-content.redaksi section.accordion .accordion__body .cardRedaksi.pimpinanRedaksi .profile .profile_detail .profile_name,
+#browser-setting-page .mainBody main.sideRight .about-content.redaksi section.accordion .accordion__body .cardRedaksi.pimpinanRedaksi .profile .profile_detail .profile_name,
+#mitra-page .mainBody main.sideRight .about-content.redaksi section.accordion .accordion__body .cardRedaksi.pimpinanRedaksi .profile .profile_detail .profile_name {
+  font-family: Inter-Bold, sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  text-align: left;
+}
+#about-page .mainBody main.sideRight .about-content.redaksi section.accordion .accordion__body .cardRedaksi.pimpinanRedaksi .profile .profile_detail .article-created,
+#browser-setting-page .mainBody main.sideRight .about-content.redaksi section.accordion .accordion__body .cardRedaksi.pimpinanRedaksi .profile .profile_detail .article-created,
+#mitra-page .mainBody main.sideRight .about-content.redaksi section.accordion .accordion__body .cardRedaksi.pimpinanRedaksi .profile .profile_detail .article-created {
+  margin-top: -4px;
+}
+#about-page .mainBody main.sideRight .about-content.redaksi section.accordion .accordion__body .cardRedaksi.pembina,
+#browser-setting-page .mainBody main.sideRight .about-content.redaksi section.accordion .accordion__body .cardRedaksi.pembina,
+#mitra-page .mainBody main.sideRight .about-content.redaksi section.accordion .accordion__body .cardRedaksi.pembina {
+  width: 100%;
+  height: 210px;
+  flex-direction: column;
+  justify-content: center;
+  float: unset;
+}
+#about-page .mainBody main.sideRight .about-content.redaksi section.accordion .accordion__body .cardRedaksi.pembina .element-obj-L,
+#browser-setting-page .mainBody main.sideRight .about-content.redaksi section.accordion .accordion__body .cardRedaksi.pembina .element-obj-L,
+#mitra-page .mainBody main.sideRight .about-content.redaksi section.accordion .accordion__body .cardRedaksi.pembina .element-obj-L {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+#about-page .mainBody main.sideRight .about-content.redaksi section.accordion .accordion__body .cardRedaksi.pembina .element-obj-R,
+#browser-setting-page .mainBody main.sideRight .about-content.redaksi section.accordion .accordion__body .cardRedaksi.pembina .element-obj-R,
+#mitra-page .mainBody main.sideRight .about-content.redaksi section.accordion .accordion__body .cardRedaksi.pembina .element-obj-R {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+#about-page .mainBody main.sideRight .about-content.redaksi section.accordion .accordion__body .cardRedaksi.pembina .profile,
+#browser-setting-page .mainBody main.sideRight .about-content.redaksi section.accordion .accordion__body .cardRedaksi.pembina .profile,
+#mitra-page .mainBody main.sideRight .about-content.redaksi section.accordion .accordion__body .cardRedaksi.pembina .profile {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: center;
+}
+#about-page .mainBody main.sideRight .about-content.redaksi section.accordion .accordion__body .cardRedaksi.pembina .profile .profile__img,
+#browser-setting-page .mainBody main.sideRight .about-content.redaksi section.accordion .accordion__body .cardRedaksi.pembina .profile .profile__img,
+#mitra-page .mainBody main.sideRight .about-content.redaksi section.accordion .accordion__body .cardRedaksi.pembina .profile .profile__img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+#about-page .mainBody main.sideRight .about-content.redaksi section.accordion .accordion__body .cardRedaksi.pembina .profile .profile__img img,
+#browser-setting-page .mainBody main.sideRight .about-content.redaksi section.accordion .accordion__body .cardRedaksi.pembina .profile .profile__img img,
+#mitra-page .mainBody main.sideRight .about-content.redaksi section.accordion .accordion__body .cardRedaksi.pembina .profile .profile__img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top center;
+     object-position: top center;
+}
+#about-page .mainBody main.sideRight .about-content.redaksi section.accordion .accordion__body .cardRedaksi.pembina .profile .profile_detail,
+#browser-setting-page .mainBody main.sideRight .about-content.redaksi section.accordion .accordion__body .cardRedaksi.pembina .profile .profile_detail,
+#mitra-page .mainBody main.sideRight .about-content.redaksi section.accordion .accordion__body .cardRedaksi.pembina .profile .profile_detail {
+  flex-direction: column;
+  align-items: center;
+}
+#about-page .mainBody main.sideRight .about-content.redaksi section.accordion .accordion__body .cardRedaksi.pembina .profile .profile_detail .profile__title,
+#browser-setting-page .mainBody main.sideRight .about-content.redaksi section.accordion .accordion__body .cardRedaksi.pembina .profile .profile_detail .profile__title,
+#mitra-page .mainBody main.sideRight .about-content.redaksi section.accordion .accordion__body .cardRedaksi.pembina .profile .profile_detail .profile__title {
+  width: -moz-max-content;
+  width: max-content;
+  padding: 4px 8px 4px 8px;
+  gap: 10px;
+  border-radius: 4px;
+  opacity: 0px;
+  background-color: #de2027;
+  color: var(--color-white);
+  font-family: Inter, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16.94px;
+}
+#about-page .mainBody main.sideRight .about-content.redaksi section.accordion .accordion__body .cardRedaksi.pembina .profile .profile_detail .profile_name,
+#browser-setting-page .mainBody main.sideRight .about-content.redaksi section.accordion .accordion__body .cardRedaksi.pembina .profile .profile_detail .profile_name,
+#mitra-page .mainBody main.sideRight .about-content.redaksi section.accordion .accordion__body .cardRedaksi.pembina .profile .profile_detail .profile_name {
+  font-family: Inter-Bold, sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  text-align: left;
+}
+#about-page .mainBody main.sideRight .about-content p,
+#browser-setting-page .mainBody main.sideRight .about-content p,
+#mitra-page .mainBody main.sideRight .about-content p {
   font-family: Inter, sans-serif;
   font-size: clamp(12px, 1.2vw, 14px);
   font-weight: 400;
   line-height: 22px;
   margin-bottom: 24px;
   color: var(--color-black);
+}
+#about-page .mainBody main.sideRight .about-content p.p-termOfService,
+#browser-setting-page .mainBody main.sideRight .about-content p.p-termOfService,
+#mitra-page .mainBody main.sideRight .about-content p.p-termOfService {
+  margin-bottom: 0px;
+}
+#about-page .mainBody main.sideRight .about-content p a,
+#browser-setting-page .mainBody main.sideRight .about-content p a,
+#mitra-page .mainBody main.sideRight .about-content p a {
+  color: var(--color-black);
+  text-decoration: underline;
+}
+#about-page .mainBody main.sideRight .about-content ol.termOfService,
+#browser-setting-page .mainBody main.sideRight .about-content ol.termOfService,
+#mitra-page .mainBody main.sideRight .about-content ol.termOfService {
+  margin-bottom: 24px;
+}
+#about-page .mainBody main.sideRight .about-content ol.termOfService li,
+#browser-setting-page .mainBody main.sideRight .about-content ol.termOfService li,
+#mitra-page .mainBody main.sideRight .about-content ol.termOfService li {
+  font-family: Inter, sans-serif;
+  font-weight: 400;
+  margin-bottom: 0;
+}
+#about-page .mainBody main.sideRight .about-content ol.disclimer li,
+#browser-setting-page .mainBody main.sideRight .about-content ol.disclimer li,
+#mitra-page .mainBody main.sideRight .about-content ol.disclimer li {
+  margin-bottom: 0px;
+}
+#about-page .mainBody main.sideRight .about-content ol.disclimer li p,
+#browser-setting-page .mainBody main.sideRight .about-content ol.disclimer li p,
+#mitra-page .mainBody main.sideRight .about-content ol.disclimer li p {
+  margin-bottom: 0px;
+}
+#about-page .mainBody main.sideRight .about-content ol li,
+#browser-setting-page .mainBody main.sideRight .about-content ol li,
+#mitra-page .mainBody main.sideRight .about-content ol li {
+  font-family: Inter-Bold, sans-serif;
+  font-size: clamp(12px, 1.2vw, 14px);
+  font-weight: 700;
+  line-height: 22px;
+  margin-bottom: 24px;
+  color: var(--color-black);
+  padding-left: 4px;
+  margin-left: 14px;
+}
+#about-page .mainBody main.sideRight .about-content ol li ol li,
+#browser-setting-page .mainBody main.sideRight .about-content ol li ol li,
+#mitra-page .mainBody main.sideRight .about-content ol li ol li {
+  margin-left: 0;
+  font-family: Inter, sans-serif;
+  font-size: clamp(12px, 1.2vw, 14px);
+  font-weight: 400;
+  line-height: 22px;
+  margin-bottom: 0px;
+  color: var(--color-black);
+}
+#about-page .mainBody main.sideRight .about-content ol li ol li ol li,
+#browser-setting-page .mainBody main.sideRight .about-content ol li ol li ol li,
+#mitra-page .mainBody main.sideRight .about-content ol li ol li ol li {
+  list-style: lower-alpha;
+  margin-left: 14px;
+}
+#about-page .mainBody main.sideRight .about-content .bannerMitra,
+#browser-setting-page .mainBody main.sideRight .about-content .bannerMitra,
+#mitra-page .mainBody main.sideRight .about-content .bannerMitra {
+  width: 100%;
+  height: auto;
+  -o-object-fit: contain;
+     object-fit: contain;
+  overflow: hidden;
+  border-radius: 12px;
+  margin-bottom: 24px;
+}
+#about-page .mainBody main.sideRight .about-content .joinAction,
+#browser-setting-page .mainBody main.sideRight .about-content .joinAction,
+#mitra-page .mainBody main.sideRight .about-content .joinAction {
+  margin: 0 auto;
+  width: -moz-max-content;
+  width: max-content;
+  height: auto;
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+#about-page .mainBody main.sideRight .about-content .joinAction .btn-join,
+#browser-setting-page .mainBody main.sideRight .about-content .joinAction .btn-join,
+#mitra-page .mainBody main.sideRight .about-content .joinAction .btn-join {
+  width: -moz-max-content;
+  width: max-content;
+  padding: 16px;
+  background-color: #000;
+  border-radius: 10px;
+  color: #fff;
+}
+#about-page .mainBody main.sideRight .about-content .joinAction .share,
+#browser-setting-page .mainBody main.sideRight .about-content .joinAction .share,
+#mitra-page .mainBody main.sideRight .about-content .joinAction .share {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px;
+}
+#about-page .mainBody main.sideRight .about-content .joinAction .share .iconShare,
+#browser-setting-page .mainBody main.sideRight .about-content .joinAction .share .iconShare,
+#mitra-page .mainBody main.sideRight .about-content .joinAction .share .iconShare {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0 16px;
+}
+#about-page .mainBody main.sideRight .about-content .joinAction .share .iconShare #linkShare,
+#browser-setting-page .mainBody main.sideRight .about-content .joinAction .share .iconShare #linkShare,
+#mitra-page .mainBody main.sideRight .about-content .joinAction .share .iconShare #linkShare {
+  cursor: pointer;
+}
+#about-page .mainBody main.sideRight .about-content .joinAction .share .iconShare #linkShare .ic-link-share-2,
+#browser-setting-page .mainBody main.sideRight .about-content .joinAction .share .iconShare #linkShare .ic-link-share-2,
+#mitra-page .mainBody main.sideRight .about-content .joinAction .share .iconShare #linkShare .ic-link-share-2 {
+  display: block;
+  content: url("../img/icon/ic-link-share.png");
+  width: 32px;
+  height: 32px;
+}
+#about-page .mainBody main.sideRight .about-content .joinAction .share .iconShare #linkShare .ic-link-share-2:hover,
+#browser-setting-page .mainBody main.sideRight .about-content .joinAction .share .iconShare #linkShare .ic-link-share-2:hover,
+#mitra-page .mainBody main.sideRight .about-content .joinAction .share .iconShare #linkShare .ic-link-share-2:hover {
+  content: url("../img/icon/ic-link-share-active.png");
+}
+#about-page .mainBody main.sideRight .about-content .joinAction .share .iconShare #linkShare #copied-2,
+#browser-setting-page .mainBody main.sideRight .about-content .joinAction .share .iconShare #linkShare #copied-2,
+#mitra-page .mainBody main.sideRight .about-content .joinAction .share .iconShare #linkShare #copied-2 {
+  display: none;
+  opacity: 0;
+  position: absolute;
+  top: 40px;
+  left: -45px;
+  background-color: rgba(var(--color-dark-100), 0.9);
+  padding: 4px 16px;
+  border-radius: 32px;
+  color: #fff;
+  text-align: center;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%; /* 24px */
+}
+#about-page .mainBody main.sideRight .about-content .joinAction .share .iconShare #linkShare #copied-2.active,
+#browser-setting-page .mainBody main.sideRight .about-content .joinAction .share .iconShare #linkShare #copied-2.active,
+#mitra-page .mainBody main.sideRight .about-content .joinAction .share .iconShare #linkShare #copied-2.active {
+  opacity: 1;
+  display: block;
+  animation: copyAnimate 0.5s ease-in-out forwards;
+  background-color: var(--color-dark-100);
+}
+@keyframes copyAnimate {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+#about-page .mainBody main.sideRight .about-content .joinAction .share .iconShare button,
+#browser-setting-page .mainBody main.sideRight .about-content .joinAction .share .iconShare button,
+#mitra-page .mainBody main.sideRight .about-content .joinAction .share .iconShare button {
+  cursor: pointer;
+}
+#about-page .mainBody main.sideRight .about-content .joinAction .share .iconShare button .ic-wa,
+#browser-setting-page .mainBody main.sideRight .about-content .joinAction .share .iconShare button .ic-wa,
+#mitra-page .mainBody main.sideRight .about-content .joinAction .share .iconShare button .ic-wa {
+  display: block;
+  content: url("../img/icon/ic-wa.png");
+  width: 32px;
+  height: 32px;
+}
+#about-page .mainBody main.sideRight .about-content .joinAction .share .iconShare button .ic-wa:hover,
+#browser-setting-page .mainBody main.sideRight .about-content .joinAction .share .iconShare button .ic-wa:hover,
+#mitra-page .mainBody main.sideRight .about-content .joinAction .share .iconShare button .ic-wa:hover {
+  content: url("../img/icon/ic-wa-active.png");
+}
+#about-page .mainBody main.sideRight .about-content .joinAction .share .iconShare button .ic-fb,
+#browser-setting-page .mainBody main.sideRight .about-content .joinAction .share .iconShare button .ic-fb,
+#mitra-page .mainBody main.sideRight .about-content .joinAction .share .iconShare button .ic-fb {
+  display: block;
+  content: url("../img/icon/ic-fb.png");
+  width: 32px;
+  height: 32px;
+}
+#about-page .mainBody main.sideRight .about-content .joinAction .share .iconShare button .ic-fb:hover,
+#browser-setting-page .mainBody main.sideRight .about-content .joinAction .share .iconShare button .ic-fb:hover,
+#mitra-page .mainBody main.sideRight .about-content .joinAction .share .iconShare button .ic-fb:hover {
+  content: url("../img/icon/ic-fb-active.png");
+}
+#about-page .mainBody main.sideRight .about-content .joinAction .share .iconShare button .ic-x,
+#browser-setting-page .mainBody main.sideRight .about-content .joinAction .share .iconShare button .ic-x,
+#mitra-page .mainBody main.sideRight .about-content .joinAction .share .iconShare button .ic-x {
+  display: block;
+  content: url("../img/icon/ic-x.png");
+  width: 32px;
+  height: 32px;
+}
+#about-page .mainBody main.sideRight .about-content .joinAction .share .iconShare button .ic-x:hover,
+#browser-setting-page .mainBody main.sideRight .about-content .joinAction .share .iconShare button .ic-x:hover,
+#mitra-page .mainBody main.sideRight .about-content .joinAction .share .iconShare button .ic-x:hover {
+  content: url("../img/icon/ic-x-active.png");
 }/*# sourceMappingURL=about-page.css.map */

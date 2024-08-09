@@ -1,7 +1,17 @@
 import slideListAction from "./on-slideList-img.js";
 const imgArea = $("#content-area")
+const defaultImgWrapper = $('.listImage .imgWrapper').outerWidth()
 let imgWidth, index
 let isTransitioning = false;
+$(window).on('resize', function () {
+    setTimeout(() => {
+        imgWidth = $('.listImage .imgWrapper').outerWidth();
+        $(".listImage").animate({ scrollLeft: `${slideListAction.getIndex() * imgWidth}` }, 0, () => {
+            checkButtons();
+        });
+    },100)
+})
+
 
 function enterFullscreen(element) {
     if (element.requestFullscreen) {
@@ -49,6 +59,7 @@ const fullscreenActionObject = {
         if (isTransitioning) return;
         isTransitioning = true
         index = slideListAction.getIndex() + 1
+        imgWidth = $('#content-area .imgWrapper').width();
         $('#content-area').animate({ scrollLeft: "+=" + imgWidth }, 500, () => {
             checkButtons();
             slideListAction.setIndex(index)
@@ -59,6 +70,7 @@ const fullscreenActionObject = {
         if (isTransitioning) return;
         isTransitioning = true
         index = slideListAction.getIndex() - 1
+        imgWidth = $('#content-area .imgWrapper').width();
         $('#content-area').animate({ scrollLeft: "-=" + imgWidth }, 500, () => {
             checkButtons();
             slideListAction.setIndex(index)
@@ -74,7 +86,7 @@ export const onFullscreen = () => {
         $('#content-area').html(content);
 
         imgWidth = $('#content-area .imgWrapper').width();
-        $("#content-area").animate({ scrollLeft: `${slideListAction.getIndex() * imgWidth}` }, 100, () => {
+        $("#content-area").animate({ scrollLeft: `${slideListAction.getIndex() * imgWidth}` }, 0, () => {
             checkButtons();
         });
         enterFullscreen(document.getElementById('fullscreen-container'));
@@ -84,6 +96,7 @@ export const onFullscreen = () => {
         $(".fullscreen-container").css('display', 'none');
         $('#content-area').html("");
         exitFullscreen();
+
     });
 
     $(document).on('keydown', function (e) {
@@ -96,21 +109,19 @@ export const onFullscreen = () => {
         if (!document.fullscreenElement) {
             $('#content-area').html("");
             $('#fullscreen-container').css('display', 'none');
-            imgWidth = $('.listImage .imgWrapper').width();
-            $(".listImage").animate({ scrollLeft: `${slideListAction.getIndex() * imgWidth}` }, 100, () => {
-                setTimeout(() => {
-                    $(".thumb").each(function (i, el) {
-                        if (i == slideListAction.getIndex()) {
-                            $(".thumb").removeClass("thumb-active")
-                            $(el).addClass("thumb-active")
-                            slideListAction.setPosition(slideListAction.getIndex())
-                        }
-                    })
-                }, 100)
+            $(".listImage").animate({ scrollLeft: `${slideListAction.getIndex() * defaultImgWrapper}` }, 0, () => {
+                $(".thumb").each(function (i, el) {
+                    if (i == slideListAction.getIndex()) {
+                        $(".thumb").removeClass("thumb-active")
+                        $(el).addClass("thumb-active")
+                        slideListAction.setPosition(slideListAction.getIndex())
+                    }
+                })
             });
         }
     });
 }
+
 
 const fullscreenAction = Object.freeze(fullscreenActionObject)
 export default fullscreenAction

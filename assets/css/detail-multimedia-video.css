@@ -9,7 +9,7 @@
   justify-content: center;
   align-items: center;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1025px) {
   #detail-video .video-container {
     height: auto;
     padding: 20px 0;
@@ -20,7 +20,7 @@
   height: 455px;
   background-color: var(--color-grey-0);
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1025px) {
   #detail-video .video-container .videoWrapper {
     width: 90%;
     height: auto;

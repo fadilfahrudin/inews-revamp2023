@@ -1,7 +1,7 @@
 export const backToTop = () => {
     $(window).on('scroll', function () {
         let scrollY = $(this).scrollTop() || document.documentElement.scrollTop;
-        if (scrollY > 400) {
+        if (scrollY > 150) {
             $("#backToTop").css('transform', 'translateY(0)');
             $("#backToTop").css('opacity', '1');
         } else {

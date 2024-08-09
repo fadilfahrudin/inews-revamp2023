@@ -76,7 +76,7 @@
                 <div class="searchForm">
                     <input type="text" name="search" id="search" placeholder="Search" autocomplete="off">
                     <button class="btnSearch" type="button" aria-label="search">
-                        <img src="./assets/img/icon/ic-search.png" alt="search" width="20" height="20">
+                        <img src="./assets/img/icon/ic-search.svg" alt="search" width="20" height="20">
                     </button>
                 </div>
                 <div id="data-list">
@@ -185,19 +185,22 @@
     <!-- END Alert SSO -->
     <!-- Navigation WP | Home -->
     <nav class="nav__main">
-        <ul id="navbar-nav" class="container">
-            <li class="navList"><a href="wp.html" class="navLink ">Home</a></li>
-            <li class="navList"><a href="/daerah" class="navLink ">Daerah</a></li>
-            <li class="navList"><a href="/news" class="navLink ">News</a></li>
-            <li class="navList"><a href="/lifestyle" class="navLink ">Lifestyle</a></li>
-            <li class="navList"><a href="/multimedia" class="navLink ">Multimedia</a></li>
-            <li class="navList"><a href="/techno" class="navLink ">Techno</a></li>
-            <li class="navList"><a href="/sport" class="navLink ">Sport</a></li>
-            <li class="navList"><a href="/otomotif" class="navLink ">Otomotif</a></li>
-            <li class="navList"><a href="/travel" class="navLink ">Travel</a></li>
-            <li class="navList"><a href="/finance" class="navLink ">Finance</a></li>
-            <li class="navList"><a href="/index" class="navLink navLink-active">Index</a></li>
-        </ul>
+        <div class="container">
+            <ul id="navbar-nav">
+                <li class="navList"><a href="wp.html" class="navLink ">Home</a></li>
+                <li class="navList"><a href="/daerah" class="navLink ">Daerah</a></li>
+                <li class="navList"><a href="/news" class="navLink ">News</a></li>
+                <li class="navList"><a href="/lifestyle" class="navLink ">Lifestyle</a></li>
+                <li class="navList"><a href="/multimedia" class="navLink ">Multimedia</a></li>
+                <li class="navList"><a href="/techno" class="navLink ">Techno</a></li>
+                <li class="navList"><a href="/sport" class="navLink ">Sport</a></li>
+                <li class="navList"><a href="/otomotif" class="navLink ">Otomotif</a></li>
+                <li class="navList"><a href="/travel" class="navLink ">Travel</a></li>
+                <li class="navList"><a href="/finance" class="navLink ">Finance</a></li>
+                <li class="navList"><a href="/index" class="navLink navLink-active">Indeks</a></li>
+            </ul>
+            <div id="dropdown"><span class="ic-dropdown-kanal hidden"></span></div>
+        </div>
     </nav>
     <!-- End Navigation WP | Home -->
 
@@ -214,8 +217,7 @@
         <div class="container">
             <div class="breadcrumb">
                 <a href="#">Home</a>
-                <img src="./assets/img/icon/ic-next-page-breadcrumb.png" alt="breadcrumb" width="8" height="8" />
-                <span class="lastPage">Index</span>
+                <span class="lastPage">Indeks</span>
             </div>
         </div>
         <!-- End Breadcrumb -->
@@ -236,7 +238,7 @@
                 <section class="indexControl">
                     <label class="selectControl" for="select-kanal">
                         <span class="sr-only">Kanal</span>
-                        <input id="select-kanal" type="text" autocomplete="off" value="All Kanal">
+                        <input id="select-kanal" type="text" autocomplete="off" value="All Kanal" readonly>
                         <img class="ic-kanal-dropdown" src="./assets/img/icon/ic-dropdown-index.svg" alt="dropdown"
                             width="24" height="24" loading="lazy">
                         <ul class="kanal-list hidden">
@@ -251,14 +253,15 @@
                             <li class="listItem">Techno</li>
                         </ul>
                     </label>
-                    <label class="selectControl" for="date-input">
-                        <span class="sr-only">Date</span>
-                        <input id="date-input" type="text" autocomplete="off" value="Date">
-                        <img class="ic-kanal-dropdown" src="./assets/img/icon/ic-dropdown-index.svg" alt="dropdown"
-                            width="24" height="24" loading="lazy">
-                        <div id="kalender" class="kalender"></div>
-
-                    </label>
+                    <div class="selectControl">
+                        <label for="date-input">
+                            <span class="sr-only">Date</span>
+                            <input id="date-input" type="text" autocomplete="off" value="Date" readonly>
+                            <img class="ic-kanal-dropdown" src="./assets/img/icon/ic-dropdown-index.svg" alt="dropdown"
+                                width="24" height="24" loading="lazy">
+                        </label>
+                        <div id="kalender" class="kalender hidden"></div>
+                    </div>
                     <button type="button" id="applyBtn">Apply</button>
                 </section>
                 <section class="widgetListArticle row">
@@ -366,6 +369,7 @@
                         </article>
                     </div>
                 </section>
+                <button id="btn-load-more" type="button"> Load More</button>
             </main>
         </section>
     </section>
@@ -467,6 +471,8 @@
                         <li class="listKanal"><a href="#">Travel <span class="ic-travel-burger"></span></a></li>
                         <li class="listKanal"><a href="#">Otomotif <span class="ic-otomotif-burger"></span></a></li>
                         <li class="listKanal"><a href="#">Techno <span class="ic-techno-burger"></span></a></li>
+                        <li class="listKanal"><a href="#">Multimedia <span class="ic-multimedia-burger"></span></a></li>
+                        <li class="listKanal"><a href="#">Indeks <span class="ic-indeks-burger"></span></a></li>
                     </ul>
                 </div>
                 <div class="mncPortal">

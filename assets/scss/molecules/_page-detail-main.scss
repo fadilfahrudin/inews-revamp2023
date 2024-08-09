@@ -79,7 +79,8 @@ section {
                                 }
                             }
                         }
-                        a {
+                        button {
+                            cursor: pointer;
                             .ic-wa {
                                 display: block;
                                 content: url("../img/icon/ic-wa.png");
@@ -124,7 +125,6 @@ section {
                         display: flex;
                         align-items: center;
                         gap: 0 8px;
-                        padding: 0 8px;
                         color: #252121;
                         &:hover {
                             color: var(--color-dark-0);
@@ -294,6 +294,7 @@ section {
                     transition: transform 0.2s ease-in-out;
                     &:hover {
                         transform: translateY(-4px);
+                        box-shadow: 0 8px 10px rgba(0, 0, 0, 0.15);
                     }
                 }
             }
